@@ -16,7 +16,9 @@
         bar.className = 'reading-progress-bar';
         bar.setAttribute('role', 'progressbar');
         bar.setAttribute('aria-label', 'Reading progress');
-        header.style.position = 'relative'; // ensure absolute child is relative to header
+        // Note: .site-header is already position:sticky — the bar's
+        // position:absolute + bottom:0 is relative to that.
+        // Do NOT override with 'relative' or sticky breaks.
         header.appendChild(bar);
 
         var rafId = null;
