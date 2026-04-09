@@ -82,73 +82,73 @@
 
         var html =
             '<header class="site-header">' +
-                '<nav class="site-nav">' +
+                '<nav class="site-nav" role="navigation" aria-label="Main navigation">' +
                     '<div class="nav-zone--left">' +
                         '<a href="' + homePath + '" class="site-logo" aria-label="Marketing or Science — Home">' +
                             '<span class="logo-text">M<span class="logo-accent">o</span>S</span>' +
                             '<span class="logo-full">Marketing or Science</span>' +
                         '</a>' +
                     '</div>' +
-                    '<div class="nav-zone--center">' +
-                        '<ul class="nav-links" role="list">' +
-                            '<li>' +
-                                '<a class="nav-link-group' + (activePage === 'articles' ? ' active' : '') + '" href="' + articlesPath + '">' +
-                                    '<span class="nav-label">Articles</span>' +
-                                    '<span class="nav-verb">Read</span>' +
-                                '</a>' +
-                            '</li>' +
-                            '<li>' +
-                                '<a class="nav-link-group' + (activePage === 'about' ? ' active' : '') + '" href="' + aboutPath + '">' +
-                                    '<span class="nav-label">About</span>' +
-                                    '<span class="nav-verb">Learn</span>' +
-                                '</a>' +
-                            '</li>' +
-                        '</ul>' +
-                    '</div>' +
                     '<div class="nav-zone--right">' +
-                        '<button class="nav-search-toggle" aria-label="Open search" aria-expanded="false">' +
-                            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                        '<button class="nav-search-icon" aria-label="Search" aria-expanded="false">' +
+                            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
                                 '<circle cx="11" cy="11" r="8"/>' +
                                 '<line x1="21" y1="21" x2="16.65" y2="16.65"/>' +
                             '</svg>' +
                         '</button>' +
-                        '<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">' +
-                            '<span class="hamburger-bar"></span>' +
-                            '<span class="hamburger-bar"></span>' +
-                            '<span class="hamburger-bar"></span>' +
+                        '<button class="nav-menu-toggle" aria-label="Open menu" aria-expanded="false">' +
+                            '<span class="toggle-bar"></span>' +
+                            '<span class="toggle-bar"></span>' +
+                            '<span class="toggle-bar"></span>' +
+                            '<span class="toggle-label">Menu</span>' +
                         '</button>' +
                     '</div>' +
                 '</nav>' +
-                '<div class="search-overlay" role="search" aria-hidden="true">' +
-                    '<div class="search-overlay-inner">' +
-                        '<input id="site-search" type="search" placeholder="Search articles…" autocomplete="off" aria-label="Search articles">' +
-                        '<button class="search-close" aria-label="Close search">' +
-                            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-                                '<line x1="18" y1="6" x2="6" y2="18"/>' +
-                                '<line x1="6" y1="6" x2="18" y2="18"/>' +
-                            '</svg>' +
-                        '</button>' +
+
+                '<div class="mega-menu" aria-hidden="true" role="dialog" aria-label="Site navigation menu">' +
+                    '<div class="mega-menu-inner">' +
+
+                        '<div class="mega-menu-search">' +
+                            '<input id="site-search" type="search" placeholder="Search articles…"' +
+                                   ' autocomplete="off" aria-label="Search articles">' +
+                            '<ul class="search-results" aria-live="polite" aria-label="Search results"></ul>' +
+                        '</div>' +
+
+                        '<div class="mega-menu-columns">' +
+
+                            '<div class="mega-col mega-col--sections">' +
+                                '<p class="mega-col-heading">Browse</p>' +
+                                '<ul class="mega-nav-list">' +
+                                    '<li><a class="mega-nav-link" href="/articles">Latest Articles</a></li>' +
+                                    '<li><a class="mega-nav-link" href="/articles?category=skincare">Skincare</a></li>' +
+                                    '<li><a class="mega-nav-link" href="/articles?category=haircare">Haircare</a></li>' +
+                                    '<li><a class="mega-nav-link" href="/articles?category=wellness">Wellness</a></li>' +
+                                    '<li><a class="mega-nav-link" href="/articles?category=otc">OTC Drugs</a></li>' +
+                                    '<li><a class="mega-nav-link" href="/articles?category=pharma">Pharma</a></li>' +
+                                '</ul>' +
+                            '</div>' +
+
+                            '<div class="mega-col mega-col--utility">' +
+                                '<p class="mega-col-heading">Article Types</p>' +
+                                '<div class="mega-tag-group">' +
+                                    '<a class="mega-tag-link" href="/articles?type=ingredient-analysis">Ingredient Analysis</a>' +
+                                    '<a class="mega-tag-link" href="/articles?type=product-breakdown">Product Breakdown</a>' +
+                                    '<a class="mega-tag-link" href="/articles?type=trial-review">Trial Review</a>' +
+                                    '<a class="mega-tag-link" href="/articles?type=regulatory-review">Regulatory Review</a>' +
+                                '</div>' +
+                                '<p class="mega-col-heading mega-col-heading--spaced">About</p>' +
+                                '<ul class="mega-utility-list">' +
+                                    '<li><a class="mega-utility-link" href="/about">About</a></li>' +
+                                    '<li><a class="mega-utility-link" href="/about#methodology">Methods</a></li>' +
+                                    '<li><a class="mega-utility-link" href="/contact">Contact</a></li>' +
+                                    '<li><a class="mega-utility-link" href="/using-our-articles">Using Our Articles</a></li>' +
+                                    '<li><a class="mega-utility-link" href="/corrections">Corrections</a></li>' +
+                                    '<li><a class="mega-utility-link" href="/submit">Submit a Proposal</a></li>' +
+                                '</ul>' +
+                            '</div>' +
+
+                        '</div>' +
                     '</div>' +
-                    '<ul class="search-results" aria-live="polite" aria-label="Search results"></ul>' +
-                '</div>' +
-                '<div class="nav-mobile-drawer" aria-hidden="true">' +
-                    '<button class="drawer-close" aria-label="Close menu">' +
-                        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-                            '<line x1="18" y1="6" x2="6" y2="18"/>' +
-                            '<line x1="6" y1="6" x2="18" y2="18"/>' +
-                        '</svg>' +
-                    '</button>' +
-                    '<ul class="drawer-links">' +
-                        '<li><a href="' + articlesPath + '"' + (activePage === 'articles' ? ' class="active"' : '') + '>Articles</a></li>' +
-                        '<li><a href="' + aboutPath + '"' + (activePage === 'about' ? ' class="active"' : '') + '>About</a></li>' +
-                        '<li><a href="' + privacyPath + '">Privacy Policy</a></li>' +
-                    '</ul>' +
-                '</div>' +
-                '<div class="topic-strip">' +
-                    '<nav class="topic-strip-inner" aria-label="Browse by topic">' +
-                        '<a class="topic-link" href="/articles?category=skincare">Skincare &amp; Beauty</a>' +
-                        '<a class="topic-link" href="/articles?category=pharma">Pharma &amp; OTC Drugs</a>' +
-                    '</nav>' +
                 '</div>' +
             '</header>';
 
@@ -218,93 +218,71 @@
         document.body.insertAdjacentHTML('beforeend', html);
     }
 
-    // ─── Search overlay toggle ───────────────────────────────────────────────
-    function initSearchToggle() {
-        var toggle  = document.querySelector('.nav-search-toggle');
-        var overlay = document.querySelector('.search-overlay');
-        var closeBtn = document.querySelector('.search-close');
-        var input   = document.querySelector('#site-search');
-        if (!toggle || !overlay) return;
+    // ─── Mega-menu ───────────────────────────────────────────────────────────
+    function initMegaMenu() {
+        var menuToggle  = document.querySelector('.nav-menu-toggle');
+        var searchIcon  = document.querySelector('.nav-search-icon');
+        var megaMenu    = document.querySelector('.mega-menu');
+        var toggleLabel = document.querySelector('.toggle-label');
+        var input       = document.querySelector('#site-search');
+        if (!menuToggle || !megaMenu) return;
 
-        function openOverlay() {
-            overlay.classList.add('is-open');
-            overlay.setAttribute('aria-hidden', 'false');
-            toggle.setAttribute('aria-expanded', 'true');
-            if (input) {
+        var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+        function openMenu(focusSearch) {
+            megaMenu.classList.add('is-open');
+            megaMenu.setAttribute('aria-hidden', 'false');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            if (searchIcon) searchIcon.setAttribute('aria-expanded', 'true');
+            if (toggleLabel) toggleLabel.textContent = 'Close';
+            document.body.style.overflow = 'hidden';
+            document.body.style.paddingRight = scrollbarWidth + 'px';
+            document.documentElement.style.paddingRight = scrollbarWidth + 'px';
+            if (focusSearch && input) {
                 setTimeout(function () { input.focus(); }, 50);
-            }
-            if (window.MOS_Search && typeof window.MOS_Search.init === 'function') {
-                window.MOS_Search.init();
+                if (window.MOS_Search && typeof window.MOS_Search.init === 'function') {
+                    window.MOS_Search.init();
+                }
+            } else {
+                megaMenu.focus(); // focus trap root
             }
         }
 
-        function closeOverlay() {
-            overlay.classList.remove('is-open');
-            overlay.setAttribute('aria-hidden', 'true');
-            toggle.setAttribute('aria-expanded', 'false');
+        function closeMenu() {
+            megaMenu.classList.remove('is-open');
+            megaMenu.setAttribute('aria-hidden', 'true');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            if (searchIcon) searchIcon.setAttribute('aria-expanded', 'false');
+            if (toggleLabel) toggleLabel.textContent = 'Menu';
+            document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
+            document.documentElement.style.paddingRight = '';
             if (window.MOS_Search && typeof window.MOS_Search.clearResults === 'function') {
                 window.MOS_Search.clearResults();
             }
         }
 
-        toggle.addEventListener('click', function () {
-            if (overlay.classList.contains('is-open')) {
-                closeOverlay();
-            } else {
-                openOverlay();
-            }
+        menuToggle.addEventListener('click', function () {
+            megaMenu.classList.contains('is-open') ? closeMenu() : openMenu(false);
         });
 
-        if (closeBtn) {
-            closeBtn.addEventListener('click', closeOverlay);
+        if (searchIcon) {
+            searchIcon.addEventListener('click', function () {
+                megaMenu.classList.contains('is-open') ? closeMenu() : openMenu(true);
+            });
         }
 
+        // Escape key closes
         document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
-                closeOverlay();
-                toggle.focus();
-            }
-        });
-    }
-
-    // ─── Mobile hamburger / drawer ───────────────────────────────────────────
-    function initHamburger() {
-        var hamburger = document.querySelector('.nav-hamburger');
-        var drawer    = document.querySelector('.nav-mobile-drawer');
-        if (!hamburger || !drawer) return;
-
-        function openDrawer() {
-            drawer.classList.add('is-open');
-            drawer.setAttribute('aria-hidden', 'false');
-            hamburger.setAttribute('aria-expanded', 'true');
-            document.body.classList.add('drawer-open');
-        }
-
-        function closeDrawer() {
-            drawer.classList.remove('is-open');
-            drawer.setAttribute('aria-hidden', 'true');
-            hamburger.setAttribute('aria-expanded', 'false');
-            document.body.classList.remove('drawer-open');
-        }
-
-        hamburger.addEventListener('click', function () {
-            if (drawer.classList.contains('is-open')) {
-                closeDrawer();
-            } else {
-                openDrawer();
+            if (e.key === 'Escape' && megaMenu.classList.contains('is-open')) {
+                closeMenu();
+                menuToggle.focus();
             }
         });
 
-        var drawerClose = document.querySelector('.drawer-close');
-        if (drawerClose) {
-            drawerClose.addEventListener('click', closeDrawer);
-        }
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
-                closeDrawer();
-                hamburger.focus();
-            }
+        // Click outside the inner panel closes (backdrop click)
+        megaMenu.addEventListener('click', function (e) {
+            if (e.target === megaMenu) closeMenu();
         });
     }
 
@@ -315,8 +293,7 @@
     function init() {
         insertNavigation();
         insertFooter();
-        initSearchToggle();
-        initHamburger();
+        initMegaMenu();
     }
 
     if (document.readyState === 'loading') {
