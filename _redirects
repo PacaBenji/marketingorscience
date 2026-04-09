@@ -1,0 +1,9 @@
+# _redirects — marketingorscience.com
+# Netlify clean URL rewrites: strip .html extension from all page URLs.
+# The browser sees /about, /privacy-policy, /articles/skincare/2026/04/retinol-paradox
+# The server serves the corresponding .html file (200, not a redirect).
+
+/about                                      /about.html                                      200
+/privacy-policy                             /privacy-policy.html                             200
+/articles                                   /articles/index.html                             200
+/articles/skincare/2026/04/retinol-paradox  /articles/skincare/2026/04/retinol-paradox.html  200

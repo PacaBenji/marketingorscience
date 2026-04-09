@@ -76,6 +76,30 @@
             ? '<span class="peer-badge">Peer Reviewed</span>'
             : '';
 
+        // Build author display — link if authorSlug provided
+        var authorHTML = '';
+        if (cfg.author) {
+            var authorName = cfg.author.name || '';
+            var authorSlug = cfg.author.slug || '';
+            var authorPath = authorSlug ? '/authors/' + authorSlug + '/' : '';
+
+            var authorInner = authorPath
+                ? '<a href="' + authorPath + '" class="author-link"><strong>' + authorName + '</strong></a>'
+                : '<strong>' + authorName + '</strong>';
+
+            authorHTML =
+                '<span class="fold-author">' +
+                    'By ' + authorInner +
+                    (cfg.author.credential
+                        ? ', <span class="author-credential">' + cfg.author.credential + '</span>'
+                        : '') +
+                '</span>';
+        }
+
+        var readingTimeHTML = cfg.readingTime
+            ? '<span class="fold-reading-time">' + cfg.readingTime + ' min read</span>'
+            : '';
+
         var fold = document.createElement('div');
         fold.className = 'article-fold';
         fold.innerHTML =
@@ -92,17 +116,11 @@
                     ? '<p class="fold-deck">' + cfg.deck + '</p>'
                     : '') +
                 '<div class="fold-byline">' +
-                    (cfg.author
-                        ? '<span class="fold-author">' +
-                              'By <strong>' + cfg.author.name + '</strong>' +
-                              (cfg.author.credential
-                                  ? ', <span class="author-credential">' + cfg.author.credential + '</span>'
-                                  : '') +
-                          '</span>'
-                        : '') +
+                    authorHTML +
                     (cfg.date
                         ? '<span class="fold-date">' + formatDate(cfg.date) + '</span>'
                         : '') +
+                    readingTimeHTML +
                 '</div>' +
                 verdictHTML +
             '</div>';

@@ -35,9 +35,9 @@
 
             <!-- Filter bar -->
             <nav class="filter-bar" aria-label="Filter by category">
-                <a href="index.html"                    class="filter-tab active">All</a>
-                <a href="index.html?category=skincare"  class="filter-tab">Skincare &amp; Beauty</a>
-                <a href="index.html?category=pharma"    class="filter-tab">Pharma &amp; OTC Drugs</a>
+                <a href="/articles"                    class="filter-tab active">All</a>
+                <a href="/articles?category=skincare"  class="filter-tab">Skincare &amp; Beauty</a>
+                <a href="/articles?category=pharma"    class="filter-tab">Pharma &amp; OTC Drugs</a>
             </nav>
 
             <!-- Article list -->
@@ -45,7 +45,7 @@
                 <div class="article-list">
 
                     <!-- Item 1 -->
-                    <a href="#" class="article-list-item" aria-label="Read: The Retinol Paradox">
+                    <a href="/articles/skincare/2026/04/retinol-paradox" class="article-list-item" data-category="skincare" aria-label="Read: The Retinol Paradox">
                         <div class="list-item-body">
                             <div class="card-badge-row">
                                 <span class="category-badge category--skincare">Skincare &amp; Beauty</span>
@@ -67,7 +67,7 @@
                     </a>
 
                     <!-- Item 2 -->
-                    <a href="#" class="article-list-item" aria-label="Read: Benzoyl Peroxide vs. Adapalene">
+                    <a href="#" class="article-list-item" data-category="pharma" aria-label="Read: Benzoyl Peroxide vs. Adapalene">
                         <div class="list-item-body">
                             <div class="card-badge-row">
                                 <span class="category-badge category--pharma">Pharma &amp; OTC Drugs</span>
@@ -89,7 +89,7 @@
                     </a>
 
                     <!-- Item 3 -->
-                    <a href="#" class="article-list-item" aria-label="Read: Hyaluronic Acid">
+                    <a href="#" class="article-list-item" data-category="skincare" aria-label="Read: Hyaluronic Acid">
                         <div class="list-item-body">
                             <div class="card-badge-row">
                                 <span class="category-badge category--skincare">Skincare &amp; Beauty</span>
@@ -111,7 +111,7 @@
                     </a>
 
                     <!-- Item 4 -->
-                    <a href="#" class="article-list-item" aria-label="Read: Niacinamide Concentration">
+                    <a href="#" class="article-list-item" data-category="skincare" aria-label="Read: Niacinamide Concentration">
                         <div class="list-item-body">
                             <div class="card-badge-row">
                                 <span class="category-badge category--skincare">Skincare &amp; Beauty</span>
@@ -133,7 +133,7 @@
                     </a>
 
                     <!-- Item 5 -->
-                    <a href="#" class="article-list-item" aria-label="Read: Oral Collagen Peptides">
+                    <a href="#" class="article-list-item" data-category="pharma" aria-label="Read: Oral Collagen Peptides">
                         <div class="list-item-body">
                             <div class="card-badge-row">
                                 <span class="category-badge category--pharma">Pharma &amp; OTC Drugs</span>
@@ -155,7 +155,7 @@
                     </a>
 
                     <!-- Item 6 -->
-                    <a href="#" class="article-list-item" aria-label="Read: SPF Claims">
+                    <a href="#" class="article-list-item" data-category="skincare" aria-label="Read: SPF Claims">
                         <div class="list-item-body">
                             <div class="card-badge-row">
                                 <span class="category-badge category--skincare">Skincare &amp; Beauty</span>
@@ -183,6 +183,8 @@
     </main>
 
     <!-- [FOOTER injected by main.js] -->
+
+    <script src="/assets/js/components/category-filter.js"></script>
 
 </body>
 </html>

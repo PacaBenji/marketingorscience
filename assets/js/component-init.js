@@ -9,7 +9,9 @@
     function areArticleComponentsLoaded() {
         return (
             typeof window.createFold !== 'undefined' &&
-            typeof window.createArticleFooter !== 'undefined'
+            typeof window.createArticleFooter !== 'undefined' &&
+            typeof window.createShareBar !== 'undefined' &&
+            typeof window.createReadMore !== 'undefined'
         );
     }
 
