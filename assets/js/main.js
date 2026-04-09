@@ -163,16 +163,55 @@
         var html =
             '<footer class="site-footer">' +
                 '<div class="footer-inner">' +
-                    '<div class="footer-brand">' +
-                        '<span class="footer-logo-text">Marketing or Science</span>' +
-                        '<p class="footer-tagline">Clinical evidence reviews for health professionals.</p>' +
+
+                    '<div class="footer-top">' +
+                        '<a href="' + homePath + '" class="footer-wordmark" aria-label="Marketing or Science — Home">' +
+                            'Marketing <em>or</em> Science' +
+                        '</a>' +
+                        '<p class="footer-descriptor">Clinical evidence reviews for health &amp; beauty claims.</p>' +
                     '</div>' +
-                    '<nav class="footer-nav" aria-label="Footer navigation">' +
-                        '<a href="' + articlesPath + '">Articles</a>' +
-                        '<a href="' + aboutPath + '">About</a>' +
-                        '<a href="' + privacyPath + '">Privacy Policy</a>' +
-                    '</nav>' +
-                    '<p class="footer-copy">&copy; ' + year + ' Marketing or Science. All rights reserved.</p>' +
+
+                    '<div class="footer-columns">' +
+
+                        '<div class="footer-col footer-col--about">' +
+                            '<h3 class="footer-col-heading">About</h3>' +
+                            '<ul class="footer-col-links">' +
+                                '<li><a href="' + aboutPath + '">Our Mission</a></li>' +
+                                '<li><a href="' + aboutPath + '#methodology">Methodology</a></li>' +
+                                '<li><a href="/authors/editorial/">Editorial Team</a></li>' +
+                            '</ul>' +
+                        '</div>' +
+
+                        '<div class="footer-col footer-col--topics">' +
+                            '<h3 class="footer-col-heading">Topics</h3>' +
+                            '<ul class="footer-col-links">' +
+                                '<li><a href="/articles?category=skincare">Skincare &amp; Beauty</a></li>' +
+                                '<li><a href="/articles?category=pharma">Pharma &amp; OTC Drugs</a></li>' +
+                                '<li><a href="' + articlesPath + '">All Articles</a></li>' +
+                            '</ul>' +
+                        '</div>' +
+
+                        '<div class="footer-col footer-col--newsletter">' +
+                            '<h3 class="footer-col-heading">Stay Informed</h3>' +
+                            '<p class="footer-newsletter-desc">Get evidence reviews delivered when it matters.</p>' +
+                            '<form class="footer-newsletter-form" action="#" method="post" novalidate>' +
+                                '<div class="footer-newsletter-row">' +
+                                    '<input class="footer-newsletter-input" type="email" placeholder="your@email.com" aria-label="Email address" required>' +
+                                    '<button class="footer-newsletter-btn" type="submit">Subscribe</button>' +
+                                '</div>' +
+                            '</form>' +
+                        '</div>' +
+
+                    '</div>' +
+
+                    '<div class="footer-bottom">' +
+                        '<p class="footer-copy">&copy; ' + year + ' Marketing or Science. All rights reserved.</p>' +
+                        '<nav class="footer-legal-nav" aria-label="Legal navigation">' +
+                            '<a href="' + privacyPath + '">Privacy Policy</a>' +
+                            '<a href="/terms">Terms of Use</a>' +
+                        '</nav>' +
+                    '</div>' +
+
                 '</div>' +
             '</footer>';
 

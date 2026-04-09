@@ -1284,77 +1284,198 @@ body {
 /* ============================================================
    18. FOOTER
    ============================================================ */
+
+/* ── Shell ── */
 .site-footer {
-    background: var(--color-dark);
+    background: #0f0f0f;
     color: var(--color-dark-muted);
-    padding: var(--space-xl) 0 var(--space-lg);
-    border-top: 1px solid #1a1a1a;
+    border-top: 3px solid #C8102E;      /* Atlantic-style red top rule */
 }
 
 .footer-inner {
     max-width: var(--max-width);
     margin-inline: auto;
     padding-inline: var(--space-lg);
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    gap: var(--space-md) var(--space-xl);
-    align-items: start;
 }
 
-.footer-brand {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.footer-logo-text {
-    display: block;
-    font-family: var(--font-serif);
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin-bottom: var(--space-xs);
-}
-
-.footer-tagline {
-    font-family: var(--font-ui);
-    font-size: var(--text-meta);
-    color: var(--color-dark-muted);
-    line-height: 1.5;
-}
-
-.footer-nav {
-    grid-column: 2;
-    grid-row: 1;
+/* ── Top: wordmark + descriptor ── */
+.footer-top {
     display: flex;
+    align-items: baseline;
     gap: var(--space-lg);
-    align-items: flex-start;
+    padding: var(--space-xl) 0 var(--space-lg);
+    border-bottom: 1px solid #2a2a2a;
+    flex-wrap: wrap;
 }
 
-.footer-nav a {
-    font-family: var(--font-ui);
-    font-size: var(--text-meta);
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    color: var(--color-dark-muted);
+.footer-wordmark {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
     text-decoration: none;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    flex-shrink: 0;
     transition: color 0.15s;
 }
 
-.footer-nav a:hover {
-    color: #FFFFFF;
+.footer-wordmark em {
+    font-style: italic;
+    font-weight: 400;
+    color: #C8102E;
+}
+
+.footer-wordmark:hover {
+    color: #C8102E;
+}
+
+.footer-descriptor {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: #666;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
+/* ── Three-column body ── */
+.footer-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.6fr;
+    gap: var(--space-xl);
+    padding: var(--space-lg) 0 var(--space-xl);
+    border-bottom: 1px solid #2a2a2a;
+}
+
+/* ── Individual column ── */
+.footer-col-heading {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.footer-col-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-col-links a {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: #999;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+    transition: color 0.15s;
+    display: inline-block;
+}
+
+.footer-col-links a:hover {
+    color: #ffffff;
+}
+
+/* ── Newsletter column ── */
+.footer-newsletter-desc {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+}
+
+.footer-newsletter-row {
+    display: flex;
+    gap: 0;
+}
+
+.footer-newsletter-input {
+    flex: 1;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-right: none;
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    padding: 0.6rem 0.875rem;
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: border-color 0.15s;
+    min-width: 0;
+}
+
+.footer-newsletter-input::placeholder {
+    color: #555;
+}
+
+.footer-newsletter-input:focus {
+    border-color: #555;
+}
+
+.footer-newsletter-btn {
+    background: #C8102E;
+    color: #fff;
+    border: 1px solid #C8102E;
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border-radius: 0;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.footer-newsletter-btn:hover {
+    background: #a50d25;
+    border-color: #a50d25;
+}
+
+/* ── Bottom bar ── */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    padding: var(--space-md) 0;
+    flex-wrap: wrap;
 }
 
 .footer-copy {
-    grid-column: 1 / -1;
-    grid-row: 2;
     font-family: var(--font-ui);
-    font-size: var(--text-meta);
+    font-size: 0.75rem;
     color: #444;
-    padding-top: var(--space-md);
-    border-top: 1px solid #1a1a1a;
+    letter-spacing: 0.02em;
 }
 
+.footer-legal-nav {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.footer-legal-nav a {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: #444;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.15s;
+}
+
+.footer-legal-nav a:hover {
+    color: #999;
+}
 
 /* ============================================================
    19. RESPONSIVE — 768 px
@@ -1389,19 +1510,14 @@ body {
         align-items: flex-start;
     }
 
-    /* Footer */
-    .footer-inner {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
+    /* Footer — collapse to single column */
+    .footer-columns {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
     }
 
-    .footer-nav {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .footer-copy {
-        grid-row: 3;
+    .footer-col--newsletter {
+        grid-column: 1 / -1;
     }
 
     /* Filter bar — allow scroll */
@@ -1454,10 +1570,24 @@ body {
         margin-left: 0;
     }
 
-    /* Footer nav — wrap */
-    .footer-nav {
-        flex-wrap: wrap;
-        gap: var(--space-md);
+    /* Footer — single column */
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-col--newsletter {
+        grid-column: 1;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
     }
 
     /* About methodology steps */
