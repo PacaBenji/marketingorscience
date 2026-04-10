@@ -97,9 +97,11 @@
                             '</svg>' +
                         '</button>' +
                         '<button class="nav-menu-toggle" aria-label="Open menu" aria-expanded="false">' +
-                            '<span class="toggle-bar"></span>' +
-                            '<span class="toggle-bar"></span>' +
-                            '<span class="toggle-bar"></span>' +
+                            '<span class="toggle-bars">' +
+                                '<span class="toggle-bar"></span>' +
+                                '<span class="toggle-bar"></span>' +
+                                '<span class="toggle-bar"></span>' +
+                            '</span>' +
                             '<span class="toggle-label">Menu</span>' +
                         '</button>' +
                     '</div>' +
@@ -107,6 +109,15 @@
 
                 '<div class="mega-menu" aria-hidden="true" role="dialog" aria-label="Site navigation menu">' +
                     '<div class="mega-menu-inner">' +
+
+                        '<button class="mega-menu-close" aria-label="Close menu">' +
+                            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none"' +
+                                 ' stroke="currentColor" stroke-width="2"' +
+                                 ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                                '<line x1="18" y1="6" x2="6" y2="18"/>' +
+                                '<line x1="6" y1="6" x2="18" y2="18"/>' +
+                            '</svg>' +
+                        '</button>' +
 
                         '<div class="mega-menu-search">' +
                             '<input id="site-search" type="search" placeholder="Search articles…"' +
@@ -279,6 +290,15 @@
                 menuToggle.focus();
             }
         });
+
+        // Close button inside mega-menu-inner
+        var closeBtn = document.querySelector('.mega-menu-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function () {
+                closeMenu();
+                menuToggle.focus();
+            });
+        }
 
         // Click outside the inner panel closes (backdrop click)
         megaMenu.addEventListener('click', function (e) {
