@@ -68,7 +68,13 @@
                     : '') +
             '</div>';
 
-        a.innerHTML = categoryLine + headline + deck + meta;
+        var imageHTML = article.image
+            ? '<div class="read-more-card-image-wrap">' +
+                  '<img src="' + article.image + '" alt="" loading="lazy" aria-hidden="true">' +
+              '</div>'
+            : '';
+
+        a.innerHTML = imageHTML + categoryLine + headline + deck + meta;
         return a;
     }
 

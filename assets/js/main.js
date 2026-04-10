@@ -187,8 +187,11 @@
                         '<div class="footer-col footer-col--topics">' +
                             '<h3 class="footer-col-heading">Topics</h3>' +
                             '<ul class="footer-col-links">' +
-                                '<li><a href="/articles?category=skincare">Skincare &amp; Beauty</a></li>' +
-                                '<li><a href="/articles?category=pharma">Pharma &amp; OTC Drugs</a></li>' +
+                                '<li><a href="/articles?category=skincare">Skincare</a></li>' +
+                                '<li><a href="/articles?category=haircare">Haircare</a></li>' +
+                                '<li><a href="/articles?category=wellness">Wellness</a></li>' +
+                                '<li><a href="/articles?category=otc">OTC Drugs</a></li>' +
+                                '<li><a href="/articles?category=pharma">Pharma</a></li>' +
                                 '<li><a href="' + articlesPath + '">All Articles</a></li>' +
                             '</ul>' +
                         '</div>' +

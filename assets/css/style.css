@@ -2190,6 +2190,19 @@ figcaption {
     color: var(--color-muted);
 }
 
+/* Card preview image */
+.read-more-card-image-wrap {
+    overflow: hidden;
+    margin-bottom: var(--space-sm);
+    aspect-ratio: 16 / 9;
+}
+.read-more-card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* ============================================================
    27. AUTHOR PAGE
    ============================================================ */
