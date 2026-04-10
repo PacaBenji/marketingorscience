@@ -24,7 +24,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'benzoyl-peroxide-vs-adapalene',
-    url          : '#',
+    url          : '/articles/pharma/2026/02/benzoyl-peroxide-vs-adapalene',
     title        : 'Benzoyl Peroxide vs. Adapalene: What the 2025 Head-to-Head Trials Actually Show',
     deck         : 'OTC acne marketing has outpaced the clinical evidence. We examine four recent RCTs and assess what\u2019s justified for first-line recommendation.',
     category     : 'Pharma & OTC Drugs',
@@ -43,7 +43,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'hyaluronic-acid-humectant',
-    url          : '#',
+    url          : '/articles/skincare/2026/02/hyaluronic-acid-humectant',
     title        : 'Hyaluronic Acid: Proven Humectant or Hydration Theater?',
     deck         : 'Molecular weight matters \u2014 yet almost no consumer product discloses it. A review of transepidermal penetration studies and what they mean for product selection.',
     category     : 'Skincare & Beauty',
@@ -62,7 +62,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'niacinamide-concentration',
-    url          : '#',
+    url          : '/articles/skincare/2026/01/niacinamide-concentration',
     title        : 'Niacinamide at 5% vs. 10%: Is There a Real Clinical Difference?',
     deck         : 'Niacinamide has become the industry\u2019s favorite multi-tasking ingredient. Examining sebum-regulation, pigmentation, and barrier-repair endpoints across concentration thresholds.',
     category     : 'Skincare & Beauty',
@@ -80,7 +80,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'oral-collagen-peptides',
-    url          : '#',
+    url          : '/articles/pharma/2026/01/oral-collagen-peptides',
     title        : 'Oral Collagen Peptides: The Bioavailability Question the Marketing Skips',
     deck         : 'A $5 billion supplement category rests on a plausible mechanism \u2014 but does the evidence reach the skin? Dissecting the trials behind the claims.',
     category     : 'Pharma & OTC Drugs',
@@ -98,7 +98,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'spf-50-vs-100',
-    url          : '#',
+    url          : '/articles/skincare/2025/12/spf-50-vs-100',
     title        : 'SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say',
     deck         : 'High-SPF marketing implies proportionally higher protection. The logarithmic reality, application thickness variables, and UVA protection gaps are rarely disclosed.',
     category     : 'Skincare & Beauty',
