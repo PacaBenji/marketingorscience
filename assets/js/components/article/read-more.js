@@ -49,13 +49,8 @@
         a.className = 'read-more-card';
         a.href = article.url || '#';
 
-        var badgeRow =
-            '<div class="card-badge-row">' +
-                '<span class="category-badge category--' + (article.categorySlug || 'general') + '">' +
-                    (article.category || '') +
-                '</span>' +
-                '<span class="article-type-badge">' + (article.type || '') + '</span>' +
-            '</div>';
+        var categoryLine =
+            '<span class="read-more-card-category">' + (article.category || '') + '</span>';
 
         var headline =
             '<h3 class="read-more-card-headline">' + (article.title || '') + '</h3>';
@@ -66,13 +61,14 @@
 
         var meta =
             '<div class="read-more-card-meta">' +
-                '<span>' + (article.author || '') + '</span>' +
-                (article.date
-                    ? '<span aria-hidden="true">&middot;</span><time datetime="' + article.date + '">' + formatDate(article.date) + '</time>'
+                '<span class="read-more-card-author">' + (article.author || '') + '</span>' +
+                (article.readingTime
+                    ? '<span class="read-more-card-dot" aria-hidden="true">&middot;</span>' +
+                      '<span class="read-more-card-time">' + article.readingTime + ' min read</span>'
                     : '') +
             '</div>';
 
-        a.innerHTML = badgeRow + headline + deck + meta;
+        a.innerHTML = categoryLine + headline + deck + meta;
         return a;
     }
 
@@ -84,114 +80,133 @@
         var limit           = cfg.limit           || 3;
 
         function build(articles) {
-            var tabs = [
-                { id: 'popular', label: 'Most Popular' },
-                { id: 'author',  label: 'By the Author' },
-                { id: 'topic',   label: 'More on the Topic' }
-            ];
-
-            // Pre-compute each tab's articles
-            var tabData = {};
-            tabs.forEach(function (tab) {
-                tabData[tab.id] = getArticles(articles, currentSlug, tab.id, {
-                    currentCategory: currentCategory,
-                    currentAuthor:   currentAuthor,
-                    limit:           limit
-                });
+            var allOthers = articles.filter(function (a) {
+                return a.slug !== currentSlug;
             });
 
-            // Hide tabs with 0 results
-            var visibleTabs = tabs.filter(function (tab) {
-                return tabData[tab.id].length > 0;
-            });
+            // ── Left column: Most Popular (ranked list) ──────────────────────
+            var popular = allOthers
+                .filter(function (a) { return a.popular === true; })
+                .sort(function (a, b) { return (a.popularRank || 99) - (b.popularRank || 99); })
+                .slice(0, 5);
 
-            if (visibleTabs.length === 0) return null;
+            // ── Right column: More from Author OR Topic ───────────────────────
+            var moreLabel  = '';
+            var moreArticles = [];
+
+            // Try author first
+            var byAuthor = allOthers
+                .filter(function (a) { return currentAuthor && a.authorSlug === currentAuthor; })
+                .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); })
+                .slice(0, 3);
+
+            if (byAuthor.length > 0) {
+                moreArticles = byAuthor;
+                // Build a readable author name from the slug
+                moreLabel = 'More From ' + (byAuthor[0].author || currentAuthor);
+            } else {
+                // Fall back to topic
+                var byTopic = allOthers
+                    .filter(function (a) { return a.categorySlug === currentCategory; })
+                    .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); })
+                    .slice(0, 3);
+                moreArticles = byTopic;
+                moreLabel = 'More From ' + (byTopic[0] ? byTopic[0].category : currentCategory);
+            }
+
+            // Need at least one column to render
+            if (popular.length === 0 && moreArticles.length === 0) return null;
 
             var section = document.createElement('section');
             section.className = 'read-more-section';
+            section.setAttribute('aria-label', 'Continue reading');
 
             var inner = document.createElement('div');
             inner.className = 'read-more-inner';
 
-            var heading = document.createElement('p');
-            heading.className = 'read-more-heading';
-            heading.textContent = 'Continue Reading';
-            inner.appendChild(heading);
+            // ── Two-column layout ─────────────────────────────────────────────
+            var grid = document.createElement('div');
+            grid.className = 'read-more-grid';
 
-            // Tab bar
-            var tabBar = document.createElement('div');
-            tabBar.className = 'read-more-tabs';
-            tabBar.setAttribute('role', 'tablist');
+            // ── LEFT: Most Popular ────────────────────────────────────────────
+            if (popular.length > 0) {
+                var leftCol = document.createElement('div');
+                leftCol.className = 'read-more-col read-more-col--popular';
 
-            var panels = {};
+                var leftHeader = document.createElement('div');
+                leftHeader.className = 'read-more-col-header';
+                leftHeader.innerHTML =
+                    '<h2 class="read-more-col-title">Most Popular</h2>';
+                leftCol.appendChild(leftHeader);
 
-            visibleTabs.forEach(function (tab, idx) {
-                var btn = document.createElement('button');
-                btn.className = 'read-more-tab' + (idx === 0 ? ' active' : '');
-                btn.textContent = tab.label;
-                btn.setAttribute('role', 'tab');
-                btn.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
-                btn.setAttribute('aria-controls', 'read-more-panel-' + tab.id);
-                btn.dataset.tab = tab.id;
-                tabBar.appendChild(btn);
-            });
+                var rankList = document.createElement('ol');
+                rankList.className = 'popular-list';
 
-            inner.appendChild(tabBar);
+                popular.forEach(function (article, idx) {
+                    var li = document.createElement('li');
+                    li.className = 'popular-item';
 
-            // Panels
-            visibleTabs.forEach(function (tab, idx) {
-                var panel = document.createElement('div');
-                panel.className = 'read-more-panel';
-                panel.id = 'read-more-panel-' + tab.id;
-                panel.setAttribute('role', 'tabpanel');
-                if (idx !== 0) panel.setAttribute('hidden', '');
+                    var verdictDot = article.verdictClass
+                        ? '<span class="popular-verdict-dot popular-verdict-dot--' + article.verdictClass + '" aria-hidden="true"></span>'
+                        : '';
 
-                tabData[tab.id].forEach(function (article) {
-                    panel.appendChild(renderCard(article));
+                    li.innerHTML =
+                        '<a class="popular-item-link" href="' + (article.url || '#') + '">' +
+                            '<span class="popular-rank" aria-hidden="true">' + (idx + 1) + '</span>' +
+                            '<span class="popular-body">' +
+                                '<span class="popular-title">' + (article.title || '') + '</span>' +
+                                '<span class="popular-meta">' +
+                                    verdictDot +
+                                    '<span class="popular-author">' + (article.author || '') + '</span>' +
+                                    (article.readingTime
+                                        ? '<span class="popular-dot" aria-hidden="true">&middot;</span>' +
+                                          '<span class="popular-time">' + article.readingTime + ' min</span>'
+                                        : '') +
+                                '</span>' +
+                            '</span>' +
+                        '</a>';
+
+                    rankList.appendChild(li);
                 });
 
-                panels[tab.id] = panel;
-                inner.appendChild(panel);
-            });
+                leftCol.appendChild(rankList);
+                grid.appendChild(leftCol);
+            }
 
-            // Tab switching logic
-            tabBar.addEventListener('click', function (e) {
-                var btn = e.target.closest('.read-more-tab');
-                if (!btn) return;
+            // ── RIGHT: More From Author/Topic ─────────────────────────────────
+            if (moreArticles.length > 0) {
+                var rightCol = document.createElement('div');
+                rightCol.className = 'read-more-col read-more-col--more';
 
-                var tabId = btn.dataset.tab;
+                var rightHeader = document.createElement('div');
+                rightHeader.className = 'read-more-col-header';
+                rightHeader.innerHTML =
+                    '<h2 class="read-more-col-title">' + moreLabel + '</h2>' +
+                    '<a class="read-more-see-all" href="' +
+                        (currentCategory ? '/articles?category=' + currentCategory : '/articles') +
+                    '">See All</a>';
+                rightCol.appendChild(rightHeader);
 
-                // Update tab states
-                var allBtns = tabBar.querySelectorAll('.read-more-tab');
-                allBtns.forEach(function (b) {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-selected', 'false');
+                var cardGrid = document.createElement('div');
+                cardGrid.className = 'read-more-card-grid';
+
+                moreArticles.forEach(function (article) {
+                    cardGrid.appendChild(renderCard(article));
                 });
-                btn.classList.add('active');
-                btn.setAttribute('aria-selected', 'true');
 
-                // Show/hide panels
-                visibleTabs.forEach(function (tab) {
-                    if (panels[tab.id]) {
-                        if (tab.id === tabId) {
-                            panels[tab.id].removeAttribute('hidden');
-                        } else {
-                            panels[tab.id].setAttribute('hidden', '');
-                        }
-                    }
-                });
-            });
+                rightCol.appendChild(cardGrid);
+                grid.appendChild(rightCol);
+            }
 
+            inner.appendChild(grid);
             section.appendChild(inner);
             return section;
         }
 
-        // If articles already loaded, build synchronously
         if (window.MOS_ARTICLES) {
             return build(window.MOS_ARTICLES);
         }
 
-        // Otherwise, create a placeholder and fill it when ready
         var placeholder = document.createElement('div');
         placeholder.id = 'read-more-placeholder';
 

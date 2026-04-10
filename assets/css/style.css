@@ -1505,6 +1505,11 @@ body {
         grid-template-columns: 1fr;
     }
 
+    /* Read more cards: 1 col */
+    .read-more-card-grid {
+        grid-template-columns: 1fr;
+    }
+
     /* Verdict block — stack */
     .verdict-block {
         flex-direction: column;
@@ -1933,11 +1938,13 @@ figcaption {
 
 
 /* ============================================================
-   26. READ MORE SECTION
+   26. READ MORE SECTION — Atlantic-style two-column layout
    ============================================================ */
+
+/* ── Shell ── */
 .read-more-section {
     border-top: 2px solid var(--color-text);
-    padding: var(--space-xl) 0;
+    padding: var(--space-xl) 0 var(--space-2xl);
     background: var(--color-bg);
 }
 
@@ -1947,69 +1954,164 @@ figcaption {
     padding-inline: var(--space-lg);
 }
 
-.read-more-heading {
-    font-family: var(--font-ui);
-    font-size: var(--text-label);
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-    margin-bottom: var(--space-md);
+/* ── Two-column grid ── */
+.read-more-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 0 var(--space-xl);
+    align-items: start;
 }
 
-.read-more-tabs {
+/* ── Shared column header ── */
+.read-more-col-header {
     display: flex;
-    align-items: center;
-    gap: 0;
-    border-bottom: var(--border);
-    margin-bottom: var(--space-xl);
-    overflow-x: auto;
-    scrollbar-width: none;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-md);
+    border-top: 2px solid var(--color-text);
+    padding-top: var(--space-sm);
+    margin-bottom: var(--space-lg);
 }
 
-.read-more-tabs::-webkit-scrollbar {
-    display: none;
-}
-
-.read-more-tab {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.75rem var(--space-md);
+.read-more-col-title {
     font-family: var(--font-ui);
     font-size: var(--text-meta);
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-muted);
-    border: none;
-    border-bottom: 2px solid transparent;
-    background: none;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: color 0.15s, border-color 0.15s;
-    margin-bottom: -1px;
+    color: var(--color-text);
+    line-height: 1;
 }
 
-.read-more-tab:hover {
+.read-more-see-all {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 400;
+    color: var(--color-muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: color 0.15s;
+    flex-shrink: 0;
+}
+
+.read-more-see-all:hover {
     color: var(--color-text);
 }
 
-.read-more-tab.active,
-.read-more-tab[aria-selected="true"] {
-    color: var(--color-accent);
-    border-bottom-color: var(--color-accent);
+/* ── LEFT: Ranked popular list ── */
+.read-more-col--popular {
+    border-right: 1px solid var(--color-divider);
+    padding-right: var(--space-xl);
 }
 
-.read-more-panel {
+.popular-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popular-item {
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.popular-item:last-child {
+    border-bottom: none;
+}
+
+.popular-item-link {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: var(--space-sm);
+    align-items: start;
+    padding: var(--space-md) 0;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.15s;
+}
+
+.popular-item-link:hover .popular-title {
+    color: var(--color-accent);
+}
+
+.popular-rank {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #C8102E;           /* Atlantic crimson rank number */
+    letter-spacing: -0.04em;
+    padding-top: 0.1em;
+}
+
+.popular-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.popular-title {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-text);
+    transition: color 0.15s;
+}
+
+.popular-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.popular-author {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.popular-dot {
+    color: var(--color-divider);
+    font-size: 0.75rem;
+}
+
+.popular-time {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--color-muted);
+}
+
+/* Verdict colour dot */
+.popular-verdict-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.popular-verdict-dot--supported  { background: #1A6B35; }
+.popular-verdict-dot--partial    { background: #7A5500; }
+.popular-verdict-dot--unsupported { background: #8B1A1A; }
+.popular-verdict-dot--mixed      { background: var(--color-accent); }
+
+/* ── RIGHT: More from author/topic cards ── */
+.read-more-col--more {
+    /* naturally fills remaining space */
+}
+
+.read-more-card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
 }
 
-.read-more-panel[hidden] {
-    display: none;
-}
-
+/* Individual card */
 .read-more-card {
     display: flex;
     flex-direction: column;
@@ -2017,46 +2119,66 @@ figcaption {
     padding-top: var(--space-md);
     text-decoration: none;
     color: inherit;
-    transition: opacity 0.15s;
-}
-
-.read-more-card:hover {
-    opacity: 0.8;
+    gap: 0.35rem;
 }
 
 .read-more-card:hover .read-more-card-headline {
     color: var(--color-accent);
 }
 
+.read-more-card-category {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
 .read-more-card-headline {
     font-family: var(--font-serif);
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     font-weight: 700;
     line-height: 1.3;
     color: var(--color-text);
-    margin-bottom: var(--space-sm);
     transition: color 0.15s;
 }
 
 .read-more-card-deck {
     font-family: var(--font-body);
-    font-size: 0.9rem;
-    color: var(--color-muted);
+    font-size: 0.875rem;
     line-height: 1.6;
-    margin-bottom: var(--space-sm);
+    color: var(--color-muted);
     flex: 1;
 }
 
 .read-more-card-meta {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: var(--space-sm);
+}
+
+.read-more-card-author {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.read-more-card-dot {
+    color: var(--color-divider);
+}
+
+.read-more-card-time {
     font-family: var(--font-ui);
     font-size: var(--text-label);
     color: var(--color-muted);
-    margin-top: auto;
 }
-
 
 /* ============================================================
    27. AUTHOR PAGE
@@ -2246,9 +2368,21 @@ figcaption {
    33. RESPONSIVE ADDITIONS — 768 px (new components)
    ============================================================ */
 @media (max-width: 768px) {
-    /* Read more grid: 1 col */
-    .read-more-panel {
+    /* Read more — stack columns */
+    .read-more-grid {
         grid-template-columns: 1fr;
+    }
+
+    .read-more-col--popular {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid var(--color-divider);
+        padding-bottom: var(--space-xl);
+        margin-bottom: var(--space-xl);
+    }
+
+    .read-more-card-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* Author header: stack */
