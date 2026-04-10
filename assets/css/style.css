@@ -56,12 +56,12 @@
     --text-label:   0.6875rem;  /* 11 px */
 
     /* — Spacing — */
-    --space-xs:   0.25rem;
-    --space-sm:   0.5rem;
-    --space-md:   1rem;
-    --space-lg:   2rem;
-    --space-xl:   4rem;
-    --space-2xl:  6rem;
+    --space-xs:   0.15rem;
+    --space-sm:   0.35rem;
+    --space-md:   0.85rem;
+    --space-lg:   1.85rem;
+    --space-xl:   3.85rem;
+    --space-2xl:  5.85rem;
 
     /* — Layout — */
     --max-width:      1200px;
