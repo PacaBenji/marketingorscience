@@ -85,8 +85,7 @@
                 '<nav class="site-nav" role="navigation" aria-label="Main navigation">' +
                     '<div class="nav-zone--left">' +
                         '<a href="' + homePath + '" class="site-logo" aria-label="Marketing or Science — Home">' +
-                            '<span class="logo-text">M<span class="logo-accent">o</span>S</span>' +
-                            '<span class="logo-full">Marketing or Science</span>' +
+                            '<img class="logo-img logo-img--dark" src="' + assetPath + '/images/logo/MoS logo-b.png" alt="Marketing or Science" width="48" height="36">' +
                         '</a>' +
                     '</div>' +
                     '<div class="nav-zone--right">' +
@@ -109,6 +108,10 @@
 
                 '<div class="mega-menu" aria-hidden="true" role="dialog" aria-label="Site navigation menu">' +
                     '<div class="mega-menu-inner">' +
+
+                        '<a href="' + homePath + '" class="mega-menu-logo" aria-label="Marketing or Science — Home">' +
+                            '<img src="' + assetPath + '/images/logo/MoS logo-w.png" alt="Marketing or Science" width="56" height="42">' +
+                        '</a>' +
 
                         '<div class="mega-menu-search">' +
                             '<input id="site-search" type="search" placeholder="Search articles…"' +
@@ -168,7 +171,7 @@
 
                     '<div class="footer-top">' +
                         '<a href="' + homePath + '" class="footer-wordmark" aria-label="Marketing or Science — Home">' +
-                            'Marketing <em>or</em> Science' +
+                            '<img src="' + assetPath + '/images/logo/MoS logo-b.png" alt="Marketing or Science" class="footer-logo-img">' +
                         '</a>' +
                         '<p class="footer-descriptor">Clinical evidence reviews for health &amp; beauty claims.</p>' +
                     '</div>' +
