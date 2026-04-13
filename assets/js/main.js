@@ -319,7 +319,6 @@
             '.article-figure',
             '.verdict-block',
             '.cta-block',
-            '.footer-columns',
             '.section-header'
         ].join(','));
 

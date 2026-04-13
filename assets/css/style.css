@@ -952,7 +952,6 @@ body {
     align-items: center;
     gap: 0;
     border-bottom: var(--border);
-    margin-bottom: var(--space-xl);
 }
 
 .filter-tab {
@@ -1702,12 +1701,12 @@ body {
     }
 
     .footer-columns {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: var(--space-lg);
     }
 
     .footer-col--newsletter {
-        grid-column: 1;
+        grid-column: 1 / -1;
     }
 
     .footer-top {
@@ -2085,7 +2084,7 @@ $1
 }
 
 .share-bar--footer {
-    padding: var(--space-xl) var(--space-lg);
+    padding: var(--space-lg) var(--space-lg) var(--space-md);
     border-top: 2px solid var(--color-text);
     margin-top: var(--space-xl);
 }
