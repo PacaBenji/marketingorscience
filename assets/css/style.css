@@ -1237,7 +1237,7 @@ body {
 
 /* ── Shell ── */
 .site-footer {
-    background: #0f0f0f;
+    background: #000;
     color: var(--color-dark-muted);
     border-top: 3px solid rgba(255,255,255,0.15);
 }
@@ -1397,7 +1397,6 @@ body {
     gap: var(--space-lg);
     padding: var(--space-md) var(--space-lg);
     flex-wrap: wrap;
-    margin: 0 calc(-1 * var(--space-lg));   /* bleed past footer-inner padding */
     background: #000;
 }
 
@@ -1725,6 +1724,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: var(--space-sm);
+        padding-inline: 1rem;
     }
 
     /* Read more */
@@ -2594,3 +2594,24 @@ $1
 /* Centre nav zone visible on desktop; hamburger hidden */
 .nav-zone--center { display: flex; }
 .nav-hamburger    { display: none; }
+
+
+/* ============================================================
+   34. SCROLL ANIMATIONS
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+
+    .will-animate {
+        opacity: 0;
+        transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .will-animate.fade-up {
+        transform: translateY(20px);
+    }
+
+    .will-animate.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

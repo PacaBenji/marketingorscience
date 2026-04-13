@@ -212,15 +212,16 @@
 
                     '</div>' +
 
-                    '<div class="footer-bottom">' +
-                        '<p class="footer-copy">&copy; ' + year + ' Marketing or Science. All rights reserved.</p>' +
-                        '<nav class="footer-legal-nav" aria-label="Legal navigation">' +
-                            '<a href="' + privacyPath + '">Privacy Policy</a>' +
-                            '<a href="/terms">Terms of Use</a>' +
-                        '</nav>' +
-                    '</div>' +
-
                 '</div>' +
+
+            '<div class="footer-bottom">' +
+                '<p class="footer-copy">&copy; ' + year + ' Marketing or Science. All rights reserved.</p>' +
+                '<nav class="footer-legal-nav" aria-label="Legal navigation">' +
+                    '<a href="' + privacyPath + '">Privacy Policy</a>' +
+                    '<a href="/terms">Terms of Use</a>' +
+                '</nav>' +
+            '</div>' +
+
             '</footer>';
 
         document.body.insertAdjacentHTML('beforeend', html);
@@ -303,6 +304,47 @@
         });
     }
 
+    // ─── Scroll animations ───────────────────────────────────────────────────
+    function initScrollAnimations() {
+        if (!window.IntersectionObserver) return;
+
+        var targets = document.querySelectorAll([
+            '.article-card',
+            '.article-list-item',
+            '.read-more-card',
+            '.popular-item',
+            '.about-panel-inner',
+            '.site-hero-inner',
+            '.fold-inner',
+            '.article-figure',
+            '.verdict-block',
+            '.cta-block',
+            '.footer-columns',
+            '.section-header'
+        ].join(','));
+
+        if (!targets.length) return;
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        targets.forEach(function(el, i) {
+            var type = el.classList.contains('article-figure') ? 'fade-in' : 'fade-up';
+            el.classList.add('will-animate', type);
+
+            var delay = (i % 3) * 80;
+            if (delay) el.style.transitionDelay = delay + 'ms';
+
+            observer.observe(el);
+        });
+    }
+
     // ─── Bootstrap ───────────────────────────────────────────────────────────
     // Load stylesheet immediately (can run before DOM ready)
     loadStylesheet();
@@ -311,6 +353,7 @@
         insertNavigation();
         insertFooter();
         initMegaMenu();
+        initScrollAnimations();
     }
 
     if (document.readyState === 'loading') {
