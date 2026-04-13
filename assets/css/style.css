@@ -1873,10 +1873,33 @@ figcaption {
 
 .mega-menu-inner {
     position: relative;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 6rem 2rem 4rem; /* top padding clears the sticky header */
+    padding: 5rem 3rem 4rem; /* top padding clears the sticky header */
 }
+
+/* Close button — top-right corner of the overlay */
+.mega-menu-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    padding: 0.5rem;
+    transition: color 0.15s;
+}
+.mega-menu-close:hover { color: var(--color-text); }
+.mega-menu-close svg { flex-shrink: 0; }
 
 /* Mega-menu logo */
 .mega-menu-logo {
@@ -1890,36 +1913,62 @@ figcaption {
     display: block;
 }
 
-$1
+.mega-menu-search {
     position: relative;
     margin-bottom: 3rem;
+    max-width: 100%;
 }
 .mega-menu-search #site-search {
     width: 100%;
-    font-family: var(--font-ui);
-    font-size: 1.25rem;
-    padding: 0.75rem 0;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0.85rem 2.5rem 0.85rem 0;
     border: none;
     border-bottom: 2px solid var(--color-text);
     outline: none;
     background: transparent;
     color: var(--color-text);
+    -webkit-appearance: none;
+    appearance: none;
+}
+.mega-menu-search #site-search:focus {
+    border-bottom-color: var(--color-accent);
 }
 .mega-menu-search #site-search::placeholder {
     color: var(--color-muted);
+    font-style: italic;
 }
+/* Hide browser's native clear button */
+.mega-menu-search #site-search::-webkit-search-cancel-button { display: none; }
 .mega-menu-search .search-results {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 2px);
     left: 0;
     right: 0;
     background: #fff;
     border: 1px solid var(--color-divider);
-    border-top: none;
+    border-top: 2px solid var(--color-accent);
     list-style: none;
     margin: 0;
     padding: 0;
     z-index: 10;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.mega-menu-search .search-results li + li {
+    border-top: 1px solid var(--color-divider);
+}
+.mega-menu-search .search-results a {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: background 0.1s;
+}
+.mega-menu-search .search-results a:hover {
+    background: var(--color-accent-light);
 }
 
 /* Two-column layout */
