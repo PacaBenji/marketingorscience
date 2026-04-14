@@ -62,6 +62,11 @@
             var searchScript = document.createElement('script');
             searchScript.src             = assetPath + '/js/components/search.js';
             searchScript.dataset.mosSearch = '1';
+            searchScript.onload = function () {
+                if (window.MOS_Search && typeof window.MOS_Search.init === 'function') {
+                    window.MOS_Search.init();
+                }
+            };
             document.head.appendChild(searchScript);
         }
 

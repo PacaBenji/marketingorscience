@@ -1558,10 +1558,6 @@ body {
         margin-bottom: var(--space-xl);
     }
 
-    .read-more-card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .read-more-inner {
         padding-inline: var(--space-md);
     }
@@ -1594,6 +1590,10 @@ body {
     /* Nav */
     .site-nav {
         padding-inline: var(--space-md);
+    }
+
+    .toggle-label {
+        display: none;
     }
 
     .logo-img {
@@ -1729,10 +1729,6 @@ body {
     /* Read more */
     .read-more-inner {
         padding-inline: 1rem;
-    }
-
-    .read-more-card-grid {
-        grid-template-columns: 1fr;
     }
 
     .popular-rank {
@@ -2216,7 +2212,7 @@ figcaption {
 /* ── Two-column grid ── */
 .read-more-grid {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: minmax(260px, 300px) 1fr;
     gap: 0 var(--space-xl);
     align-items: start;
 }
@@ -2366,7 +2362,7 @@ figcaption {
 
 .read-more-card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: var(--space-lg);
 }
 
