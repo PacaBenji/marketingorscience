@@ -647,7 +647,7 @@ body {
    11. ARTICLE LIST (articles/index.html)
    ============================================================ */
 .article-list-section {
-    padding: var(--space-xl) 0;
+    padding-bottom: var(--space-xl) 0;
 }
 
 .article-list {
@@ -1634,7 +1634,7 @@ body {
 
     /* Article list */
     .article-list-section {
-        padding: var(--space-lg) 0;
+        padding-bottom: var(--space-lg) 0;
     }
 
     /* Article fold */
