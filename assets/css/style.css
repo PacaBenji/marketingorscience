@@ -1607,6 +1607,10 @@ body {
     }
 
     /* Mega-menu: phone-sized */
+    .mega-menu-close {
+        right: var(--space-md);
+    }
+
     .mega-menu-inner {
         padding: 3.5rem 1rem 2rem;
     }
@@ -1880,14 +1884,14 @@ figcaption {
     padding: 5rem 3rem 4rem; /* top padding clears the sticky header */
 }
 
-/* Close button — top-right corner of the overlay */
+/* Close button — sits in the nav bar row, right-aligned to match the hamburger */
 .mega-menu-close {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.5rem;
+    position: fixed;
+    top: 0;
+    right: var(--space-lg);
+    height: var(--nav-height);
     display: flex;
     align-items: center;
-    gap: 0.4rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -1897,8 +1901,10 @@ figcaption {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--color-muted);
-    padding: 0.5rem;
+    padding: 0 0.5rem;
+    gap: 0.4rem;
     transition: color 0.15s;
+    z-index: 1001;
 }
 .mega-menu-close:hover { color: var(--color-text); }
 .mega-menu-close svg { flex-shrink: 0; }
