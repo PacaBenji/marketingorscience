@@ -2682,3 +2682,80 @@ figcaption {
         transform: translateY(0);
     }
 }
+
+/* ============================================================
+   35. EXPERT CARDS GRID
+   ============================================================ */
+.expert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.expert-card {
+    border: var(--border);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.expert-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.expert-card-meta {
+    flex: 1;
+}
+
+.expert-card-name {
+    font-family: var(--font-serif);
+    font-size: var(--text-body);
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+    display: block;
+}
+
+.expert-card-name:hover {
+    color: var(--color-accent);
+}
+
+.expert-card-credential {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+    font-style: italic;
+}
+
+.expert-card-specialty {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 500;
+    color: var(--color-muted);
+    border: var(--border);
+    display: inline-block;
+    padding: 2px 8px;
+}
+
+.expert-card-bio {
+    font-family: var(--font-body);
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+    line-height: 1.6;
+}
+
+.expert-card-link {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-accent);
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.expert-card-link:hover {
+    text-decoration: underline;
+}

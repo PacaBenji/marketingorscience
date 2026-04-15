@@ -22,6 +22,8 @@
     var activePage = '';
     if (pathname.startsWith('/articles')) activePage = 'articles';
     else if (pathname.startsWith('/about')) activePage = 'about';
+    else if (pathname.startsWith('/experts')) activePage = 'experts';
+    else if (pathname.startsWith('/methods')) activePage = 'methods';
 
     function activeClass(page) {
         return activePage === page ? ' class="active"' : '';
@@ -157,7 +159,8 @@
                                 '<p class="mega-col-heading mega-col-heading--spaced">About</p>' +
                                 '<ul class="mega-utility-list">' +
                                     '<li><a class="mega-utility-link" href="/about">About</a></li>' +
-                                    '<li><a class="mega-utility-link" href="/about#methodology">Methods</a></li>' +
+                                    '<li><a class="mega-utility-link" href="/experts">Experts</a></li>' +
+                                    '<li><a class="mega-utility-link" href="/methods">Methods</a></li>' +
                                     '<li><a class="mega-utility-link" href="/contact">Contact</a></li>' +
                                     '<li><a class="mega-utility-link" href="/using-our-articles">Using Our Articles</a></li>' +
                                     '<li><a class="mega-utility-link" href="/corrections">Corrections</a></li>' +
@@ -195,8 +198,8 @@
                             '<h3 class="footer-col-heading">About</h3>' +
                             '<ul class="footer-col-links">' +
                                 '<li><a href="' + aboutPath + '">Our Mission</a></li>' +
-                                '<li><a href="' + aboutPath + '#methodology">Methodology</a></li>' +
-                                '<li><a href="/authors/editorial/">Experts</a></li>' +
+                                '<li><a href="/experts">Experts</a></li>' +
+                                '<li><a href="/methods">Methods</a></li>' +
                             '</ul>' +
                         '</div>' +
 
