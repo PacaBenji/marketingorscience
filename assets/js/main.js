@@ -196,7 +196,7 @@
                             '<ul class="footer-col-links">' +
                                 '<li><a href="' + aboutPath + '">Our Mission</a></li>' +
                                 '<li><a href="' + aboutPath + '#methodology">Methodology</a></li>' +
-                                '<li><a href="/authors/editorial/">Editorial Team</a></li>' +
+                                '<li><a href="/authors/editorial/">Experts</a></li>' +
                             '</ul>' +
                         '</div>' +
 
