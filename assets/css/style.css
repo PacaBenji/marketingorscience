@@ -1607,6 +1607,10 @@ body {
     }
 
     /* Mega-menu: phone-sized */
+    .mega-menu-close {
+        right: var(--space-md);
+    }
+
     .mega-menu-inner {
         padding: 3.5rem 1rem 2rem;
     }
@@ -1880,24 +1884,30 @@ figcaption {
     padding: 5rem 3rem 4rem; /* top padding clears the sticky header */
 }
 
-/* Close button — sits in nav-zone--right, same styling as the menu toggle */
+/* Close button — sits in the nav bar row, right-aligned to match the hamburger */
 .mega-menu-close {
+    position: fixed;
+    top: 0;
+    right: var(--space-sm);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--color-nav-text);
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
     font-family: var(--font-ui);
-    font-size: var(--text-label);
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    border-radius: 4px;
+    color: var(--color-muted);
+    padding: 0 0.5rem;
+    gap: 0.4rem;
     transition: color 0.15s;
+    z-index: 1001;
 }
-.mega-menu-close:hover { color: #FFFFFF; }
+.mega-menu-close:hover { color: var(--color-text); }
+.mega-menu-close svg { flex-shrink: 0; }
 
 /* Mega-menu logo */
 .mega-menu-logo {
@@ -2689,12 +2699,6 @@ figcaption {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.expert-card:hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 4px 16px rgba(26, 74, 138, 0.08);
 }
 
 .expert-card-header {
@@ -2703,24 +2707,8 @@ figcaption {
     gap: var(--space-sm);
 }
 
-.expert-avatar {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: var(--color-accent-light);
-    color: var(--color-accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-serif);
-    font-size: 1.375rem;
-    font-weight: 700;
-    flex-shrink: 0;
-}
-
 .expert-card-meta {
     flex: 1;
-    min-width: 0;
 }
 
 .expert-card-name {
@@ -2730,7 +2718,6 @@ figcaption {
     color: var(--color-text);
     text-decoration: none;
     display: block;
-    transition: color 0.15s;
 }
 
 .expert-card-name:hover {
@@ -2742,26 +2729,16 @@ figcaption {
     font-size: var(--text-meta);
     color: var(--color-muted);
     font-style: italic;
-    margin-top: 1px;
 }
 
-/* Tag list */
-.expert-tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.expert-tag {
+.expert-card-specialty {
     font-family: var(--font-ui);
-    font-size: 0.625rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    background: var(--color-accent-light);
-    padding: 3px 8px;
-    border-radius: 2px;
+    font-size: var(--text-label);
+    font-weight: 500;
+    color: var(--color-muted);
+    border: var(--border);
+    display: inline-block;
+    padding: 2px 8px;
 }
 
 .expert-card-bio {
@@ -2774,11 +2751,9 @@ figcaption {
 .expert-card-link {
     font-family: var(--font-ui);
     font-size: var(--text-meta);
-    font-weight: 500;
     color: var(--color-accent);
     text-decoration: none;
     margin-top: auto;
-    padding-top: var(--space-xs);
 }
 
 .expert-card-link:hover {
