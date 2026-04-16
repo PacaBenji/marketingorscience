@@ -110,19 +110,19 @@
                             '</span>' +
                             '<span class="toggle-label">Menu</span>' +
                         '</button>' +
+                        '<button class="mega-menu-close" aria-label="Close menu" hidden>' +
+                            '<span class="toggle-bars">' +
+                                '<span class="toggle-bar"></span>' +
+                                '<span class="toggle-bar"></span>' +
+                                '<span class="toggle-bar"></span>' +
+                            '</span>' +
+                            '<span class="toggle-label">Close</span>' +
+                        '</button>' +
                     '</div>' +
                 '</nav>' +
 
                 '<div class="mega-menu" aria-hidden="true" role="dialog" aria-label="Site navigation menu">' +
                     '<div class="mega-menu-inner">' +
-
-                        '<button class="mega-menu-close" aria-label="Close menu">' +
-                            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-                                '<line x1="18" y1="6" x2="6" y2="18"/>' +
-                                '<line x1="6" y1="6" x2="18" y2="18"/>' +
-                            '</svg>' +
-                            '<span>Close</span>' +
-                        '</button>' +
 
                         '<a href="' + homePath + '" class="mega-menu-logo" aria-label="Marketing or Science — Home">' +
                             '<img src="' + assetPath + '/images/logo/MoS logo-w.png" alt="Marketing or Science" width="56" height="42">' +
@@ -246,9 +246,10 @@
     // ─── Mega-menu ───────────────────────────────────────────────────────────
     function initMegaMenu() {
         var menuToggle  = document.querySelector('.nav-menu-toggle');
+        var closeBtn    = document.querySelector('.mega-menu-close');
         var searchIcon  = document.querySelector('.nav-search-icon');
         var megaMenu    = document.querySelector('.mega-menu');
-        var toggleLabel = document.querySelector('.toggle-label');
+        var toggleLabel = menuToggle && menuToggle.querySelector('.toggle-label');
         var input       = document.querySelector('#site-search');
         if (!menuToggle || !megaMenu) return;
 
@@ -258,6 +259,8 @@
             megaMenu.classList.add('is-open');
             megaMenu.setAttribute('aria-hidden', 'false');
             menuToggle.setAttribute('aria-expanded', 'true');
+            menuToggle.hidden = true;
+            if (closeBtn) closeBtn.hidden = false;
             if (searchIcon) searchIcon.setAttribute('aria-expanded', 'true');
             if (toggleLabel) toggleLabel.textContent = 'Close';
             document.body.style.overflow = 'hidden';
@@ -277,8 +280,9 @@
             megaMenu.classList.remove('is-open');
             megaMenu.setAttribute('aria-hidden', 'true');
             menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.hidden = false;
+            if (closeBtn) closeBtn.hidden = true;
             if (searchIcon) searchIcon.setAttribute('aria-expanded', 'false');
-            if (toggleLabel) toggleLabel.textContent = 'Menu';
             document.body.style.overflow = '';
             document.body.style.paddingRight = '';
             document.documentElement.style.paddingRight = '';
@@ -305,8 +309,7 @@
             }
         });
 
-        // Close button inside mega-menu-inner
-        var closeBtn = document.querySelector('.mega-menu-close');
+        // Close button in nav bar
         if (closeBtn) {
             closeBtn.addEventListener('click', function () {
                 closeMenu();
