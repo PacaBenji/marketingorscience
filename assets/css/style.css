@@ -1810,7 +1810,7 @@ figcaption {
     line-height: 1.55;
     color: var(--color-muted);
     margin-top: var(--space-xs);
-    border-top: 1px solid var(--color-divider);
+    border-bottom: 1px solid var(--color-divider);
     padding-top: var(--space-xs);
 }
 
