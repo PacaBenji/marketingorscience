@@ -51,6 +51,16 @@
 
         document.head.appendChild(link);
 
+        // Favicon — injected once, site-wide
+        if (!document.querySelector('link[data-mos-favicon]')) {
+            var favicon = document.createElement('link');
+            favicon.rel              = 'icon';
+            favicon.type             = 'image/png';
+            favicon.href             = assetPath + '/images/logo/MoS logo-b.png';
+            favicon.dataset.mosFavicon = '1';
+            document.head.appendChild(favicon);
+        }
+
         // Article manifest — MOS_ARTICLES (loaded once, site-wide)
         if (!document.querySelector('script[data-mos-articles]')) {
             var manifest = document.createElement('script');

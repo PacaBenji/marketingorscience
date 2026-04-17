@@ -2771,3 +2771,139 @@ figcaption {
 .expert-card-link:hover {
     text-decoration: underline;
 }
+
+/* Process flow diagram */
+.method-flow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: var(--space-lg) 0;
+    flex-wrap: wrap;
+}
+.method-flow-step {
+    flex: 1;
+    min-width: 120px;
+    border: var(--border);
+    padding: var(--space-sm) var(--space-md);
+    text-align: center;
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+.method-flow-step.is-active {
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+}
+.method-flow-arrow {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+    padding: 0 var(--space-xs);
+    flex-shrink: 0;
+}
+
+.expert-quote {
+    border-left: 3px solid var(--color-accent);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-lg) 0;
+    background: var(--color-accent-light);
+}
+
+.expert-quote p {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    font-style: italic;
+    color: var(--color-text);
+    line-height: 1.65;
+    margin: 0 0 var(--space-sm);
+}
+
+.expert-quote footer {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--color-muted);
+    font-style: normal;
+}
+
+.expert-quote footer strong {
+    color: var(--color-text);
+}
+
+/* Evidence grade bar */
+.grade-bar {
+    display: flex;
+    height: 8px;
+    margin: var(--space-md) 0 var(--space-lg);
+    gap: 2px;
+}
+.grade-bar-segment {
+    flex: 1;
+    background: var(--color-divider);
+}
+.grade-bar-segment.filled {
+    background: var(--color-accent);
+}
+
+/* Lab testing highlight */
+.lab-testing-highlight {
+    background: var(--color-accent-light);
+    border-left: 3px solid var(--color-accent);
+    padding: var(--space-lg);
+    margin-top: var(--space-md);
+}
+.lab-testing-highlight ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lab-testing-highlight ul li {
+    padding: var(--space-xs) 0 var(--space-xs) var(--space-lg);
+    position: relative;
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    color: var(--color-text);
+    line-height: 1.65;
+}
+.lab-testing-highlight ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+.lab-test-types {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: var(--border);
+}
+.lab-test-type {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+/* Revision flag example */
+.revision-flag-example {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    border: var(--border);
+    padding: var(--space-xs) var(--space-md);
+    margin-top: var(--space-md);
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--color-muted);
+}
+.revision-flag-example strong {
+    color: var(--color-text);
+}

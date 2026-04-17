@@ -31,6 +31,9 @@
             <header style="padding-bottom: 2rem; border-bottom: 1px solid #E0E0E0; margin-bottom: 3rem;">
                 <span style="display: block; font-family: 'Inter', sans-serif; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #1A4A8A; margin-bottom: 0.75rem;">How We Work</span>
                 <h1 id="methods-heading" style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.03em;">Methodology</h1>
+                <p style="margin-top: 1.25rem; font-family: var(--font-body); font-size: var(--text-body); color: var(--color-muted); line-height: 1.7; max-width: 600px;">
+                    Every claim we evaluate follows the same structured process — from identifying what a product actually asserts, to grading the quality of evidence behind it, to issuing a verdict grounded in the literature. This page documents that process in full.
+                </p>
             </header>
 
             <!-- 1. Review Framework -->
@@ -40,6 +43,16 @@
                     Each review follows a structured framework. The Claim &rarr; Evidence &rarr; Verdict
                     architecture is consistent across all article types:
                 </p>
+
+                <div class="method-flow">
+                    <div class="method-flow-step">Claim Identification</div>
+                    <span class="method-flow-arrow" aria-hidden="true">→</span>
+                    <div class="method-flow-step">Literature Review</div>
+                    <span class="method-flow-arrow" aria-hidden="true">→</span>
+                    <div class="method-flow-step">Evidence Grading</div>
+                    <span class="method-flow-arrow" aria-hidden="true">→</span>
+                    <div class="method-flow-step is-active">Verdict</div>
+                </div>
 
                 <div style="margin-top: 1.5rem;">
                     <div class="methodology-step">
@@ -79,6 +92,14 @@
                 <p>
                     Our 5-point scale reflects the quality and consistency of the available human evidence:
                 </p>
+
+                <div class="grade-bar" aria-hidden="true">
+                    <div class="grade-bar-segment filled"></div>
+                    <div class="grade-bar-segment filled"></div>
+                    <div class="grade-bar-segment filled"></div>
+                    <div class="grade-bar-segment filled"></div>
+                    <div class="grade-bar-segment filled"></div>
+                </div>
 
                 <div style="margin-top: 1.5rem;">
                     <div class="methodology-step">
@@ -126,12 +147,22 @@
                     For select product reviews, we commission independent third-party laboratory analysis
                     to verify claims that cannot be assessed from published literature alone.
                 </p>
-                <ul>
-                    <li>All testing is conducted by ISO 17025-accredited laboratories with no commercial relationship with the brands under review.</li>
-                    <li>Testing scope includes: active ingredient concentration verification, contaminant screening, and stability assessment.</li>
-                    <li>Products are purchased at retail price by our editorial team — we do not accept manufacturer-supplied samples for tested reviews.</li>
-                    <li>Lab reports are cited directly in the relevant article. Raw data is available on request.</li>
-                </ul>
+                <div class="lab-testing-highlight">
+                    <ul>
+                        <li>We partner with multiple accredited third-party laboratories to verify product claims — no single lab relationship creates a conflict of interest.</li>
+                        <li>All testing is conducted by ISO 17025-accredited laboratories with no commercial relationship with the brands under review.</li>
+                        <li>Products are purchased at retail price by our editorial team — we do not accept manufacturer-supplied samples for tested reviews.</li>
+                        <li>Lab reports are cited directly in the relevant article.</li>
+                        <li>Raw data is available on request.</li>
+                    </ul>
+                    <div class="lab-test-types">
+                        <span class="lab-test-type">Active Ingredient Concentration</span>
+                        <span class="lab-test-type">·</span>
+                        <span class="lab-test-type">Contaminant Screening</span>
+                        <span class="lab-test-type">·</span>
+                        <span class="lab-test-type">Stability Assessment</span>
+                    </div>
+                </div>
             </section>
 
             <!-- 4. Conflict of Interest Policy -->
@@ -161,6 +192,9 @@
                     revision date alongside the original publication date. Minor corrections (typographical,
                     formatting) are made silently.
                 </p>
+                <div class="revision-flag-example" aria-label="Example revision flag">
+                    <strong>Revised:</strong> <span>March 2025</span> <span style="color: var(--color-divider);">|</span> <span>Originally published January 2024</span>
+                </div>
             </section>
 
         </div><!-- /.content-container -->
