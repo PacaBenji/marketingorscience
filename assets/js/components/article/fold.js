@@ -22,7 +22,7 @@
 
     var CATEGORY_SLUGS = {
         'Skincare / Beauty'   : 'skincare',
-        'Pharma & OTC Drugs'  : 'pharma'
+        'Pharma & OTC'        : 'pharma'
     };
 
     function buildEvidenceStars(rating, max) {

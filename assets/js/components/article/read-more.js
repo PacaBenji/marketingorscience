@@ -86,6 +86,11 @@
         var limit           = cfg.limit           || 3;
 
         function build(articles) {
+            // Auto-resolve author from manifest if not explicitly provided
+            if (!currentAuthor) {
+                var self = articles.find(function(a) { return a.slug === currentSlug; });
+                if (self) currentAuthor = self.authorSlug;
+            }
             var allOthers = articles.filter(function (a) {
                 return a.slug !== currentSlug;
             });

@@ -153,8 +153,7 @@
                                     '<li><a class="mega-nav-link" href="/articles?category=skincare">Skincare</a></li>' +
                                     '<li><a class="mega-nav-link" href="/articles?category=haircare">Haircare</a></li>' +
                                     '<li><a class="mega-nav-link" href="/articles?category=wellness">Wellness</a></li>' +
-                                    '<li><a class="mega-nav-link" href="/articles?category=otc">OTC Drugs</a></li>' +
-                                    '<li><a class="mega-nav-link" href="/articles?category=pharma">Pharma</a></li>' +
+                                    '<li><a class="mega-nav-link" href="/articles?category=pharma">Pharma &amp; OTC</a></li>' +
                                 '</ul>' +
                             '</div>' +
 
@@ -219,8 +218,7 @@
                                 '<li><a href="/articles?category=skincare">Skincare</a></li>' +
                                 '<li><a href="/articles?category=haircare">Haircare</a></li>' +
                                 '<li><a href="/articles?category=wellness">Wellness</a></li>' +
-                                '<li><a href="/articles?category=otc">OTC Drugs</a></li>' +
-                                '<li><a href="/articles?category=pharma">Pharma</a></li>' +
+                                '<li><a href="/articles?category=pharma">Pharma &amp; OTC</a></li>' +
                                 '<li><a href="' + articlesPath + '">All Articles</a></li>' +
                             '</ul>' +
                         '</div>' +

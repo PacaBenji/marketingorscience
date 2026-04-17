@@ -43,8 +43,7 @@
                 'skincare' : 'Skincare',
                 'haircare' : 'Haircare',
                 'wellness' : 'Wellness',
-                'otc'      : 'OTC Drugs',
-                'pharma'   : 'Pharma'
+                'pharma'   : 'Pharma & OTC'
             };
             var typeLabels = {
                 'ingredient-analysis' : 'Ingredient Analyses',
