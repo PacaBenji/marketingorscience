@@ -519,7 +519,7 @@ body {
     color: #ffffff;
     margin-bottom: var(--space-xl);
 }
-.featured-banner-link:hover .featured-banner-headline {
+.featured-banner-headline:hover {
     text-decoration: underline;
 }
 
@@ -1153,11 +1153,10 @@ body {
 .fold-inner {
     max-width: var(--max-width);   /* was --content-width (740px) */
     margin-inline: auto;
-    padding-inline: var(--space-lg);
 }
 
 .fold-inner--below {
-    padding-top: var(--space-md);
+    padding-top: var(--space-lg);
 }
 
 /* Two-column layout: content left, share right */
@@ -1224,7 +1223,8 @@ body {
     font-style: italic;
     line-height: 1.65;
     color: var(--color-muted);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
+    margin-top: var(--space-lg);
 }
 
 .fold-byline {
