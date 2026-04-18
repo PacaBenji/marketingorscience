@@ -17,7 +17,7 @@
         var wrapper = document.createElement('div');
         wrapper.className = 'share-bar share-bar--' + position;
 
-        var headingHTML = '<span class="share-bar-heading">Share This Story</span>';
+        var headingHTML = '<span class="share-bar-heading">Share Article</span>';
 
         var buttonsHTML =
             '<div class="share-buttons">' +

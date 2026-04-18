@@ -135,7 +135,7 @@
 
         var shareFoldHTML =
             '<div class="fold-below-share share-bar">' +
-                '<span class="share-bar-heading">Share This Story</span>' +
+                '<span class="share-bar-heading">Share Article</span>' +
                 '<div class="share-buttons">' +
                     '<button class="share-btn share-btn--copy-fold" data-url="' + safeUrl + '">' +
                         '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
