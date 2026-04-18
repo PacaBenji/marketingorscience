@@ -448,6 +448,65 @@ body {
 
 
 /* ============================================================
+   8b. FEATURED ARTICLE BANNER (home page)
+   ============================================================ */
+.featured-banner {
+    border-bottom: var(--border);
+    padding: var(--space-xl) 0;
+}
+
+.featured-banner-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.featured-banner-image {
+    width: 100%;
+    margin-bottom: var(--space-lg);
+}
+
+.featured-banner-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.featured-banner-headline {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: var(--space-sm) 0 var(--space-md);
+    color: var(--color-text);
+}
+
+.featured-banner-link:hover .featured-banner-headline {
+    color: var(--color-accent);
+}
+
+.featured-banner-deck {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-muted);
+    margin-bottom: var(--space-md);
+    max-width: 680px;
+}
+
+.featured-banner-cta {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--color-accent);
+}
+
+
+/* ============================================================
    9. SECTION CHROME
    ============================================================ */
 .section-header {
@@ -987,14 +1046,63 @@ body {
    ============================================================ */
 .article-fold {
     border-bottom: var(--border);
-    padding: var(--space-xl) 0 var(--space-lg);
+    padding: 0 0 var(--space-lg);
     background: var(--color-bg);
 }
 
+/* Hero image with overlaid title (Undark-style) */
+.fold-hero-image {
+    position: relative;
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-bottom: var(--space-lg);
+    padding-inline: var(--space-lg);
+}
+
+.fold-hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Dark gradient scrim — category badge + headline overlaid on bottom of image */
+.fold-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: var(--space-lg);
+    right: var(--space-lg);
+    padding: var(--space-2xl) var(--space-lg) var(--space-md);
+    background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%);
+}
+
+.fold-hero-overlay .fold-headline {
+    color: #ffffff;
+    margin-bottom: var(--space-sm);
+}
+
+.fold-hero-overlay .fold-meta-row {
+    margin-bottom: var(--space-sm);
+}
+
+.fold-hero-overlay .category-badge,
+.fold-hero-overlay .article-type-badge,
+.fold-hero-overlay .peer-badge {
+    color: rgba(255,255,255,0.90);
+    background: rgba(255,255,255,0.15);
+    border: none;
+}
+
+/* Below-image portion: deck + byline + verdict */
 .fold-inner {
     max-width: var(--content-width);
     margin-inline: auto;
     padding-inline: var(--space-lg);
+}
+
+.fold-inner--below {
+    padding-top: var(--space-md);
 }
 
 .fold-meta-row {

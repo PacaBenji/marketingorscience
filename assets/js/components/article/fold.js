@@ -22,7 +22,9 @@
 
     var CATEGORY_SLUGS = {
         'Skincare / Beauty'   : 'skincare',
-        'Pharma & OTC'        : 'pharma'
+        'Skincare & Beauty'   : 'skincare',
+        'Pharma & OTC'        : 'pharma',
+        'Pharma & Supplements': 'pharma'
     };
 
     function buildEvidenceStars(rating, max) {
@@ -100,18 +102,42 @@
             ? '<span class="fold-reading-time">' + cfg.readingTime + ' min read</span>'
             : '';
 
-        var fold = document.createElement('div');
-        fold.className = 'article-fold';
-        fold.innerHTML =
-            '<div class="fold-inner">' +
-                '<div class="fold-meta-row">' +
-                    '<span class="category-badge category--' + categorySlug + '">' +
-                        (cfg.category || '') +
-                    '</span>' +
-                    '<span class="article-type-badge">' + (cfg.type || '') + '</span>' +
-                    peerBadge +
-                '</div>' +
-                '<h1 class="fold-headline">' + (cfg.headline || '') + '</h1>' +
+        // ── Hero image: pull from og:image meta tag ───────────────────────────
+        var ogImg   = document.querySelector('meta[property="og:image"]');
+        var heroSrc = ogImg ? ogImg.getAttribute('content') : '';
+
+        var heroHTML = '';
+        if (heroSrc) {
+            heroHTML =
+                '<div class="fold-hero-image">' +
+                    '<img src="' + heroSrc + '" alt="' + (cfg.headline || '') + '" loading="eager" fetchpriority="high">' +
+                    '<div class="fold-hero-overlay">' +
+                        '<div class="fold-meta-row">' +
+                            '<span class="category-badge category--' + categorySlug + '">' +
+                                (cfg.category || '') +
+                            '</span>' +
+                            '<span class="article-type-badge">' + (cfg.type || '') + '</span>' +
+                            peerBadge +
+                        '</div>' +
+                        '<h1 class="fold-headline">' + (cfg.headline || '') + '</h1>' +
+                    '</div>' +
+                '</div>';
+        }
+
+        // ── Below-image: deck + byline + verdict ──────────────────────────────
+        var belowHTML =
+            '<div class="fold-inner' + (heroSrc ? ' fold-inner--below' : '') + '">' +
+                // If no hero image, render meta-row + headline here (graceful fallback)
+                (!heroSrc
+                    ? '<div class="fold-meta-row">' +
+                          '<span class="category-badge category--' + categorySlug + '">' +
+                              (cfg.category || '') +
+                          '</span>' +
+                          '<span class="article-type-badge">' + (cfg.type || '') + '</span>' +
+                          peerBadge +
+                      '</div>' +
+                      '<h1 class="fold-headline">' + (cfg.headline || '') + '</h1>'
+                    : '') +
                 (cfg.deck
                     ? '<p class="fold-deck">' + cfg.deck + '</p>'
                     : '') +
@@ -124,6 +150,10 @@
                 '</div>' +
                 verdictHTML +
             '</div>';
+
+        var fold = document.createElement('div');
+        fold.className = 'article-fold';
+        fold.innerHTML = heroHTML + belowHTML;
 
         return fold;
     }
