@@ -390,7 +390,7 @@ body {
 .site-hero {
     background: var(--color-bg);
     border-bottom: var(--border);
-    padding: var(--space-xl) 0 var(--space-xl);
+    padding: var(--space-lg) 0 var(--space-lg);
     text-align: center;
 }
 
@@ -517,7 +517,10 @@ body {
     line-height: 1.1;
     letter-spacing: -0.03em;
     color: #ffffff;
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+.featured-banner-link:hover .featured-banner-headline {
+    text-decoration: underline;
 }
 
 /* CTA inside overlay */
@@ -539,12 +542,12 @@ body {
 .featured-banner-below {
     max-width: var(--max-width);
     margin-inline: auto;
-    padding: var(--space-md) var(--space-lg) 0;
+    padding: var(--space-lg) 0 0;
 }
 
 .featured-banner-deck {
     font-family: var(--font-body);
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
     font-style: italic;
     line-height: 1.65;
     color: var(--color-muted);
