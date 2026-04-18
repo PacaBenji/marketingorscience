@@ -484,19 +484,6 @@
                 articleBody.insertBefore(toc, articleBody.firstChild);
             }
 
-            // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/skincare/2026/04/retinol-paradox',
-                title    : 'The Retinol Paradox: Does Concentration Actually Predict Efficacy?',
-                position : 'inline'
-            });
-            if (articleBody) {
-                // Insert after TOC (or as first child if no TOC)
-                var tocEl = articleBody.querySelector('.article-toc');
-                var insertAfter = tocEl ? tocEl.nextSibling : articleBody.firstChild;
-                articleBody.insertBefore(shareInline, insertAfter);
-            }
-
             // ── 4. Mid-article CTA block ─────────────────────────────────────
             if (typeof injectCTABlock === 'function') {
                 injectCTABlock();

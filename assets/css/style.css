@@ -1053,17 +1053,16 @@ body {
 /* Hero image with overlaid title (Undark-style) */
 .fold-hero-image {
     position: relative;
-    max-width: 1200px;
-    margin-inline: auto;
-    margin-bottom: var(--space-lg);
-    padding-inline: var(--space-lg);
+    width: 100%;              /* full bleed — no max-width, no side padding */
+    margin-bottom: 0;
 }
 
 .fold-hero-image img {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 2 / 1;
+    min-height: 40vh;
     object-fit: cover;
 }
 
@@ -1071,10 +1070,16 @@ body {
 .fold-hero-overlay {
     position: absolute;
     bottom: 0;
-    left: var(--space-lg);
-    right: var(--space-lg);
+    left: 0;
+    right: 0;
     padding: var(--space-2xl) var(--space-lg) var(--space-md);
     background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%);
+}
+
+/* Inner wrapper constrains overlay text for readability */
+.fold-hero-overlay-inner {
+    max-width: var(--max-width);   /* 1200px */
+    margin-inline: auto;
 }
 
 .fold-hero-overlay .fold-headline {
@@ -1096,13 +1101,42 @@ body {
 
 /* Below-image portion: deck + byline + verdict */
 .fold-inner {
-    max-width: var(--content-width);
+    max-width: var(--max-width);   /* was --content-width (740px) */
     margin-inline: auto;
     padding-inline: var(--space-lg);
 }
 
 .fold-inner--below {
     padding-top: var(--space-md);
+}
+
+/* Two-column layout: content left, share right */
+.fold-below-grid {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    gap: var(--space-lg);
+    align-items: start;
+}
+
+.fold-below-share {
+    padding-top: var(--space-md);  /* align with deck */
+}
+
+/* Share heading visible in fold context */
+.fold-below-share .share-bar-heading {
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+/* Stack buttons vertically in the fold */
+.fold-below-share .share-buttons {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.fold-below-share .share-btn {
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .fold-meta-row {
@@ -1534,29 +1568,6 @@ body {
 }
 
 /* ============================================================
-   19a. RESPONSIVE — 900 px (read-more stacking)
-   ============================================================ */
-@media (max-width: 900px) {
-    /* Read more — stack columns before they get too cramped */
-    .read-more-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .read-more-col--popular {
-        border-right: none;
-        padding-right: 0;
-        border-bottom: 1px solid var(--color-divider);
-        padding-bottom: var(--space-xl);
-        margin-bottom: var(--space-xl);
-    }
-
-    .read-more-inner {
-        padding-inline: var(--space-md);
-    }
-}
-
-
-/* ============================================================
    19. RESPONSIVE — 768 px
    ============================================================ */
 @media (max-width: 768px) {
@@ -1769,6 +1780,36 @@ body {
         margin-left: 0;
     }
 
+    /* Fold below grid: stack on mobile */
+    .fold-below-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fold-below-share {
+        padding-top: 0;
+        border-top: var(--border);
+        padding-top: var(--space-sm);
+        margin-top: var(--space-sm);
+    }
+
+    .fold-below-share .share-buttons {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: var(--space-xs);
+    }
+
+    .fold-below-share .share-btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.6rem;
+        width: auto;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .fold-below-share .share-bar-heading {
+        display: none;
+    }
+
     /* Article body */
     .article-body {
         padding: var(--space-lg) 1rem;
@@ -1840,7 +1881,19 @@ body {
         padding-inline: 1rem;
     }
 
-    /* Read more */
+    /* Read more — stack on small mobile */
+    .read-more-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .read-more-col--popular {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid var(--color-divider);
+        padding-bottom: var(--space-xl);
+        margin-bottom: var(--space-xl);
+    }
+
     .read-more-inner {
         padding-inline: 1rem;
     }
