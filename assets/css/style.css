@@ -1126,7 +1126,7 @@ body {
 /* Inner wrapper constrains overlay text for readability */
 .fold-hero-overlay-inner {
     max-width: var(--max-width);   /* 1200px */
-    margin-inline: auto;
+    margin-inline: auto; 
 }
 
 .fold-hero-overlay .fold-headline {
