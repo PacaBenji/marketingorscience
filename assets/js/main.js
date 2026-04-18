@@ -115,7 +115,7 @@
                 '<nav class="site-nav" role="navigation" aria-label="Main navigation">' +
                     '<div class="nav-zone--left">' +
                         '<a href="' + homePath + '" class="site-logo" aria-label="Marketing or Science — Home">' +
-                            '<img class="logo-img logo-img--dark" src="' + assetPath + '/images/logo/mos-logo-light.svg" alt="Marketing or Science" width="48" height="19">' +
+                            '<img class="logo-img logo-img--dark" src="' + assetPath + '/images/logo/mos-logo-light.svg" alt="Marketing or Science" width="58" height="36">' +
                         '</a>' +
                     '</div>' +
                     '<div class="nav-zone--right">' +
@@ -148,7 +148,7 @@
                         '</button>' +
 
                         '<a href="' + homePath + '" class="mega-menu-logo" aria-label="Marketing or Science — Home">' +
-                            '<img src="' + assetPath + '/images/logo/mos-logo-dark.svg" alt="Marketing or Science" width="56" height="22">' +
+                            '<img src="' + assetPath + '/images/logo/mos-logo-dark.svg" alt="Marketing or Science" width="71" height="44">' +
                         '</a>' +
 
                         '<div class="mega-menu-search">' +

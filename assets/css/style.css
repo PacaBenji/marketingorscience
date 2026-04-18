@@ -254,7 +254,7 @@ body {
 
 .logo-img {
     display: block;
-    height: 19px;
+    height: 36px;
     width: auto;
     object-fit: contain;
 }
@@ -1463,7 +1463,7 @@ body {
     }
 
     .logo-img {
-        height: 14px;
+        height: 30px;
     }
 
     /* Mega-menu: tighter padding */
@@ -1472,7 +1472,7 @@ body {
     }
 
     .mega-menu-logo img {
-        height: 18px;
+        height: 36px;
     }
 
     /* Hero — less vertical breathing room */
@@ -1603,7 +1603,7 @@ body {
     }
 
     .logo-img {
-        height: 12px;
+        height: 26px;
     }
 
     /* Mega-menu: phone-sized */
@@ -1616,7 +1616,7 @@ body {
     }
 
     .mega-menu-logo img {
-        height: 14px;
+        height: 30px;
     }
 
     .mega-menu-columns {
@@ -1910,7 +1910,7 @@ figcaption {
 }
 
 .mega-menu-logo img {
-    height: 22px;
+    height: 44px;
     width: auto;
     display: block;
 }
