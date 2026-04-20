@@ -527,7 +527,7 @@ body {
 .featured-banner-overlay .featured-banner-deck {
     color: rgba(255, 255, 255, 0.85);
     font-size: var(--text-body);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-xl);
 }
 
 /* CTA inside overlay */
@@ -1163,7 +1163,7 @@ body {
 }
 
 .fold-inner--below {
-    padding-top: var(--space-lg);
+    padding-top: var(--space-md);
 }
 
 /* Two-column layout: content left, share right */
