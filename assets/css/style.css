@@ -1633,6 +1633,11 @@ body {
         --space-2xl: 3.5rem;
     }
 
+    .featured-banner-image img {
+        min-height: 65vh;
+        max-height: 65vh;
+    }
+
     /* Nav */
     .logo-full {
         display: none;
@@ -2816,7 +2821,7 @@ figcaption {
 .cta-block p {
     font-family: var(--font-body);
     font-size: var(--text-body);
-    color: var(--color-dark-muted);
+    color: white;
     line-height: 1.7;
     margin-bottom: var(--space-md);
     max-width: 480px;
