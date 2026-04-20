@@ -688,6 +688,16 @@ body {
     background: #E8EEF7;
 }
 
+.category-badge.category--haircare {
+    color: #1A4A8A;
+    background: #E8EEF7;
+}
+
+.category-badge.category--wellness {
+    color: #1A4A8A;
+    background: #E8EEF7;
+}
+
 /* Article type badge — outline style */
 .article-type-badge {
     display: inline-block;
