@@ -389,7 +389,6 @@ body {
    ============================================================ */
 .site-hero {
     background: var(--color-bg);
-    border-bottom: var(--border);
     padding: var(--space-lg) 0 var(--space-lg);
     text-align: center;
 }
@@ -451,7 +450,6 @@ body {
    8b. FEATURED ARTICLE BANNER (home page)
    ============================================================ */
 .featured-banner {
-    border-bottom: var(--border);
     padding-bottom: var(--space-lg);
 }
 
