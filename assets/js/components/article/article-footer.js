@@ -25,7 +25,6 @@
         var wrapper = document.createElement('div');
         wrapper.className = 'article-footer-block';
         wrapper.innerHTML =
-            '<hr class="article-divider">' +
             '<div class="article-disclaimer">' +
                 '<p class="disclaimer-label">Editorial Disclaimer</p>' +
                 '<p>' + disclaimer + '</p>' +
