@@ -1638,6 +1638,7 @@ body {
     :root {
         --space-xl:  2.5rem;
         --space-2xl: 3.5rem;
+        --nav-height: 48px;
     }
 
     .featured-banner-image img {
@@ -2451,6 +2452,12 @@ figcaption {
     align-items: start;
 }
 
+@media (max-width: 768px) {
+    .read-more-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ── Shared column header ── */
 .read-more-col-header {
     display: flex;
@@ -2748,7 +2755,7 @@ figcaption {
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--color-accent);
+    background: #cba17d;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.1s linear;

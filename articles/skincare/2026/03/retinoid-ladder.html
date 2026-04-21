@@ -282,16 +282,6 @@
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
 
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/skincare/2026/03/retinoid-ladder',
-                title    : 'The Retinoid Ladder: Matching Strength to Indication Across OTC and Rx Formulations',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
-
             if (typeof injectCTABlock === 'function') injectCTABlock();
 
             var footer = createArticleFooter({

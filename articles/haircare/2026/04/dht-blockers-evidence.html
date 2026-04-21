@@ -224,7 +224,7 @@
                 type        : 'Ingredient Analysis',
                 headline    : 'DHT Blockers: Finasteride, Saw Palmetto, and the Evidence Gap',
                 deck        : 'DHT-blocking supplements and drugs are marketed for androgenetic alopecia. The evidence gap between finasteride and natural DHT blockers like saw palmetto is substantial.',
-                author      : { name: 'Editorial', slug: 'editorial', credential: null },
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
                 date        : '2026-04-04',
                 readingTime : 10,
                 verdict     : { label: 'Partially Supported', rating: 3, max: 5 },
@@ -234,16 +234,6 @@
 
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
-
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/haircare/2026/04/dht-blockers-evidence',
-                title    : 'DHT Blockers: Finasteride, Saw Palmetto, and the Evidence Gap',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
 
             if (typeof injectCTABlock === 'function') injectCTABlock();
 

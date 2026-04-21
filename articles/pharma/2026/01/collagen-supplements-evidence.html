@@ -257,16 +257,6 @@
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
 
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/pharma/2026/01/collagen-supplements-evidence',
-                title    : 'Collagen Supplements: Parsing the Bioavailability Claims from the Clinical Outcomes Data',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
-
             if (typeof injectCTABlock === 'function') injectCTABlock();
 
             var footer = createArticleFooter({

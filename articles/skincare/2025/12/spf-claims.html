@@ -370,7 +370,7 @@
                 type        : 'Regulatory Review',
                 headline    : 'SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say',
                 deck        : 'SPF 100 sunscreens command a premium and promise maximum protection. The underlying photobiology and independent beach studies tell a more complicated story.',
-                author      : { name: 'Editorial', slug: 'editorial', credential: null },
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
                 date        : '2025-12-18',
                 readingTime : 10,
                 verdict     : { label: 'Claim Unsupported', rating: 2, max: 5 },
@@ -385,47 +385,7 @@
             }
 
             // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/skincare/2025/12/spf-claims',
-                title    : 'SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                var insertAfter = tocEl ? tocEl.nextSibling : articleBody.firstChild;
-                articleBody.insertBefore(shareInline, insertAfter);
-            }
-
-            // ── 4. Mid-article CTA block ─────────────────────────────────────
-            if (typeof injectCTABlock === 'function') {
-                injectCTABlock();
-            }
-
-            // ── 5. Article footer ────────────────────────────────────────────
-            var footer = createArticleFooter({
-                citationNote: 'Marketing or Science. (2025, December 18). SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say. marketingorscience.com'
-            });
-            main.appendChild(footer);
-
-            // ── 6. Footer share bar (before article footer) ──────────────────
-            var shareFooter = createShareBar({
-                url      : 'https://marketingorscience.com/articles/skincare/2025/12/spf-claims',
-                title    : 'SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say',
-                position : 'footer'
-            });
-            main.insertBefore(shareFooter, footer);
-
-            // ── 7. Read More section ─────────────────────────────────────────
-            var readMore = createReadMore({
-                currentSlug     : 'spf-claims',
-                currentCategory : 'skincare',
-                currentAuthor   : 'editorial',
-                limit           : 3
-            });
-            if (readMore) {
-                main.appendChild(readMore);
-            }
-        });
+            );
     </script>
 
 </body>

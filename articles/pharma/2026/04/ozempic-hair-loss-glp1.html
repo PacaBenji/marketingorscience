@@ -227,16 +227,6 @@
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
 
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/pharma/2026/04/ozempic-hair-loss-glp1',
-                title    : 'GLP-1 Drugs and Hair Loss: What the Ozempic/Zepbound Trial Data Shows',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
-
             if (typeof injectCTABlock === 'function') injectCTABlock();
 
             var footer = createArticleFooter({

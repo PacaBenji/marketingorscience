@@ -216,7 +216,7 @@
                 type        : 'Ingredient Analysis',
                 headline    : 'Bakuchiol vs. Retinol: Is the "Natural Alternative" Claim Justified?',
                 deck        : 'Bakuchiol is marketed as a plant-based retinol alternative with comparable efficacy and better tolerability. The clinical trial literature is more limited than the marketing implies.',
-                author      : { name: 'Editorial', slug: 'editorial', credential: null },
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
                 date        : '2026-04-12',
                 readingTime : 9,
                 verdict     : { label: 'Partially Supported', rating: 3, max: 5 },
@@ -226,16 +226,6 @@
 
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
-
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/skincare/2026/04/bakuchiol-vs-retinol',
-                title    : 'Bakuchiol vs. Retinol: Is the "Natural Alternative" Claim Justified?',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
 
             if (typeof injectCTABlock === 'function') injectCTABlock();
 

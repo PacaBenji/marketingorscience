@@ -216,7 +216,7 @@
                 type        : 'Ingredient Analysis',
                 headline    : 'Dandruff and the Scalp Microbiome: Does Treating the Fungus Fix the Flaking?',
                 deck        : 'Dandruff is linked to Malassezia overgrowth on the scalp. A review of the evidence for antifungal shampoos, scalp microbiome research, and what the RCTs show about treatment efficacy.',
-                author      : { name: 'Editorial', slug: 'editorial', credential: null },
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
                 date        : '2026-04-08',
                 readingTime : 9,
                 verdict     : { label: 'Supported', rating: 4, max: 5 },
@@ -226,16 +226,6 @@
 
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
-
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/haircare/2026/04/dandruff-scalp-microbiome',
-                title    : 'Dandruff and the Scalp Microbiome: Does Treating the Fungus Fix the Flaking?',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
 
             if (typeof injectCTABlock === 'function') injectCTABlock();
 

@@ -209,7 +209,7 @@
                 type        : 'Product Breakdown',
                 headline    : 'Red Light Therapy for Hair Growth: Separating Signal from Noise',
                 deck        : 'Low-level laser therapy and red light devices are marketed for hair growth. A review of the RCT evidence, FDA clearance basis, and what the photobiomodulation data actually show.',
-                author      : { name: 'Editorial', slug: 'editorial', credential: null },
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
                 date        : '2026-04-11',
                 readingTime : 9,
                 verdict     : { label: 'Partially Supported', rating: 3, max: 5 },
@@ -219,16 +219,6 @@
 
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
-
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/wellness/2026/04/red-light-therapy-hair-growth',
-                title    : 'Red Light Therapy for Hair Growth: Separating Signal from Noise',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
 
             if (typeof injectCTABlock === 'function') injectCTABlock();
 

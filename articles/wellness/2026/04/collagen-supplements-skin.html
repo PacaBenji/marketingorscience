@@ -228,16 +228,6 @@
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
 
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/wellness/2026/04/collagen-supplements-skin',
-                title    : 'Oral Collagen Supplements: Does Intake Actually Reach the Skin?',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
-
             if (typeof injectCTABlock === 'function') injectCTABlock();
 
             var footer = createArticleFooter({

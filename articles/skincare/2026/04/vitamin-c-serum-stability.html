@@ -241,16 +241,6 @@
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
 
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/skincare/2026/04/vitamin-c-serum-stability',
-                title    : 'Vitamin C Serums: Does Percentage Actually Predict Stability?',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
-
             if (typeof injectCTABlock === 'function') injectCTABlock();
 
             var footer = createArticleFooter({

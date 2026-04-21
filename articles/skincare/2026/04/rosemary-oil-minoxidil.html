@@ -408,7 +408,7 @@
                 type        : 'Ingredient Analysis',
                 headline    : 'Rosemary Oil vs. Minoxidil: What the Evidence Actually Shows',
                 deck        : 'A single small trial comparing rosemary oil to 2% minoxidil has fuelled a billion-dollar \u201cnatural\u201d hair-growth category. The methodology deserves closer scrutiny.',
-                author      : { name: 'Editorial', slug: 'editorial', credential: null },
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
                 date        : '2026-04-18',
                 readingTime : 11,
                 verdict     : { label: 'Weak Evidence', rating: 2, max: 5 },
@@ -423,47 +423,7 @@
             }
 
             // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/skincare/2026/04/rosemary-oil-minoxidil',
-                title    : 'Rosemary Oil vs. Minoxidil: What the Evidence Actually Shows',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                var insertAfter = tocEl ? tocEl.nextSibling : articleBody.firstChild;
-                articleBody.insertBefore(shareInline, insertAfter);
-            }
-
-            // ── 4. Mid-article CTA block ─────────────────────────────────────
-            if (typeof injectCTABlock === 'function') {
-                injectCTABlock();
-            }
-
-            // ── 5. Article footer ────────────────────────────────────────────
-            var footer = createArticleFooter({
-                citationNote: 'Marketing or Science. (2026, April 18). Rosemary Oil vs. Minoxidil: What the Evidence Actually Shows. marketingorscience.com'
-            });
-            main.appendChild(footer);
-
-            // ── 6. Footer share bar (before article footer) ──────────────────
-            var shareFooter = createShareBar({
-                url      : 'https://marketingorscience.com/articles/skincare/2026/04/rosemary-oil-minoxidil',
-                title    : 'Rosemary Oil vs. Minoxidil: What the Evidence Actually Shows',
-                position : 'footer'
-            });
-            main.insertBefore(shareFooter, footer);
-
-            // ── 7. Read More section ─────────────────────────────────────────
-            var readMore = createReadMore({
-                currentSlug     : 'rosemary-oil-minoxidil',
-                currentCategory : 'skincare',
-                currentAuthor   : 'editorial',
-                limit           : 3
-            });
-            if (readMore) {
-                main.appendChild(readMore);
-            }
-        });
+            );
     </script>
 
 </body>

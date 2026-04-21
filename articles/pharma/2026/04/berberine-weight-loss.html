@@ -428,7 +428,7 @@
                 type        : 'Ingredient Analysis',
                 headline    : 'Berberine for Weight Loss: A Clinical Review of \u201cNature\u2019s Ozempic\u201d',
                 deck        : 'Berberine activates AMPK and lowers blood glucose \u2014 mechanisms it shares with metformin. Whether it warrants the \u201cnatural Ozempic\u201d label is a different question.',
-                author      : { name: 'Editorial', slug: 'editorial', credential: null },
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
                 date        : '2026-04-18',
                 readingTime : 12,
                 verdict     : { label: 'Claim Overstated', rating: 2, max: 5 },
@@ -443,47 +443,7 @@
             }
 
             // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/pharma/2026/04/berberine-weight-loss',
-                title    : 'Berberine for Weight Loss: A Clinical Review of \u201cNature\u2019s Ozempic\u201d',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                var insertAfter = tocEl ? tocEl.nextSibling : articleBody.firstChild;
-                articleBody.insertBefore(shareInline, insertAfter);
-            }
-
-            // ── 4. Mid-article CTA block ─────────────────────────────────────
-            if (typeof injectCTABlock === 'function') {
-                injectCTABlock();
-            }
-
-            // ── 5. Article footer ────────────────────────────────────────────
-            var footer = createArticleFooter({
-                citationNote: 'Marketing or Science. (2026, April 18). Berberine for Weight Loss: A Clinical Review of \u201cNature\u2019s Ozempic\u201d. marketingorscience.com'
-            });
-            main.appendChild(footer);
-
-            // ── 6. Footer share bar (before article footer) ──────────────────
-            var shareFooter = createShareBar({
-                url      : 'https://marketingorscience.com/articles/pharma/2026/04/berberine-weight-loss',
-                title    : 'Berberine for Weight Loss: A Clinical Review of \u201cNature\u2019s Ozempic\u201d',
-                position : 'footer'
-            });
-            main.insertBefore(shareFooter, footer);
-
-            // ── 7. Read More section ─────────────────────────────────────────
-            var readMore = createReadMore({
-                currentSlug     : 'berberine-weight-loss',
-                currentCategory : 'pharma',
-                currentAuthor   : 'editorial',
-                limit           : 3
-            });
-            if (readMore) {
-                main.appendChild(readMore);
-            }
-        });
+            );
     </script>
 
 </body>

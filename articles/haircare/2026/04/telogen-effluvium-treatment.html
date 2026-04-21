@@ -222,7 +222,7 @@
                 type        : 'Condition Review',
                 headline    : 'Telogen Effluvium: What Triggers It and What the Trials Say About Recovery',
                 deck        : 'Telogen effluvium is diffuse hair shedding triggered by physiological stress. A review of the evidence on triggers, natural recovery timeline, and what interventions the trials actually support.',
-                author      : { name: 'Editorial', slug: 'editorial', credential: null },
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
                 date        : '2026-04-06',
                 readingTime : 9,
                 verdict     : { label: 'Partially Supported', rating: 3, max: 5 },
@@ -232,16 +232,6 @@
 
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
-
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/haircare/2026/04/telogen-effluvium-treatment',
-                title    : 'Telogen Effluvium: What Triggers It and What the Trials Say About Recovery',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
 
             if (typeof injectCTABlock === 'function') injectCTABlock();
 

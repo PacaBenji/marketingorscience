@@ -211,7 +211,7 @@
                 type        : 'Ingredient Analysis',
                 headline    : 'Minoxidil for Female Pattern Hair Loss: What the Evidence Actually Shows',
                 deck        : 'Minoxidil is the only FDA-approved topical treatment for female pattern hair loss. A review of the RCT evidence, dosing considerations, and what the trials show about response rates and limitations.',
-                author      : { name: 'Editorial', slug: 'editorial', credential: null },
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
                 date        : '2026-04-02',
                 readingTime : 10,
                 verdict     : { label: 'Supported', rating: 4, max: 5 },
@@ -221,16 +221,6 @@
 
             var toc = createTOC();
             if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
-
-            var shareInline = createShareBar({
-                url      : 'https://marketingorscience.com/articles/haircare/2026/04/minoxidil-female-pattern-hair-loss',
-                title    : 'Minoxidil for Female Pattern Hair Loss: What the Evidence Actually Shows',
-                position : 'inline'
-            });
-            if (articleBody) {
-                var tocEl = articleBody.querySelector('.article-toc');
-                articleBody.insertBefore(shareInline, tocEl ? tocEl.nextSibling : articleBody.firstChild);
-            }
 
             if (typeof injectCTABlock === 'function') injectCTABlock();
 
