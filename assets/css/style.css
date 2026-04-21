@@ -1848,7 +1848,7 @@ body {
 
     /* Article list */
     .article-list-section {
-        padding-bottom: var(--space-lg) 0;
+        padding: 0 0 var(--space-lg);
     }
 
     /* Article fold */
@@ -1883,7 +1883,7 @@ body {
 
     .fold-below-share .share-buttons {
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: var(--space-xs);
     }
 
