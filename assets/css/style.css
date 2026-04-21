@@ -878,7 +878,6 @@ body {
 .page-header {
     padding: var(--space-xl) 0 var(--space-lg);
     border-bottom: var(--border);
-    margin-bottom: var(--space-xl);
 }
 
 .page-header-kicker {
@@ -1239,7 +1238,7 @@ body {
     line-height: 1.65;
     color: var(--color-muted);
     margin-bottom: var(--space-lg);
-    margin-top: var(--space-lg);
+    margin-top: var(--space-sm);
 }
 
 .fold-byline {
@@ -1721,7 +1720,6 @@ body {
     /* Page header */
     .page-header {
         padding: var(--space-lg) 0 var(--space-md);
-        margin-bottom: var(--space-lg);
     }
 
     /* About page */
@@ -1769,6 +1767,27 @@ body {
 
     .nav-hamburger {
         display: flex;
+    }
+
+    /* Read more — stack on mobile/tablet */
+    .read-more-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .read-more-col--popular {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid var(--color-divider);
+        padding-bottom: var(--space-xl);
+        margin-bottom: var(--space-xl);
+    }
+
+    .read-more-inner {
+        padding-inline: 1rem;
+    }
+
+    .popular-rank {
+        font-size: 1.5rem;
     }
 }
 
@@ -1949,27 +1968,6 @@ body {
         align-items: flex-start;
         gap: var(--space-sm);
         padding-inline: 1rem;
-    }
-
-    /* Read more — stack on small mobile */
-    .read-more-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .read-more-col--popular {
-        border-right: none;
-        padding-right: 0;
-        border-bottom: 1px solid var(--color-divider);
-        padding-bottom: var(--space-xl);
-        margin-bottom: var(--space-xl);
-    }
-
-    .read-more-inner {
-        padding-inline: 1rem;
-    }
-
-    .popular-rank {
-        font-size: 1.5rem;
     }
 
     /* About methodology steps */
@@ -2693,7 +2691,6 @@ figcaption {
     gap: var(--space-lg) var(--space-xl);
     align-items: start;
     padding: var(--space-xl) 0;
-    border-bottom: var(--border);
     margin-bottom: var(--space-xl);
 }
 

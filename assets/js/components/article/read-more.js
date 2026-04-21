@@ -111,10 +111,12 @@
                 .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); })
                 .slice(0, 3);
 
+            var seeAllHref = '';
             if (byAuthor.length > 0) {
                 moreArticles = byAuthor;
                 // Build a readable author name from the slug
-                moreLabel = 'More From ' + (byAuthor[0].author || currentAuthor);
+                moreLabel  = 'More From ' + (byAuthor[0].author || currentAuthor);
+                seeAllHref = '/authors/' + currentAuthor + '/';
             } else {
                 // Fall back to topic
                 var byTopic = allOthers
@@ -122,7 +124,8 @@
                     .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); })
                     .slice(0, 3);
                 moreArticles = byTopic;
-                moreLabel = 'More From ' + (byTopic[0] ? byTopic[0].category : currentCategory);
+                moreLabel    = 'More From ' + (byTopic[0] ? byTopic[0].category : currentCategory);
+                seeAllHref   = currentCategory ? '/articles?category=' + currentCategory : '/articles';
             }
 
             // Need at least one column to render
@@ -193,9 +196,7 @@
                 rightHeader.className = 'read-more-col-header';
                 rightHeader.innerHTML =
                     '<h2 class="read-more-col-title">' + moreLabel + '</h2>' +
-                    '<a class="read-more-see-all" href="' +
-                        (currentCategory ? '/articles?category=' + currentCategory : '/articles') +
-                    '">See All</a>';
+                    '<a class="read-more-see-all" href="' + seeAllHref + '">See All</a>';
                 rightCol.appendChild(rightHeader);
 
                 var cardGrid = document.createElement('div');
