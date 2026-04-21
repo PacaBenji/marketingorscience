@@ -2762,7 +2762,7 @@ figcaption {
     bottom: -1px;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background: #cba17d;
     transform: scaleX(0);
     transform-origin: left;
