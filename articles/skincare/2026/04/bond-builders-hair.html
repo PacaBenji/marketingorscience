@@ -415,6 +415,26 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
+            // ── 1. Fold (hero) ───────────────────────────────────────────────
+            var fold = createFold({
+                category    : 'Haircare',
+                type        : 'Ingredient Analysis',
+                headline    : 'Bond Builders (Olaplex, K18): Do They Actually Repair Hair?',
+                deck        : 'The bond-repair category commands premium prices on a claim of covalent chemistry. The independent peer-reviewed literature is considerably thinner than the marketing spend.',
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
+                date        : '2026-04-18',
+                readingTime : 11,
+                verdict     : { label: 'Claim Partially Supported', rating: 2, max: 5 },
+                peerReviewed: false
+            });
+            main.insertBefore(fold, articleBody);
+
+            // ── 2. Table of Contents ─────────────────────────────────────────
+            var toc = createTOC();
+            if (toc && articleBody) {
+                articleBody.insertBefore(toc, articleBody.firstChild);
+            }
+
             // ── 3. Article footer ────────────────────────────────────────────
             var footer = createArticleFooter({
                 citationNote: 'Editorial Team. (2026, April 18). Bond Builders (Olaplex, K18): Do They Actually Repair Hair? marketingorscience.com'

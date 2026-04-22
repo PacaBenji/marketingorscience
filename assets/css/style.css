@@ -815,6 +815,9 @@ body {
     margin-bottom: var(--space-sm);
     transition: color 0.15s;
 }
+.list-item-body:hover .list-item-headline {
+    text-decoration: underline;
+}
 
 .list-item-deck {
     font-family: var(--font-body);

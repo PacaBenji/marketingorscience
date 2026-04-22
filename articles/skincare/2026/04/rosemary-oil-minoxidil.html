@@ -402,6 +402,26 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
+            // ── 1. Fold (hero) ───────────────────────────────────────────────
+            var fold = createFold({
+                category    : 'Haircare',
+                type        : 'Ingredient Analysis',
+                headline    : 'Rosemary Oil vs. Minoxidil: What the Evidence Actually Shows',
+                deck        : 'A single small trial comparing rosemary oil to 2% minoxidil has fuelled a billion-dollar \u201cnatural\u201d hair-growth category. The methodology deserves closer scrutiny.',
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
+                date        : '2026-04-18',
+                readingTime : 10,
+                verdict     : { label: 'Weak Evidence', rating: 2, max: 5 },
+                peerReviewed: false
+            });
+            main.insertBefore(fold, articleBody);
+
+            // ── 2. Table of Contents ─────────────────────────────────────────
+            var toc = createTOC();
+            if (toc && articleBody) {
+                articleBody.insertBefore(toc, articleBody.firstChild);
+            }
+
             // ── 3. Article footer ────────────────────────────────────────────
             var footer = createArticleFooter({
                 citationNote: 'Editorial Team. (2026, April 18). Rosemary Oil vs. Minoxidil: What the Evidence Actually Shows. marketingorscience.com'

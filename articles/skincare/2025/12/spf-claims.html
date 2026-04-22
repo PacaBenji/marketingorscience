@@ -364,6 +364,26 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
+            // ── 1. Fold (hero) ───────────────────────────────────────────────
+            var fold = createFold({
+                category    : 'Skincare & Beauty',
+                type        : 'Regulatory Review',
+                headline    : 'SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say',
+                deck        : 'SPF 100 sunscreens command premium prices and promise superior protection. The FDA\u2019s proposed monograph and independent beach studies tell a more complicated story.',
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
+                date        : '2025-12-18',
+                readingTime : 10,
+                verdict     : { label: 'Claim Unsupported', rating: 2, max: 5 },
+                peerReviewed: false
+            });
+            main.insertBefore(fold, articleBody);
+
+            // ── 2. Table of Contents ─────────────────────────────────────────
+            var toc = createTOC();
+            if (toc && articleBody) {
+                articleBody.insertBefore(toc, articleBody.firstChild);
+            }
+
             // ── 3. Article footer ────────────────────────────────────────────
             var footer = createArticleFooter({
                 citationNote: 'Editorial Team. (2025, December 18). SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say. marketingorscience.com'
