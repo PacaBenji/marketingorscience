@@ -415,28 +415,29 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
-            // ── 1. Fold (hero) ───────────────────────────────────────────────
-            var fold = createFold({
-                category    : 'Skincare & Beauty',
-                type        : 'Ingredient Analysis',
-                headline    : 'Bond Builders (Olaplex, K18): Do They Actually Repair Hair?',
-                deck        : 'The bond-repair category commands premium prices on a claim of covalent chemistry. The independent peer-reviewed literature is considerably thinner than the marketing spend.',
-                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
-                date        : '2026-04-18',
-                readingTime : 10,
-                verdict     : { label: 'Claim Partially Supported', rating: 2, max: 5 },
-                peerReviewed: false
+            // ── 3. Article footer ────────────────────────────────────────────
+            var footer = createArticleFooter({
+                citationNote: 'Editorial Team. (2026, April 18). Bond Builders (Olaplex, K18): Do They Actually Repair Hair? marketingorscience.com'
             });
-            main.insertBefore(fold, articleBody);
+            main.appendChild(footer);
 
-            // ── 2. Table of Contents ─────────────────────────────────────────
-            var toc = createTOC();
-            if (toc && articleBody) {
-                articleBody.insertBefore(toc, articleBody.firstChild);
-            }
+            // ── 4. Share bar (footer) ────────────────────────────────────
+            var shareFooter = createShareBar({
+                url      : 'https://marketingorscience.com/articles/skincare/2026/04/bond-builders-hair',
+                title    : 'Bond Builders (Olaplex, K18): Do They Actually Repair Hair?',
+                position : 'footer'
+            });
+            main.insertBefore(shareFooter, footer);
 
-            // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            );
+            // ── 5. Read more ─────────────────────────────────────────────────────
+            var readMore = createReadMore({
+                currentSlug     : 'bond-builders-hair',
+                currentCategory : 'skincare',
+                currentAuthor   : 'editorial',
+                limit           : 3
+            });
+            if (readMore) main.appendChild(readMore);
+        });
     </script>
 
 </body>

@@ -370,28 +370,29 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
-            // ── 1. Fold (hero) ───────────────────────────────────────────────
-            var fold = createFold({
-                category    : 'Pharma & Supplements',
-                type        : 'Product Breakdown',
-                headline    : 'Oral Collagen Peptides: The Bioavailability Question the Marketing Skips',
-                deck        : 'Collagen supplement marketing promises skin, joint, and hair benefits. The bioavailability science is real but routinely overstated \u2014 and the critical comparator is almost always missing.',
-                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
-                date        : '2026-01-08',
-                readingTime : 11,
-                verdict     : { label: 'Mixed Evidence', rating: 2, max: 5 },
-                peerReviewed: false
+            // ── 3. Article footer ────────────────────────────────────────────
+            var footer = createArticleFooter({
+                citationNote: 'Editorial Team. (2026, January 8). Oral Collagen Peptides: The Bioavailability Question the Marketing Skips. marketingorscience.com'
             });
-            main.insertBefore(fold, articleBody);
+            main.appendChild(footer);
 
-            // ── 2. Table of Contents ─────────────────────────────────────────
-            var toc = createTOC();
-            if (toc && articleBody) {
-                articleBody.insertBefore(toc, articleBody.firstChild);
-            }
+            // ── 4. Share bar (footer) ────────────────────────────────────
+            var shareFooter = createShareBar({
+                url      : 'https://marketingorscience.com/articles/pharma/2026/01/collagen-peptides',
+                title    : 'Oral Collagen Peptides: The Bioavailability Question the Marketing Skips',
+                position : 'footer'
+            });
+            main.insertBefore(shareFooter, footer);
 
-            // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            );
+            // ── 5. Read more ─────────────────────────────────────────────────────
+            var readMore = createReadMore({
+                currentSlug     : 'collagen-peptides',
+                currentCategory : 'pharma',
+                currentAuthor   : 'editorial',
+                limit           : 3
+            });
+            if (readMore) main.appendChild(readMore);
+        });
     </script>
 
 </body>

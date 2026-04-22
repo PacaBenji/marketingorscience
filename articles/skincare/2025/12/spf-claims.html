@@ -364,28 +364,29 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
-            // ── 1. Fold (hero) ───────────────────────────────────────────────
-            var fold = createFold({
-                category    : 'Skincare & Beauty',
-                type        : 'Regulatory Review',
-                headline    : 'SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say',
-                deck        : 'SPF 100 sunscreens command a premium and promise maximum protection. The underlying photobiology and independent beach studies tell a more complicated story.',
-                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
-                date        : '2025-12-18',
-                readingTime : 10,
-                verdict     : { label: 'Claim Unsupported', rating: 2, max: 5 },
-                peerReviewed: false
+            // ── 3. Article footer ────────────────────────────────────────────
+            var footer = createArticleFooter({
+                citationNote: 'Editorial Team. (2025, December 18). SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say. marketingorscience.com'
             });
-            main.insertBefore(fold, articleBody);
+            main.appendChild(footer);
 
-            // ── 2. Table of Contents ─────────────────────────────────────────
-            var toc = createTOC();
-            if (toc && articleBody) {
-                articleBody.insertBefore(toc, articleBody.firstChild);
-            }
+            // ── 4. Share bar (footer) ────────────────────────────────────
+            var shareFooter = createShareBar({
+                url      : 'https://marketingorscience.com/articles/skincare/2025/12/spf-claims',
+                title    : 'SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say',
+                position : 'footer'
+            });
+            main.insertBefore(shareFooter, footer);
 
-            // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            );
+            // ── 5. Read more ─────────────────────────────────────────────────────
+            var readMore = createReadMore({
+                currentSlug     : 'spf-claims',
+                currentCategory : 'skincare',
+                currentAuthor   : 'editorial',
+                limit           : 3
+            });
+            if (readMore) main.appendChild(readMore);
+        });
     </script>
 
 </body>

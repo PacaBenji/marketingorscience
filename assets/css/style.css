@@ -482,7 +482,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: var(--space-2xl) var(--space-lg) var(--space-md);
+    padding: var(--space-2xl) var(--space-lg) var(--space-lg);
     background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%);
 }
 
@@ -541,6 +541,7 @@ body {
 
 .featured-banner-link:hover .featured-banner-cta {
     color: #ffffff;
+    text-decoration:underline;
 }
 
 /* Below-image: deck — mirrors .fold-inner--below */

@@ -388,28 +388,29 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
-            // ── 1. Fold (hero) ───────────────────────────────────────────────
-            var fold = createFold({
-                category    : 'Skincare & Beauty',
-                type        : 'Ingredient Analysis',
-                headline    : 'Niacinamide at 5% vs. 10%: Is There a Real Clinical Difference?',
-                deck        : 'The skincare industry has standardized on 10% niacinamide as a premium signal. The controlled trial literature suggests the difference from 5% is smaller \u2014 and comes with tolerability trade-offs.',
-                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
-                date        : '2026-01-22',
-                readingTime : 10,
-                verdict     : { label: 'Partially Supported', rating: 3, max: 5 },
-                peerReviewed: false
+            // ── 3. Article footer ────────────────────────────────────────────
+            var footer = createArticleFooter({
+                citationNote: 'Editorial Team. (2026, January 22). Niacinamide at 5% vs. 10%: Is There a Real Clinical Difference? marketingorscience.com'
             });
-            main.insertBefore(fold, articleBody);
+            main.appendChild(footer);
 
-            // ── 2. Table of Contents ─────────────────────────────────────────
-            var toc = createTOC();
-            if (toc && articleBody) {
-                articleBody.insertBefore(toc, articleBody.firstChild);
-            }
+            // ── 4. Share bar (footer) ────────────────────────────────────
+            var shareFooter = createShareBar({
+                url      : 'https://marketingorscience.com/articles/skincare/2026/01/niacinamide-concentration',
+                title    : 'Niacinamide at 5% vs. 10%: Is There a Real Clinical Difference?',
+                position : 'footer'
+            });
+            main.insertBefore(shareFooter, footer);
 
-            // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            );
+            // ── 5. Read more ─────────────────────────────────────────────────────
+            var readMore = createReadMore({
+                currentSlug     : 'niacinamide-concentration',
+                currentCategory : 'skincare',
+                currentAuthor   : 'editorial',
+                limit           : 3
+            });
+            if (readMore) main.appendChild(readMore);
+        });
     </script>
 
 </body>

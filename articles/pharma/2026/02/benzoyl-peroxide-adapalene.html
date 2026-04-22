@@ -405,8 +405,29 @@
                 articleBody.insertBefore(toc, articleBody.firstChild);
             }
 
-            // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            );
+            // ── 3. Article footer ────────────────────────────────────────────
+            var footer = createArticleFooter({
+                citationNote: 'Editorial Team. (2026, February 28). Benzoyl Peroxide vs. Adapalene: What the 2025 Head-to-Head Trials Actually Show. marketingorscience.com'
+            });
+            main.appendChild(footer);
+
+            // ── 4. Share bar (footer) ────────────────────────────────────
+            var shareFooter = createShareBar({
+                url      : 'https://marketingorscience.com/articles/pharma/2026/02/benzoyl-peroxide-adapalene',
+                title    : 'Benzoyl Peroxide vs. Adapalene: What the 2025 Head-to-Head Trials Actually Show',
+                position : 'footer'
+            });
+            main.insertBefore(shareFooter, footer);
+
+            // ── 5. Read more ─────────────────────────────────────────────────────
+            var readMore = createReadMore({
+                currentSlug     : 'benzoyl-peroxide-adapalene',
+                currentCategory : 'pharma',
+                currentAuthor   : 'editorial',
+                limit           : 3
+            });
+            if (readMore) main.appendChild(readMore);
+        });
     </script>
 
 </body>

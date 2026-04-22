@@ -422,28 +422,29 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
-            // ── 1. Fold (hero) ───────────────────────────────────────────────
-            var fold = createFold({
-                category    : 'Pharma & Supplements',
-                type        : 'Ingredient Analysis',
-                headline    : 'Berberine for Weight Loss: A Clinical Review of \u201cNature\u2019s Ozempic\u201d',
-                deck        : 'Berberine activates AMPK and lowers blood glucose \u2014 mechanisms it shares with metformin. Whether it warrants the \u201cnatural Ozempic\u201d label is a different question.',
-                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
-                date        : '2026-04-18',
-                readingTime : 12,
-                verdict     : { label: 'Claim Overstated', rating: 2, max: 5 },
-                peerReviewed: false
+            // ── 3. Article footer ────────────────────────────────────────────
+            var footer = createArticleFooter({
+                citationNote: 'Editorial Team. (2026, April 18). Berberine for Weight Loss: A Clinical Review of “Nature’s Ozempic”. marketingorscience.com'
             });
-            main.insertBefore(fold, articleBody);
+            main.appendChild(footer);
 
-            // ── 2. Table of Contents ─────────────────────────────────────────
-            var toc = createTOC();
-            if (toc && articleBody) {
-                articleBody.insertBefore(toc, articleBody.firstChild);
-            }
+            // ── 4. Share bar (footer) ────────────────────────────────────
+            var shareFooter = createShareBar({
+                url      : 'https://marketingorscience.com/articles/pharma/2026/04/berberine-weight-loss',
+                title    : 'Berberine for Weight Loss: A Clinical Review of “Nature’s Ozempic”',
+                position : 'footer'
+            });
+            main.insertBefore(shareFooter, footer);
 
-            // ── 3. Inline share bar (after TOC) ─────────────────────────────
-            );
+            // ── 5. Read more ─────────────────────────────────────────────────────
+            var readMore = createReadMore({
+                currentSlug     : 'berberine-weight-loss',
+                currentCategory : 'pharma',
+                currentAuthor   : 'editorial',
+                limit           : 3
+            });
+            if (readMore) main.appendChild(readMore);
+        });
     </script>
 
 </body>
