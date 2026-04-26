@@ -151,7 +151,7 @@ window.MOS_ARTICLES = [
     searchText   : 'adapalene otc switch fda acne benzoyl peroxide combination pharma regulatory review',
     popular      : false,
     readingTime  : 8,
-    image        : 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400',
+    image        : 'assets/images/oral-collagen-abstract.jpg?w=400',
   },
   {
     slug         : 'collagen-supplements-evidence',
@@ -432,7 +432,7 @@ window.MOS_ARTICLES = [
     searchText   : 'ozempic hair loss hair loss glp1 hair loss zepbound weight loss and hair loss semaglutide tirzepatide pharma trial review',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400',
+    image        : 'assets/images/oral-collagen-abstract.jpg?w=400',
   },
   // Pharma P2
   {
@@ -472,7 +472,7 @@ window.MOS_ARTICLES = [
     searchText   : 'minoxidil finasteride androgenic alopecia in females hair loss dermatologist female pattern hair loss pharma trial review',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400',
+    image        : 'assets/images/oral-collagen-abstract.jpg?w=400',
   },
   // Pharma P4
   {
