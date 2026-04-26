@@ -783,7 +783,7 @@ body {
 /* Full-width list card */
 .article-list-item {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 200px 1fr auto;
     gap: var(--space-md) var(--space-xl);
     align-items: start;
     padding: var(--space-lg) 0;
@@ -791,6 +791,14 @@ body {
     text-decoration: none;
     color: inherit;
     transition: opacity 0.15s;
+}
+
+.list-item-thumb {
+    width: 200px;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border: var(--border);
+    flex-shrink: 0;
 }
 
 .article-list-item:first-child {
@@ -1693,6 +1701,10 @@ body {
         grid-template-columns: 1fr;
         gap: var(--space-sm);
         padding: var(--space-md) 0;
+    }
+
+    .list-item-thumb {
+        display: none;
     }
 
     .list-item-side {
