@@ -794,11 +794,9 @@ body {
 }
 
 .list-item-thumb {
-    width: 200px;
     aspect-ratio: 3 / 2;
     object-fit: cover;
     border: var(--border);
-    flex-shrink: 0;
 }
 
 .article-list-item:first-child {
@@ -1696,19 +1694,20 @@ body {
         padding: var(--space-xl) 0;
     }
 
-    /* Article list: collapse side column */
+    /* Article list: single column on mobile */
     .article-list-item {
         grid-template-columns: 1fr;
         gap: var(--space-sm);
         padding: var(--space-md) 0;
     }
 
-    .list-item-thumb {
-        display: none;
-    }
-
     .list-item-side {
         align-items: flex-start;
+    }
+
+    /* Layout containers: tighter padding */
+    .container {
+        padding-inline: var(--space-md);
     }
 
     /* Article fold */
