@@ -392,7 +392,7 @@ window.MOS_ARTICLES = [
     searchText   : 'red light therapy for hair growth hair growth brush red light lllt photobiomodulation laser wellness',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400',
+    image        : '/assets/images/red-light-therapy.jpg?w=400',
   },
   // Wellness W4
   {
@@ -492,7 +492,7 @@ window.MOS_ARTICLES = [
     searchText   : 'prp hair treatment hair restoration microneedling for hair loss platelet rich plasma pharma trial review',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400',
+    image        : '/assets/images/red-light-therapy.jpg?w=400',
   },
 ];
 

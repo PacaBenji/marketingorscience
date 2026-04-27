@@ -959,7 +959,7 @@ body {
     display: block;
     width: 48px;
     height: 1px;
-    background: var(--color-accent);
+    background: var(--color-accent-var);
     margin: var(--space-lg) auto;
     border: none;
 }
@@ -971,7 +971,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-accent);
+    color: var(--color-accent-hover);
     text-decoration: none;
     border-bottom: 1px solid var(--color-accent-hover);
     padding-bottom: 2px;
@@ -981,6 +981,7 @@ body {
 .about-panel-link:hover {
     color: #FFFFFF;
     border-color: #FFFFFF;
+    border-bottom: 1px solid white;
 }
 
 
@@ -2781,7 +2782,7 @@ figcaption {
     bottom: -1px;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: var(--color-accent-hover);
     transform: scaleX(0);
     transform-origin: left;
