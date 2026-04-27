@@ -56,7 +56,7 @@
             var favicon = document.createElement('link');
             favicon.rel              = 'icon';
             favicon.type             = 'image/png';
-            favicon.href             = assetPath + '/images/logo/MoS logo-b.png';
+            favicon.href             = assetPath + '/images/logo/MoS-logo-b.svg';
             favicon.dataset.mosFavicon = '1';
             document.head.appendChild(favicon);
         }
@@ -102,7 +102,7 @@
                 '<nav class="site-nav" role="navigation" aria-label="Main navigation">' +
                     '<div class="nav-zone--left">' +
                         '<a href="' + homePath + '" class="site-logo" aria-label="Marketing or Science — Home">' +
-                            '<img class="logo-img logo-img--dark" src="' + assetPath + '/images/logo/MoS logo-b.png" alt="Marketing or Science" width="48" height="36">' +
+                            '<img class="logo-img logo-img--dark" src="' + assetPath + '/images/logo/MoS-logo-b.svg" alt="Marketing or Science" width="48" height="36">' +
                         '</a>' +
                     '</div>' +
                     '<div class="nav-zone--right">' +
@@ -135,7 +135,7 @@
                         '</button>' +
 
                         '<a href="' + homePath + '" class="mega-menu-logo" aria-label="Marketing or Science — Home">' +
-                            '<img src="' + assetPath + '/images/logo/MoS logo-w.png" alt="Marketing or Science" width="56" height="42">' +
+                            '<img src="' + assetPath + '/images/logo/MoS-logo-w.svg" alt="Marketing or Science" width="56" height="42">' +
                         '</a>' +
 
                         '<div class="mega-menu-search">' +
@@ -196,7 +196,7 @@
 
                     '<div class="footer-top">' +
                         '<a href="' + homePath + '" class="footer-wordmark" aria-label="Marketing or Science — Home">' +
-                            '<img src="' + assetPath + '/images/logo/MoS logo-b.png" alt="Marketing or Science" class="footer-logo-img">' +
+                            '<img src="' + assetPath + '/images/logo/MoS-logo-b.svg" alt="Marketing or Science" class="footer-logo-img">' +
                         '</a>' +
                         '<p class="footer-descriptor">Clinical evidence reviews for health &amp; beauty claims.</p>' +
                     '</div>' +

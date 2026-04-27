@@ -794,6 +794,7 @@ body {
 }
 
 .list-item-thumb {
+    width: 100%;
     aspect-ratio: 3 / 2;
     object-fit: cover;
     border: var(--border);
@@ -1180,7 +1181,7 @@ body {
 }
 
 .fold-inner--below {
-    padding-top: var(--space-md);
+    padding: var(--space-md);
 }
 
 /* Two-column layout: content left, share right */
@@ -2137,7 +2138,7 @@ figcaption {
 .mega-menu-close {
     position: absolute;
     top: 1.25rem;
-    right: 1.5rem;
+    right: 2.5rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
@@ -2778,7 +2779,7 @@ figcaption {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #cba17d;
+    background: var(--color-accent-hover);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.1s linear;
