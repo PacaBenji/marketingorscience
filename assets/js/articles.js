@@ -113,7 +113,7 @@ window.MOS_ARTICLES = [
     searchText   : 'spf 50 100 sunscreen fda monograph real world data logarithmic uva uvb skincare regulatory review',
     popular      : false,
     readingTime  : 7,
-    image        : '/assets/images/man-sunburnt-back.jpg',
+    image        : '/assets/images/man-sunburn-back.jpg',
   },
   {
     slug         : 'retinoid-ladder',
@@ -212,7 +212,7 @@ window.MOS_ARTICLES = [
     searchText   : 'azelaic acid evidence skin care pigmentation rosacea acne hyperpigmentation skincare ingredient analysis',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/man-sunburnt-back.jpg?w=400',
+    image        : '/assets/images/man-sunburn-back.jpg?w=400',
   },
   // Skincare S3
   {
