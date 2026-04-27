@@ -39,7 +39,7 @@
     --color-muted:         #6B6B6B;
     --color-divider:       #E0E0E0;
     --color-dark:          #0A0A0A;
-    --color-dark-text:     #F0F0F0;
+    --color-dark-text:     #f1f1f1;
     --color-dark-muted:    #A0A0A0;
 
     /* — Typography — */
@@ -1713,7 +1713,7 @@ body {
 
     /* Article fold */
     .article-fold {
-        padding: var(--space-lg) 0 var(--space-md);
+        padding: 0 0 var(--space-md);
     }
 
     .fold-inner {

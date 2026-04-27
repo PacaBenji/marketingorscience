@@ -239,7 +239,7 @@
                 '</div>' +
 
             '<div class="footer-bottom">' +
-                '<p class="footer-copy">&copy; ' + year + ' Marketing or Science. All rights reserved.</p>' +
+                '<p class="footer-copy">&copy; ' + year + ' marketingorscience.com. All rights reserved.</p>' +
                 '<nav class="footer-legal-nav" aria-label="Legal navigation">' +
                     '<a href="' + privacyPath + '">Privacy Policy</a>' +
                     '<a href="/terms">Terms of Use</a>' +
