@@ -784,7 +784,7 @@ body {
 .article-list-item {
     display: grid;
     grid-template-columns: 200px 1fr auto;
-    gap: var(--space-md) var(--space-xl);
+    gap: var(--space-md) var(--space-md);
     align-items: start;
     padding: var(--space-lg) 0;
     border-bottom: var(--border);
@@ -795,7 +795,7 @@ body {
 
 .list-item-thumb {
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border: var(--border);
 }
@@ -1701,7 +1701,9 @@ body {
         gap: var(--space-sm);
         padding: var(--space-md) 0;
     }
-
+    .list-item-thumb {
+        aspect-ratio: 3/2;
+    }
     .list-item-side {
         align-items: flex-start;
     }
@@ -2138,7 +2140,7 @@ figcaption {
 .mega-menu-close {
     position: absolute;
     top: 1.25rem;
-    right: 2.5rem;
+    right: 1.25rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
