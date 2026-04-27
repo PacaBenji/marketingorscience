@@ -21,7 +21,7 @@ window.MOS_ARTICLES = [
     popular      : true,
     popularRank  : 1,
     readingTime  : 12,
-    image        : 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400',
+    image        : '/assets/images/liquid-beauty-product.jpg?w=400',
   },
   {
     slug         : 'benzoyl-peroxide-adapalene',
@@ -78,7 +78,7 @@ window.MOS_ARTICLES = [
     searchText   : 'niacinamide concentration 5 10 percent clinical difference sebum pigmentation barrier skincare ingredient analysis',
     popular      : false,
     readingTime  : 8,
-    image        : 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400',
+    image        : '/assets/images/dark-drops-retinol.jpg?w=400',
   },
   {
     slug         : 'collagen-peptides',
@@ -113,7 +113,7 @@ window.MOS_ARTICLES = [
     searchText   : 'spf 50 100 sunscreen fda monograph real world data logarithmic uva uvb skincare regulatory review',
     popular      : false,
     readingTime  : 7,
-    image        : 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400',
+    image        : '/assets/images/man-sunburnt-back.jpg?w=400',
   },
   {
     slug         : 'retinoid-ladder',
@@ -192,7 +192,7 @@ window.MOS_ARTICLES = [
     searchText   : 'vitamin c serum stability percentage best vitamin c serum skinceuticals ce ferulic l-ascorbic acid oxidation skincare ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400',
+    image        : '/assets/images/liquid-beauty-product.jpg?w=400',
   },
   // Skincare S2
   {
@@ -212,7 +212,7 @@ window.MOS_ARTICLES = [
     searchText   : 'azelaic acid evidence skin care pigmentation rosacea acne hyperpigmentation skincare ingredient analysis',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400',
+    image        : '/assets/images/man-sunburnt-back.jpg?w=400',
   },
   // Skincare S3
   {
@@ -232,7 +232,7 @@ window.MOS_ARTICLES = [
     searchText   : 'bakuchiol retinol serum retinoids natural alternative skincare ingredient analysis anti-aging',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400',
+    image        : '/assets/images/liquid-beauty-product.jpg?w=400',
   },
   // Skincare S4
   {
