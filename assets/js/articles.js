@@ -59,7 +59,7 @@ window.MOS_ARTICLES = [
     popular      : true,
     popularRank  : 3,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400',
+    image        : '/assets/images/transparent-drops-retinol.jpg?w=400',
   },
   {
     slug         : 'niacinamide-concentration',
@@ -132,7 +132,7 @@ window.MOS_ARTICLES = [
     searchText   : 'retinoid ladder retinol retinaldehyde adapalene tretinoin otc rx skincare ingredient analysis photoaging',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400',
+    image        : '/assets/images/transparent-drops-retinol.jpg?w=400',
   },
   {
     slug         : 'adapalene-otc-switch',
@@ -252,7 +252,7 @@ window.MOS_ARTICLES = [
     searchText   : 'best eye cream eye cream for dark circles hyaluronic acid serum periorbital skincare product breakdown',
     popular      : false,
     readingTime  : 8,
-    image        : 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400',
+    image        : '/assets/images/transparent-drops-retinol.jpg?w=400',
   },
   // Haircare H1
   {

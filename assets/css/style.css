@@ -1410,6 +1410,7 @@ body {
     text-transform: uppercase;
     color: var(--color-muted);
     margin-bottom: var(--space-xs);
+    margin-top: var(--space-sm)
     display: block;
 }
 
