@@ -21,7 +21,7 @@ window.MOS_ARTICLES = [
     popular      : true,
     popularRank  : 1,
     readingTime  : 12,
-    image        : '/assets/images/liquid-beauty-product.jpg?w=400',
+    image        : '/assets/images/liquid-beauty-product.jpg',
   },
   {
     slug         : 'benzoyl-peroxide-adapalene',
@@ -39,7 +39,7 @@ window.MOS_ARTICLES = [
     popular      : true,
     popularRank  : 2,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400',
+    image        : '/assets/images/acne-skin.jpg',
   },
   {
     slug         : 'hyaluronic-acid',
@@ -78,7 +78,7 @@ window.MOS_ARTICLES = [
     searchText   : 'niacinamide concentration 5 10 percent clinical difference sebum pigmentation barrier skincare ingredient analysis',
     popular      : false,
     readingTime  : 8,
-    image        : '/assets/images/dark-drops-retinol.jpg?w=400',
+    image        : '/assets/images/dark-drops-retinol.jpg?',
   },
   {
     slug         : 'collagen-peptides',
@@ -94,7 +94,7 @@ window.MOS_ARTICLES = [
     searchText   : 'oral collagen peptides bioavailability supplement skin anti-aging pharma product breakdown',
     popular      : false,
     readingTime  : 11,
-    image        : 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400',
+    image        : '/assets/images/oral-collagen-abstract.jpg',
   },
   {
     slug         : 'spf-claims',
@@ -113,7 +113,7 @@ window.MOS_ARTICLES = [
     searchText   : 'spf 50 100 sunscreen fda monograph real world data logarithmic uva uvb skincare regulatory review',
     popular      : false,
     readingTime  : 7,
-    image        : '/assets/images/man-sunburnt-back.jpg?w=400',
+    image        : '/assets/images/man-sunburnt-back.jpg',
   },
   {
     slug         : 'retinoid-ladder',
@@ -132,7 +132,7 @@ window.MOS_ARTICLES = [
     searchText   : 'retinoid ladder retinol retinaldehyde adapalene tretinoin otc rx skincare ingredient analysis photoaging',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/transparent-drops-retinol.jpg?w=400',
+    image        : '/assets/images/pipete-serum-texture.jpg',
   },
   {
     slug         : 'adapalene-otc-switch',
@@ -452,7 +452,7 @@ window.MOS_ARTICLES = [
     searchText   : 'minoxidil minoxidil alternative rogaine hair growth oral minoxidil topical vs oral pharma trial review',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400',
+    image        : '/assets/images/topical-vs-oral-minoxidil.jpg',
   },
   // Pharma P3
   {

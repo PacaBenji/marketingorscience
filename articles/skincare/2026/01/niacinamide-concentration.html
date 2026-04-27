@@ -13,7 +13,7 @@
     <meta property="og:title"       content="Niacinamide at 5% vs. 10%: Is There a Real Clinical Difference?">
     <meta property="og:description" content="The skincare industry has standardized on 10% niacinamide as a premium signal. The controlled trial literature tells a more nuanced story.">
     <meta property="og:url"         content="https://marketingorscience.com/articles/skincare/2026/01/niacinamide-concentration">
-    <meta property="og:image"       content="/assets/images/dark-drops-retinol.jpg?w=1200">
+    <meta property="og:image"       content="/assets/images/dark-drops-retinol.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="theme-color"        content="#1A4A8A">
@@ -51,7 +51,7 @@
 
             <figure class="article-figure">
                 <img
-                    src="/assets/images/dark-drops-retinol.jpg?w=640"
+                    src="/assets/images/dark-drops-retinol.jpg"
                     alt="Skincare products arranged on marble surface with clean minimalist aesthetic"
                     loading="lazy">
                 <figcaption>
@@ -152,7 +152,7 @@
 
             <figure class="article-figure">
                 <img
-                    src="https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=640"
+                    src="/assets/images/hyaluronic-acid-clear.jpg"
                     alt="Scientific laboratory equipment and measurement tools"
                     loading="lazy">
                 <figcaption>
@@ -233,7 +233,7 @@
 
             <figure class="article-figure">
                 <img
-                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=640"
+                    src="/assets/images/man-sunburn-back.jpg"
                     alt="Close-up of facial skin showing redness and flushing"
                     loading="lazy">
                 <figcaption>
@@ -387,7 +387,18 @@
         initComponentsWhenReady(function () {
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
-
+            var fold = createFold({
+                category    : 'Skincare & Beauty',
+                type        : 'Ingredient Analysis',
+                headline    : 'Niacinamide at 5% vs. 10%: Is There a Real Clinical Difference?',
+                deck        : 'Niacinamide has become the industry\u2019s favorite multi-tasking ingredient. Examining sebum-regulation, pigmentation, and barrier-repair endpoints across concentration thresholds.',
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
+                date        : '2026-01-22',
+                readingTime : 8,
+                verdict     : { label: 'Partial Evidence', rating: 3, max: 5 },
+                peerReviewed: false
+            });
+            main.insertBefore(fold, articleBody);
             // ── 3. Article footer ────────────────────────────────────────────
             var footer = createArticleFooter({
                 citationNote: 'Editorial Team. (2026, January 22). Niacinamide at 5% vs. 10%: Is There a Real Clinical Difference? marketingorscience.com'
