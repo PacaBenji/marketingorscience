@@ -438,11 +438,12 @@ body {
 
 .hero-rule {
     display: block;
-    width: 48px;
-    height: 2px;
+    width: 4px;
+    height: 48px;
     background: var(--color-accent);
     margin: var(--space-lg) auto 0;
     border: none;
+    transform: skewX(-20deg);
 }
 
 
@@ -580,6 +581,19 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-text);
+    position: relative;
+    padding-left: 16px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 3px;
+    height: 16px;
+    background: var(--color-accent);
 }
 
 .section-link {
@@ -957,11 +971,12 @@ body {
 
 .about-panel-rule {
     display: block;
-    width: 48px;
-    height: 1px;
-    background: var(--color-accent-var);
+    width: 4px;
+    height: 40px;
+    background: var(--color-accent-hover);
     margin: var(--space-lg) auto;
     border: none;
+    transform: skewX(-20deg);
 }
 
 .about-panel-link {

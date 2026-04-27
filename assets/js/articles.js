@@ -170,7 +170,7 @@ window.MOS_ARTICLES = [
     searchText   : 'collagen supplements bioavailability hydrolysed peptides skin rct integrative pharma product breakdown',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1559181567-c3190ca9d222?w=400',
+    image        : '/assets/images/oral-collagen-abstract.jpg',
   },
   // ── Part B: 16 new articles (April 2026) ──────────────────────────────────
 
@@ -292,7 +292,7 @@ window.MOS_ARTICLES = [
     searchText   : 'dht blocker natural dht blocker minoxidil finasteride androgenic alopecia saw palmetto hair loss',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1559181567-c3190ca9d222?w=400',
+    image        : '/assets/images/finasteride-pills.jpg',
   },
   // Haircare H3
   {
@@ -312,7 +312,7 @@ window.MOS_ARTICLES = [
     searchText   : 'telogen effluvium hair loss postpartum hair loss stress and hair loss diffuse shedding recovery',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400',
+    image        : '/assets/images/senior-woman-hair.jpg',
   },
   // Haircare H4
   {
@@ -332,7 +332,7 @@ window.MOS_ARTICLES = [
     searchText   : 'dandruff treatment medicated dandruff shampoo scalp treatment malassezia microbiome ketoconazole zinc pyrithione',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/abstract-microbiome.jpg',
+    image        : '/assets/images/abstract-microbiome.jpg',
   },
   // Wellness W1
   {
@@ -352,7 +352,7 @@ window.MOS_ARTICLES = [
     searchText   : 'collagen liquid collagen collagen supplements skin elasticity wrinkle bioavailability wellness',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1559181567-c3190ca9d222?w=400',
+    image        : '/assets/images/oral-collagen-abstract.jpg',
   },
   // Wellness W2
   {
@@ -372,7 +372,7 @@ window.MOS_ARTICLES = [
     searchText   : 'vitamin d hair loss hair loss blood test hair loss causes deficiency supplement wellness',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1559181567-c3190ca9d222?w=400',
+    image        : '/assets/images/vitamin-d.jpg',
   },
   // Wellness W3
   {
@@ -472,7 +472,7 @@ window.MOS_ARTICLES = [
     searchText   : 'minoxidil finasteride androgenic alopecia in females hair loss dermatologist female pattern hair loss pharma trial review',
     popular      : false,
     readingTime  : 10,
-    image        : 'assets/images/oral-collagen-abstract.jpg?w=400',
+    image        : '/assets/images/finasteride-pills.jpg',
   },
   // Pharma P4
   {
@@ -492,7 +492,7 @@ window.MOS_ARTICLES = [
     searchText   : 'prp hair treatment hair restoration microneedling for hair loss platelet rich plasma pharma trial review',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/red-light-therapy.jpg?w=400',
+    image        : '/assets/images/prp-treatment.png',
   },
 ];
 
