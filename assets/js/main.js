@@ -55,8 +55,8 @@
         if (!document.querySelector('link[data-mos-favicon]')) {
             var favicon = document.createElement('link');
             favicon.rel              = 'icon';
-            favicon.type             = 'image/png';
-            favicon.href             = assetPath + '/images/logo/MoS-logo-b.svg';
+            favicon.type             = 'image/svg+xml';
+            favicon.href             = assetPath + '/images/logo/MoS-logo-w.svg';
             favicon.dataset.mosFavicon = '1';
             document.head.appendChild(favicon);
         }

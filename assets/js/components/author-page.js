@@ -32,6 +32,9 @@
             : 'verdict-pill';
 
         a.innerHTML =
+            (article.image
+                ? '<img class="list-item-thumb" src="' + article.image + '" alt="" loading="lazy">'
+                : '') +
             '<div class="list-item-body">' +
                 '<div class="card-badge-row">' +
                     '<span class="category-badge category--' + (article.categorySlug || 'general') + '">' +

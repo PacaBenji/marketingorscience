@@ -232,7 +232,7 @@ window.MOS_ARTICLES = [
     searchText   : 'bakuchiol retinol serum retinoids natural alternative skincare ingredient analysis anti-aging',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/liquid-beauty-product.jpg?w=400',
+    image        : '/assets/images/pipete-serum-texture.jpg',
   },
   // Skincare S4
   {
@@ -332,7 +332,7 @@ window.MOS_ARTICLES = [
     searchText   : 'dandruff treatment medicated dandruff shampoo scalp treatment malassezia microbiome ketoconazole zinc pyrithione',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400',
+    image        : '/assets/abstract-microbiome.jpg',
   },
   // Wellness W1
   {
