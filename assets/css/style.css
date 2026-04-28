@@ -438,8 +438,8 @@ body {
 
 .hero-rule {
     display: block;
-    width: 4px;
-    height: 48px;
+    width: 8px;
+    height: 16px;
     background: var(--color-accent);
     margin: var(--space-lg) auto 0;
     border: none;
@@ -779,15 +779,23 @@ body {
     color: var(--color-muted);
     margin-top: auto;
     padding-top: var(--space-sm);
+}
+
+/* Muted meta slash — author/date rows */
+.card-meta,
+.list-item-meta,
+.fold-author {
     position: relative;
     padding-left: 14px;
 }
 
-.card-meta::before {
+.card-meta::before,
+.list-item-meta::before,
+.fold-author::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%) skewX(-20deg);
     width: 4px;
     height: 12px;
@@ -890,20 +898,6 @@ body {
     font-family: var(--font-ui);
     font-size: var(--text-meta);
     color: var(--color-muted);
-    position: relative;
-    padding-left: 14px;
-}
-
-.list-item-meta::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%) skewX(-20deg);
-    width: 4px;
-    height: 12px;
-    background: var(--color-accent);
-    opacity: 0.5;
 }
 
 .list-item-side {
@@ -1019,8 +1013,8 @@ body {
 
 .about-panel-rule {
     display: block;
-    width: 4px;
-    height: 40px;
+    width: 8px;
+    height: 16px;
     background: var(--color-accent-hover);
     margin: var(--space-lg) auto;
     border: none;
