@@ -6,13 +6,13 @@
     <title>Magnesium L-Threonate: Does It Actually Cross the Blood-Brain Barrier? — Marketing or Science</title>
     <meta name="description" content="The marketing claim rests primarily on rat studies and a single small human trial. Whether the threonate form uniquely elevates brain magnesium levels in humans remains unresolved. A clinical evidence review.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://marketingorscience.com/articles/pharma/2026/04/magnesium-threonate">
+    <link rel="canonical" href="https://marketingorscience.com/articles/wellness/2026/04/magnesium-threonate">
 
     <!-- Open Graph -->
     <meta property="og:type"        content="article">
     <meta property="og:title"       content="Magnesium L-Threonate: Does It Actually Cross the Blood-Brain Barrier?">
     <meta property="og:description" content="The marketing claim rests primarily on rat studies and a single small human trial. Whether the threonate form uniquely elevates brain magnesium levels in humans remains unresolved.">
-    <meta property="og:url"         content="https://marketingorscience.com/articles/pharma/2026/04/magnesium-threonate">
+    <meta property="og:url"         content="https://marketingorscience.com/articles/wellness/2026/04/magnesium-threonate">
     <meta property="og:image"       content="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -435,6 +435,26 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
+            // ── 1. Fold (hero) ───────────────────────────────────────────────
+            var fold = createFold({
+                category    : 'Wellness',
+                type        : 'Ingredient Analysis',
+                headline    : 'Magnesium L-Threonate: Does It Actually Cross the Blood-Brain Barrier?',
+                deck        : 'The marketing claim rests primarily on rat studies and a single small human trial. Whether the threonate form uniquely elevates brain magnesium levels in humans remains unresolved.',
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
+                date        : '2026-04-18',
+                readingTime : 10,
+                verdict     : { label: 'Insufficient Evidence', rating: 1, max: 5 },
+                peerReviewed: false
+            });
+            main.insertBefore(fold, articleBody);
+
+            // ── 2. Table of Contents ─────────────────────────────────────────
+            var toc = createTOC();
+            if (toc && articleBody) {
+                articleBody.insertBefore(toc, articleBody.firstChild);
+            }
+
             // ── 3. Article footer ────────────────────────────────────────────
             var footer = createArticleFooter({
                 citationNote: 'Editorial Team. (2026, April 18). Magnesium L-Threonate: Does It Actually Cross the Blood-Brain Barrier? marketingorscience.com'
@@ -443,7 +463,7 @@
 
             // ── 4. Share bar (footer) ────────────────────────────────────
             var shareFooter = createShareBar({
-                url      : 'https://marketingorscience.com/articles/pharma/2026/04/magnesium-threonate',
+                url      : 'https://marketingorscience.com/articles/wellness/2026/04/magnesium-threonate',
                 title    : 'Magnesium L-Threonate: Does It Actually Cross the Blood-Brain Barrier?',
                 position : 'footer'
             });
@@ -452,7 +472,7 @@
             // ── 5. Read more ─────────────────────────────────────────────────────
             var readMore = createReadMore({
                 currentSlug     : 'magnesium-threonate',
-                currentCategory : 'pharma',
+                currentCategory : 'wellness',
                 currentAuthor   : 'editorial',
                 limit           : 3
             });

@@ -6,13 +6,13 @@
     <title>Berberine for Weight Loss: A Clinical Review of "Nature's Ozempic" — Marketing or Science</title>
     <meta name="description" content="Berberine activates AMPK and lowers blood glucose — mechanisms it shares with metformin. Whether it warrants the 'natural Ozempic' label is a different question. A clinical evidence review.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://marketingorscience.com/articles/pharma/2026/04/berberine-weight-loss">
+    <link rel="canonical" href="https://marketingorscience.com/articles/wellness/2026/04/berberine-weight-loss">
 
     <!-- Open Graph -->
     <meta property="og:type"        content="article">
     <meta property="og:title"       content="Berberine for Weight Loss: A Clinical Review of &ldquo;Nature&rsquo;s Ozempic&rdquo;">
     <meta property="og:description" content="Berberine activates AMPK and lowers blood glucose — mechanisms it shares with metformin. Whether it warrants the 'natural Ozempic' label is a different question.">
-    <meta property="og:url"         content="https://marketingorscience.com/articles/pharma/2026/04/berberine-weight-loss">
+    <meta property="og:url"         content="https://marketingorscience.com/articles/wellness/2026/04/berberine-weight-loss">
     <meta property="og:image"       content="/assets/images/oral-collagen-abstract.jpg?w=1200">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -422,6 +422,26 @@
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
 
+            // ── 1. Fold (hero) ───────────────────────────────────────────────
+            var fold = createFold({
+                category    : 'Wellness',
+                type        : 'Ingredient Analysis',
+                headline    : 'Berberine for Weight Loss: A Clinical Review of \u201cNature\u2019s Ozempic\u201d',
+                deck        : 'Berberine activates AMPK and lowers blood glucose \u2014 mechanisms it shares with metformin. Whether it warrants the \u201cnatural Ozempic\u201d label is a different question.',
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
+                date        : '2026-04-18',
+                readingTime : 10,
+                verdict     : { label: 'Claim Overstated', rating: 1, max: 5 },
+                peerReviewed: false
+            });
+            main.insertBefore(fold, articleBody);
+
+            // ── 2. Table of Contents ─────────────────────────────────────────
+            var toc = createTOC();
+            if (toc && articleBody) {
+                articleBody.insertBefore(toc, articleBody.firstChild);
+            }
+
             // ── 3. Article footer ────────────────────────────────────────────
             var footer = createArticleFooter({
                 citationNote: 'Editorial Team. (2026, April 18). Berberine for Weight Loss: A Clinical Review of “Nature’s Ozempic”. marketingorscience.com'
@@ -430,7 +450,7 @@
 
             // ── 4. Share bar (footer) ────────────────────────────────────
             var shareFooter = createShareBar({
-                url      : 'https://marketingorscience.com/articles/pharma/2026/04/berberine-weight-loss',
+                url      : 'https://marketingorscience.com/articles/wellness/2026/04/berberine-weight-loss',
                 title    : 'Berberine for Weight Loss: A Clinical Review of “Nature’s Ozempic”',
                 position : 'footer'
             });
@@ -439,7 +459,7 @@
             // ── 5. Read more ─────────────────────────────────────────────────────
             var readMore = createReadMore({
                 currentSlug     : 'berberine-weight-loss',
-                currentCategory : 'pharma',
+                currentCategory : 'wellness',
                 currentAuthor   : 'editorial',
                 limit           : 3
             });

@@ -438,12 +438,11 @@ body {
 
 .hero-rule {
     display: block;
-    width: 4px;
-    height: 48px;
+    width: 48px;
+    height: 2px;
     background: var(--color-accent);
     margin: var(--space-lg) auto 0;
     border: none;
-    transform: skewX(-20deg);
 }
 
 
@@ -517,6 +516,19 @@ body {
     letter-spacing: -0.03em;
     color: #ffffff;
     margin-bottom: var(--space-sm);
+    position: relative;
+    padding-left: 20px;
+}
+
+.featured-banner-headline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 8px;
+    height: 20px;
+    background: #fff;
 }
 .featured-banner-headline:hover {
     text-decoration: underline;
@@ -574,6 +586,27 @@ body {
     margin-bottom: var(--space-lg);
 }
 
+/* Diagonal slash accent — brand motif from SVG logo */
+.slash-accent,
+.section-title,
+.read-more-col-title {
+    position: relative;
+    padding-left: 20px;
+}
+
+.slash-accent::before,
+.section-title::before,
+.read-more-col-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 8px;
+    height: 16px;
+    background: var(--color-accent);
+}
+
 .section-title {
     font-family: var(--font-ui);
     font-size: var(--text-meta);
@@ -581,19 +614,6 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-text);
-    position: relative;
-    padding-left: 16px;
-}
-
-.section-title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%) skewX(-20deg);
-    width: 3px;
-    height: 16px;
-    background: var(--color-accent);
 }
 
 .section-link {
@@ -604,6 +624,19 @@ body {
     text-decoration: none;
     letter-spacing: 0.04em;
     transition: color 0.15s;
+    position: relative;
+    padding-left: 14px;
+}
+
+.section-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 6px;
+    height: 12px;
+    background: var(--color-accent);
 }
 
 .section-link:hover {
@@ -758,7 +791,20 @@ body {
     color: var(--color-muted);
     margin-top: auto;
     padding-top: var(--space-sm);
-    border-top: var(--border);
+    position: relative;
+    padding-left: 14px;
+}
+
+.card-meta::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 4px;
+    height: 12px;
+    background: var(--color-accent);
+    opacity: 0.5;
 }
 
 .card-meta-dot {
@@ -971,12 +1017,11 @@ body {
 
 .about-panel-rule {
     display: block;
-    width: 4px;
-    height: 40px;
-    background: var(--color-accent-hover);
+    width: 48px;
+    height: 1px;
+    background: var(--color-accent-var);
     margin: var(--space-lg) auto;
     border: none;
-    transform: skewX(-20deg);
 }
 
 .about-panel-link {
