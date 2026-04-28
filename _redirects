@@ -7,3 +7,6 @@
 /privacy-policy                             /privacy-policy.html                             200
 /articles                                   /articles/index.html                             200
 /articles/skincare/2026/04/retinol-paradox  /articles/skincare/2026/04/retinol-paradox.html  200
+
+# Author → Expert redirects
+/authors/*  /experts/:splat  301

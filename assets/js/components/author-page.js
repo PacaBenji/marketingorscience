@@ -6,8 +6,8 @@
     'use strict';
 
     function getAuthorSlug() {
-        // Expect URL pattern: /authors/{slug}/
-        var match = window.location.pathname.match(/\/authors\/([^\/]+)/);
+        // Expect URL pattern: /experts/{slug}/
+        var match = window.location.pathname.match(/\/experts\/([^\/]+)/);
         return match ? match[1] : '';
     }
 

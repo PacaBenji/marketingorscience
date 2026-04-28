@@ -78,7 +78,7 @@ window.MOS_ARTICLES = [
     searchText   : 'niacinamide concentration 5 10 percent clinical difference sebum pigmentation barrier skincare ingredient analysis',
     popular      : false,
     readingTime  : 8,
-    image        : '/assets/images/dark-drops-retinol.jpg?',
+    image        : '/assets/images/dark-drops-retinol.jpg',
   },
   {
     slug         : 'collagen-peptides',
@@ -153,7 +153,7 @@ window.MOS_ARTICLES = [
     searchText   : 'adapalene otc switch fda acne benzoyl peroxide combination pharma regulatory review',
     popular      : false,
     readingTime  : 8,
-    image        : 'assets/images/adapalene-cream.jpg',
+    image        : '/assets/images/adapalene-cream.jpg',
   },
   {
     slug         : 'collagen-supplements-evidence',
@@ -294,7 +294,7 @@ window.MOS_ARTICLES = [
     searchText   : 'dht blocker natural dht blocker minoxidil finasteride androgenic alopecia saw palmetto hair loss',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/finasteride-pills.jpg',
+    image        : '/assets/images/dht-blocker.jpg',
   },
   // Haircare H3
   {
@@ -434,7 +434,7 @@ window.MOS_ARTICLES = [
     searchText   : 'ozempic hair loss hair loss glp1 hair loss zepbound weight loss and hair loss semaglutide tirzepatide pharma trial review',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/glp1-drugs.jpg',
+    image        : '/assets/images/glp1-drugs.JPG',
   },
   // Pharma P2
   {
@@ -496,7 +496,6 @@ window.MOS_ARTICLES = [
     readingTime  : 10,
     image        : '/assets/images/prp-treatment.jpg',
   },
-  // ── Part C: 4 recategorized articles ──────────────────────────────────
   {
     slug         : 'rosemary-oil-minoxidil',
     url          : '/articles/haircare/2026/04/rosemary-oil-minoxidil',
@@ -552,7 +551,7 @@ window.MOS_ARTICLES = [
     searchText   : 'berberine weight loss nature ozempic ampk metformin supplement blood glucose wellness ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/oral-collagen-abstract.jpg?w=400',
+    image        : '/assets/images/dht-blocker.jpg',
   },
   {
     slug         : 'magnesium-threonate',
