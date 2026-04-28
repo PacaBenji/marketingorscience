@@ -414,7 +414,7 @@ window.MOS_ARTICLES = [
     searchText   : 'iron and hair loss hair loss blood work diffuse thinning hair ferritin threshold supplement wellness',
     popular      : false,
     readingTime  : 9,
-    image        : 'https://images.unsplash.com/photo-1559181567-c3190ca9d222?w=400',
+    image        : '/assets/images/mature-woman-hair.jpg',
   },
   // Pharma P1
   {
