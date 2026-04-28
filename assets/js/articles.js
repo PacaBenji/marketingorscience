@@ -434,7 +434,7 @@ window.MOS_ARTICLES = [
     searchText   : 'ozempic hair loss hair loss glp1 hair loss zepbound weight loss and hair loss semaglutide tirzepatide pharma trial review',
     popular      : false,
     readingTime  : 9,
-    image        : 'assets/images/oral-collagen-abstract.jpg',
+    image        : '/assets/images/glp1-drugs.jpg',
   },
   // Pharma P2
   {

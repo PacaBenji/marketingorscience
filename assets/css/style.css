@@ -1513,6 +1513,19 @@ body {
     text-transform: uppercase;
     margin-bottom: var(--space-sm);
     color: var(--color-text);
+    position: relative;
+    padding-left: 16px;
+}
+
+.claim-block-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 6px;
+    height: 12px;
+    background: var(--color-accent);
 }
 
 .claim-block--evidence { border-top-color: var(--color-accent); }
@@ -2224,8 +2237,8 @@ figcaption {
 /* Close button — top-right of the mega-menu overlay */
 .mega-menu-close {
     position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
+    top: 1rem;
+    right: 1rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
@@ -2775,6 +2788,19 @@ figcaption {
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: var(--color-muted);
+    position: relative;
+    padding-left: 16px;
+}
+
+.read-more-card-author::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 6px;
+    height: 12px;
+    background: var(--color-accent);
 }
 
 .read-more-card-dot {
