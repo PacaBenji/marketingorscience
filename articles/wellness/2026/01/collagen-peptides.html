@@ -6,14 +6,14 @@
     <title>Oral Collagen Peptides: The Bioavailability Question the Marketing Skips — Marketing or Science</title>
     <meta name="description" content="Collagen supplement marketing promises skin, joint, and hair benefits. The bioavailability science is more complicated: peptides are digested, absorption is partial, and tissue targeting is unproven.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://marketingorscience.com/articles/pharma/2026/01/collagen-peptides">
+    <link rel="canonical" href="https://marketingorscience.com/articles/wellness/2026/01/collagen-peptides">
 
     <!-- Open Graph -->
     <meta property="og:type"        content="article">
     <meta property="og:title"       content="Oral Collagen Peptides: The Bioavailability Question the Marketing Skips">
     <meta property="og:description" content="Collagen supplement marketing promises skin, joint, and hair benefits. The bioavailability science is more complicated than the marketing suggests.">
-    <meta property="og:url"         content="https://marketingorscience.com/articles/pharma/2026/01/collagen-peptides">
-    <meta property="og:image"       content="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200">
+    <meta property="og:url"         content="https://marketingorscience.com/articles/wellness/2026/01/collagen-peptides">
+    <meta property="og:image"       content="/assets/images/oral-collagen-abstract.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="theme-color"        content="#1A4A8A">
@@ -51,8 +51,8 @@
 
             <figure class="article-figure">
                 <img
-                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=640"
-                    alt="Collagen powder supplement in scoop next to glass of water"
+                    src="/assets/images/oral-collagen-abstract.jpg"
+                    alt="collagen powder abstract"
                     loading="lazy">
                 <figcaption>
                     The global collagen supplement market exceeded $9 billion in 2024,
@@ -369,7 +369,18 @@
         initComponentsWhenReady(function () {
             var main        = document.querySelector('main');
             var articleBody = document.querySelector('.article-body');
-
+            var fold = createFold({
+                category    : 'Wellness',
+                type        : 'Condition Review',
+                headline    : 'Oral Collagen Peptides: The Bioavailability Question the Marketing Skips',
+                deck        : 'A $5 billion supplement category rests on a plausible mechanism \u2014 but does the evidence reach the skin? Dissecting the trials behind the claims.',
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
+                date        : '2026-01-08',
+                readingTime : 9,
+                verdict     : { label: 'Mixed Evidence', rating: 3, max: 5 },
+                peerReviewed: false
+            });
+            main.insertBefore(fold, articleBody);
             // ── 3. Article footer ────────────────────────────────────────────
             var footer = createArticleFooter({
                 citationNote: 'Editorial Team. (2026, January 8). Oral Collagen Peptides: The Bioavailability Question the Marketing Skips. marketingorscience.com'
@@ -378,7 +389,7 @@
 
             // ── 4. Share bar (footer) ────────────────────────────────────
             var shareFooter = createShareBar({
-                url      : 'https://marketingorscience.com/articles/pharma/2026/01/collagen-peptides',
+                url      : 'https://marketingorscience.com/articles/wellness/2026/01/collagen-peptides',
                 title    : 'Oral Collagen Peptides: The Bioavailability Question the Marketing Skips',
                 position : 'footer'
             });
@@ -387,7 +398,7 @@
             // ── 5. Read more ─────────────────────────────────────────────────────
             var readMore = createReadMore({
                 currentSlug     : 'collagen-peptides',
-                currentCategory : 'pharma',
+                currentCategory : 'wellness',
                 currentAuthor   : 'editorial',
                 limit           : 3
             });

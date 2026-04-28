@@ -212,6 +212,16 @@
                             '</ul>' +
                         '</div>' +
 
+                        '<div class="footer-col footer-col--resources">' +
+                            '<h3 class="footer-col-heading">Resources</h3>' +
+                            '<ul class="footer-col-links">' +
+                                '<li><a href="/contact">Contact</a></li>' +
+                                '<li><a href="/using-our-articles">Using Our Articles</a></li>' +
+                                '<li><a href="/corrections">Corrections</a></li>' +
+                                '<li><a href="/submit">Submit a Proposal</a></li>' +
+                            '</ul>' +
+                        '</div>' +
+
                         '<div class="footer-col footer-col--topics">' +
                             '<h3 class="footer-col-heading">Topics</h3>' +
                             '<ul class="footer-col-links">' +

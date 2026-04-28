@@ -82,10 +82,12 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'collagen-peptides',
-    url          : '/articles/pharma/2026/01/collagen-peptides',
+    url          : '/articles/wellness/2026/01/collagen-peptides',
     title        : 'Oral Collagen Peptides: The Bioavailability Question the Marketing Skips',
     deck         : 'A $5 billion supplement category rests on a plausible mechanism \u2014 but does the evidence reach the skin? Dissecting the trials behind the claims.',
-    category     : 'Pharma & OTC',
+    category     : 'Wellness',
+    type         : 'Ingredient Analysis',
+    tags         : ['collagen', 'supplements', 'bioavailability', 'skin'],
     author       : 'Editorial Team',
     authorSlug   : 'editorial',
     date         : '2026-01-08',
@@ -155,11 +157,11 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'collagen-supplements-evidence',
-    url          : '/articles/pharma/2026/01/collagen-supplements-evidence',
+    url          : '/articles/wellness/2026/01/collagen-supplements-evidence',
     title        : 'Collagen Supplements: Parsing the Bioavailability Claims from the Clinical Outcomes Data',
     deck         : 'Hydrolysed collagen peptides are among the fastest-growing supplement categories. A critical review of absorption evidence, skin-outcome RCTs, and what integrative practice guidelines actually recommend.',
-    category     : 'Pharma & Supplements',
-    categorySlug : 'pharma',
+    category     : 'Wellness',
+    categorySlug : 'wellness',
     type         : 'Product Breakdown',
     tags         : ['collagen', 'supplements', 'bioavailability', 'skin', 'integrative'],
     author       : 'Sarah Lindqvist',
@@ -432,7 +434,7 @@ window.MOS_ARTICLES = [
     searchText   : 'ozempic hair loss hair loss glp1 hair loss zepbound weight loss and hair loss semaglutide tirzepatide pharma trial review',
     popular      : false,
     readingTime  : 9,
-    image        : 'assets/images/oral-collagen-abstract.jpg?w=400',
+    image        : 'assets/images/oral-collagen-abstract.jpg',
   },
   // Pharma P2
   {
