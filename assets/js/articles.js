@@ -39,7 +39,7 @@ window.MOS_ARTICLES = [
     popular      : true,
     popularRank  : 2,
     readingTime  : 10,
-    image        : '/assets/images/acne-skin.jpg',
+    image        : '/assets/images/adapalene-cream.jpg',
   },
   {
     slug         : 'hyaluronic-acid',
@@ -59,7 +59,7 @@ window.MOS_ARTICLES = [
     popular      : true,
     popularRank  : 3,
     readingTime  : 9,
-    image        : '/assets/images/transparent-drops-retinol.jpg?w=400',
+    image        : '/assets/images/hyaluronic-acid-clear.jpg',
   },
   {
     slug         : 'niacinamide-concentration',
@@ -434,7 +434,7 @@ window.MOS_ARTICLES = [
     searchText   : 'ozempic hair loss hair loss glp1 hair loss zepbound weight loss and hair loss semaglutide tirzepatide pharma trial review',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/glp1-drugs.JPG',
+    image        : '/assets/images/glp1-drug.jpg',
   },
   // Pharma P2
   {
@@ -551,7 +551,7 @@ window.MOS_ARTICLES = [
     searchText   : 'berberine weight loss nature ozempic ampk metformin supplement blood glucose wellness ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/dht-blocker.jpg',
+    image        : '/assets/images/red-berries.jpg',
   },
   {
     slug         : 'magnesium-threonate',

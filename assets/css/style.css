@@ -1586,10 +1586,10 @@ body {
     line-height: 1.4;
 }
 
-/* ── Three-column body ── */
+/* ── Four-column body ── */
 .footer-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.6fr;
+    grid-template-columns: 1fr 1fr 1fr 1.4fr;
     gap: var(--space-xl);
     padding: var(--space-lg) 0 var(--space-xl);
     border-bottom: 1px solid #2a2a2a;

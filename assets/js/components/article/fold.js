@@ -10,7 +10,7 @@
 //     author     : { name: 'Dr. Jane Smith', credential: 'M.D., Dermatology' },
 //     date       : '2026-04-09',                 // ISO 8601
 //     verdict    : {                             // optional
-//         label  : 'Claim Partially Supported',
+//         label  : 'Partially Supported',
 //         rating : 3,                            // 1–5
 //         max    : 5
 //     },
