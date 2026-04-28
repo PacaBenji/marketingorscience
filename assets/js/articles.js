@@ -194,7 +194,7 @@ window.MOS_ARTICLES = [
     searchText   : 'vitamin c serum stability percentage best vitamin c serum skinceuticals ce ferulic l-ascorbic acid oxidation skincare ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/liquid-beauty-product.jpg?w=400',
+    image        : '/assets/images/macro-orange.jpg',
   },
   // Skincare S2
   {
@@ -354,7 +354,7 @@ window.MOS_ARTICLES = [
     searchText   : 'collagen liquid collagen collagen supplements skin elasticity wrinkle bioavailability wellness',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/oral-collagen-abstract.jpg',
+    image        : '/assets/images/oral-collagen-suppplement.jpg',
   },
   // Wellness W2
   {
