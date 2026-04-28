@@ -3138,6 +3138,19 @@ figcaption {
     color: var(--color-accent);
     text-decoration: none;
     margin-top: auto;
+    position: relative;
+    padding-left: 16px;
+}
+
+.expert-card-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 6px;
+    height: 12px;
+    background: var(--color-accent);
 }
 
 .expert-card-link:hover {

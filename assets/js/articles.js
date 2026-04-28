@@ -153,7 +153,7 @@ window.MOS_ARTICLES = [
     searchText   : 'adapalene otc switch fda acne benzoyl peroxide combination pharma regulatory review',
     popular      : false,
     readingTime  : 8,
-    image        : 'assets/images/oral-collagen-abstract.jpg?w=400',
+    image        : 'assets/images/adapalene-cream.jpg',
   },
   {
     slug         : 'collagen-supplements-evidence',
@@ -494,7 +494,7 @@ window.MOS_ARTICLES = [
     searchText   : 'prp hair treatment hair restoration microneedling for hair loss platelet rich plasma pharma trial review',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/prp-treatment.png',
+    image        : '/assets/images/prp-treatment.jpg',
   },
   // ── Part C: 4 recategorized articles ──────────────────────────────────
   {
@@ -533,7 +533,7 @@ window.MOS_ARTICLES = [
     searchText   : 'olaplex k18 bond builder bond repair hair damage covalent chemistry haircare ingredient analysis',
     popular      : false,
     readingTime  : 11,
-    image        : 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400',
+    image        : '/assets/images/young-woman-hair.jpg',
   },
   {
     slug         : 'berberine-weight-loss',
