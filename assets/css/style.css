@@ -439,7 +439,7 @@ body {
 .hero-rule {
     display: block;
     width: 8px;
-    height: 16px;
+    height: 20px;
     background: var(--color-accent);
     margin: var(--space-lg) auto 0;
     border: none;
@@ -795,7 +795,7 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    top: 60%;
+    top: 55%;
     transform: translateY(-50%) skewX(-20deg);
     width: 4px;
     height: 12px;
@@ -956,6 +956,19 @@ body {
     text-transform: uppercase;
     color: var(--color-accent);
     margin-bottom: var(--space-sm);
+    position: relative;
+    padding-left: 20px;
+}
+
+.page-header-kicker::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 8px;
+    height: 16px;
+    background: var(--color-accent);
 }
 
 .page-header-title {
@@ -1014,7 +1027,7 @@ body {
 .about-panel-rule {
     display: block;
     width: 8px;
-    height: 16px;
+    height: 20px;
     background: var(--color-accent-hover);
     margin: var(--space-lg) auto;
     border: none;
