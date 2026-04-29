@@ -19,7 +19,7 @@
             .filter(function (a) { return !slugs[a.slug]; })
             .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
 
-        return popular.concat(recent).slice(0, 6);
+        return popular.concat(recent).slice(0, 7);
     }
 
     function renderBanner(article) {

@@ -2638,8 +2638,8 @@ figcaption {
 }
 
 .share-btn--footer {
-    padding: 0.5rem 1.125rem;
-    font-size: var(--text-meta);
+    padding: 0.4rem 0.875rem;
+    font-size: var(--text-label);
 }
 
 
@@ -3076,9 +3076,9 @@ figcaption {
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-accent-hover);
+    color: var(--color-accent-hover) !important;
     text-decoration: none;
-    border-bottom: 1px solid var(---color-accent-hover);
+    border-bottom: 1px solid var(---color-accent-hover) !important;
     padding-bottom: 2px;
     transition: color 0.15s, border-color 0.15s;
 }
