@@ -154,6 +154,16 @@
                 '</div>' +
             '</div>';
 
+        // ── Correction / update notice (only when cfg.correction is provided) ──
+        var correctionHTML = '';
+        if (cfg.correction && cfg.correction.date && cfg.correction.text) {
+            correctionHTML =
+                '<div class="correction-notice">' +
+                    '<p class="correction-notice-label">Correction \u2014 ' + formatDate(cfg.correction.date) + '</p>' +
+                    '<p>' + cfg.correction.text + '</p>' +
+                '</div>';
+        }
+
         // ── Below-image: deck + byline + verdict ──────────────────────────────
         var belowInnerHTML =
             // If no hero image, render meta-row + headline here (graceful fallback)
@@ -179,6 +189,7 @@
                     readingTimeHTML +
                 '</div>' +
                 verdictHTML +
+                correctionHTML +
             '</div>';
 
         // Wrap in two-column grid (content + share) when there's a hero image

@@ -1432,6 +1432,35 @@ body {
     margin-left: var(--space-xs);
 }
 
+/* Correction / update notice (inside fold, below verdict) */
+.correction-notice {
+    margin-top: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    border-top: 3px solid #8B1A1A;
+    background: var(--color-accent-hover);
+}
+
+.correction-notice-label {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8B1A1A;
+    margin-bottom: var(--space-xs);
+}
+
+.correction-notice p {
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    color: var(--color-text);
+    margin: 0;
+}
+
+.correction-notice p + p {
+    margin-top: var(--space-xs);
+}
+
 
 /* ============================================================
    17. ARTICLE BODY TYPOGRAPHY
