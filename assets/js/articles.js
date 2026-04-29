@@ -29,7 +29,8 @@ window.MOS_ARTICLES = [
     title        : 'Benzoyl Peroxide vs. Adapalene: What the 2025 Head-to-Head Trials Actually Show',
     deck         : 'OTC acne marketing has outpaced the clinical evidence. We examine four recent RCTs and assess what\u2019s justified for first-line recommendation.',
     category     : 'Pharma & OTC',
-    type         : 'Ingredient Analysis'
+    categorySlug : 'pharma',
+    type         : 'Ingredient Analysis',
     tags         : ['acne', 'benzoyl-peroxide', 'adapalene', 'otc'],
     author       : 'Editorial Team',
     authorSlug   : 'editorial',
@@ -274,7 +275,7 @@ window.MOS_ARTICLES = [
     searchText   : 'minoxidil female pattern baldness fphl hair loss androgenic alopecia rogaine hair growth women',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400',
+    image        : '/assets/images/female-pattern-hair-loss.jpg',
   },
   // Haircare H2
   {
