@@ -13,6 +13,7 @@
 
         var items = document.querySelectorAll('.article-list-item');
         var tabs  = document.querySelectorAll('.filter-tab');
+        var typePills = document.querySelectorAll('.type-pill');
 
         // Update tab active states
         tabs.forEach(function (tab) {
@@ -23,7 +24,15 @@
             } else if (category && href.indexOf('category=' + category) !== -1) {
                 tab.classList.add('active');
             }
-            // Note: type tabs are not in the filter-bar, so no type tab activation needed here
+        });
+
+        // Update type pill active states
+        typePills.forEach(function (pill) {
+            pill.classList.remove('active');
+            var href = pill.getAttribute('href') || '';
+            if (type && href.indexOf('type=' + type) !== -1) {
+                pill.classList.add('active');
+            }
         });
 
         // Show / hide items by category AND/OR type
@@ -49,7 +58,8 @@
                 'ingredient-analysis' : 'Ingredient Analyses',
                 'product-breakdown'   : 'Product Breakdowns',
                 'trial-review'        : 'Trial Reviews',
-                'regulatory-review'   : 'Regulatory Reviews'
+                'regulatory-review'   : 'Regulatory Reviews',
+                'condition-review'    : 'Condition Reviews'
             };
             if (type && typeLabels[type]) {
                 heading.textContent = typeLabels[type];

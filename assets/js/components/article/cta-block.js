@@ -14,7 +14,7 @@
             '<p>' +
                 'Marketing or Science publishes independent clinical evidence reviews — ' +
                 'examining the gap between health and beauty marketing claims and the ' +
-                'peer-reviewed literature.' +
+                'scientific literature.' +
             '</p>' +
             '<a href="/about" class="cta-block-link">Learn about our methodology &rarr;</a>';
 
