@@ -21,7 +21,7 @@ window.MOS_ARTICLES = [
     searchText   : 'hair loss treatments women men sex differences androgenetic alopecia minoxidil finasteride spironolactone prp ludwig hamilton norwood haircare ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/female-pattern-hair-loss.jpg',
+    image        : '/assets/images/man-woman-hair.jpg',
   },
   {
     slug         : 'hair-growth-timelines',
@@ -40,7 +40,7 @@ window.MOS_ARTICLES = [
     searchText   : 'hair growth timelines anagen cycle treatment expectations fast results shedding phase minoxidil finasteride haircare condition review',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/young-woman-hair.jpg',
+    image        : '/assets/images/woman-hair-loss.jpg',
   },
   {
     slug         : 'biotin-hair-growth',
@@ -310,8 +310,7 @@ window.MOS_ARTICLES = [
     verdict      : 'Partially Supported',
     verdictClass : 'partial',
     searchText   : 'vitamin c serum stability percentage best vitamin c serum skinceuticals ce ferulic l-ascorbic acid oxidation skincare ingredient analysis',
-    popular      : true,
-    popularRank  : 5,
+    popular      : false,
     readingTime  : 10,
     image        : '/assets/images/macro-orange.jpg',
   },
