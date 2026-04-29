@@ -189,7 +189,6 @@
                     readingTimeHTML +
                 '</div>' +
                 verdictHTML +
-                correctionHTML +
             '</div>';
 
         // Wrap in two-column grid (content + share) when there's a hero image
@@ -201,11 +200,13 @@
                         belowInnerHTML +
                         shareFoldHTML +
                     '</div>' +
+                    correctionHTML +
                 '</div>';
         } else {
             belowHTML =
                 '<div class="fold-inner">' +
                     belowInnerHTML +
+                    correctionHTML +
                 '</div>';
         }
 

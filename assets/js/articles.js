@@ -87,6 +87,7 @@ window.MOS_ARTICLES = [
     title        : 'Oral Collagen Peptides: The Bioavailability Question the Marketing Skips',
     deck         : 'A $5 billion supplement category rests on a plausible mechanism \u2014 but does the evidence reach the skin? Dissecting the trials behind the claims.',
     category     : 'Wellness',
+    categorySlug : 'wellness',
     type         : 'Ingredient Analysis',
     tags         : ['collagen', 'supplements', 'bioavailability', 'skin'],
     author       : 'Editorial Team',
