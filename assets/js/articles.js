@@ -39,7 +39,7 @@ window.MOS_ARTICLES = [
     popular      : true,
     popularRank  : 2,
     readingTime  : 10,
-    image        : '/assets/images/adapalene-cream.jpg',
+    image        : '/assets/images/acne-skin.jpg',
   },
   {
     slug         : 'hyaluronic-acid',
