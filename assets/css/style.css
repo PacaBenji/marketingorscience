@@ -943,8 +943,9 @@ body {
 
 /* Page header for articles/ listing */
 .page-header {
-    padding: var(--space-xl) 0 var(--space-lg);
+    padding: var(--space-xl) 0 var(--space-md);
     border-bottom: var(--border);
+    margin-bottom: var(--space-md);
 }
 
 .page-header-kicker {
