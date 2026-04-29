@@ -1457,8 +1457,7 @@ body {
     margin-top: var(--space-lg);
     padding: var(--space-md) var(--space-lg);
     border-top: 3px solid #8B1A1A;
-    background: var(--color-accent-hover);
-    opacity: 0.5;
+    background: #fecab3;
 }
 
 .correction-notice-label {
