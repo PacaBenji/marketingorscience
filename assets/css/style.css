@@ -2165,6 +2165,32 @@ body {
         margin: var(--space-md) 0;
     }
 
+    /* Clear float context after collapsed figures so drop cap doesn't shift text */
+    .article-figure + p,
+    .article-figure + .claim-block {
+        clear: both;
+    }
+
+    /* Tame drop cap on small screens */
+    .article-body > p:first-of-type::first-letter {
+        font-size: 3.5em;
+        margin: 0.04em 0.06em 0 0;
+    }
+
+    /* Slash accent — ensure padding survives narrow viewports */
+    .slash-accent,
+    .section-title,
+    .read-more-col-title {
+        padding-left: 18px;
+    }
+
+    .slash-accent::before,
+    .section-title::before,
+    .read-more-col-title::before {
+        width: 6px;
+        height: 13px;
+    }
+
     /* Evidence table — horizontal scroll on narrow viewports */
     .evidence-table {
         display: block;

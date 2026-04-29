@@ -136,7 +136,7 @@ window.MOS_ARTICLES = [
     searchText   : 'retinoid ladder retinol retinaldehyde adapalene tretinoin otc rx skincare ingredient analysis photoaging',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/pipete-serum-texture.jpg',
+    image        : '/assets/images/retinoid-abstract.jpg',
   },
   {
     slug         : 'adapalene-otc-switch',
