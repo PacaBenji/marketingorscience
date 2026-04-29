@@ -56,7 +56,7 @@
             var favicon = document.createElement('link');
             favicon.rel              = 'icon';
             favicon.type             = 'image/svg+xml';
-            favicon.href             = assetPath + '/images/logo/MoS-logo-b.svg';
+            favicon.href             = assetPath + '/images/logo/favicon.svg';
             favicon.dataset.mosFavicon = '1';
             document.head.appendChild(favicon);
         }
