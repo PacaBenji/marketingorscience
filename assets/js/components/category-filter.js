@@ -75,4 +75,7 @@
     } else {
         init();
     }
+
+    // Re-run filtering after dynamic article list is rendered
+    window.addEventListener('articleListRendered', init, { once: true });
 })();

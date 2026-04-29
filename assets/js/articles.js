@@ -214,7 +214,7 @@ window.MOS_ARTICLES = [
     searchText   : 'azelaic acid evidence skin care pigmentation rosacea acne hyperpigmentation skincare ingredient analysis',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/man-sunburn-back.jpg?w=400',
+    image        : '/assets/images/man-sunburn-back.jpg',
   },
   // Skincare S3
   {
@@ -254,7 +254,7 @@ window.MOS_ARTICLES = [
     searchText   : 'best eye cream eye cream for dark circles hyaluronic acid serum periorbital skincare product breakdown',
     popular      : false,
     readingTime  : 8,
-    image        : '/assets/images/transparent-drops-retinol.jpg?w=400',
+    image        : '/assets/images/transparent-drops-retinol.jpg',
   },
   // Haircare H1
   {
@@ -354,7 +354,7 @@ window.MOS_ARTICLES = [
     searchText   : 'collagen liquid collagen collagen supplements skin elasticity wrinkle bioavailability wellness',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/oral-collagen-suppplement.jpg',
+    image        : '/assets/images/oral-collagen-supplement.jpg',
   },
   // Wellness W2
   {
@@ -394,7 +394,7 @@ window.MOS_ARTICLES = [
     searchText   : 'red light therapy for hair growth hair growth brush red light lllt photobiomodulation laser wellness',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/red-light-therapy.jpg?w=400',
+    image        : '/assets/images/red-light-therapy.jpg',
   },
   // Wellness W4
   {
@@ -513,7 +513,7 @@ window.MOS_ARTICLES = [
     searchText   : 'rosemary oil minoxidil hair growth natural alternative rogaine essential oil haircare ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400',
+    image        : 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108',
   },
   {
     slug         : 'bond-builders-hair',
@@ -570,7 +570,7 @@ window.MOS_ARTICLES = [
     searchText   : 'magnesium l-threonate blood brain barrier magtein brain health nootropic supplement wellness ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400',
+    image        : 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063',
   },
 ];
 

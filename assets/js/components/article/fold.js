@@ -35,19 +35,7 @@
         return html;
     }
 
-    function formatDate(iso) {
-        try {
-            var d = new Date(iso + 'T12:00:00Z');
-            return d.toLocaleDateString('en-US', {
-                year: 'month' !== 'year' ? 'numeric' : undefined,
-                month: 'long',
-                day: 'numeric',
-                timeZone: 'UTC'
-            });
-        } catch (e) {
-            return iso;
-        }
-    }
+    var formatDate = window.MOS_formatDate || function (iso) { return iso; };
 
     /**
      * createFold(config) → HTMLElement
@@ -83,7 +71,7 @@
         if (cfg.author) {
             var authorName = cfg.author.name || '';
             var authorSlug = cfg.author.slug || '';
-            var authorPath = authorSlug ? '/authors/' + authorSlug + '/' : '';
+            var authorPath = authorSlug ? '/experts/' + authorSlug + '/' : '';
 
             var authorInner = authorPath
                 ? '<a href="' + authorPath + '" class="author-link"><strong>' + authorName + '</strong></a>'

@@ -5,14 +5,7 @@
 (function () {
     'use strict';
 
-    function formatDate(iso) {
-        try {
-            var d = new Date(iso + 'T12:00:00Z');
-            return d.toLocaleDateString('en-US', {
-                year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
-            });
-        } catch (e) { return iso; }
-    }
+    var formatDate = window.MOS_formatDate || function (iso) { return iso; };
 
     function sortByDateDesc(a, b) {
         return (b.date || '').localeCompare(a.date || '');
@@ -116,7 +109,7 @@
                 moreArticles = byAuthor;
                 // Build a readable author name from the slug
                 moreLabel  = 'More From ' + (byAuthor[0].author || currentAuthor);
-                seeAllHref = '/authors/' + currentAuthor + '/';
+                seeAllHref = '/experts/' + currentAuthor + '/';
             } else {
                 // Fall back to topic
                 var byTopic = allOthers

@@ -69,6 +69,14 @@
             document.head.appendChild(manifest);
         }
 
+        // Shared date formatter — loaded before component scripts
+        if (!document.querySelector('script[data-mos-formatdate]')) {
+            var fmtDate = document.createElement('script');
+            fmtDate.src                  = assetPath + '/js/utils/format-date.js';
+            fmtDate.dataset.mosFormatdate = '1';
+            document.head.appendChild(fmtDate);
+        }
+
         // Search component — depends on manifest
         if (!document.querySelector('script[data-mos-search]')) {
             var searchScript = document.createElement('script');

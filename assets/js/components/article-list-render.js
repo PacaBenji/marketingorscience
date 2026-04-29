@@ -1,30 +1,25 @@
-// author-page.js — marketingorscience.com
-// Reads author slug from URL, filters MOS_ARTICLES, and populates
-// .author-articles-list on /authors/{slug}/ pages.
+// article-list-render.js — marketingorscience.com
+// Renders all articles into .article-list from MOS_ARTICLES.
+// Replaces hardcoded cards; works with category-filter.js for filtering.
 
 (function () {
     'use strict';
 
-    function getAuthorSlug() {
-        // Expect URL pattern: /experts/{slug}/
-        var match = window.location.pathname.match(/\/experts\/([^\/]+)/);
-        return match ? match[1] : '';
-    }
-
     var formatDate = window.MOS_formatDate || function (iso) { return iso; };
 
-    function renderArticleItem(article) {
-        var a = document.createElement('a');
-        a.className = 'article-list-item';
-        a.href = article.url || '#';
-        a.setAttribute('data-category', article.categorySlug || '');
-        a.setAttribute('aria-label', 'Read: ' + article.title);
+    function slugifyType(type) {
+        return (type || '').toLowerCase().replace(/\s+/g, '-');
+    }
 
+    function renderArticleItem(article) {
         var verdictClass = article.verdictClass
             ? 'verdict-pill verdict-pill--' + article.verdictClass
             : 'verdict-pill';
 
-        a.innerHTML =
+        return '<a href="' + (article.url || '#') + '" class="article-list-item"' +
+            ' data-category="' + (article.categorySlug || '') + '"' +
+            ' data-type="' + slugifyType(article.type) + '"' +
+            ' aria-label="Read: ' + (article.title || '') + '">' +
             (article.image
                 ? '<img class="list-item-thumb" src="' + article.image + '" alt="" loading="lazy">'
                 : '') +
@@ -55,44 +50,30 @@
                 (article.verdict
                     ? '<span class="' + verdictClass + '">' + article.verdict + '</span>'
                     : '') +
-            '</div>';
-
-        return a;
+            '</div>' +
+        '</a>';
     }
 
-    function populate(authorSlug) {
-        var container = document.querySelector('.author-articles-list');
+    function render(articles) {
+        var container = document.querySelector('.article-list');
         if (!container) return;
 
-        if (!window.MOS_ARTICLES || !window.MOS_ARTICLES.length) {
-            container.innerHTML = '<p style="color:var(--color-muted)">No articles found.</p>';
-            return;
-        }
-
-        var articles = window.MOS_ARTICLES
-            .filter(function (a) { return a.authorSlug === authorSlug; })
-            .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
-
-        if (articles.length === 0) {
-            container.innerHTML = '<p style="color:var(--color-muted)">No articles found for this author.</p>';
-            return;
-        }
-
-        container.innerHTML = '';
-        articles.forEach(function (article) {
-            container.appendChild(renderArticleItem(article));
+        var sorted = articles.slice().sort(function (a, b) {
+            return (b.date || '').localeCompare(a.date || '');
         });
+
+        container.innerHTML = sorted.map(renderArticleItem).join('');
+
+        // Notify category-filter that cards are ready
+        window.dispatchEvent(new CustomEvent('articleListRendered'));
     }
 
     function init() {
-        var authorSlug = getAuthorSlug();
-        if (!authorSlug) return;
-
         if (window.MOS_ARTICLES) {
-            populate(authorSlug);
+            render(window.MOS_ARTICLES);
         } else {
             window.addEventListener('articlesLoaded', function () {
-                populate(authorSlug);
+                render(window.MOS_ARTICLES);
             }, { once: true });
         }
     }
