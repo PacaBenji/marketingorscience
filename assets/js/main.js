@@ -274,7 +274,7 @@
                 e.preventDefault();
                 var confirm = document.createElement('span');
                 confirm.className = 'footer-newsletter-confirm';
-                confirm.textContent = 'Thanks — we\'ll be in touch.';
+                confirm.innerHTML = '<span class="footer-newsletter-check">&#10003;</span> Thanks \u2014 we\'ll be in touch.';
                 form.parentNode.replaceChild(confirm, form);
             });
         }

@@ -1763,6 +1763,10 @@ body {
     color: #aaa;
 }
 
+.footer-newsletter-check {
+    color: #4caf50;
+}
+
 /* ── Bottom bar ── */
 .footer-bottom {
     display: flex;
