@@ -19,6 +19,7 @@
         return '<a href="' + (article.url || '#') + '" class="article-list-item"' +
             ' data-category="' + (article.categorySlug || '') + '"' +
             ' data-type="' + slugifyType(article.type) + '"' +
+            ' data-tags="' + (article.tags || []).join(' ') + '"' +
             ' aria-label="Read: ' + (article.title || '') + '">' +
             (article.image
                 ? '<img class="list-item-thumb" src="' + article.image + '" alt="" loading="lazy">'

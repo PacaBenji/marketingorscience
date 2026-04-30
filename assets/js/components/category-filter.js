@@ -1,50 +1,54 @@
 // category-filter.js — marketingorscience.com
-// Reads ?category= and ?type= from URL and filters .article-list-item elements
-// by their data-category and data-type attributes. Also marks the matching tab
-// active and updates the page heading dynamically.
+// Reads ?category= from URL for category tabs.
+// Tag dropdown filters in-page without URL changes.
+// Filters .article-list-item by data-category and data-tags (AND logic).
 
 (function () {
     'use strict';
 
-    function init() {
+    var activeTag = '';
+
+    function populateTagDropdown(select) {
+        var tags = {};
+        (window.MOS_ARTICLES || []).forEach(function (a) {
+            (a.tags || []).forEach(function (t) { tags[t] = true; });
+        });
+        Object.keys(tags).sort().forEach(function (tag) {
+            var opt = document.createElement('option');
+            opt.value = tag;
+            opt.textContent = tag.replace(/-/g, ' ');
+            select.appendChild(opt);
+        });
+    }
+
+    function applyFilters() {
         var params   = new URLSearchParams(window.location.search);
         var category = params.get('category') || '';
-        var type     = params.get('type') || '';
 
         var items = document.querySelectorAll('.article-list-item');
         var tabs  = document.querySelectorAll('.filter-tab');
-        var typePills = document.querySelectorAll('.type-pill');
 
         // Update tab active states
         tabs.forEach(function (tab) {
             tab.classList.remove('active');
             var href = tab.getAttribute('href') || '';
-            if (!category && !type && (href === '/articles' || href === '/articles/' || href === '../articles')) {
+            if (!category && (href === '/articles' || href === '/articles/' || href === '../articles')) {
                 tab.classList.add('active');
             } else if (category && href.indexOf('category=' + category) !== -1) {
                 tab.classList.add('active');
             }
         });
 
-        // Update type pill active states
-        typePills.forEach(function (pill) {
-            pill.classList.remove('active');
-            var href = pill.getAttribute('href') || '';
-            if (type && href.indexOf('type=' + type) !== -1) {
-                pill.classList.add('active');
-            }
-        });
-
-        // Show / hide items by category AND/OR type
+        // Show / hide items by category AND tag
         items.forEach(function (item) {
             var itemCat  = item.getAttribute('data-category') || '';
-            var itemType = item.getAttribute('data-type') || '';
-            var catMatch  = !category || itemCat === category;
-            var typeMatch = !type     || itemType === type;
-            item.style.display = (catMatch && typeMatch) ? '' : 'none';
+            var itemTags = item.getAttribute('data-tags') || '';
+            var catMatch = !category || itemCat === category;
+            var tagMatch = !activeTag || itemTags.split(' ').indexOf(activeTag) !== -1;
+            item.style.display = (catMatch && tagMatch) ? '' : 'none';
         });
 
-        // Update page heading based on active filter
+        // Update page heading
         var heading = document.querySelector('.page-header-title');
         if (heading) {
             var categoryLabels = {
@@ -54,30 +58,28 @@
                 'wellness' : 'Wellness',
                 'pharma'   : 'Pharma & OTC'
             };
-            var typeLabels = {
-                'ingredient-analysis' : 'Ingredient Analyses',
-                'product-breakdown'   : 'Product Breakdowns',
-                'trial-review'        : 'Trial Reviews',
-                'regulatory-review'   : 'Regulatory Reviews',
-                'condition-review'    : 'Condition Reviews'
-            };
-            if (type && typeLabels[type]) {
-                heading.textContent = typeLabels[type];
+            if (activeTag) {
+                heading.textContent = activeTag.replace(/-/g, ' ');
             } else if (category && categoryLabels[category]) {
                 heading.textContent = categoryLabels[category];
             } else {
                 heading.textContent = 'All Articles';
             }
         }
+    }
 
-        // Intercept tab clicks to update URL without full reload where possible
-        tabs.forEach(function (tab) {
-            tab.addEventListener('click', function (e) {
-                var href = tab.getAttribute('href') || '';
-                // Allow normal navigation — browser handles it.
-                // The filter runs on load, so the URL change is sufficient.
+    function init() {
+        var select = document.getElementById('tag-filter');
+        if (select && select.options.length <= 1) {
+            populateTagDropdown(select);
+        }
+        if (select) {
+            select.addEventListener('change', function () {
+                activeTag = select.value;
+                applyFilters();
             });
-        });
+        }
+        applyFilters();
     }
 
     if (document.readyState === 'loading') {
@@ -86,6 +88,6 @@
         init();
     }
 
-    // Re-run filtering after dynamic article list is rendered
+    // Re-run after dynamic article list is rendered
     window.addEventListener('articleListRendered', init, { once: true });
 })();
