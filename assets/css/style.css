@@ -1184,8 +1184,7 @@ body {
 
 /* Type filter dropdown */
 .tag-filter-bar {
-    padding: var(--space-sm) 0;
-    border-bottom: var(--border);
+    padding: var(--space-md) 0 var(--space-sm);
     display: flex;
     align-items: center;
     gap: 0.5em;
