@@ -1,22 +1,22 @@
 // category-filter.js — marketingorscience.com
 // Reads ?category= from URL for category tabs.
-// Tag dropdown filters in-page without URL changes.
-// Filters .article-list-item by data-category and data-tags (AND logic).
+// Type dropdown filters in-page without URL changes.
+// Filters .article-list-item by data-category and data-type (AND logic).
 
 (function () {
     'use strict';
 
-    var activeTag = '';
+    var activeType = '';
 
-    function populateTagDropdown(select) {
-        var tags = {};
+    function populateTypeDropdown(select) {
+        var types = {};
         (window.MOS_ARTICLES || []).forEach(function (a) {
-            (a.tags || []).forEach(function (t) { tags[t] = true; });
+            if (a.type) { types[a.type] = true; }
         });
-        Object.keys(tags).sort().forEach(function (tag) {
+        Object.keys(types).sort().forEach(function (type) {
             var opt = document.createElement('option');
-            opt.value = tag;
-            opt.textContent = tag.replace(/-/g, ' ');
+            opt.value = type.toLowerCase().replace(/\s+/g, '-');
+            opt.textContent = type;
             select.appendChild(opt);
         });
     }
@@ -39,13 +39,13 @@
             }
         });
 
-        // Show / hide items by category AND tag
+        // Show / hide items by category AND type
         items.forEach(function (item) {
             var itemCat  = item.getAttribute('data-category') || '';
-            var itemTags = item.getAttribute('data-tags') || '';
-            var catMatch = !category || itemCat === category;
-            var tagMatch = !activeTag || itemTags.split(' ').indexOf(activeTag) !== -1;
-            item.style.display = (catMatch && tagMatch) ? '' : 'none';
+            var itemType = item.getAttribute('data-type') || '';
+            var catMatch  = !category || itemCat === category;
+            var typeMatch = !activeType || itemType === activeType;
+            item.style.display = (catMatch && typeMatch) ? '' : 'none';
         });
 
         // Update page heading
@@ -58,8 +58,11 @@
                 'wellness' : 'Wellness',
                 'pharma'   : 'Pharma & OTC'
             };
-            if (activeTag) {
-                heading.textContent = activeTag.replace(/-/g, ' ');
+            if (activeType) {
+                // Find the display label from the select options
+                var select = document.getElementById('type-filter');
+                var selectedOpt = select && select.options[select.selectedIndex];
+                heading.textContent = selectedOpt ? selectedOpt.textContent : activeType.replace(/-/g, ' ');
             } else if (category && categoryLabels[category]) {
                 heading.textContent = categoryLabels[category];
             } else {
@@ -69,13 +72,13 @@
     }
 
     function init() {
-        var select = document.getElementById('tag-filter');
+        var select = document.getElementById('type-filter');
         if (select && select.options.length <= 1) {
-            populateTagDropdown(select);
+            populateTypeDropdown(select);
         }
         if (select) {
             select.addEventListener('change', function () {
-                activeTag = select.value;
+                activeType = select.value;
                 applyFilters();
             });
         }
