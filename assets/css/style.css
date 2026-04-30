@@ -1757,6 +1757,12 @@ body {
     color: #0f0f0f;
 }
 
+.footer-newsletter-confirm {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: #aaa;
+}
+
 /* ── Bottom bar ── */
 .footer-bottom {
     display: flex;

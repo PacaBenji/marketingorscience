@@ -267,6 +267,17 @@
             '</footer>';
 
         document.body.insertAdjacentHTML('beforeend', html);
+
+        var form = document.querySelector('.footer-newsletter-form');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var confirm = document.createElement('span');
+                confirm.className = 'footer-newsletter-confirm';
+                confirm.textContent = 'Thanks — we\'ll be in touch.';
+                form.parentNode.replaceChild(confirm, form);
+            });
+        }
     }
 
     // ─── Mega-menu ───────────────────────────────────────────────────────────
