@@ -1059,9 +1059,12 @@ body {
     padding: var(--space-xl) 0 var(--space-2xl);
 }
 
-.about-section {
-    margin-bottom: var(--space-xl);
+.about-section .expert-grid {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
 }
+
+
 
 .about-section h2 {
     font-size: var(--text-h3);
@@ -1831,6 +1834,10 @@ body {
         --space-xl:  2.5rem;
         --space-2xl: 3.5rem;
         --nav-height: 48px;
+    }
+
+    .about-section .expert-grid {
+        grid-template-columns: 1fr;
     }
 
     .featured-banner-image img {
