@@ -290,7 +290,7 @@ window.MOS_ARTICLES = [
     popular      : true,
     popularRank  : 4,
     readingTime  : 10,
-    image        : '/assets/images/oral-collagen-abstract.jpg',
+    image        : '/assets/images/collagen-supplement.jpg',
   },
   // ── Part B: 16 new articles (April 2026) ──────────────────────────────────
 
