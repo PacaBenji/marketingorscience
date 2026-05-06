@@ -693,7 +693,7 @@ body {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
     flex-wrap: wrap;
 }
 
@@ -871,7 +871,7 @@ body {
     line-height: 1.25;
     letter-spacing: -0.02em;
     color: var(--color-text);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
     transition: color 0.15s;
 }
 .list-item-body:hover .list-item-headline {
@@ -883,7 +883,7 @@ body {
     font-size: var(--text-body);
     color: var(--color-muted);
     line-height: 1.65;
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
 }
 
 .list-item-meta {
