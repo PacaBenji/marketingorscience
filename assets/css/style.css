@@ -1071,6 +1071,7 @@ body {
     margin-bottom: var(--space-md);
     padding-bottom: var(--space-sm);
     border-bottom: var(--border);
+    margin-top: var(--space-xl);
 }
 
 .about-section p + p {
