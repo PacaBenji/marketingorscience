@@ -708,7 +708,7 @@ window.MOS_ARTICLES = [
     searchText   : 'pdrn polydeoxyribonucleotide salmon dna skin booster injectable regenerative medicine a2a receptor wound healing aesthetic skincare ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : 'https://images.unsplash.com/photo-1612458913725-4bdc8f61f87b',
+    image        : '/assets/images/facial-skin-texture.jpg',
   },
   {
     slug         : 'sublingual-allergy-drops',
@@ -727,7 +727,7 @@ window.MOS_ARTICLES = [
     searchText   : 'sublingual allergy drops slit scit immunotherapy tablets grastek ragwitek odactra oralair compounded drops allergy shots pharma treatment analysis',
     popular      : false,
     readingTime  : 11,
-    image        : 'https://images.unsplash.com/photo-1585435557343-3b092031a831',
+    image        : '/assets/images/sublingual-allergy-drops.jpg',
   },
   {
     slug         : 'nootropics-category-overview',
@@ -746,7 +746,7 @@ window.MOS_ARTICLES = [
     searchText   : 'nootropics cognitive enhancement caffeine l-theanine citicoline cdp-choline lions mane hericium bacopa monnieri ashwagandha ginkgo biloba phosphatidylserine huperzine wellness category overview',
     popular      : false,
     readingTime  : 13,
-    image        : 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae',
+    image        : '/assets/images/nootropics-abstract.jpg',
   },
   {
     slug         : 'glycerin-humectant',
@@ -765,7 +765,7 @@ window.MOS_ARTICLES = [
     searchText   : 'glycerin glycerol humectant moisturizer skin barrier hydration aquaporin aqp3 stratum corneum tewl hyaluronic acid urea propylene glycol skincare ingredient analysis',
     popular      : false,
     readingTime  : 11,
-    image        : 'https://images.unsplash.com/photo-1556228578-8c89e6adf883',
+    image        : '/assets/images/glycerin.jpg',
   },
 ];
 
