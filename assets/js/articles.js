@@ -3,6 +3,45 @@
 // Exposed as window.MOS_ARTICLES.
 
 window.MOS_ARTICLES = [
+  // ── 2 new articles (May 13, 2026) ────────────────────────────────────────
+  {
+    slug         : 'beauty-peptides-evidence-review',
+    url          : '/articles/skincare/2026/05/beauty-peptides-evidence-review',
+    title        : 'Beauty Peptides by Class: What the Clinical Evidence Actually Shows',
+    deck         : 'Matrixyl, GHK-Cu, Argireline, and enzyme-inhibitor peptides are among the most-marketed skincare actives. A class-by-class review of the RCT evidence, penetration data, and the conflict-of-interest landscape that shapes the literature.',
+    category     : 'Skincare & Beauty',
+    categorySlug : 'skincare',
+    type         : 'Ingredient Analysis',
+    tags         : ['peptides', 'matrixyl', 'ghk-cu', 'argireline', 'cosmeceutical', 'anti-aging'],
+    author       : 'Dr. Stella Cho',
+    authorSlug   : 'stella-cho',
+    date         : '2026-05-13',
+    verdict      : 'Mixed Evidence',
+    verdictClass : 'mixed',
+    searchText   : 'beauty peptides matrixyl ghk-cu argireline signal carrier neurotransmitter enzyme inhibitor rct evidence penetration 500 dalton rule cosmeceutical anti-aging skincare ingredient analysis',
+    popular      : false,
+    readingTime  : 13,
+    image        : '/assets/images/liquid-beauty-product.jpg',
+  },
+  {
+    slug         : 'peptide-compounding-fda-review',
+    url          : '/articles/pharma/2026/05/peptide-compounding-fda-review',
+    title        : 'Seven Peptides, One Regulatory Gray Zone: Inside the FDA\'s 503A Compounding Review',
+    deck         : 'BPC-157, Semax, Epitalon, and four other peptides were removed from the FDA\'s \'do not compound\' list in April 2026. A review of the regulatory history, the evidence gaps that drove the original restrictions, and what the July 2026 PCAC re-review means.',
+    category     : 'Pharma & OTC',
+    categorySlug : 'pharma',
+    type         : 'Regulatory Review',
+    tags         : ['peptides', 'fda', 'compounding', '503a', 'bpc-157', 'semax', 'epitalon', 'pcac', 'regulatory'],
+    author       : 'Editorial Team',
+    authorSlug   : 'editorial',
+    date         : '2026-05-13',
+    verdict      : 'Mixed Evidence',
+    verdictClass : 'mixed',
+    searchText   : 'peptide compounding fda 503a bulks list bpc-157 kpv tb-500 mots-c emideltide semax epitalon pcac category 2 regulatory review pharma',
+    popular      : false,
+    readingTime  : 14,
+    image        : '/assets/images/adapalene-cream.jpg',
+  },
   // ── 6 new articles (April 29, 2026) ──────────────────────────────────────
   {
     slug         : 'hair-loss-treatments-sex-differences',
