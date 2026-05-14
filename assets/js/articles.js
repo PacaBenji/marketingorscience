@@ -40,7 +40,7 @@ window.MOS_ARTICLES = [
     searchText   : 'peptide compounding fda 503a bulks list bpc-157 kpv tb-500 mots-c emideltide semax epitalon pcac category 2 regulatory review pharma',
     popular      : false,
     readingTime  : 14,
-    image        : '/assets/images/adapalene-cream.jpg',
+    image        : '/assets/images/peptide-vials.jpg',
   },
   // ── 6 new articles (April 29, 2026) ──────────────────────────────────────
   {
