@@ -21,7 +21,7 @@ window.MOS_ARTICLES = [
     searchText   : 'beauty peptides matrixyl ghk-cu argireline signal carrier neurotransmitter enzyme inhibitor rct evidence penetration 500 dalton rule cosmeceutical anti-aging skincare ingredient analysis',
     popular      : false,
     readingTime  : 13,
-    image        : '/assets/images/liquid-beauty-product.jpg',
+    image        : '/assets/images/women-peptides-skin.jpg',
   },
   {
     slug         : 'peptide-compounding-fda-review',
