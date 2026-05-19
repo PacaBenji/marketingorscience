@@ -21,7 +21,7 @@ window.MOS_ARTICLES = [
     searchText   : 'thesis nootropics product breakdown clarity energy logic motivation citicoline alpha-gpc lion mane ashwagandha caffeine theanine sabroxy 7,8-dihydroxyflavone teacrine dynamine personalized cognitive supplements wellness',
     popular      : false,
     readingTime  : 12,
-    image        : '/assets/images/nootropics-abstract.jpg',
+    image        : '/assets/images/colorful-pill.jpg',
   },
   {
     slug         : 'creme-de-la-mer-miracle-broth',
@@ -40,7 +40,7 @@ window.MOS_ARTICLES = [
     searchText   : 'creme de la mer miracle broth max huber sea kelp macrocystis pyrifera petrolatum mineral oil fermentation luxury skincare moisturizer estee lauder product breakdown',
     popular      : false,
     readingTime  : 11,
-    image        : '/assets/images/woman-applying-cream.jpg',
+    image        : '/assets/images/creme-la-mer.jpg',
   },
   {
     slug         : 'baby-eczema-condition-review',
@@ -59,7 +59,7 @@ window.MOS_ARTICLES = [
     searchText   : 'baby eczema infant atopic dermatitis filaggrin leap trial beep preventadall topical steroids hydrocortisone tacrolimus pimecrolimus crisaborole dupilumab dupixent aveeno mustela cerave national eczema association seal pediatric condition review',
     popular      : false,
     readingTime  : 14,
-    image        : '/assets/images/macro-skin.jpg',
+    image        : '/assets/images/tiny-baby.jpg',
   },
   // ── 2 new articles (May 13, 2026) ────────────────────────────────────────
   {
