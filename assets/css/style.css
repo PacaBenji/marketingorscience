@@ -1074,6 +1074,10 @@ body {
     margin-top: var(--space-xl);
 }
 
+.about-section h2 + p {
+    margin-bottom: var(--space-lg);
+}
+
 .about-section p + p {
     margin-top: var(--space-md);
     margin-bottom: var(--space-md);
@@ -1559,7 +1563,7 @@ body {
     text-transform: uppercase;
     color: var(--color-muted);
     margin-bottom: var(--space-xs);
-    margin-top: var(--space-sm)
+    margin-top: var(--space-sm);
     display: block;
 }
 

@@ -70,33 +70,6 @@
                 the central question, and it is not yet well answered.
             </p>
 
-            <script>
-            initComponentsWhenReady(function() {
-                createFold({
-                    category:    'Wellness',
-                    articleType: 'Ingredient Analysis',
-                    title:       'Lemon Verbena and Hibiscus for Joint Health: Evaluating the Combination Evidence',
-                    deck:        'Two botanicals with distinct phytochemical profiles are increasingly paired in joint supplements. We review what each ingredient&rsquo;s evidence base actually looks like &mdash; and what the combination trials add.',
-                    author:      'Editorial Team',
-                    authorUrl:   '/experts/editorial/',
-                    date:        'May 23, 2026',
-                    readingTime: '10 min read',
-                    verdict:     'Mixed Evidence',
-                    verdictClass:'mixed',
-                    score:       2,
-                    scoreMax:    5
-                });
-
-                createTOC([
-                    { id: 'lemon-verbena',      label: 'Lemon Verbena: Mechanism and Evidence' },
-                    { id: 'hibiscus',           label: 'Hibiscus: Mechanism and Evidence' },
-                    { id: 'combination',        label: 'Combination Product Trials' },
-                    { id: 'claims',             label: 'Evaluating the Marketing Claims' },
-                    { id: 'verdict',            label: 'Verdict' }
-                ]);
-            });
-            </script>
-
             <!-- 1. Lemon Verbena -->
             <h2 id="lemon-verbena">Lemon Verbena: Mechanism and Evidence</h2>
 
@@ -323,22 +296,54 @@
                 joint health interventions are not supported.
             </p>
 
-            <script>
-            initComponentsWhenReady(function() {
-                injectCTABlock();
-                createArticleFooter({
-                    author:    'Editorial Team',
-                    authorUrl: '/experts/editorial/',
-                    date:      'May 23, 2026'
-                });
-                createShareBar();
-                createReadMore({ currentSlug: 'lemon-verbena-hibiscus' });
-            });
-            </script>
-
         </article>
 
     </main>
+
+    <script>
+        initComponentsWhenReady(function () {
+            var main        = document.querySelector('main');
+            var articleBody = document.querySelector('.article-body');
+
+            var fold = createFold({
+                category    : 'Wellness',
+                type        : 'Ingredient Analysis',
+                headline    : 'Lemon Verbena and Hibiscus for Joint Health: Evaluating the Combination Evidence',
+                deck        : 'Two botanicals with distinct phytochemical profiles are increasingly paired in joint supplements. We review what each ingredient\'s evidence base actually looks like — and what the combination trials add.',
+                author      : { name: 'Editorial Team', slug: 'editorial', credential: null },
+                date        : '2026-05-23',
+                readingTime : 10,
+                verdict     : { label: 'Mixed Evidence', rating: 2, max: 5 },
+                peerReviewed: false
+            });
+            main.insertBefore(fold, articleBody);
+
+            var toc = createTOC();
+            if (toc && articleBody) articleBody.insertBefore(toc, articleBody.firstChild);
+
+            if (typeof injectCTABlock === 'function') injectCTABlock();
+
+            var footer = createArticleFooter({
+                citationNote: 'Editorial Team. (2026, May 23). Lemon Verbena and Hibiscus for Joint Health: Evaluating the Combination Evidence. marketingorscience.com'
+            });
+            main.appendChild(footer);
+
+            var shareFooter = createShareBar({
+                url      : 'https://marketingorscience.com/articles/wellness/2026/05/lemon-verbena-hibiscus',
+                title    : 'Lemon Verbena and Hibiscus for Joint Health: Evaluating the Combination Evidence',
+                position : 'footer'
+            });
+            main.insertBefore(shareFooter, footer);
+
+            var readMore = createReadMore({
+                currentSlug     : 'lemon-verbena-hibiscus',
+                currentCategory : 'wellness',
+                currentAuthor   : 'editorial',
+                limit           : 3
+            });
+            if (readMore) main.appendChild(readMore);
+        });
+    </script>
 
     <!-- [FOOTER injected by main.js] -->
 
