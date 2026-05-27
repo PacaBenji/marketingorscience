@@ -1076,6 +1076,7 @@ body {
 
 .about-section p + p {
     margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
 }
 
 .about-section ul {
