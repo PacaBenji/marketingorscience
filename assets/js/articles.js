@@ -943,7 +943,7 @@ window.MOS_ARTICLES = [
     searchText   : 'lemon verbena aloysia citrodora hibiscus sabdariffa joint health inflammation verbascoside anthocyanins womac osteoarthritis uric acid wellness ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/lemon-verbena-hibiscus.jpg',
+    image        : '/assets/images/lemon-verbena.jpg',
   },
 ];
 
