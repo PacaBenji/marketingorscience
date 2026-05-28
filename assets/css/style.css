@@ -1078,6 +1078,20 @@ body {
     margin-bottom: var(--space-lg);
 }
 
+.experts-tag-line {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+}
+
+.about-section > .expert-card-link {
+    display: inline-block;
+    margin-top: var(--space-md);
+}
+
 .about-section p + p {
     margin-top: var(--space-md);
     margin-bottom: var(--space-md);
@@ -3243,14 +3257,14 @@ figcaption {
 
 .expert-tag {
     font-family: var(--font-ui);
-    font-size: var(--text-label);
+    font-size: var(--text-meta);
     color: var(--color-muted);
     letter-spacing: 0.02em;
 }
 
 .expert-card-bio {
     font-family: var(--font-body);
-    font-size: var(--text-meta);
+    font-size: var(--text-body);
     color: var(--color-muted);
     line-height: 1.6;
 }
