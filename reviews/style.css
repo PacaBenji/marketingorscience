@@ -99,13 +99,12 @@ strong { font-weight: 700; }
     position: sticky;
     top: 0;
     z-index: 100;
-    background: var(--color-bg);
+    background: var(--color-dark);
     height: var(--nav-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 var(--space-lg);
-    border-bottom: var(--border);
 }
 
 .review-nav__logo img {
@@ -116,11 +115,12 @@ strong { font-weight: 700; }
 .review-nav__link {
     font-family: var(--font-ui);
     font-size: var(--text-meta);
-    color: var(--color-muted);
+    color: var(--color-dark-muted);
     letter-spacing: 0.03em;
+    text-decoration: none;
 }
 
-.review-nav__link:hover { color: var(--color-accent); }
+.review-nav__link:hover { color: #fff; }
 
 
 /* ============================================================
@@ -613,29 +613,50 @@ strong { font-weight: 700; }
     width: 100%;
     border-collapse: collapse;
     font-family: var(--font-ui);
-    font-size: var(--text-meta);
-    margin-bottom: var(--space-lg);
+    font-size: 0.8rem;
+    margin: var(--space-lg) 0;
+    border: 1px solid var(--color-divider);
+    overflow: hidden;
 }
 
 .ingredient-table th,
 .ingredient-table td {
-    border: var(--border);
-    padding: var(--space-sm) var(--space-md);
+    padding: 0.6rem 0.875rem;
     text-align: left;
-    vertical-align: top;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--color-divider);
+    border-right: 1px solid var(--color-divider);
+    line-height: 1.4;
+}
+
+.ingredient-table th:last-child,
+.ingredient-table td:last-child {
+    border-right: none;
+}
+
+.ingredient-table thead tr {
+    background: var(--color-accent);
 }
 
 .ingredient-table th {
-    background: var(--color-accent-light);
     font-weight: 700;
-    color: var(--color-accent);
-    font-size: var(--text-label);
-    letter-spacing: 0.06em;
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
-.ingredient-table tr:nth-child(even) td {
-    background: #fafafa;
+.ingredient-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.ingredient-table tbody tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+.ingredient-table tbody tr:hover td {
+    background: var(--color-accent-light);
 }
 
 /* Card footer CTA */
@@ -645,15 +666,8 @@ strong { font-weight: 700; }
     border-top: var(--border);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: var(--space-md);
-    flex-wrap: wrap;
-}
-
-.card-footer-cta__note {
-    font-family: var(--font-ui);
-    font-size: var(--text-meta);
-    color: var(--color-muted);
 }
 
 .card-cta-link {
@@ -687,25 +701,37 @@ strong { font-weight: 700; }
     width: 100%;
     border-collapse: collapse;
     font-family: var(--font-ui);
-    font-size: var(--text-meta);
-    min-width: 720px;
+    font-size: 0.8rem;
+    min-width: 780px;
+    border: 1px solid var(--color-divider);
 }
 
 .comparison-table th,
 .comparison-table td {
-    border: var(--border);
-    padding: var(--space-sm) var(--space-md);
+    padding: 0.6rem 0.875rem;
     text-align: left;
-    white-space: nowrap;
+    border-bottom: 1px solid var(--color-divider);
+    border-right: 1px solid var(--color-divider);
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.comparison-table th:last-child,
+.comparison-table td:last-child {
+    border-right: none;
+}
+
+.comparison-table thead tr {
+    background: var(--color-accent);
 }
 
 .comparison-table th {
-    background: var(--color-accent-light);
     font-weight: 700;
-    color: var(--color-accent);
-    font-size: var(--text-label);
-    letter-spacing: 0.06em;
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
+    white-space: nowrap;
     position: sticky;
     top: var(--nav-height);
 }
@@ -716,14 +742,21 @@ strong { font-weight: 700; }
     left: 0;
     background: var(--color-bg);
     border-right: 2px solid var(--color-divider);
-    min-width: 180px;
+    min-width: 170px;
+    white-space: nowrap;
 }
 
-.comparison-table tr:nth-child(even) td { background: #fafafa; }
-.comparison-table tr:nth-child(even) td:first-child { background: #fafafa; }
+.comparison-table tbody tr:nth-child(even) td { background: #f8fafc; }
+.comparison-table tbody tr:nth-child(even) td:first-child { background: #f8fafc; }
 
-.comparison-table tr.winner-row td { background: var(--color-accent-light); }
-.comparison-table tr.winner-row td:first-child { background: var(--color-accent-light); }
+.comparison-table tbody tr:hover td { background: var(--color-accent-light); }
+.comparison-table tbody tr:hover td:first-child { background: var(--color-accent-light); }
+
+.comparison-table tr.winner-row td { background: var(--color-accent-light); font-weight: 600; }
+.comparison-table tr.winner-row td:first-child {
+    background: var(--color-accent-light);
+    border-left: 3px solid var(--color-accent);
+}
 
 .check { color: var(--pro-color); font-weight: 700; }
 .cross { color: var(--con-color); font-weight: 700; }
