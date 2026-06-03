@@ -44,7 +44,7 @@
     /* — Layout — */
     --review-max-width: 860px;
     --max-width:        1200px;
-    --nav-height:       56px;
+    --nav-height:       60px;
 
     /* — Borders — */
     --radius: 0;
@@ -71,6 +71,7 @@ body {
     background: var(--color-bg);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -196,9 +197,10 @@ strong { font-weight: 700; }
 }
 
 .author-card__avatar {
-    width: 44px;
-    height: 44px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
+    object-fit: cover;
     background: var(--color-accent);
     color: #fff;
     font-family: var(--font-serif);
@@ -235,6 +237,12 @@ strong { font-weight: 700; }
    ============================================================ */
 .quick-rankings {
     margin-bottom: var(--space-xl);
+}
+
+.quick-rankings ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .quick-rankings h2 {
@@ -659,7 +667,79 @@ strong { font-weight: 700; }
     background: var(--color-accent-light);
 }
 
-/* Card footer CTA */
+/* Table scroll wrapper — enables horizontal scroll on mobile */
+.table-scroll-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: var(--space-lg) 0;
+    border: 1px solid var(--color-divider);
+}
+
+.table-scroll-wrap .ingredient-table {
+    margin: 0;
+    border: none;
+}
+
+/* Related reading section */
+.related-reading {
+    margin-bottom: var(--space-xl);
+}
+
+.related-reading .section-heading {
+    font-size: var(--text-h2);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: var(--border);
+}
+
+/* Related reading grid */
+.related-reading-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+}
+
+.related-reading-card {
+    display: block;
+    border: var(--border);
+    border-top: 3px solid var(--color-accent);
+    padding: var(--space-md);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-top-color 0.15s;
+}
+
+.related-reading-card:hover {
+    border-top-color: var(--color-accent-hover);
+    color: var(--color-text);
+}
+
+.related-reading-card__category {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.related-reading-card__title {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: var(--space-sm);
+    line-height: 1.35;
+}
+
+.related-reading-card__desc {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+    line-height: 1.5;
+}
 .card-footer-cta {
     margin-top: var(--space-lg);
     padding-top: var(--space-md);
@@ -909,6 +989,12 @@ strong { font-weight: 700; }
     .trust-badges { gap: var(--space-sm); }
 
     .review-footer__inner { flex-direction: column; text-align: center; }
+
+    .related-reading-grid { grid-template-columns: 1fr 1fr; }
+
+    .evidence-bar { flex-wrap: wrap; }
+
+    .author-card { align-items: flex-start; }
 }
 
 @media (max-width: 480px) {
@@ -918,6 +1004,14 @@ strong { font-weight: 700; }
 
     .quick-rank-item { flex-wrap: wrap; }
     .quick-rank-item__link { width: 100%; margin-top: var(--space-sm); }
+
+    .related-reading-grid { grid-template-columns: 1fr; }
+
+    .author-card { flex-direction: column; align-items: flex-start; }
+
+    .review-card { padding: var(--space-md); }
+
+    .methodology { padding: var(--space-md); }
 }
 
 /* ============================================================
