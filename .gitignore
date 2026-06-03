@@ -1,3 +1,4 @@
 /.claude
 .serena/project.yml
 assets/.DS_Store
+.gstack/

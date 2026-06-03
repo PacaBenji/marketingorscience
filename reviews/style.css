@@ -1,0 +1,887 @@
+/* ============================================================
+   reviews/style.css — reviews.marketingorscience.com
+   Standalone stylesheet for review pages.
+   Copies MoS design tokens; adds review-specific components.
+   ============================================================ */
+
+/* ============================================================
+   1. CSS CUSTOM PROPERTIES (mirrored from main style.css)
+   ============================================================ */
+:root {
+    /* — Colors — */
+    --color-bg:            #FFFFFF;
+    --color-text:          #0A0A0A;
+    --color-accent:        #1A4A8A;
+    --color-accent-hover:  #cba17d;
+    --color-accent-light:  #E8EEF7;
+    --color-muted:         #6B6B6B;
+    --color-divider:       #E0E0E0;
+    --color-dark:          #0A0A0A;
+    --color-dark-text:     #f1f1f1;
+    --color-dark-muted:    #A0A0A0;
+
+    /* — Typography — */
+    --font-serif:   'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body:    'Lora', Georgia, 'Times New Roman', serif;
+    --font-ui:      'Inter', Arial, Helvetica, sans-serif;
+
+    /* — Type Scale — */
+    --text-hero:    clamp(2rem, 4vw, 3.25rem);
+    --text-h2:      clamp(1.5rem, 2.5vw, 2rem);
+    --text-h3:      clamp(1.125rem, 1.8vw, 1.375rem);
+    --text-body:    1.0625rem;
+    --text-meta:    0.8125rem;
+    --text-label:   0.6875rem;
+
+    /* — Spacing — */
+    --space-xs:   0.15rem;
+    --space-sm:   0.35rem;
+    --space-md:   0.85rem;
+    --space-lg:   1.85rem;
+    --space-xl:   3.85rem;
+    --space-2xl:  5.85rem;
+
+    /* — Layout — */
+    --review-max-width: 860px;
+    --max-width:        1200px;
+    --nav-height:       56px;
+
+    /* — Borders — */
+    --radius: 0;
+    --border: 1px solid var(--color-divider);
+
+    /* — Review-specific — */
+    --star-filled:   #f5a623;
+    --pro-color:     #1A6B35;
+    --con-color:     #8B1A1A;
+}
+
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { color: var(--color-accent-hover); }
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+p { margin-bottom: var(--space-lg); }
+p:last-child { margin-bottom: 0; }
+
+ul, ol { padding-left: 1.5rem; }
+li { margin-bottom: var(--space-sm); }
+
+strong { font-weight: 700; }
+
+
+/* ============================================================
+   3. NAV
+   ============================================================ */
+.review-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-dark);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-lg);
+}
+
+.review-nav__logo img {
+    height: 28px;
+    width: auto;
+}
+
+.review-nav__link {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-dark-muted);
+    letter-spacing: 0.03em;
+}
+
+.review-nav__link:hover { color: var(--color-dark-text); }
+
+
+/* ============================================================
+   4. LAYOUT WRAPPER
+   ============================================================ */
+.review-wrap {
+    max-width: var(--review-max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+
+/* ============================================================
+   5. HERO
+   ============================================================ */
+.review-hero {
+    padding: var(--space-xl) 0 var(--space-lg);
+    border-bottom: var(--border);
+    margin-bottom: var(--space-xl);
+}
+
+.review-hero__kicker {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+.review-hero h1 {
+    font-size: var(--text-hero);
+    margin-bottom: var(--space-lg);
+    max-width: 720px;
+}
+
+.review-hero__intro {
+    font-size: 1.125rem;
+    color: var(--color-muted);
+    max-width: 640px;
+    margin-bottom: var(--space-lg);
+}
+
+/* Trust badges */
+.trust-badges {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+}
+
+.trust-badge {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: 4px 10px;
+}
+
+/* Author card */
+.author-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-accent-light);
+    border-left: 3px solid var(--color-accent);
+}
+
+.author-card__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.author-card__name {
+    font-family: var(--font-ui);
+    font-size: var(--text-body);
+    font-weight: 600;
+    display: block;
+}
+
+.author-card__cred {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+    display: block;
+}
+
+.author-card__bio {
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+    margin: 0;
+}
+
+
+/* ============================================================
+   6. QUICK RANKINGS
+   ============================================================ */
+.quick-rankings {
+    margin-bottom: var(--space-xl);
+}
+
+.quick-rankings h2 {
+    font-size: var(--text-h2);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: var(--border);
+}
+
+.quick-rank-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    border-bottom: var(--border);
+}
+
+.quick-rank-item__num {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 700;
+    color: var(--color-muted);
+    width: 24px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.quick-rank-item__name {
+    font-family: var(--font-ui);
+    font-size: var(--text-body);
+    font-weight: 600;
+    flex: 1;
+}
+
+.quick-rank-item__format {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    border: 1px solid var(--color-divider);
+    padding: 2px 8px;
+    flex-shrink: 0;
+}
+
+.quick-rank-item__rating {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 700;
+    color: var(--color-text);
+    width: 48px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.quick-rank-item__link {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 600;
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+/* Winner / Runner-up badges */
+.winner-badge,
+.runner-up-badge {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    flex-shrink: 0;
+}
+
+.winner-badge {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.runner-up-badge {
+    background: var(--color-accent-hover);
+    color: #fff;
+}
+
+
+/* ============================================================
+   7. METHODOLOGY
+   ============================================================ */
+.methodology {
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
+    border: var(--border);
+    border-top: 3px solid var(--color-accent);
+}
+
+.methodology h2 {
+    font-size: var(--text-h2);
+    margin-bottom: var(--space-lg);
+}
+
+.methodology h3 {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.methodology h3:first-of-type { margin-top: 0; }
+
+.methodology p, .methodology ul { margin-bottom: var(--space-md); }
+
+.checklist-box {
+    background: var(--color-accent-light);
+    border-left: 3px solid var(--color-accent);
+    padding: var(--space-md) var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.checklist-box ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-lg);
+}
+
+.checklist-box li {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+.checklist-box li::before {
+    content: "✓ ";
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   8. PRODUCT CARDS
+   ============================================================ */
+.review-cards-section h2 {
+    font-size: var(--text-h2);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: var(--border);
+}
+
+.review-card {
+    border: 1px solid var(--color-divider);
+    border-top: 3px solid var(--color-divider);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
+}
+
+.review-card--winner {
+    border-top: 4px solid var(--color-accent);
+}
+
+.review-card--runner-up {
+    border-top: 4px solid var(--color-accent-hover);
+}
+
+/* Card header */
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.rank-badge {
+    font-family: var(--font-ui);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-muted);
+    width: 36px;
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+.card-header__meta {
+    flex: 1;
+    min-width: 200px;
+}
+
+.card-header__badges {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-sm);
+}
+
+.card-header__format {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    border: 1px solid var(--color-divider);
+    padding: 2px 8px;
+}
+
+.review-card h2 {
+    font-size: clamp(1.25rem, 2vw, 1.625rem);
+    margin-bottom: var(--space-sm);
+    line-height: 1.25;
+}
+
+/* Star rating */
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: var(--space-sm);
+}
+
+.star {
+    font-size: 1rem;
+    color: var(--color-divider);
+}
+
+.star--filled { color: var(--star-filled); }
+.star--half { color: var(--star-filled); }
+
+.star-rating__score {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 700;
+    color: var(--color-muted);
+    margin-left: 4px;
+}
+
+/* Product image + CTA column */
+.card-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    min-width: 160px;
+    flex-shrink: 0;
+}
+
+.product-img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border: var(--border);
+    background: #fafafa;
+}
+
+.buy-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--color-accent);
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 10px 16px;
+    transition: background 0.15s;
+}
+
+.buy-btn:hover {
+    background: var(--color-accent-hover);
+    color: #fff;
+}
+
+.card-price {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+    text-align: center;
+}
+
+/* Evidence bar */
+.evidence-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    padding: var(--space-md) 0;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    margin-bottom: var(--space-lg);
+}
+
+.evidence-badge {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 3px 8px;
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    border: 1px solid rgba(26,74,138,0.2);
+}
+
+/* Verdict pills (mirrored from main style.css) */
+.verdict-pill {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border: 1px solid currentColor;
+}
+
+.verdict-pill--supported   { color: #1A6B35; background: #e8f5ed; border-color: #1A6B35; }
+.verdict-pill--partial     { color: #7a4f00; background: #fdf3e0; border-color: #c68a00; }
+.verdict-pill--unsupported { color: #8B1A1A; background: #fdeaea; border-color: #8B1A1A; }
+.verdict-pill--mixed       { color: #3a3a8a; background: #eeeeff; border-color: #5555aa; }
+
+/* Pros / cons */
+.pros-cons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.pros-cons__col h4 {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+}
+
+.pros-cons__col--pros h4 { color: var(--pro-color); }
+.pros-cons__col--cons h4 { color: var(--con-color); }
+
+.pros-cons__col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pros-cons__col--pros li::before {
+    content: "✓ ";
+    color: var(--pro-color);
+    font-weight: 700;
+}
+
+.pros-cons__col--cons li::before {
+    content: "✗ ";
+    color: var(--con-color);
+    font-weight: 700;
+}
+
+/* Deep-dive body */
+.card-body h3 {
+    font-size: var(--text-h3);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.card-body h3:first-child { margin-top: 0; }
+
+/* Ingredient table */
+.ingredient-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    margin-bottom: var(--space-lg);
+}
+
+.ingredient-table th,
+.ingredient-table td {
+    border: var(--border);
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    vertical-align: top;
+}
+
+.ingredient-table th {
+    background: var(--color-accent-light);
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: var(--text-label);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.ingredient-table tr:nth-child(even) td {
+    background: #fafafa;
+}
+
+/* Card footer CTA */
+.card-footer-cta {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.card-footer-cta__note {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+}
+
+.card-cta-link {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 0.04em;
+}
+
+.card-cta-link:hover { color: var(--color-accent-hover); }
+
+
+/* ============================================================
+   9. COMPARISON TABLE
+   ============================================================ */
+.comparison-section {
+    margin-bottom: var(--space-xl);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.comparison-section h2 {
+    font-size: var(--text-h2);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: var(--border);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    min-width: 720px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: var(--border);
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    white-space: nowrap;
+}
+
+.comparison-table th {
+    background: var(--color-accent-light);
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: var(--text-label);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    position: sticky;
+    top: var(--nav-height);
+}
+
+.comparison-table td:first-child {
+    font-weight: 600;
+    position: sticky;
+    left: 0;
+    background: var(--color-bg);
+    border-right: 2px solid var(--color-divider);
+    min-width: 180px;
+}
+
+.comparison-table tr:nth-child(even) td { background: #fafafa; }
+.comparison-table tr:nth-child(even) td:first-child { background: #fafafa; }
+
+.comparison-table tr.winner-row td { background: var(--color-accent-light); }
+.comparison-table tr.winner-row td:first-child { background: var(--color-accent-light); }
+
+.check { color: var(--pro-color); font-weight: 700; }
+.cross { color: var(--con-color); font-weight: 700; }
+
+
+/* ============================================================
+   10. FAQ
+   ============================================================ */
+.review-faq {
+    margin-bottom: var(--space-xl);
+}
+
+.review-faq h2 {
+    font-size: var(--text-h2);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: var(--border);
+}
+
+.review-faq details {
+    border-bottom: var(--border);
+}
+
+.review-faq summary {
+    font-family: var(--font-ui);
+    font-size: var(--text-body);
+    font-weight: 600;
+    padding: var(--space-md) 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-faq summary::-webkit-details-marker { display: none; }
+
+.review-faq summary::after {
+    content: "+";
+    font-size: 1.25rem;
+    color: var(--color-muted);
+    flex-shrink: 0;
+}
+
+.review-faq details[open] summary::after { content: "−"; }
+
+.review-faq .faq-body {
+    padding: 0 0 var(--space-lg);
+    font-size: var(--text-body);
+    color: var(--color-muted);
+}
+
+
+/* ============================================================
+   11. DISCLAIMER
+   ============================================================ */
+.review-disclaimer {
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
+    border: var(--border);
+    background: #fafafa;
+}
+
+.review-disclaimer p {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-muted);
+    margin-bottom: var(--space-md);
+}
+
+.review-disclaimer p:last-child { margin-bottom: 0; }
+
+
+/* ============================================================
+   12. FOOTER
+   ============================================================ */
+.review-footer {
+    background: var(--color-dark);
+    color: var(--color-dark-text);
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.review-footer__inner {
+    max-width: var(--review-max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+}
+
+.review-footer__logo img { height: 24px; width: auto; }
+
+.review-footer__copy {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-dark-muted);
+}
+
+.review-footer__back {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--color-dark-muted);
+}
+
+.review-footer__back:hover { color: var(--color-dark-text); }
+
+
+/* ============================================================
+   13. SECTION DIVIDERS
+   ============================================================ */
+.section-rule {
+    border: none;
+    border-top: var(--border);
+    margin: var(--space-xl) 0;
+}
+
+.section-heading {
+    font-size: var(--text-h2);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: var(--border);
+}
+
+
+/* ============================================================
+   14. RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+    .review-wrap { padding: 0 var(--space-md); }
+
+    .review-hero { padding: var(--space-lg) 0; }
+
+    .card-header { flex-direction: column; }
+
+    .card-aside {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        min-width: unset;
+    }
+
+    .product-img { width: 80px; height: 80px; }
+
+    .pros-cons-grid { grid-template-columns: 1fr; }
+
+    .quick-rank-item__format { display: none; }
+
+    .trust-badges { gap: var(--space-sm); }
+
+    .review-footer__inner { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .review-nav { padding: 0 var(--space-md); }
+
+    .card-aside { flex-direction: column; align-items: flex-start; }
+
+    .quick-rank-item { flex-wrap: wrap; }
+    .quick-rank-item__link { width: 100%; margin-top: var(--space-sm); }
+}
