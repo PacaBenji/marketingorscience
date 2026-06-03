@@ -99,27 +99,28 @@ strong { font-weight: 700; }
     position: sticky;
     top: 0;
     z-index: 100;
-    background: var(--color-dark);
+    background: var(--color-bg);
     height: var(--nav-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 var(--space-lg);
+    border-bottom: var(--border);
 }
 
 .review-nav__logo img {
-    height: 28px;
+    height: 36px;
     width: auto;
 }
 
 .review-nav__link {
     font-family: var(--font-ui);
     font-size: var(--text-meta);
-    color: var(--color-dark-muted);
+    color: var(--color-muted);
     letter-spacing: 0.03em;
 }
 
-.review-nav__link:hover { color: var(--color-dark-text); }
+.review-nav__link:hover { color: var(--color-accent); }
 
 
 /* ============================================================
@@ -884,4 +885,61 @@ strong { font-weight: 700; }
 
     .quick-rank-item { flex-wrap: wrap; }
     .quick-rank-item__link { width: 100%; margin-top: var(--space-sm); }
+}
+
+/* ============================================================
+   VIDEO PLACEHOLDER
+   ============================================================ */
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--color-dark);
+    border: 1px solid var(--color-divider);
+    margin: var(--space-lg) 0;
+    overflow: hidden;
+}
+
+.video-placeholder__inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    text-align: center;
+}
+
+.video-placeholder__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #fff;
+    padding-left: 4px; /* optical center for play triangle */
+    margin-bottom: var(--space-sm);
+}
+
+.video-placeholder__label {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.video-placeholder__sub {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--color-dark-muted);
+    margin: 0;
 }
