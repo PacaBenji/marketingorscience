@@ -495,15 +495,17 @@ strong { font-weight: 700; }
 .card-aside {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: var(--space-md);
-    min-width: 160px;
-    flex-shrink: 0;
+    flex: 0 0 33%;
+    max-width: 33%;
+    min-width: 220px;
 }
 
 .product-img {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
     border: var(--border);
     background: #fafafa;
@@ -516,10 +518,10 @@ strong { font-weight: 700; }
     background: var(--color-accent);
     color: #fff;
     font-family: var(--font-ui);
-    font-size: var(--text-meta);
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    padding: 10px 16px;
+    padding: 14px 18px;
     transition: background 0.15s;
 }
 
@@ -1140,13 +1142,15 @@ strong { font-weight: 700; }
     .card-header { flex-direction: column; }
 
     .card-aside {
+        flex: 0 0 auto;
+        max-width: 100%;
         flex-direction: row;
         align-items: center;
         width: 100%;
         min-width: unset;
     }
 
-    .product-img { width: 80px; height: 80px; }
+    .product-img { width: 120px; height: 120px; flex-shrink: 0; }
 
     .pros-cons-grid { grid-template-columns: 1fr; }
 
