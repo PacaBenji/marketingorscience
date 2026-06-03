@@ -105,23 +105,27 @@ strong { font-weight: 700; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 var(--space-lg);
+    padding: 0 var(--space-xl);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .review-nav__logo img {
-    height: 36px;
+    height: 28px;
     width: auto;
+    display: block;
 }
 
 .review-nav__link {
     font-family: var(--font-ui);
-    font-size: var(--text-meta);
-    color: var(--color-dark-muted);
-    letter-spacing: 0.03em;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.15s;
 }
 
-.review-nav__link:hover { color: #fff; }
+.review-nav__link:hover { color: rgba(255,255,255,0.85); }
 
 
 /* ============================================================
@@ -703,15 +707,27 @@ strong { font-weight: 700; }
     display: block;
     border: var(--border);
     border-top: 3px solid var(--color-accent);
-    padding: var(--space-md);
     text-decoration: none;
     color: var(--color-text);
     transition: border-top-color 0.15s;
+    overflow: hidden;
 }
 
 .related-reading-card:hover {
     border-top-color: var(--color-accent-hover);
     color: var(--color-text);
+}
+
+.related-reading-card__img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--color-accent-light);
+    display: block;
+}
+
+.related-reading-card__body {
+    padding: var(--space-md);
 }
 
 .related-reading-card__category {
@@ -782,18 +798,21 @@ strong { font-weight: 700; }
     border-collapse: collapse;
     font-family: var(--font-ui);
     font-size: 0.8rem;
-    min-width: 780px;
+    min-width: 860px;
     border: 1px solid var(--color-divider);
+    table-layout: fixed;
 }
 
 .comparison-table th,
 .comparison-table td {
-    padding: 0.6rem 0.875rem;
+    padding: 0.6rem 0.75rem;
     text-align: left;
     border-bottom: 1px solid var(--color-divider);
     border-right: 1px solid var(--color-divider);
     line-height: 1.4;
-    vertical-align: middle;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .comparison-table th:last-child,
@@ -816,14 +835,32 @@ strong { font-weight: 700; }
     top: var(--nav-height);
 }
 
+/* Column widths via nth-child on fixed-layout table */
+.comparison-table th:nth-child(1),
+.comparison-table td:nth-child(1) { width: 160px; }   /* Product */
+.comparison-table th:nth-child(2),
+.comparison-table td:nth-child(2) { width: 70px; }    /* Format */
+.comparison-table th:nth-child(3),
+.comparison-table td:nth-child(3) { width: 110px; }   /* Mg Form */
+.comparison-table th:nth-child(4),
+.comparison-table td:nth-child(4) { width: 85px; }    /* Elemental Mg */
+.comparison-table th:nth-child(5),
+.comparison-table td:nth-child(5) { width: 200px; }   /* Other Sleep Ingredients */
+.comparison-table th:nth-child(6),
+.comparison-table td:nth-child(6) { width: 75px; }    /* Melatonin? */
+.comparison-table th:nth-child(7),
+.comparison-table td:nth-child(7) { width: 70px; }    /* 3rd Party */
+.comparison-table th:nth-child(8),
+.comparison-table td:nth-child(8) { width: 80px; }    /* Price */
+.comparison-table th:nth-child(9),
+.comparison-table td:nth-child(9) { width: 55px; }    /* Rating */
+
 .comparison-table td:first-child {
     font-weight: 600;
     position: sticky;
     left: 0;
     background: var(--color-bg);
     border-right: 2px solid var(--color-divider);
-    min-width: 170px;
-    white-space: nowrap;
 }
 
 .comparison-table tbody tr:nth-child(even) td { background: #f8fafc; }
@@ -916,7 +953,8 @@ strong { font-weight: 700; }
 .review-footer {
     background: var(--color-dark);
     color: var(--color-dark-text);
-    padding: var(--space-xl) var(--space-lg);
+    padding: var(--space-xl) var(--space-xl);
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .review-footer__inner {
@@ -929,19 +967,32 @@ strong { font-weight: 700; }
     gap: var(--space-lg);
 }
 
-.review-footer__logo img { height: 24px; width: auto; }
+.review-footer__logo img {
+    height: 22px;
+    width: auto;
+    display: block;
+    opacity: 0.85;
+}
+
+.review-footer__logo:hover img { opacity: 1; }
 
 .review-footer__copy {
     font-family: var(--font-ui);
-    font-size: var(--text-meta);
-    color: var(--color-dark-muted);
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.03em;
 }
 
 .review-footer__back {
     font-family: var(--font-ui);
-    font-size: var(--text-meta);
-    color: var(--color-dark-muted);
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    transition: color 0.15s;
 }
+
+.review-footer__back:hover { color: rgba(255,255,255,0.85); }
 
 .review-footer__back:hover { color: var(--color-dark-text); }
 
