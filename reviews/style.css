@@ -1068,8 +1068,8 @@ strong { font-weight: 700; }
    12. FOOTER
    ============================================================ */
 .review-footer {
-    background: var(--color-bg);
-    color: var(--color-text);
+    background: var(--color-dark);
+    color: var(--color-dark-text);
     padding: var(--space-xl) var(--space-xl);
     border-top: 1px solid var(--color-divider);
 }
@@ -1110,8 +1110,6 @@ strong { font-weight: 700; }
 }
 
 .review-footer__back:hover { color: rgba(255,255,255,0.85); }
-
-.review-footer__back:hover { color: var(--color-dark-text); }
 
 
 /* ============================================================
@@ -1249,10 +1247,55 @@ strong { font-weight: 700; }
    REVIEW VIDEO
    ============================================================ */
 .review-video {
-    width: 100%;
-    max-height: 480px;
     display: block;
     background: var(--color-dark);
-    margin: var(--space-lg) 0;
-    object-fit: contain;
+    margin: var(--space-md) 0 var(--space-md);
+    border-radius: 4px;
+}
+
+/* Default (square or unspecified): full width, no float, text below */
+.review-video,
+.review-video--square {
+    width: 100%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+/* Portrait video (9:16) — float right, narrow column, text wraps */
+.review-video--portrait {
+    float: right;
+    width: 240px;
+    max-width: 40%;
+    aspect-ratio: 9 / 16;
+    margin: 0 0 var(--space-md) var(--space-lg);
+    object-fit: cover;
+}
+
+/* Landscape video (16:9) — float right, wider, text wraps */
+.review-video--landscape {
+    float: right;
+    width: 360px;
+    max-width: 50%;
+    aspect-ratio: 16 / 9;
+    margin: 0 0 var(--space-md) var(--space-lg);
+    object-fit: cover;
+}
+
+/* Clear floats at the end of card body so layout doesn't bleed */
+.card-body::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .review-video--portrait,
+    .review-video--landscape {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: var(--space-md) 0;
+    }
 }
