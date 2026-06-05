@@ -968,6 +968,8 @@ strong { font-weight: 700; }
     text-transform: uppercase;
     position: sticky;
     top: var(--nav-height);
+    border-top: none;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
 }
 
 /* Column widths via nth-child on fixed-layout table */
