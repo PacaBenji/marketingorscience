@@ -359,21 +359,15 @@
     function initScrollAnimations() {
         if (!window.IntersectionObserver) return;
 
-        var targets = document.querySelectorAll([
-            '.article-card',
-            '.article-list-item',
-            '.read-more-card',
-            '.popular-item',
-            '.about-panel-inner',
-            '.site-hero-inner',
-            '.fold-inner',
-            '.article-figure',
-            '.verdict-block',
-            '.cta-block',
-            '.section-header'
-        ].join(','));
-
-        if (!targets.length) return;
+        // Grid items: stagger resets every 3 columns
+        var gridSelectors = ['.article-card', '.read-more-card', '.popular-item'];
+        // List items: sequential stagger capped at 300ms
+        var listSelectors = ['.article-list-item', '.quick-rank-item'];
+        // Single/fade-in items: no stagger
+        var fadeInSelectors = ['.article-figure', '.toc-block', '.author-card'];
+        // Other fade-up items: no stagger
+        var singleSelectors = ['.about-panel-inner', '.site-hero-inner', '.fold-inner',
+            '.verdict-block', '.cta-block', '.section-header', '.claim-block'];
 
         var observer = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
@@ -384,14 +378,56 @@
             });
         }, { threshold: 0.12 });
 
-        targets.forEach(function(el, i) {
-            var type = el.classList.contains('article-figure') ? 'fade-in' : 'fade-up';
-            el.classList.add('will-animate', type);
+        function observe(els, type, staggerFn) {
+            els.forEach(function(el, i) {
+                el.classList.add('will-animate', type);
+                var delay = staggerFn ? staggerFn(i) : 0;
+                if (delay) el.style.transitionDelay = delay + 'ms';
+                observer.observe(el);
+            });
+        }
 
-            var delay = (i % 3) * 80;
-            if (delay) el.style.transitionDelay = delay + 'ms';
+        observe(
+            Array.from(document.querySelectorAll(gridSelectors.join(','))),
+            'fade-up',
+            function(i) { return (i % 3) * 80; }
+        );
+        observe(
+            Array.from(document.querySelectorAll(listSelectors.join(','))),
+            'fade-up',
+            function(i) { return Math.min(i * 60, 300); }
+        );
+        observe(
+            Array.from(document.querySelectorAll(fadeInSelectors.join(','))),
+            'fade-in',
+            null
+        );
+        observe(
+            Array.from(document.querySelectorAll(singleSelectors.join(','))),
+            'fade-up',
+            null
+        );
+    }
 
-            observer.observe(el);
+    // ─── Image skeleton loaders ──────────────────────────────────────────────
+    function initImageLoaders() {
+        var wrappers = document.querySelectorAll(
+            '.card-image-wrap, .article-figure, .featured-banner-image'
+        );
+        wrappers.forEach(function(wrap) {
+            var img = wrap.querySelector('img');
+            if (!img) return;
+            wrap.classList.add('img-wrap');
+            if (img.complete && img.naturalWidth) {
+                img.classList.add('is-loaded');
+            } else {
+                img.addEventListener('load', function() {
+                    img.classList.add('is-loaded');
+                }, { once: true });
+                img.addEventListener('error', function() {
+                    img.classList.add('is-loaded'); // remove shimmer even on error
+                }, { once: true });
+            }
         });
     }
 
@@ -404,6 +440,7 @@
         insertFooter();
         initMegaMenu();
         initScrollAnimations();
+        initImageLoaders();
     }
 
     if (document.readyState === 'loading') {
