@@ -94,6 +94,14 @@
             document.head.appendChild(searchScript);
         }
 
+        // Converge custom event tracking
+        if (!document.querySelector('script[data-mos-tracking]')) {
+            var trackingScript = document.createElement('script');
+            trackingScript.src = assetPath + '/js/tracking.js';
+            trackingScript.dataset.mosTracking = '1';
+            document.head.appendChild(trackingScript);
+        }
+
         // Google Fonts — Playfair Display, Lora, Inter
         if (!document.querySelector('link[data-mos-fonts]')) {
             var fonts = document.createElement('link');
