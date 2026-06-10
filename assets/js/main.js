@@ -436,11 +436,13 @@
     }
 
     function markLoaded(img) {
+        var wrap = img.closest('.img-wrap');
+        function done() { if (wrap) wrap.classList.add('is-loaded'); }
         if (img.complete && img.naturalWidth) {
-            img.classList.add('is-loaded');
+            done();
         } else {
-            img.addEventListener('load',  function() { img.classList.add('is-loaded'); }, { once: true });
-            img.addEventListener('error', function() { img.classList.add('is-loaded'); }, { once: true });
+            img.addEventListener('load',  done, { once: true });
+            img.addEventListener('error', done, { once: true });
         }
     }
 

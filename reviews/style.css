@@ -1330,13 +1330,15 @@ strong { font-weight: 700; }
    IMAGE SKELETON LOADER
    ============================================================ */
 @keyframes shimmer {
-    0%   { background-position: -400px 0; }
-    100% { background-position:  400px 0; }
+    0%   { background-position: -800px 0; }
+    100% { background-position:  800px 0; }
 }
 
 .img-wrap {
     position: relative;
-    background: #f0f0f0;
+    display: block;
+    width: 100%;
+    background: #e8e8e8;
     overflow: hidden;
 }
 
@@ -1344,10 +1346,16 @@ strong { font-weight: 700; }
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, #f0f0f0 25%, #e4e4e4 50%, #f0f0f0 75%);
+    background: linear-gradient(90deg, #e8e8e8 0%, #d0d0d0 40%, #e8e8e8 80%);
     background-size: 800px 100%;
     animation: shimmer 1.4s infinite linear;
-    z-index: 0;
+    z-index: 2;
+    transition: opacity 0.35s ease;
+}
+
+.img-wrap.is-loaded::before {
+    opacity: 0;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1357,11 +1365,8 @@ strong { font-weight: 700; }
 .img-wrap img {
     position: relative;
     z-index: 1;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-}
-
-.img-wrap img.is-loaded {
-    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 }
