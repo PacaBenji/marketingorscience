@@ -411,24 +411,37 @@
 
     // ─── Image skeleton loaders ──────────────────────────────────────────────
     function initImageLoaders() {
-        var wrappers = document.querySelectorAll(
-            '.card-image-wrap, .article-figure, .featured-banner-image'
+        // For card/banner wrappers: add img-wrap class directly (no figcaption inside)
+        var directWrappers = document.querySelectorAll(
+            '.card-image-wrap, .featured-banner-image'
         );
-        wrappers.forEach(function(wrap) {
+        directWrappers.forEach(function(wrap) {
             var img = wrap.querySelector('img');
             if (!img) return;
             wrap.classList.add('img-wrap');
-            if (img.complete && img.naturalWidth) {
-                img.classList.add('is-loaded');
-            } else {
-                img.addEventListener('load', function() {
-                    img.classList.add('is-loaded');
-                }, { once: true });
-                img.addEventListener('error', function() {
-                    img.classList.add('is-loaded'); // remove shimmer even on error
-                }, { once: true });
-            }
+            markLoaded(img);
         });
+
+        // For article figures: wrap just the img, not the figcaption
+        var figures = document.querySelectorAll('.article-figure');
+        figures.forEach(function(figure) {
+            var img = figure.querySelector('img');
+            if (!img) return;
+            var wrapper = document.createElement('div');
+            wrapper.className = 'img-wrap';
+            img.parentNode.insertBefore(wrapper, img);
+            wrapper.appendChild(img);
+            markLoaded(img);
+        });
+    }
+
+    function markLoaded(img) {
+        if (img.complete && img.naturalWidth) {
+            img.classList.add('is-loaded');
+        } else {
+            img.addEventListener('load',  function() { img.classList.add('is-loaded'); }, { once: true });
+            img.addEventListener('error', function() { img.classList.add('is-loaded'); }, { once: true });
+        }
     }
 
     // ─── Bootstrap ───────────────────────────────────────────────────────────

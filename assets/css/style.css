@@ -3185,14 +3185,15 @@ figcaption {
         transform: translateY(0);
     }
 
-    /* Featured banner entrance */
+    /* Featured banner + article fold entrance */
     @keyframes banner-enter {
         from { opacity: 0; transform: scale(1.03); }
         to   { opacity: 1; transform: scale(1); }
     }
 
-    .featured-banner-image img {
-        animation: banner-enter 0.7s ease forwards;
+    .featured-banner-image img,
+    .fold-hero-image img {
+        animation: banner-enter 1s ease forwards;
     }
 }
 
