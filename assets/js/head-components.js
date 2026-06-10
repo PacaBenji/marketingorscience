@@ -34,6 +34,19 @@
         }
     }
 
+    function injectConverge() {
+        var s = document.createElement('script');
+        s.src = 'https://static.runconverge.com/pixels/j4pRsz.js';
+        s.async = true;
+        document.head.appendChild(s);
+
+        window.cvg || (cvg = function () {
+            cvg.process ? cvg.process.apply(cvg, arguments) : cvg.queue.push(arguments);
+        }, cvg.queue = []);
+        cvg({ method: 'track', eventName: '$page_load' });
+    }
+
     // Run immediately — this is called synchronously from <head>
     initFOUCPrevention();
+    injectConverge();
 })();
