@@ -1,2 +1,2 @@
 # marketingorscience
-marketingorscience.com
+Clinical breakdowns for professionals who need real data - not advertising copy.
