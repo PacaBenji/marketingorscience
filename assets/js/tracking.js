@@ -1,7 +1,5 @@
 (function() {
 
-    var OUTBOUND_DOMAINS = ['getreyou.com', 'pacagen.com', 'drinkwildtype.com'];
-
     var SESSION_PV_COUNT_KEY = 'cvg_session_pv_count';
     var FIRED_PV2_KEY        = 'cvg_fired_pv2';
     var FIRED_PV3_KEY        = 'cvg_fired_pv3';
@@ -9,16 +7,22 @@
     var SCROLL_50_KEY        = 'cvg_scroll_50';
     var SCROLL_75_KEY        = 'cvg_scroll_75';
 
-    // 1. Outbound click tracking
+    var OUTBOUND_EVENTS = [
+        { domain: 'getreyou.com',      eventName: 'MoS GetReyou Click' },
+        { domain: 'pacagen.com',        eventName: 'MoS Pacagen Click' },
+        { domain: 'drinkwildtype.com',  eventName: 'MoS Wildtype Click' }
+    ];
+
+    // 1. Outbound click tracking — one event per brand
     document.addEventListener('click', function(e) {
         var link = e.target.closest('a[href]');
         if (!link) return;
         var host = '';
         try { host = new URL(link.href).hostname; } catch(x) { return; }
-        for (var i = 0; i < OUTBOUND_DOMAINS.length; i++) {
-            if (host === OUTBOUND_DOMAINS[i] || host.endsWith('.' + OUTBOUND_DOMAINS[i])) {
-                cvg({ method: 'track', eventName: 'OutboundClick', properties: {
-                    domain: OUTBOUND_DOMAINS[i],
+        for (var i = 0; i < OUTBOUND_EVENTS.length; i++) {
+            var d = OUTBOUND_EVENTS[i].domain;
+            if (host === d || host.endsWith('.' + d)) {
+                cvg({ method: 'track', eventName: OUTBOUND_EVENTS[i].eventName, properties: {
                     outbound_url: link.href
                 }});
                 break;
@@ -66,12 +70,6 @@
     if (next === 3 && !sessionStorage.getItem(FIRED_PV3_KEY)) {
         sessionStorage.setItem(FIRED_PV3_KEY, '1');
         cvg({ method: 'track', eventName: 'Session Pageviews 3', properties: { session_page_views: 3 } });
-    }
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', setupArticleCompletion);
-    } else {
-        setupArticleCompletion();
     }
 
 })();
