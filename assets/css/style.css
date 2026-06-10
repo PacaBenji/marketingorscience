@@ -1599,6 +1599,7 @@ body {
     border-top: 2px solid var(--color-text);
     padding: var(--space-lg);
     margin: var(--space-lg) 0;
+    clear: both;
 }
 
 .claim-block-label {
