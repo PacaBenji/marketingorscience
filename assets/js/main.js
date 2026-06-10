@@ -39,14 +39,18 @@
         link.href           = assetPath + '/css/style.css';
 
         link.onload = link.onerror = function () {
-            document.body.style.visibility = 'visible';
-            document.body.style.opacity    = '1';
+            if (document.body) {
+                document.body.style.visibility = 'visible';
+                document.body.style.opacity    = '1';
+            }
         };
 
         // Hard fallback: never leave the page invisible
         setTimeout(function () {
-            document.body.style.visibility = 'visible';
-            document.body.style.opacity    = '1';
+            if (document.body) {
+                document.body.style.visibility = 'visible';
+                document.body.style.opacity    = '1';
+            }
         }, 2000);
 
         document.head.appendChild(link);
