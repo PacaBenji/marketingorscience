@@ -13,6 +13,31 @@
         { domain: 'drinkwildtype.com',  eventName: 'MoS Wildtype Click' }
     ];
 
+    // Safe wrapper — mirrors CvgOnsite.tsx from headless repo.
+    // Polls every 200ms until j4pRsz.js has loaded and set cvg.process,
+    // then drains the app-level queue. Direct cvg() calls fail silently
+    // if the pixel hasn't loaded yet; this guarantees delivery.
+    var eventQueue = [];
+    var retryInterval = null;
+
+    function checkCvgReady() {
+        if (typeof cvg !== 'undefined' && typeof cvg.process === 'function') {
+            if (retryInterval) { clearInterval(retryInterval); retryInterval = null; }
+            while (eventQueue.length > 0) { cvg(eventQueue.shift()); }
+            return true;
+        }
+        return false;
+    }
+
+    function safeTrack(data) {
+        if (checkCvgReady()) {
+            cvg(data);
+        } else {
+            eventQueue.push(data);
+            if (!retryInterval) { retryInterval = setInterval(checkCvgReady, 200); }
+        }
+    }
+
     // 1. Outbound click tracking — one event per brand
     document.addEventListener('click', function(e) {
         var link = e.target.closest('a[href]');
@@ -22,7 +47,7 @@
         for (var i = 0; i < OUTBOUND_EVENTS.length; i++) {
             var d = OUTBOUND_EVENTS[i].domain;
             if (host === d || host.endsWith('.' + d)) {
-                cvg({ method: 'track', eventName: OUTBOUND_EVENTS[i].eventName, properties: {
+                safeTrack({ method: 'track', eventName: OUTBOUND_EVENTS[i].eventName, properties: {
                     outbound_url: link.href
                 }});
                 break;
@@ -43,35 +68,33 @@
         var d = maxScroll;
         if (d >= 0.25 && !sessionStorage.getItem(SCROLL_25_KEY)) {
             sessionStorage.setItem(SCROLL_25_KEY, '1');
-            cvg({ method: 'track', eventName: 'Scroll Depth 25%' });
+            safeTrack({ method: 'track', eventName: 'Scroll Depth 25%' });
         }
         if (d >= 0.50 && !sessionStorage.getItem(SCROLL_50_KEY)) {
             sessionStorage.setItem(SCROLL_50_KEY, '1');
-            cvg({ method: 'track', eventName: 'Scroll Depth 50%' });
+            safeTrack({ method: 'track', eventName: 'Scroll Depth 50%' });
         }
         if (d >= 0.75 && !sessionStorage.getItem(SCROLL_75_KEY)) {
             sessionStorage.setItem(SCROLL_75_KEY, '1');
-            cvg({ method: 'track', eventName: 'Scroll Depth 75%' });
+            safeTrack({ method: 'track', eventName: 'Scroll Depth 75%' });
         }
     }
     window.addEventListener('scroll', checkScrollThresholds, { passive: true });
     checkScrollThresholds();
 
-    // 3. Session pageview milestones — deferred to ensure j4pRsz.js has loaded
-    setTimeout(function() {
-        var raw  = sessionStorage.getItem(SESSION_PV_COUNT_KEY);
-        var prev = raw ? parseInt(raw, 10) : 0;
-        var next = isFinite(prev) ? prev + 1 : 1;
-        sessionStorage.setItem(SESSION_PV_COUNT_KEY, String(next));
+    // 3. Session pageview milestones
+    var raw  = sessionStorage.getItem(SESSION_PV_COUNT_KEY);
+    var prev = raw ? parseInt(raw, 10) : 0;
+    var next = isFinite(prev) ? prev + 1 : 1;
+    sessionStorage.setItem(SESSION_PV_COUNT_KEY, String(next));
 
-        if (next === 2 && !sessionStorage.getItem(FIRED_PV2_KEY)) {
-            sessionStorage.setItem(FIRED_PV2_KEY, '1');
-            cvg({ method: 'track', eventName: 'Session Pageviews 2', properties: { session_page_views: 2 } });
-        }
-        if (next === 3 && !sessionStorage.getItem(FIRED_PV3_KEY)) {
-            sessionStorage.setItem(FIRED_PV3_KEY, '1');
-            cvg({ method: 'track', eventName: 'Session Pageviews 3', properties: { session_page_views: 3 } });
-        }
-    }, 200);
+    if (next === 2 && !sessionStorage.getItem(FIRED_PV2_KEY)) {
+        sessionStorage.setItem(FIRED_PV2_KEY, '1');
+        safeTrack({ method: 'track', eventName: 'Session Pageviews 2', properties: { session_page_views: 2 } });
+    }
+    if (next === 3 && !sessionStorage.getItem(FIRED_PV3_KEY)) {
+        sessionStorage.setItem(FIRED_PV3_KEY, '1');
+        safeTrack({ method: 'track', eventName: 'Session Pageviews 3', properties: { session_page_views: 3 } });
+    }
 
 })();
