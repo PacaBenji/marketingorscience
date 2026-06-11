@@ -57,19 +57,21 @@
     window.addEventListener('scroll', checkScrollThresholds, { passive: true });
     checkScrollThresholds();
 
-    // 3. Session pageview milestones
-    var raw  = sessionStorage.getItem(SESSION_PV_COUNT_KEY);
-    var prev = raw ? parseInt(raw, 10) : 0;
-    var next = isFinite(prev) ? prev + 1 : 1;
-    sessionStorage.setItem(SESSION_PV_COUNT_KEY, String(next));
+    // 3. Session pageview milestones — deferred to ensure j4pRsz.js has loaded
+    setTimeout(function() {
+        var raw  = sessionStorage.getItem(SESSION_PV_COUNT_KEY);
+        var prev = raw ? parseInt(raw, 10) : 0;
+        var next = isFinite(prev) ? prev + 1 : 1;
+        sessionStorage.setItem(SESSION_PV_COUNT_KEY, String(next));
 
-    if (next === 2 && !sessionStorage.getItem(FIRED_PV2_KEY)) {
-        sessionStorage.setItem(FIRED_PV2_KEY, '1');
-        cvg({ method: 'track', eventName: 'Session Pageviews 2', properties: { session_page_views: 2 } });
-    }
-    if (next === 3 && !sessionStorage.getItem(FIRED_PV3_KEY)) {
-        sessionStorage.setItem(FIRED_PV3_KEY, '1');
-        cvg({ method: 'track', eventName: 'Session Pageviews 3', properties: { session_page_views: 3 } });
-    }
+        if (next === 2 && !sessionStorage.getItem(FIRED_PV2_KEY)) {
+            sessionStorage.setItem(FIRED_PV2_KEY, '1');
+            cvg({ method: 'track', eventName: 'Session Pageviews 2', properties: { session_page_views: 2 } });
+        }
+        if (next === 3 && !sessionStorage.getItem(FIRED_PV3_KEY)) {
+            sessionStorage.setItem(FIRED_PV3_KEY, '1');
+            cvg({ method: 'track', eventName: 'Session Pageviews 3', properties: { session_page_views: 3 } });
+        }
+    }, 200);
 
 })();

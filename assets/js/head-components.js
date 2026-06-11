@@ -30,16 +30,20 @@
     function initConvergeTracking() {
         if (window.cvg) return;
 
-        window.cvg || (cvg = function () {
-            cvg.process ? cvg.process.apply(cvg, arguments) : cvg.queue.push(arguments)
-        }, cvg.queue = []);
-
-        cvg({ method: "track", eventName: "$page_load" });
-
+        // Load pixel first so download starts immediately
         const script = document.createElement('script');
         script.src = 'https://static.runconverge.com/pixels/j4pRsz.js';
         script.async = true;
         document.head.appendChild(script);
+
+        // Official queue shim — assigns to both window.cvg and local c
+        // so j4pRsz.js can find and drain the queue when it loads
+        var c;
+        window.cvg || (c = window.cvg = function() {
+            c.process ? c.process.apply(c, arguments) : c.queue.push(arguments)
+        }, c.queue = []);
+
+        cvg({ method: "track", eventName: "$page_load" });
     }
 
     function initHeadComponents() {
