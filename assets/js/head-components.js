@@ -47,9 +47,7 @@
         initConvergeTracking();
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initHeadComponents);
-    } else {
-        initHeadComponents();
-    }
+    // cvg must be defined immediately so tracking.js can call it safely.
+    // FOUC styles are DOM-safe to inject at parse time too.
+    initHeadComponents();
 })();
