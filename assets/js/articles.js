@@ -3,7 +3,27 @@
 // Exposed as window.MOS_ARTICLES.
 
 window.MOS_ARTICLES = [
-  // ── 4 new articles (May–June 2026) ───────────────────────────────────────
+  // ── 5 new articles (May–June 2026) ───────────────────────────────────────
+  {
+    slug         : 'minoxidil-vs-novogro',
+    url          : '/articles/haircare/2026/06/minoxidil-vs-novogro',
+    title        : 'Minoxidil vs. NOVOGRO: Legacy vs. the Future?',
+    deck         : 'Minoxidil has been the topical hair loss standard for 40 years. NOVOGRO (NV-623 & NV-624) are new AI-discovered molecules targeting dermal papilla cells directly. A review of the preclinical evidence, the mechanism difference, and whether the science justifies the narrative. This article is Part 1 of a 3-part series on NOVOGRO, a new category of intentionally designed molecules that target damaged hair follicles from the inside and out.',
+    category     : 'Haircare',
+    categorySlug : 'haircare',
+    type         : 'Ingredient Analysis',
+    tags         : ['minoxidil', 'novogro', 'nv-623', 'nv-624', 'dermal-papilla', 'hair-loss', 'ai-drug-discovery', 'androgenetic-alopecia'],
+    author       : 'Editorial Team',
+    authorSlug   : 'editorial',
+    date         : '2026-06-13',
+    verdict      : 'Promising — Awaiting Clinical Data',
+    verdictClass : 'partial',
+    searchText   : 'minoxidil novogro nv-623 nv-624 nv-273 nv-1065 dermal papilla cells dpc hair follicle organoid ai drug discovery hair loss androgenetic alopecia 5-alpha reductase dht haircare ingredient analysis re:you reyou getreyou biorxiv preprint developing story',
+    popular      : false,
+    readingTime  : 11,
+    image        : '/assets/images/minoxidil-vs-novogro-cover.jpg',
+    peerReviewed : false,
+  },
   {
     slug         : 'stress-hair-loss',
     url          : '/articles/haircare/2026/06/stress-hair-loss',
