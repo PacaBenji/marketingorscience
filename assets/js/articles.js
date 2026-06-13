@@ -3,7 +3,27 @@
 // Exposed as window.MOS_ARTICLES.
 
 window.MOS_ARTICLES = [
-  // ── 4 new articles (May–June 2026) ───────────────────────────────────────
+  // ── 5 new articles (May–June 2026) ───────────────────────────────────────
+  {
+    slug         : 'bemotrizinol-fda-approval',
+    url          : '/articles/pharma/2026/06/bemotrizinol-fda-approval',
+    title        : 'Bemotrizinol Gets FDA Approval: What the Evidence Says About the First New Sunscreen Ingredient in 20 Years',
+    deck         : 'The FDA granted GRASE status to bemotrizinol (BEMT) in June 2026, ending a two-decade drought of new US sunscreen options. A review of the efficacy data, how it compares to existing filters, and what the caveats are.',
+    category     : 'Pharma & Rx',
+    categorySlug : 'pharma',
+    type         : 'Regulatory Review',
+    tags         : ['bemotrizinol', 'bemt', 'sunscreen', 'fda', 'uva', 'uvb', 'grase', 'photoprotection'],
+    author       : 'Editorial Team',
+    authorSlug   : 'editorial',
+    date         : '2026-06-13',
+    verdict      : 'Supported',
+    verdictClass : 'supported',
+    searchText   : 'bemotrizinol bemt sunscreen fda grase approval uva uvb broad spectrum photoprotection avobenzone oxybenzone zinc oxide titanium dioxide organic filter parsol shield dsm pharma regulatory review',
+    popular      : false,
+    readingTime  : 10,
+    image        : '/assets/images/bemotrizinol-sunscreen.jpg',
+    peerReviewed : false,
+  },
   {
     slug         : 'stress-hair-loss',
     url          : '/articles/haircare/2026/06/stress-hair-loss',
