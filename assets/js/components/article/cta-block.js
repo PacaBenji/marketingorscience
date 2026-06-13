@@ -12,7 +12,7 @@
         block.innerHTML =
             '<span class="cta-block-kicker">About This Publication</span>' +
             '<p>' +
-                'Marketing or Science publishes independent clinical evidence reviews — ' +
+                'Marketing or Science publishes independent scientific and clinical evidence reviews — ' +
                 'examining the gap between health and beauty marketing claims and the ' +
                 'scientific literature.' +
             '</p>' +
