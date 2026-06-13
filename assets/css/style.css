@@ -2305,6 +2305,26 @@ figcaption {
     padding-top: var(--space-xs);
 }
 
+/* Numbered reference list — restores list-style markers stripped
+   by the global ul/ol reset. Lines up with [N] footnotes in the
+   article body via id="ref-N" anchors. */
+.article-references {
+    list-style: decimal outside;
+    padding-left: 1.75em;
+    margin: var(--space-lg) 0;
+}
+
+.article-references li {
+    padding-left: 0.25em;
+    margin-bottom: var(--space-sm);
+    line-height: 1.55;
+}
+
+.article-references li:target {
+    background: var(--color-accent-light);
+    border-radius: 2px;
+}
+
 /* Clearfix after article body to prevent float bleed into footer */
 .article-body::after {
     content: '';
