@@ -41,7 +41,6 @@ window.MOS_ARTICLES = [
     popularRank  : 0,
     readingTime  : 10,
     image        : '/assets/images/bemotrizinol-sunscreen.jpg',
-    peerReviewed : false,
   },
   {
     slug         : 'stress-hair-loss',
