@@ -48,16 +48,22 @@
         var verdictHTML  = '';
 
         if (cfg.verdict) {
+            var hasRating = cfg.verdict.rating != null;
+            var ratingMax = cfg.verdict.max || 5;
+            var ratingHTML = hasRating
+                ? buildEvidenceStars(cfg.verdict.rating, ratingMax) +
+                  '<span class="evidence-rating-fraction">' +
+                      cfg.verdict.rating + '/' + ratingMax +
+                  '</span>'
+                : '<span class="evidence-rating-fraction evidence-rating-tbd">TBD</span>';
+
             verdictHTML =
                 '<div class="verdict-block">' +
                     '<span class="verdict-label">Verdict</span>' +
                     '<span class="verdict-text">' + (cfg.verdict.label || '') + '</span>' +
                     '<span class="evidence-rating">' +
                         '<span class="evidence-rating-label">Evidence Strength</span>' +
-                        buildEvidenceStars(cfg.verdict.rating || 0, cfg.verdict.max || 5) +
-                        '<span class="evidence-rating-fraction">' +
-                            (cfg.verdict.rating || 0) + '/' + (cfg.verdict.max || 5) +
-                        '</span>' +
+                        ratingHTML +
                     '</span>' +
                 '</div>';
         }
