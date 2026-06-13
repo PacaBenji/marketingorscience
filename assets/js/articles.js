@@ -6,8 +6,8 @@ window.MOS_ARTICLES = [
   {
     slug         : 'minoxidil-vs-novogro',
     url          : '/articles/haircare/2026/06/minoxidil-vs-novogro',
-    title        : 'Minoxidil vs. NOVOGRO: Legacy vs. the Future?',
-    deck         : 'Minoxidil has been the topical hair loss standard for 40 years. NOVOGRO (NV-623 & NV-624) are new AI-discovered molecules targeting dermal papilla cells directly. A review of the preclinical evidence, the mechanism difference, and whether the science justifies the narrative. This article is Part 1 of a 3-part series on NOVOGRO, a new category of intentionally designed molecules that target damaged hair follicles from the inside and out.',
+    title        : 'Minoxidil vs. NOVOGRO™: Legacy vs. the Future?',
+    deck         : 'Minoxidil has been the topical hair loss standard for 40 years. NOVOGRO™ (NV-623 & NV-624) are new AI-discovered molecules targeting dermal papilla cells directly. A review of the preclinical evidence, the mechanism difference, and whether the science justifies the narrative. This article is Part 1 of a 3-part series on NOVOGRO™, a new category of intentionally designed molecules that target damaged hair follicles from the inside and out.',
     category     : 'Haircare',
     categorySlug : 'haircare',
     type         : 'Ingredient Analysis',
