@@ -3,7 +3,6 @@
 // Exposed as window.MOS_ARTICLES.
 
 window.MOS_ARTICLES = [
-  // ── 5 new articles (May–June 2026) ───────────────────────────────────────
   {
     slug         : 'minoxidil-vs-novogro',
     url          : '/articles/haircare/2026/06/minoxidil-vs-novogro',
@@ -22,6 +21,25 @@ window.MOS_ARTICLES = [
     popular      : false,
     readingTime  : 11,
     image        : '/assets/images/minoxidil-vs-novogro-cover.jpg',
+  },
+  {
+    slug         : 'bemotrizinol-fda-approval',
+    url          : '/articles/pharma/2026/06/bemotrizinol-fda-approval',
+    title        : 'Bemotrizinol Gets FDA Approval: What the Evidence Says About the First New Sunscreen Ingredient in 20 Years',
+    deck         : 'The FDA granted GRASE status to bemotrizinol (BEMT) in June 2026, ending a two-decade drought of new US sunscreen options. A review of the efficacy data, how it compares to existing filters, and what the caveats are.',
+    category     : 'Pharma & OTC',
+    categorySlug : 'pharma',
+    type         : 'Regulatory Review',
+    tags         : ['bemotrizinol', 'bemt', 'sunscreen', 'fda', 'uva', 'uvb', 'grase', 'photoprotection'],
+    author       : 'Editorial Team',
+    authorSlug   : 'editorial',
+    date         : '2026-06-12',
+    verdict      : 'Supported',
+    verdictClass : 'supported',
+    searchText   : 'bemotrizinol bemt sunscreen fda grase approval uva uvb broad spectrum photoprotection avobenzone oxybenzone zinc oxide titanium dioxide organic filter parsol shield dsm pharma regulatory review',
+    popular      : false,
+    readingTime  : 10,
+    image        : '/assets/images/bemotrizinol-sunscreen.jpg',
     peerReviewed : false,
   },
   {
@@ -930,7 +948,7 @@ window.MOS_ARTICLES = [
     url          : '/articles/pharma/2026/05/sublingual-allergy-drops',
     title        : 'Sublingual Allergy Drops vs. Allergy Shots: What the Evidence Says About SLIT',
     deck         : 'Sublingual immunotherapy drops are marketed as a convenient at-home alternative to allergy shots. A review of the RCT evidence, FDA approval status of tablets vs. compounded drops, and safety profile compared to SCIT.',
-    category     : 'Pharma & Rx',
+    category     : 'Pharma & OTC',
     categorySlug : 'pharma',
     type         : 'Trial Review',
     tags         : ['slit', 'sublingual-immunotherapy', 'allergy-drops', 'allergy-shots', 'scit', 'immunotherapy'],
