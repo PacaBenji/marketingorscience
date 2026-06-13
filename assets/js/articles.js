@@ -20,7 +20,7 @@ window.MOS_ARTICLES = [
     searchText   : 'minoxidil novogro nv-623 nv-624 nv-273 nv-1065 dermal papilla cells dpc hair follicle organoid ai drug discovery hair loss androgenetic alopecia 5-alpha reductase dht haircare ingredient analysis re:you reyou getreyou biorxiv preprint developing story',
     popular      : false,
     readingTime  : 11,
-    image        : '/assets/images/minoxidil-vs-novogro-cover.jpg',
+    image        : '/assets/images/minoxidil-vs-novogro-cover.png',
   },
   {
     slug         : 'bemotrizinol-fda-approval',

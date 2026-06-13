@@ -159,7 +159,7 @@
         if (cfg.correction && cfg.correction.date && cfg.correction.text) {
             correctionHTML =
                 '<div class="correction-notice">' +
-                    '<p class="correction-notice-label">Correction \u2014 ' + formatDate(cfg.correction.date) + '</p>' +
+                    '<p class="correction-notice-label">' + (cfg.correction.label || 'Correction') + ' \u2014 ' + formatDate(cfg.correction.date) + '</p>' +
                     '<p>' + cfg.correction.text + '</p>' +
                 '</div>';
         }
