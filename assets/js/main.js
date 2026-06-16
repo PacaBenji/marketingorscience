@@ -70,6 +70,14 @@
             var manifest = document.createElement('script');
             manifest.src              = assetPath + '/js/articles.js';
             manifest.dataset.mosArticles = '1';
+            manifest.onload = function () {
+                if (!document.querySelector('script[data-mos-sd]')) {
+                    var sd = document.createElement('script');
+                    sd.src          = assetPath + '/js/structured-data.js';
+                    sd.dataset.mosSd = '1';
+                    document.head.appendChild(sd);
+                }
+            };
             document.head.appendChild(manifest);
         }
 

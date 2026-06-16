@@ -8,40 +8,381 @@
     </url>
 
     <url>
+        <loc>https://marketingorscience.com/about</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
         <loc>https://marketingorscience.com/articles/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://marketingorscience.com/about.html</loc>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/biotin-hair-growth</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marketingorscience.com/privacy-policy.html</loc>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/bond-builders-hair</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marketingorscience.com/experts/stella-cho/</loc>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/dandruff-scalp-microbiome</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.8</priority>
     </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/dht-blockers-evidence</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/hair-density-vs-thickness</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/hair-growth-timelines</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/hair-loss-treatments-sex-differences</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/minoxidil-female-pattern-hair-loss</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/rosemary-oil-minoxidil</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/04/telogen-effluvium-treatment</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/06/alopecia-areata-jak-inhibitors</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/06/ketoconazole-hair-loss</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/06/minoxidil-vs-novogro</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/06/postpartum-hair-loss</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/06/saw-palmetto-hair-loss</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/06/stress-hair-loss</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/02/adapalene-otc-switch</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/02/benzoyl-peroxide-adapalene</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/04/finasteride-female-hair-loss</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/04/ozempic-hair-loss-glp1</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/04/prp-hair-loss-evidence</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/04/topical-vs-oral-minoxidil</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/05/peptide-compounding-fda-review</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/05/sublingual-allergy-drops</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/06/bemotrizinol-fda-approval</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2025/12/spf-claims</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/01/niacinamide-concentration</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/02/hyaluronic-acid</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/03/retinoid-ladder</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/04/azelaic-acid-evidence</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/04/bakuchiol-vs-retinol</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/04/caffeine-eye-products</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/04/eye-cream-evidence</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/04/retinol-paradox</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/04/salicylic-acid-concentration</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/04/vitamin-c-serum-stability</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/05/beauty-peptides-evidence-review</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/05/creme-de-la-mer-miracle-broth</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/05/glycerin-humectant</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/05/pdrn-skin-repair</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/01/collagen-peptides</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/01/collagen-supplements-evidence</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/04/berberine-weight-loss</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/04/collagen-supplements-skin</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/04/iron-deficiency-hair-loss</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/04/magnesium-threonate</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/04/red-light-therapy-hair-growth</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/04/vitamin-d-hair-loss</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/05/ashwagandha-evidence-review</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/05/baby-eczema-condition-review</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/05/creatine-cognitive-health</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/05/l-carnitine-evidence-review</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/05/lemon-verbena-hibiscus</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/05/nootropics-category-overview</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/05/thesis-nootropics-evidence</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://marketingorscience.com/experts/</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/experts/editorial/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/experts/stella-cho/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://marketingorscience.com/methods/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/reviews/best-focus-supplements/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/reviews/best-magnesium-supplement/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 
 </urlset>
