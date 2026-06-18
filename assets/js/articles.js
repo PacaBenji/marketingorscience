@@ -14,7 +14,7 @@ window.MOS_ARTICLES = [
     tags         : ['cancer', 'sugar', 'warburg-effect', 'ketogenic-diet', 'oncology', 'nutrition', 'pet-scan', 'cachexia'],
     author       : 'Dr. Ben Ouyang',
     authorSlug   : 'ben-ouyang',
-    date         : '2026-06-16',
+    date         : '2026-06-18',
     verdict      : 'Claim Unsupported',
     verdictClass : 'unsupported',
     searchText   : 'sugar cancer warburg effect glucose pet scan fdg ketogenic diet oncology nutrition espen asco wcrf aicr cachexia malnutrition colon cancer ssb sugar sweetened beverages trial review wellness ben ouyang',
