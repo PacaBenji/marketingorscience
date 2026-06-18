@@ -5,7 +5,7 @@
 window.MOS_ARTICLES = [
   {
     slug         : 'does-sugar-feed-cancer',
-    url          : '/articles/wellness/2026/06/does-sugar-feed-cancer',
+    url          : '/articles/pharma/2026/06/does-sugar-feed-cancer',
     title        : 'Does Sugar Feed Cancer? What the Clinical Evidence Actually Shows',
     deck         : 'The "sugar feeds cancer" claim has driven restrictive diets and an entire wellness industry aimed at oncology patients. The mechanistic story is real — but the dietary translation is not what the trial evidence supports.',
     category     : 'Pharma & OTC',
