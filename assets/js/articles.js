@@ -4,6 +4,25 @@
 
 window.MOS_ARTICLES = [
   {
+    slug         : 'does-sugar-feed-cancer',
+    url          : '/articles/wellness/2026/06/does-sugar-feed-cancer',
+    title        : 'Does Sugar Feed Cancer? What the Clinical Evidence Actually Shows',
+    deck         : 'The "sugar feeds cancer" claim has driven restrictive diets and an entire wellness industry aimed at oncology patients. The mechanistic story is real — but the dietary translation is not what the trial evidence supports.',
+    category     : 'Wellness',
+    categorySlug : 'wellness',
+    type         : 'Trial Review',
+    tags         : ['cancer', 'sugar', 'warburg-effect', 'ketogenic-diet', 'oncology', 'nutrition', 'pet-scan', 'cachexia'],
+    author       : 'Dr. Ben Ouyang',
+    authorSlug   : 'ben-ouyang',
+    date         : '2026-06-16',
+    verdict      : 'Claim Unsupported',
+    verdictClass : 'unsupported',
+    searchText   : 'sugar cancer warburg effect glucose pet scan fdg ketogenic diet oncology nutrition espen asco wcrf aicr cachexia malnutrition colon cancer ssb sugar sweetened beverages trial review wellness ben ouyang',
+    popular      : false,
+    readingTime  : 10,
+    image        : '/assets/images/sugar-cancer-cover.jpg',
+  },
+  {
     slug         : 'minoxidil-vs-novogro',
     url          : '/articles/haircare/2026/06/minoxidil-vs-novogro',
     title        : 'Minoxidil vs. NOVOGRO™: Legacy vs. the Future?',

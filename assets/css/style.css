@@ -2060,13 +2060,17 @@ body {
         gap: var(--space-lg);
     }
 
-    /* Hero */
+    /* Hero — full viewport height on mobile */
     .site-hero {
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
         padding: 2rem 0;
     }
 
     .site-hero-inner {
         padding-inline: 1rem;
+        width: 100%;
     }
 
     /* Article grid: 1 col */
