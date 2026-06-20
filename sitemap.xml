@@ -385,4 +385,28 @@
         <priority>0.8</priority>
     </url>
 
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/06/tranexamic-acid-hyperpigmentation</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/06/omega-3-anti-inflammatory-evidence</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/06/tretinoin-vs-otc-retinol</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/06/ceramide-moisturizers-skin-barrier</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
