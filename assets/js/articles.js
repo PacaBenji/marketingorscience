@@ -120,8 +120,8 @@ window.MOS_ARTICLES = [
   {
     slug         : 'finasteride-vs-novogro',
     url          : '/articles/haircare/2026/06/finasteride-vs-novogro',
-    title        : 'Finasteride vs. NOVOGRO for Female Hair Growth: Is Blocking DHT Without Side Effects Finally Possible?',
-    deck         : 'Part 2 of our NOVOGRO series compares finasteride\'s female evidence and systemic safety constraints against NV-1065, a non-steroidal DHT-blocking molecule positioned as a follicle-targeted alternative.',
+    title        : 'Finasteride vs. NOVOGRO™ for Female Hair Growth: Is Blocking DHT Without Side Effects Finally Possible?',
+    deck         : 'We compare finasteride\'s evidence and safety constraints in women against NV-1065, a non-steroidal DHT-blocking molecule positioned as a follicle-targeted alternative. Part 2 of a 3-part series on NOVOGRO™, a new category of intentionally designed molecules that target damaged hair follicles from the inside and out.',
     category     : 'Haircare',
     categorySlug : 'haircare',
     type         : 'Ingredient Analysis',
