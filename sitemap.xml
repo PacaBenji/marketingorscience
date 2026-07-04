@@ -14,6 +14,24 @@
     </url>
 
     <url>
+        <loc>https://marketingorscience.com/contact</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/corrections</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/using-our-articles</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
         <loc>https://marketingorscience.com/articles/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -110,6 +128,18 @@
     </url>
 
     <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/06/castor-oil-hair-growth</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/06/finasteride-vs-novogro</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://marketingorscience.com/articles/haircare/2026/06/stress-hair-loss</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -165,6 +195,18 @@
 
     <url>
         <loc>https://marketingorscience.com/articles/pharma/2026/06/bemotrizinol-fda-approval</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/06/does-sugar-feed-cancer</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/06/peanut-allergy-prevention-treatment</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -356,6 +398,12 @@
     </url>
 
     <url>
+        <loc>https://marketingorscience.com/experts/ben-ouyang/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
         <loc>https://marketingorscience.com/experts/editorial/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -387,6 +435,18 @@
 
     <url>
         <loc>https://marketingorscience.com/articles/skincare/2026/06/tranexamic-acid-hyperpigmentation</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/06/bovine-colostrum-supplements</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/06/electrolyte-powders-hydration</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

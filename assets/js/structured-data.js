@@ -43,6 +43,24 @@
         return;
     }
 
+    // ── Static indexable pages ──────────────────────────────────────────────
+    var staticPages = {
+        '/contact':           'Contact — Marketing or Science',
+        '/corrections':       'Corrections Policy — Marketing or Science',
+        '/using-our-articles':'Using Our Articles — Marketing or Science'
+    };
+    var cleanPath = pathname.replace(/\/$/, '');
+    if (staticPages[cleanPath]) {
+        injectSchema({
+            '@context'  : 'https://schema.org',
+            '@type'     : 'WebPage',
+            'name'      : staticPages[cleanPath],
+            'url'       : getCanonical(),
+            'isPartOf'  : { '@type': 'WebSite', 'name': 'Marketing or Science', 'url': BASE }
+        });
+        return;
+    }
+
     // ── Expert / author pages ────────────────────────────────────────────────
     if (pathname.startsWith('/experts/') && pathname.replace(/\/$/, '').split('/').length >= 3) {
         var h1 = document.querySelector('h1');
