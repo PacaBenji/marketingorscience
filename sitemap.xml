@@ -469,4 +469,22 @@
         <priority>0.8</priority>
     </url>
 
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/07/compounded-glp1-semaglutide-tirzepatide</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/07/apple-cider-vinegar-weight-loss-blood-sugar</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/07/chemical-vs-mineral-sunscreen</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
