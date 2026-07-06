@@ -263,13 +263,6 @@
 
                         '<div class="footer-col footer-col--newsletter">' +
                             '<h3 class="footer-col-heading">Stay Informed</h3>' +
-                            '<p class="footer-newsletter-desc">Get evidence reviews delivered when it matters.</p>' +
-                            '<form class="footer-newsletter-form" action="#" method="post" novalidate>' +
-                                '<div class="footer-newsletter-row">' +
-                                    '<input class="footer-newsletter-input" type="email" placeholder="your@email.com" aria-label="Email address" required>' +
-                                    '<button class="footer-newsletter-btn" type="submit">Subscribe</button>' +
-                                '</div>' +
-                            '</form>' +
                             '<div class="footer-social" aria-label="Follow us">' +
                                 '<a class="footer-social-link" href="https://www.instagram.com/marketingorscience/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">' +
                                     '<svg class="footer-social-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">' +
@@ -282,6 +275,13 @@
                                     '</svg>' +
                                 '</a>' +
                             '</div>' +
+                            '<p class="footer-newsletter-desc">Get evidence reviews delivered when it matters.</p>' +
+                            '<form class="footer-newsletter-form" action="#" method="post" novalidate>' +
+                                '<div class="footer-newsletter-row">' +
+                                    '<input class="footer-newsletter-input" type="email" placeholder="your@email.com" aria-label="Email address" required>' +
+                                    '<button class="footer-newsletter-btn" type="submit">Subscribe</button>' +
+                                '</div>' +
+                            '</form>' +
                         '</div>' +
 
                     '</div>' +
