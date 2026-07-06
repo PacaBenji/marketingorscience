@@ -1810,6 +1810,29 @@ body {
     color: #4caf50;
 }
 
+/* ── Social links ── */
+.footer-social {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    transition: color 0.15s;
+}
+
+.footer-social-link:hover {
+    color: #ffffff;
+}
+
+.footer-social-icon {
+    display: block;
+}
+
 /* ── Bottom bar ── */
 .footer-bottom {
     display: flex;
