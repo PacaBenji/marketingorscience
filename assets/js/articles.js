@@ -20,7 +20,7 @@ window.MOS_ARTICLES = [
     searchText   : 'chemical mineral sunscreen zinc oxide titanium dioxide oxybenzone avobenzone octinoxate octocrylene homosalate octisalate grase fda systemic absorption matta jama 2019 2020 endocrine disruption reef safe hawaii sb2571 coral bleaching spf application white cast clean beauty skincare ingredient analysis',
     popular      : false,
     readingTime  : 11,
-    image        : '/assets/images/chemical-vs-mineral-sunscreen.jpg',
+    image        : '/assets/images/chemical-vs-mineral-sunscreens.jpg',
   },
   {
     slug         : 'apple-cider-vinegar-weight-loss-blood-sugar',
