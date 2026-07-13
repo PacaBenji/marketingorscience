@@ -1815,6 +1815,7 @@ body {
     display: flex;
     gap: var(--space-sm);
     margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
 }
 
 .footer-social-link {

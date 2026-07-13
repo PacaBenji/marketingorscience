@@ -274,6 +274,11 @@
                                         '<path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.08 0 12 0 12s0 3.92.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/>' +
                                     '</svg>' +
                                 '</a>' +
+                                '<a class="footer-social-link" href="https://x.com/marketingorsci" target="_blank" rel="noopener noreferrer" aria-label="X">' +
+                                    '<svg class="footer-social-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">' +
+                                        '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>' +
+                                    '</svg>' +
+                                '</a>' +
                             '</div>' +
                             '<p class="footer-newsletter-desc">Get evidence reviews delivered when it matters.</p>' +
                             '<form class="footer-newsletter-form" action="#" method="post" novalidate>' +
