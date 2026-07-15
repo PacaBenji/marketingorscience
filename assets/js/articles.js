@@ -20,7 +20,7 @@ window.MOS_ARTICLES = [
     searchText   : 'exosomes extracellular vesicles small ev misev2023 regenerative skincare microneedling laser stem cell mesenchymal adipose platelet derived fda unapproved public safety notification adverse events nebraska outbreak jama network open aesthetic surgery journal cureus meta analysis penetration stratum corneum serum skincare ingredient analysis',
     popular      : false,
     readingTime  : 11,
-    image        : '/assets/images/macro-skin.jpg',
+    image        : '/assets/images/neck-skin-closeup.jpg',
   },
   {
     slug         : 'snail-mucin-skincare',
@@ -39,7 +39,7 @@ window.MOS_ARTICLES = [
     searchText   : 'snail mucin snail secretion filtrate ssf cornu aspersum helix aspersa cryptomphalus cosrx 96 percent essence k-beauty glass skin glycoproteins hyaluronic acid glycolic acid allantoin zinc fabi 2013 lim 2020 photoaging tewl hydration elasticity firmness wrinkles skincare ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/skincare-formulas.jpg',
+    image        : '/assets/images/snails-face.jpg',
   },
   {
     slug         : 'chemical-vs-mineral-sunscreen',
@@ -1167,7 +1167,7 @@ window.MOS_ARTICLES = [
     searchText   : 'rosemary oil minoxidil hair growth natural alternative rogaine essential oil haircare ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/rosemary-oil-hair.jpg',
+    image        : 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=1200',
   },
   {
     slug         : 'bond-builders-hair',
