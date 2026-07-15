@@ -487,4 +487,16 @@
         <priority>0.8</priority>
     </url>
 
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/07/snail-mucin-skincare</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/07/exosome-skincare</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
