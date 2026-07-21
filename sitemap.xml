@@ -499,4 +499,22 @@
         <priority>0.8</priority>
     </url>
 
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/07/ai-in-beauty-wellness</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/07/dermatologists-beauty-brands</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/07/clinical-trials-beauty-vs-pharma</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
