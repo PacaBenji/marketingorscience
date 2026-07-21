@@ -1559,6 +1559,30 @@ body {
     color: var(--color-accent-hover);
 }
 
+/* Body prose lists — restore markers stripped by the global ul/ol reset.
+   Scoped to direct children so it never touches the nested .article-toc <ol>
+   (inside <nav>), and :not() guards the flat .article-references list. */
+.article-body > ul:not(.article-references),
+.article-body > ol:not(.article-references) {
+    margin: var(--space-md) 0;
+    padding-left: 1.5em;
+}
+
+.article-body > ul:not(.article-references) {
+    list-style: disc outside;
+}
+
+.article-body > ol:not(.article-references) {
+    list-style: decimal outside;
+}
+
+.article-body > ul:not(.article-references) > li,
+.article-body > ol:not(.article-references) > li {
+    margin: 0.5em 0;
+    padding-left: 0.35em;
+    line-height: 1.7;
+}
+
 .article-divider {
     border: none;
     border-top: var(--border);
