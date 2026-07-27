@@ -279,8 +279,13 @@
                                         '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>' +
                                     '</svg>' +
                                 '</a>' +
+                                '<a class="footer-social-link" href="https://marketingorscience.substack.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack">' +
+                                    '<svg class="footer-social-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">' +
+                                        '<path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812H22.54V24l-10.54-5.91L1.46 24V10.812zM22.539 0H1.46v2.836h21.08V0z"/>' +
+                                    '</svg>' +
+                                '</a>' +
                             '</div>' +
-                            '<p class="footer-newsletter-desc">Get evidence reviews delivered when it matters.</p>' +
+                            '<p class="footer-newsletter-desc">Read and follow us on Substack &mdash; evidence reviews delivered when it matters.</p>' +
                             '<form class="footer-newsletter-form" action="#" method="post" novalidate>' +
                                 '<div class="footer-newsletter-row">' +
                                     '<input class="footer-newsletter-input" type="email" placeholder="your@email.com" aria-label="Email address" required>' +
@@ -309,10 +314,11 @@
         if (form) {
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                var confirm = document.createElement('span');
-                confirm.className = 'footer-newsletter-confirm';
-                confirm.innerHTML = '<span class="footer-newsletter-check">&#10003;</span> Thanks \u2014 we\'ll be in touch.';
-                form.parentNode.replaceChild(confirm, form);
+                var input = form.querySelector('.footer-newsletter-input');
+                var email = input && input.value ? input.value.trim() : '';
+                var base  = 'https://marketingorscience.substack.com/subscribe';
+                var url   = email ? base + '?email=' + encodeURIComponent(email) : base;
+                window.open(url, '_blank', 'noopener');
             });
         }
     }
