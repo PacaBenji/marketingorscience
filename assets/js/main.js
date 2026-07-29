@@ -285,7 +285,7 @@
                                     '</svg>' +
                                 '</a>' +
                             '</div>' +
-                            '<p class="footer-newsletter-desc">Read and follow us on Substack &mdash; evidence reviews delivered when it matters.</p>' +
+                            '<p class="footer-newsletter-desc">We&apos;ve recently moved to Substack!  Follow us for evidence reviews delivered when it matters.</p>' +
                             '<form class="footer-newsletter-form" action="#" method="post" novalidate>' +
                                 '<div class="footer-newsletter-row">' +
                                     '<input class="footer-newsletter-input" type="email" placeholder="your@email.com" aria-label="Email address" required>' +
