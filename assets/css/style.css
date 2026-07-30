@@ -462,17 +462,13 @@ body {
     background: var(--color-accent);
     margin: var(--space-lg) auto 0;
     border: none;
-    transform: skewX(-20deg)!important;
+    transform: skewX(-20deg);
 }
 
 
 /* ============================================================
    8b. FEATURED ARTICLE BANNER (home page)
    ============================================================ */
-.featured-banner {
-    padding-bottom: var(--space-lg);
-}
-
 .featured-banner-link {
     display: block;
     text-decoration: none;
@@ -882,7 +878,7 @@ body {
 
 .most-read-item {
     display: flex;
-    flex: 0 0 calc((100% - (var(--space-lg) * 3)) / 4);
+    flex: 0 0 clamp(240px, 22%, 300px);
     min-width: 0;
     scroll-snap-align: start;
 }
@@ -3545,8 +3541,7 @@ figcaption {
 
     .site-hero .hero-kicker,
     .site-hero .hero-headline,
-    .site-hero .hero-deck,
-    .site-hero .hero-rule {
+    .site-hero .hero-deck {
         opacity: 0;
         animation: hero-enter 0.7s var(--ease-out) forwards;
     }
@@ -3554,7 +3549,17 @@ figcaption {
     .site-hero .hero-kicker   { animation-delay: 0.05s; }
     .site-hero .hero-headline { animation-delay: 0.15s; }
     .site-hero .hero-deck     { animation-delay: 0.28s; }
-    .site-hero .hero-rule     { animation-delay: 0.40s; }
+
+    /* Rule fades in on opacity only — animating transform would clobber its skewX */
+    @keyframes hero-fade {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    .site-hero .hero-rule {
+        opacity: 0;
+        animation: hero-fade 0.7s var(--ease-out) 0.40s forwards;
+    }
 
     /* Featured banner + article fold entrance */
     @keyframes banner-enter {

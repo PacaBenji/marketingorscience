@@ -111,7 +111,6 @@
             '<div class="most-read-inner">' +
                 '<div class="section-header">' +
                     '<span class="section-title" id="most-read-heading">Most Read</span>' +
-                    '<a href="/articles" class="section-link">View All &rarr;</a>' +
                 '</div>' +
                 '<ol class="most-read-list">' +
                     list.map(renderMostReadItem).join('') +
