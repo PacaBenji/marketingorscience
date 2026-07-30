@@ -1933,8 +1933,8 @@ body {
     }
 
     .featured-banner-image img {
-        min-height: 65vh;
-        max-height: 65vh;
+        min-height: 80vh;
+        max-height: 80vh;
     }
 
     /* Nav */
