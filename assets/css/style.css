@@ -857,6 +857,11 @@ body {
     padding-inline: var(--space-lg);
 }
 
+.most-read-section .section-header {
+    border-top: none;
+    padding-top: 0;
+}
+
 /* Full-width horizontal carousel — scroll-snap, spans viewport width */
 .most-read-list {
     list-style: none;
