@@ -27,12 +27,28 @@
         'Pharma & Supplements': 'pharma'
     };
 
-    function buildEvidenceStars(rating, max) {
-        var html = '';
+    // Verdict label → semantic state (drives left-rule + meter color)
+    var VERDICT_STATES = {
+        'Supported'                         : 'supported',
+        'Partially Supported'               : 'partial',
+        'Promising — Awaiting Clinical Data': 'partial',
+        'Mixed Evidence'                    : 'mixed',
+        'Claim Unsupported'                 : 'unsupported',
+        'Mostly Marketing'                  : 'unsupported'
+    };
+
+    function verdictState(label) {
+        return VERDICT_STATES[label] || 'mixed';
+    }
+
+    // Reuse the shared .grade-bar: `max` segments, first `rating` filled.
+    function buildEvidenceBar(rating, max) {
+        var segs = '';
         for (var i = 1; i <= max; i++) {
-            html += '<span class="evidence-pip' + (i <= rating ? ' filled' : '') + '"></span>';
+            segs += '<span class="grade-bar-segment' + (i <= rating ? ' filled' : '') + '"></span>';
         }
-        return html;
+        return '<span class="grade-bar" role="img" aria-label="Evidence strength ' +
+                   rating + ' of ' + max + '">' + segs + '</span>';
     }
 
     var formatDate = window.MOS_formatDate || function (iso) { return iso; };
@@ -50,15 +66,16 @@
         if (cfg.verdict) {
             var hasRating = cfg.verdict.rating != null;
             var ratingMax = cfg.verdict.max || 5;
+            var state     = verdictState(cfg.verdict.label);
             var ratingHTML = hasRating
-                ? buildEvidenceStars(cfg.verdict.rating, ratingMax) +
+                ? buildEvidenceBar(cfg.verdict.rating, ratingMax) +
                   '<span class="evidence-rating-fraction">' +
                       cfg.verdict.rating + '/' + ratingMax +
                   '</span>'
                 : '<span class="evidence-rating-fraction evidence-rating-tbd">TBD</span>';
 
             verdictHTML =
-                '<div class="verdict-block">' +
+                '<div class="verdict-block verdict-block--' + state + '">' +
                     '<span class="verdict-label">Verdict</span>' +
                     '<span class="verdict-text">' + (cfg.verdict.label || '') + '</span>' +
                     '<span class="evidence-rating">' +
