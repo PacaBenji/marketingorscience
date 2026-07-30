@@ -6,11 +6,21 @@
 
     var formatDate = window.MOS_formatDate || function (iso) { return iso; };
 
-    // Popular articles ranked by popularRank (undark-style 01–05 list).
+    // Ranked list: curated popular articles first (by popularRank), then padded
+    // with the newest remaining articles so the Most Read carousel always fills.
     function getRanked(articles) {
-        return articles
+        var popular = articles
             .filter(function (a) { return a.popular === true; })
             .sort(function (a, b) { return (a.popularRank || 99) - (b.popularRank || 99); });
+
+        var seen = {};
+        popular.forEach(function (a) { seen[a.slug] = 1; });
+
+        var filler = articles
+            .filter(function (a) { return !seen[a.slug]; })
+            .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
+
+        return popular.concat(filler);
     }
 
     // The single lead story for the banner — top-ranked popular, else newest.
@@ -122,10 +132,12 @@
             bannerSlot.innerHTML = renderBanner(banner);
         }
 
-        // Most Read — ranked 01–05
+        // Most Read — ranked top 10
         var mostReadSlot = document.querySelector('.most-read-slot');
         if (mostReadSlot) {
-            mostReadSlot.innerHTML = renderMostRead(ranked.slice(0, 5));
+            mostReadSlot.innerHTML = renderMostRead(
+                ranked.filter(function (a) { return a.slug !== banner.slug; }).slice(0, 10)
+            );
         }
 
         // Grid — most recent by date (distinct from ranked block)

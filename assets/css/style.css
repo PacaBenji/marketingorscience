@@ -462,7 +462,7 @@ body {
     background: var(--color-accent);
     margin: var(--space-lg) auto 0;
     border: none;
-    transform: skewX(-20deg);
+    transform: skewX(-20deg)!important;
 }
 
 
@@ -862,19 +862,29 @@ body {
     padding-inline: var(--space-lg);
 }
 
-/* Card grid on desktop — mirrors .article-grid */
+/* Full-width horizontal carousel — scroll-snap, ~4 cards visible */
 .most-read-list {
     list-style: none;
-    padding: 0;
+    padding: 0 0 var(--space-sm);
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: var(--space-lg);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.most-read-list::-webkit-scrollbar {
+    display: none;
 }
 
 .most-read-item {
     display: flex;
+    flex: 0 0 calc((100% - (var(--space-lg) * 3)) / 4);
     min-width: 0;
+    scroll-snap-align: start;
 }
 
 /* Card — mirrors .article-card */
@@ -2202,26 +2212,12 @@ body {
         padding: var(--space-xl) 0;
     }
 
-    /* Most Read: single column */
-    /* Most Read: horizontal scroll-snap carousel; 2nd card peeks off-edge */
+    /* Most Read carousel: 1 card + peek of 2nd (base rule handles scroll-snap) */
     .most-read-list {
-        display: flex;
-        grid-template-columns: none;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
         gap: var(--space-md);
-        margin-inline: calc(var(--space-lg) * -1);
-        padding-inline: var(--space-lg);
-        padding-bottom: var(--space-sm);
-    }
-    .most-read-list::-webkit-scrollbar {
-        display: none;
     }
     .most-read-item {
         flex: 0 0 80%;
-        scroll-snap-align: start;
     }
 
     /* Inline related card: collapse float, narrower cap */
