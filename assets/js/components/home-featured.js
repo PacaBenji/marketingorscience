@@ -112,11 +112,63 @@
                 '<div class="section-header">' +
                     '<span class="section-title" id="most-read-heading">Most Read</span>' +
                 '</div>' +
-                '<ol class="most-read-list">' +
-                    list.map(renderMostReadItem).join('') +
-                '</ol>' +
             '</div>' +
+            '<ol class="most-read-list">' +
+                list.map(renderMostReadItem).join('') +
+            '</ol>' +
+            '<div class="most-read-dots" aria-hidden="true"></div>' +
         '</section>';
+    }
+
+    // Build scroll-synced dot indicators beneath the Most Read carousel.
+    function initMostReadDots() {
+        var list = document.querySelector('.most-read-list');
+        var dotsWrap = document.querySelector('.most-read-dots');
+        if (!list || !dotsWrap) return;
+
+        var items = Array.prototype.slice.call(list.querySelectorAll('.most-read-item'));
+        if (items.length < 2) return;
+
+        var dots = items.map(function (item, i) {
+            var dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'most-read-dot';
+            dot.setAttribute('aria-label', 'Go to item ' + (i + 1));
+            dot.addEventListener('click', function () {
+                list.scrollTo({ left: item.offsetLeft, behavior: 'smooth' });
+            });
+            dotsWrap.appendChild(dot);
+            return dot;
+        });
+
+        function setActive(idx) {
+            dots.forEach(function (d, i) {
+                d.classList.toggle('is-active', i === idx);
+            });
+        }
+
+        function nearestIndex() {
+            var target = list.scrollLeft;
+            var best = 0;
+            var bestDist = Infinity;
+            items.forEach(function (item, i) {
+                var dist = Math.abs(item.offsetLeft - target);
+                if (dist < bestDist) { bestDist = dist; best = i; }
+            });
+            return best;
+        }
+
+        var ticking = false;
+        list.addEventListener('scroll', function () {
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(function () {
+                setActive(nearestIndex());
+                ticking = false;
+            });
+        });
+
+        setActive(0);
     }
 
     function render(articles) {
@@ -137,6 +189,7 @@
             mostReadSlot.innerHTML = renderMostRead(
                 ranked.filter(function (a) { return a.slug !== banner.slug; }).slice(0, 10)
             );
+            initMostReadDots();
         }
 
         // Grid — most recent by date (distinct from ranked block)

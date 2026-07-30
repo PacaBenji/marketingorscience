@@ -858,10 +858,10 @@ body {
     padding-inline: var(--space-lg);
 }
 
-/* Full-width horizontal carousel — scroll-snap, ~4 cards visible */
+/* Full-width horizontal carousel — scroll-snap, spans viewport width */
 .most-read-list {
     list-style: none;
-    padding: 0 0 var(--space-sm);
+    padding: 0 var(--space-lg) var(--space-sm);
     margin: 0;
     display: flex;
     gap: var(--space-lg);
@@ -881,6 +881,34 @@ body {
     flex: 0 0 clamp(240px, 22%, 300px);
     min-width: 0;
     scroll-snap-align: start;
+}
+
+/* Scroll-affordance dots beneath the carousel */
+.most-read-dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.most-read-dots:empty {
+    display: none;
+}
+
+.most-read-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    background: var(--color-divider);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.most-read-dot.is-active {
+    background: var(--color-accent);
+    transform: scale(1.35);
 }
 
 /* Card — mirrors .article-card */
