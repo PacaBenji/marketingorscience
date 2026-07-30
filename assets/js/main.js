@@ -333,8 +333,18 @@
         if (!menuToggle || !megaMenu) return;
 
         var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        var lastFocused = null;
+
+        function getFocusable() {
+            return Array.prototype.slice.call(
+                megaMenu.querySelectorAll('a[href], button, input, [tabindex]:not([tabindex="-1"])')
+            ).filter(function (el) {
+                return el.offsetWidth > 0 || el.offsetHeight > 0 || el === document.activeElement;
+            });
+        }
 
         function openMenu(focusSearch) {
+            lastFocused = document.activeElement;
             megaMenu.classList.add('is-open');
             megaMenu.setAttribute('aria-hidden', 'false');
             menuToggle.setAttribute('aria-expanded', 'true');
@@ -363,6 +373,10 @@
             if (window.MOS_Search && typeof window.MOS_Search.clearResults === 'function') {
                 window.MOS_Search.clearResults();
             }
+            if (lastFocused && typeof lastFocused.focus === 'function') {
+                lastFocused.focus();
+                lastFocused = null;
+            }
         }
 
         menuToggle.addEventListener('click', function () {
@@ -375,11 +389,37 @@
             });
         }
 
-        // Escape key closes
+        // Keyboard handling while open: Escape closes; Tab is trapped inside
         document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && megaMenu.classList.contains('is-open')) {
+            if (!megaMenu.classList.contains('is-open')) return;
+
+            if (e.key === 'Escape') {
                 closeMenu();
-                menuToggle.focus();
+                return;
+            }
+
+            if (e.key === 'Tab') {
+                var focusable = getFocusable();
+                if (!focusable.length) {
+                    e.preventDefault();
+                    megaMenu.focus();
+                    return;
+                }
+                var first = focusable[0];
+                var last  = focusable[focusable.length - 1];
+                var active = document.activeElement;
+
+                if (e.shiftKey) {
+                    if (active === first || active === megaMenu || !megaMenu.contains(active)) {
+                        e.preventDefault();
+                        last.focus();
+                    }
+                } else {
+                    if (active === last || active === megaMenu || !megaMenu.contains(active)) {
+                        e.preventDefault();
+                        first.focus();
+                    }
+                }
             }
         });
 
@@ -388,7 +428,6 @@
         if (closeBtn) {
             closeBtn.addEventListener('click', function () {
                 closeMenu();
-                menuToggle.focus();
             });
         }
 
