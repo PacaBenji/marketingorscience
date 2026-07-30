@@ -102,6 +102,16 @@
             document.head.appendChild(searchScript);
         }
 
+        // Inline "Related" cards — article pages only; self-invokes once
+        // MOS_ARTICLES is ready. Loaded centrally so existing article HTML
+        // needs no per-file edits.
+        if (isInArticles && !document.querySelector('script[data-mos-related-inline]')) {
+            var relatedInline = document.createElement('script');
+            relatedInline.src = assetPath + '/js/components/article/related-inline.js';
+            relatedInline.dataset.mosRelatedInline = '1';
+            document.head.appendChild(relatedInline);
+        }
+
         // Converge custom event tracking
         if (!document.querySelector('script[data-mos-tracking]')) {
             var trackingScript = document.createElement('script');
@@ -438,34 +448,44 @@
     }
 
     // ─── Scroll animations ───────────────────────────────────────────────────
+    // Observer is created once and reused. Safe to call repeatedly — elements
+    // already tagged .will-animate are skipped — so late-injected content
+    // (homepage cards, inline related cards) can register itself by calling
+    // window.MOS_initScrollAnimations() after it mounts.
+    var scrollObserver = null;
+
     function initScrollAnimations() {
         if (!window.IntersectionObserver) return;
 
         // Grid items: stagger resets every 3 columns
         var gridSelectors = ['.article-card', '.read-more-card', '.popular-item'];
         // List items: sequential stagger capped at 300ms
-        var listSelectors = ['.article-list-item', '.quick-rank-item'];
+        var listSelectors = ['.article-list-item', '.quick-rank-item', '.most-read-item'];
         // Single/fade-in items: no stagger
-        var fadeInSelectors = ['.article-figure', '.toc-block', '.author-card'];
+        var fadeInSelectors = ['.article-figure', '.toc-block', '.author-card', '.related-inline'];
         // Other fade-up items: no stagger
         var singleSelectors = ['.about-panel-inner', '.site-hero-inner', '.fold-inner',
             '.verdict-block', '.cta-block', '.section-header', '.claim-block'];
 
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
+        if (!scrollObserver) {
+            scrollObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        scrollObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+        }
 
         function observe(els, type, staggerFn) {
             els.forEach(function(el, i) {
+                // Skip elements already registered on a prior pass
+                if (el.classList.contains('will-animate')) return;
                 el.classList.add('will-animate', type);
                 var delay = staggerFn ? staggerFn(i) : 0;
                 if (delay) el.style.transitionDelay = delay + 'ms';
-                observer.observe(el);
+                scrollObserver.observe(el);
             });
         }
 
@@ -490,6 +510,7 @@
             null
         );
     }
+    window.MOS_initScrollAnimations = initScrollAnimations;
 
     // ─── Image skeleton loaders ──────────────────────────────────────────────
     function initImageLoaders() {
@@ -509,6 +530,8 @@
         figures.forEach(function(figure) {
             var img = figure.querySelector('img');
             if (!img) return;
+            // Skip if already wrapped (idempotent across re-runs)
+            if (img.closest('.img-wrap')) return;
             var wrapper = document.createElement('div');
             wrapper.className = 'img-wrap';
             img.parentNode.insertBefore(wrapper, img);
@@ -516,6 +539,7 @@
             markLoaded(img);
         });
     }
+    window.MOS_initImageLoaders = initImageLoaders;
 
     function markLoaded(img) {
         var wrap = img.closest('.img-wrap');

@@ -71,6 +71,10 @@
     /* — Borders — */
     --radius:   0;   /* zero border-radius — print heritage */
     --border:   1px solid var(--color-divider);
+
+    /* — Motion — */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --dur:      0.55s;
 }
 
 
@@ -837,6 +841,196 @@ body {
     line-height: 1;
     margin-bottom: var(--space-sm);
     letter-spacing: -0.05em;
+}
+
+
+/* ============================================================
+   10b. MOST READ — numbered ranking block (homepage)
+   ============================================================ */
+.most-read-section {
+    background: #F8F8F8;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: var(--space-xl) 0;
+}
+
+.most-read-inner {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--space-lg);
+}
+
+/* Two-column ranked list on desktop, single column on narrow screens */
+.most-read-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-2xl);
+    border-top: 2px solid var(--color-text);
+}
+
+.most-read-item {
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.most-read-link {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: var(--space-md);
+    align-items: start;
+    padding: var(--space-md) var(--space-sm);
+    margin-inline: calc(var(--space-sm) * -1);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s var(--ease-out);
+}
+
+/* Hairline elevation on hover — restrained, print-friendly */
+.most-read-item:hover {
+    background: #ffffff;
+}
+
+.most-read-link:hover .most-read-title {
+    color: var(--color-accent);
+}
+
+/* Large tabular numeral — echoes the .card-number treatment */
+.most-read-rank {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 0.9;
+    color: var(--color-divider);
+    letter-spacing: -0.05em;
+    font-variant-numeric: tabular-nums;
+    transition: color 0.2s var(--ease-out);
+}
+
+.most-read-link:hover .most-read-rank {
+    color: var(--color-accent);
+}
+
+.most-read-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+}
+
+.most-read-title {
+    font-family: var(--font-serif);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-text);
+    transition: color 0.15s;
+}
+
+.most-read-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.most-read-author {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.most-read-time {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--color-muted);
+}
+
+
+/* ============================================================
+   10c. INLINE RELATED CARD (in-article, floated)
+   ============================================================ */
+.related-inline {
+    float: right;
+    width: 300px;
+    margin: var(--space-xs) 0 var(--space-lg) var(--space-lg);
+    clear: right;
+    border-top: 2px solid var(--color-accent);
+    background: #F8F8F8;
+    padding: var(--space-md);
+}
+
+.related-inline-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.related-inline-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    margin-bottom: var(--space-md);
+    border: var(--border);
+    background: #f0f0f0;
+}
+
+.related-inline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s var(--ease-out);
+}
+
+.related-inline-link:hover .related-inline-image img {
+    transform: scale(1.03);
+}
+
+/* "Related" label — slash motif echoes .section-title */
+.related-inline-label {
+    display: block;
+    position: relative;
+    padding-left: 16px;
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+}
+
+.related-inline-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) skewX(-20deg);
+    width: 6px;
+    height: 13px;
+    background: var(--color-accent);
+}
+
+.related-inline-headline {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.1875rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    transition: color 0.15s;
+}
+
+.related-inline-link:hover .related-inline-headline {
+    color: var(--color-accent);
 }
 
 
@@ -1973,6 +2167,23 @@ body {
     /* Article grid section */
     .article-grid-section {
         padding: var(--space-xl) 0;
+    }
+
+    /* Most Read: single column */
+    .most-read-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Inline related card: collapse float, narrower cap */
+    .related-inline {
+        float: none;
+        width: 100%;
+        max-width: 420px;
+        margin: var(--space-lg) auto;
+    }
+    .related-inline + p,
+    .related-inline + .claim-block {
+        clear: both;
     }
 
     /* Article list: single column on mobile */
@@ -3266,7 +3477,8 @@ figcaption {
 
     .will-animate {
         opacity: 0;
-        transition: opacity 0.55s ease, transform 0.55s ease;
+        transition: opacity var(--dur) var(--ease-out),
+                    transform var(--dur) var(--ease-out);
     }
 
     .will-animate.fade-up {
@@ -3277,6 +3489,26 @@ figcaption {
         opacity: 1;
         transform: translateY(0);
     }
+
+    /* Hero load-in — staggered reveal on page load. Above-the-fold, so it
+       runs on its own timeline rather than via the scroll observer. */
+    @keyframes hero-enter {
+        from { opacity: 0; transform: translateY(16px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .site-hero .hero-kicker,
+    .site-hero .hero-headline,
+    .site-hero .hero-deck,
+    .site-hero .hero-rule {
+        opacity: 0;
+        animation: hero-enter 0.7s var(--ease-out) forwards;
+    }
+
+    .site-hero .hero-kicker   { animation-delay: 0.05s; }
+    .site-hero .hero-headline { animation-delay: 0.15s; }
+    .site-hero .hero-deck     { animation-delay: 0.28s; }
+    .site-hero .hero-rule     { animation-delay: 0.40s; }
 
     /* Featured banner + article fold entrance */
     @keyframes banner-enter {

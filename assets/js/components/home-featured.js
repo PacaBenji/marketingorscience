@@ -6,20 +6,27 @@
 
     var formatDate = window.MOS_formatDate || function (iso) { return iso; };
 
-    function getFeatured(articles) {
-        // Popular articles sorted by rank, then pad with most recent
-        var popular = articles
+    // Popular articles ranked by popularRank (undark-style 01–05 list).
+    function getRanked(articles) {
+        return articles
             .filter(function (a) { return a.popular === true; })
             .sort(function (a, b) { return (a.popularRank || 99) - (b.popularRank || 99); });
+    }
 
-        var slugs = {};
-        popular.forEach(function (a) { slugs[a.slug] = true; });
+    // The single lead story for the banner — top-ranked popular, else newest.
+    function getBanner(articles, ranked) {
+        if (ranked.length) return ranked[0];
+        return articles
+            .slice()
+            .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); })[0];
+    }
 
-        var recent = articles
-            .filter(function (a) { return !slugs[a.slug]; })
-            .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
-
-        return popular.concat(recent).slice(0, 7);
+    // Grid = most recent by date, distinct from the ranked block above it.
+    function getLatest(articles, count) {
+        return articles
+            .slice()
+            .sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); })
+            .slice(0, count);
     }
 
     function renderBanner(article) {
@@ -64,20 +71,80 @@
         '</a>';
     }
 
-    function render(articles) {
-        var featured = getFeatured(articles);
-        if (!featured.length) return;
+    // Numbered "Most Read" ranking row — mirrors read-more.js .popular-item.
+    function renderMostReadItem(article, idx) {
+        var rank = idx + 1;
+        var rankStr = rank < 10 ? '0' + rank : String(rank);
 
-        // Banner — first article
+        var verdictDot = article.verdictClass
+            ? '<span class="popular-verdict-dot popular-verdict-dot--' + article.verdictClass + '" aria-hidden="true"></span>'
+            : '';
+
+        var time = article.readingTime
+            ? '<span class="popular-dot" aria-hidden="true">&middot;</span>' +
+              '<span class="most-read-time">' + article.readingTime + ' min</span>'
+            : '';
+
+        return '<li class="most-read-item">' +
+            '<a class="most-read-link" href="' + article.url + '">' +
+                '<span class="most-read-rank" aria-hidden="true">' + rankStr + '</span>' +
+                '<span class="most-read-body">' +
+                    '<span class="most-read-title">' + (article.title || '') + '</span>' +
+                    '<span class="most-read-meta">' +
+                        verdictDot +
+                        '<span class="most-read-author">' + (article.author || '') + '</span>' +
+                        time +
+                    '</span>' +
+                '</span>' +
+            '</a>' +
+        '</li>';
+    }
+
+    function renderMostRead(list) {
+        if (!list.length) return '';
+        return '<section class="most-read-section" aria-labelledby="most-read-heading">' +
+            '<div class="most-read-inner">' +
+                '<div class="section-header">' +
+                    '<span class="section-title" id="most-read-heading">Most Read</span>' +
+                    '<a href="/articles" class="section-link">View All &rarr;</a>' +
+                '</div>' +
+                '<ol class="most-read-list">' +
+                    list.map(renderMostReadItem).join('') +
+                '</ol>' +
+            '</div>' +
+        '</section>';
+    }
+
+    function render(articles) {
+        if (!articles || !articles.length) return;
+
+        var ranked = getRanked(articles);
+        var banner = getBanner(articles, ranked);
+
+        // Banner — lead story
         var bannerSlot = document.querySelector('.featured-banner-slot');
-        if (bannerSlot) {
-            bannerSlot.innerHTML = renderBanner(featured[0]);
+        if (bannerSlot && banner) {
+            bannerSlot.innerHTML = renderBanner(banner);
         }
 
-        // Grid — next 5
+        // Most Read — ranked 01–05
+        var mostReadSlot = document.querySelector('.most-read-slot');
+        if (mostReadSlot) {
+            mostReadSlot.innerHTML = renderMostRead(ranked.slice(0, 5));
+        }
+
+        // Grid — most recent by date (distinct from ranked block)
         var grid = document.querySelector('.article-grid');
         if (grid) {
-            grid.innerHTML = featured.slice(1).map(renderCard).join('');
+            grid.innerHTML = getLatest(articles, 6).map(renderCard).join('');
+        }
+
+        // Late-injected content: register with the shared observer + image loaders
+        if (typeof window.MOS_initScrollAnimations === 'function') {
+            window.MOS_initScrollAnimations();
+        }
+        if (typeof window.MOS_initImageLoaders === 'function') {
+            window.MOS_initImageLoaders();
         }
     }
 
