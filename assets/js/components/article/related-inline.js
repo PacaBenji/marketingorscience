@@ -23,36 +23,73 @@
         }) || null;
     }
 
-    // Selection order mirrors read-more.js: same author first, then category.
+    // Tags too generic to signal topical relatedness.
+    var GENERIC_TAGS = {
+        skincare: 1, haircare: 1, wellness: 1, pharma: 1,
+        fda: 1, otc: 1, supplements: 1
+    };
+
+    function specificTags(a) {
+        return (a.tags || []).filter(function (t) { return !GENERIC_TAGS[t]; });
+    }
+
+    // Selection order: manual override → curated relatedSlugs →
+    // tag-overlap score → same category (newest) → any newest.
     function pickRelated(articles, current) {
         var others = articles.filter(function (a) { return a.slug !== current.slug; });
 
-        // Manual override wins if provided and resolvable
-        var override = window.MOS_RELATED_OVERRIDE;
-        if (Array.isArray(override) && override.length) {
-            for (var i = 0; i < override.length; i++) {
-                var match = others.find(function (a) { return a.slug === override[i]; });
+        function bySlug(slug) {
+            return others.find(function (a) { return a.slug === slug; });
+        }
+        function firstResolvable(slugs) {
+            for (var i = 0; i < slugs.length; i++) {
+                var match = bySlug(slugs[i]);
                 if (match) return match;
             }
+            return null;
         }
-
         function newest(list) {
             return list.slice().sort(function (a, b) {
                 return (b.date || '').localeCompare(a.date || '');
             })[0];
         }
 
-        // Same author
-        if (current.authorSlug) {
-            var byAuthor = others.filter(function (a) { return a.authorSlug === current.authorSlug; });
-            if (byAuthor.length) return newest(byAuthor);
+        // 1. Manual override wins if provided and resolvable
+        var override = window.MOS_RELATED_OVERRIDE;
+        if (Array.isArray(override) && override.length) {
+            var ov = firstResolvable(override);
+            if (ov) return ov;
         }
-        // Fallback: same category
+
+        // 2. Curated relatedSlugs from articles.js
+        if (Array.isArray(current.relatedSlugs) && current.relatedSlugs.length) {
+            var curated = firstResolvable(current.relatedSlugs);
+            if (curated) return curated;
+        }
+
+        // 3. Tag-overlap score (shared specific tags, then same category)
+        var curTags = {};
+        specificTags(current).forEach(function (t) { curTags[t] = 1; });
+        var scored = others.map(function (a) {
+            var shared = specificTags(a).filter(function (t) { return curTags[t]; }).length;
+            var s = shared * 3;
+            if (a.categorySlug === current.categorySlug) s += 1;
+            return { article: a, score: s };
+        }).filter(function (x) { return x.score > 0; });
+        if (scored.length) {
+            scored.sort(function (x, y) {
+                return (y.score - x.score) ||
+                       (y.article.date || '').localeCompare(x.article.date || '');
+            });
+            return scored[0].article;
+        }
+
+        // 4. Same category, newest
         if (current.categorySlug) {
             var byCat = others.filter(function (a) { return a.categorySlug === current.categorySlug; });
             if (byCat.length) return newest(byCat);
         }
-        // Last resort: any newest
+        // 5. Last resort: any newest
         return others.length ? newest(others) : null;
     }
 

@@ -71,31 +71,26 @@
         '</a>';
     }
 
-    // Numbered "Most Read" ranking row — mirrors read-more.js .popular-item.
+    // "Most Read" card — image-top, rank badge, title, author + date.
     function renderMostReadItem(article, idx) {
         var rank = idx + 1;
-        var rankStr = rank < 10 ? '0' + rank : String(rank);
 
-        var verdictDot = article.verdictClass
-            ? '<span class="popular-verdict-dot popular-verdict-dot--' + article.verdictClass + '" aria-hidden="true"></span>'
-            : '';
-
-        var time = article.readingTime
-            ? '<span class="popular-dot" aria-hidden="true">&middot;</span>' +
-              '<span class="most-read-time">' + article.readingTime + ' min</span>'
+        var imageHTML = article.image
+            ? '<div class="most-read-card-image">' +
+                  '<span class="most-read-rank-badge" aria-hidden="true">' + rank + '</span>' +
+                  '<img src="' + article.image + '" alt="" loading="lazy" width="600" height="340">' +
+              '</div>'
             : '';
 
         return '<li class="most-read-item">' +
-            '<a class="most-read-link" href="' + article.url + '">' +
-                '<span class="most-read-rank" aria-hidden="true">' + rankStr + '</span>' +
-                '<span class="most-read-body">' +
-                    '<span class="most-read-title">' + (article.title || '') + '</span>' +
-                    '<span class="most-read-meta">' +
-                        verdictDot +
-                        '<span class="most-read-author">' + (article.author || '') + '</span>' +
-                        time +
-                    '</span>' +
-                '</span>' +
+            '<a class="most-read-card" href="' + article.url + '" aria-label="Read: ' + article.title + '">' +
+                imageHTML +
+                '<h3 class="most-read-title">' + (article.title || '') + '</h3>' +
+                '<div class="most-read-meta">' +
+                    '<span class="most-read-author">' + (article.author || '') + '</span>' +
+                    '<span class="most-read-dot" aria-hidden="true">&middot;</span>' +
+                    '<time datetime="' + article.date + '">' + formatDate(article.date) + '</time>' +
+                '</div>' +
             '</a>' +
         '</li>';
     }

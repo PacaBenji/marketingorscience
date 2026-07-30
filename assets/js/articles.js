@@ -5,6 +5,7 @@
 window.MOS_ARTICLES = [
   {
     slug         : 'methylene-blue-nootropic',
+    relatedSlugs : ['nootropics-category-overview', 'thesis-nootropics-evidence', 'creatine-cognitive-health'],
     url          : '/articles/wellness/2026/08/methylene-blue-nootropic',
     title        : 'Methylene Blue as a Nootropic: What the Evidence Actually Shows',
     deck         : 'Methylene blue is the century-old dye now sold as a viral brain-and-longevity \'brain fuel.\' A review of the real mitochondrial mechanism, why rodent results don\'t translate to human cognition, and the serious serotonin-syndrome risk.',
@@ -24,6 +25,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'bpc-157-healing-peptide',
+    relatedSlugs : ['peptide-compounding-fda-review', 'compounded-glp1-semaglutide-tirzepatide', 'beauty-peptides-evidence-review'],
     url          : '/articles/pharma/2026/07/bpc-157-healing-peptide',
     title        : 'BPC-157: What the Evidence Actually Shows About the "Healing Peptide"',
     deck         : 'BPC-157 is marketed as a miracle healing peptide for tendons, gut, and injury recovery, and an FDA advisory panel just narrowly backed it for compounding. A review of the striking animal data, the near-absent human evidence, and the regulatory fight.',
@@ -43,6 +45,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'cyclospora-outbreak-produce-safety',
+    relatedSlugs : ['peanut-allergy-prevention-treatment', 'sublingual-allergy-drops', 'clinical-trials-beauty-vs-pharma'],
     url          : '/articles/pharma/2026/07/cyclospora-outbreak-produce-safety',
     title        : 'The 2026 Cyclospora Outbreak: Should You Stop Eating Produce?',
     deck         : 'A large 2026 Cyclospora outbreak tied to recalled iceberg lettuce has people swearing off salads. A review of what the parasite is, why washing doesn\'t reliably remove it, who is actually at risk, and why avoiding produce is the wrong lesson.',
@@ -62,6 +65,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'ai-in-beauty-wellness',
+    relatedSlugs : ['dermatologists-beauty-brands', 'clinical-trials-beauty-vs-pharma', 'exosome-skincare'],
     url          : '/articles/wellness/2026/07/ai-in-beauty-wellness',
     title        : 'AI in Beauty and Wellness: What the Evidence Actually Shows',
     deck         : 'AI is marketed as a dermatologist in your pocket, a personalized-formula engine, and a wellness coach. A review of where the technology is genuinely validated, where it is marketing theater, and where it is quietly risky.',
@@ -81,6 +85,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'dermatologists-beauty-brands',
+    relatedSlugs : ['ai-in-beauty-wellness', 'clinical-trials-beauty-vs-pharma', 'vitamin-c-serum-stability'],
     url          : '/articles/skincare/2026/07/dermatologists-beauty-brands',
     title        : 'How Dermatologists Interface With Beauty Brands: What the Labels Actually Mean',
     deck         : '\'Dermatologist tested,\' \'dermatologist recommended,\' derm-founded lines, and skinfluencer partnerships all trade on medical authority. A review of what those terms legally mean, who pays whom, and where the credential adds real value.',
@@ -100,6 +105,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'clinical-trials-beauty-vs-pharma',
+    relatedSlugs : ['dermatologists-beauty-brands', 'ai-in-beauty-wellness', 'peptide-compounding-fda-review'],
     url          : '/articles/pharma/2026/07/clinical-trials-beauty-vs-pharma',
     title        : 'Clinical Trials in Beauty and Wellness vs Pharma: Why "Clinically Proven" Means Two Different Things',
     deck         : 'A drug\'s \'clinical trial\' and a serum\'s \'clinically proven\' claim share a word and almost nothing else. A review of how pharma trials are actually run, what cosmetic and supplement \'clinical\' testing really is, and how to decode the label.',
@@ -120,6 +126,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'exosome-skincare',
+    relatedSlugs : ['pdrn-skin-repair', 'beauty-peptides-evidence-review', 'snail-mucin-skincare'],
     url          : '/articles/skincare/2026/07/exosome-skincare',
     title        : 'Exosomes in Skincare: What the Evidence Actually Shows',
     deck         : 'Exosomes are marketed as a next-generation regenerative skincare and post-procedure active. A review of the biology, the FDA\'s warning that no exosome product is approved, the thin clinical evidence, and the safety record.',
@@ -139,6 +146,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'snail-mucin-skincare',
+    relatedSlugs : ['glycerin-humectant', 'hyaluronic-acid', 'ceramide-moisturizers-skin-barrier'],
     url          : '/articles/skincare/2026/07/snail-mucin-skincare',
     title        : 'Snail Mucin in Skincare: What the Evidence Actually Shows',
     deck         : 'Snail secretion filtrate is the viral K-beauty hydrator sold on repair and glass-skin claims. A review of what the ingredient actually contains, the small industry-linked trials, and where the evidence holds up.',
@@ -158,6 +166,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'chemical-vs-mineral-sunscreen',
+    relatedSlugs : ['spf-claims', 'bemotrizinol-fda-approval', 'dermatologists-beauty-brands'],
     url          : '/articles/skincare/2026/07/chemical-vs-mineral-sunscreen',
     title        : 'Chemical vs. Mineral Sunscreen: What the Evidence Says About Safety and Protection',
     deck         : 'Mineral sunscreen is marketed as the \'clean,\' safer choice; chemical filters as more elegant and effective. A review of how each filter type works, the systemic-absorption studies, the coral-reef claims, and whether either is meaningfully better at preventing skin damage.',
@@ -177,6 +186,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'apple-cider-vinegar-weight-loss-blood-sugar',
+    relatedSlugs : ['berberine-weight-loss', 'l-carnitine-evidence-review', 'compounded-glp1-semaglutide-tirzepatide'],
     url          : '/articles/wellness/2026/07/apple-cider-vinegar-weight-loss-blood-sugar',
     title        : 'Apple Cider Vinegar for Weight Loss and Blood Sugar: What the Evidence Actually Shows',
     deck         : 'ACV is marketed as a fat-burning, blood-sugar-balancing daily tonic. A review of the small human trials, the acetic-acid mechanism, the postprandial-glucose data, and the enamel and esophageal risks the gummies don\'t mention.',
@@ -196,6 +206,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'compounded-glp1-semaglutide-tirzepatide',
+    relatedSlugs : ['ozempic-hair-loss-glp1', 'bpc-157-healing-peptide', 'peptide-compounding-fda-review'],
     url          : '/articles/pharma/2026/07/compounded-glp1-semaglutide-tirzepatide',
     title        : 'Compounded Semaglutide and Tirzepatide: What the Shortage Loophole Actually Delivered',
     deck         : 'Telehealth brands sold compounded GLP-1s as a cheaper, identical alternative to Ozempic and Zepbound. A review of the 503A/503B compounding pathway, the FDA\'s shortage-list resolution, and what \'compounded\' actually means for safety, dosing, and efficacy.',
@@ -215,6 +226,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'peanut-allergy-prevention-treatment',
+    relatedSlugs : ['sublingual-allergy-drops', 'baby-eczema-condition-review', 'cyclospora-outbreak-produce-safety'],
     url          : '/articles/pharma/2026/06/peanut-allergy-prevention-treatment',
     title        : 'Prevention and Treatment of Peanut Allergy: What the Evidence Actually Shows',
     deck         : 'For decades, US guidelines told parents to avoid peanuts in infancy — advice that likely worsened the allergy epidemic. A review of the AAP avoidance era, the LEAP trials that reversed the guidance, and the first FDA-approved treatments.',
@@ -234,6 +246,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'bovine-colostrum-supplements',
+    relatedSlugs : ['collagen-supplements-evidence', 'omega-3-anti-inflammatory-evidence', 'electrolyte-powders-hydration'],
     url          : '/articles/wellness/2026/06/bovine-colostrum-supplements',
     title        : 'Bovine Colostrum Supplements: What the Clinical Evidence Actually Shows',
     deck         : 'Bovine colostrum is marketed for gut health, immunity, and skin. A review of the bioavailability question, the human trial evidence, and why the local gut effects are better supported than the systemic claims.',
@@ -254,6 +267,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'electrolyte-powders-hydration',
+    relatedSlugs : ['apple-cider-vinegar-weight-loss-blood-sugar', 'collagen-supplements-evidence', 'omega-3-anti-inflammatory-evidence'],
     url          : '/articles/wellness/2026/06/electrolyte-powders-hydration',
     title        : 'Electrolyte Powders: Does Everyone Actually Need Them?',
     deck         : 'LMNT, Liquid I.V., and the electrolyte boom promise better hydration for everyone. A review of the oral rehydration science, sodium intake data, and when electrolyte supplementation actually matters.',
@@ -273,6 +287,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'castor-oil-hair-growth',
+    relatedSlugs : ['hair-growth-timelines', 'biotin-hair-growth', 'rosemary-oil-minoxidil'],
     url          : '/articles/haircare/2026/06/castor-oil-hair-growth',
     title        : 'Castor Oil for Hair Growth: What the Evidence Actually Shows',
     deck         : 'Castor oil is one of the most popular home remedies for hair and eyelash growth. A review of the actual clinical evidence, the borrowed mechanisms, and the hair-felting risk the marketing leaves out.',
@@ -292,6 +307,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'tretinoin-vs-otc-retinol',
+    relatedSlugs : ['bakuchiol-vs-retinol', 'retinoid-ladder', 'retinol-paradox'],
     url          : '/articles/pharma/2026/06/tretinoin-vs-otc-retinol',
     title        : 'Tretinoin vs. OTC Retinol: How Big Is the Efficacy Gap?',
     deck         : 'Prescription tretinoin and OTC retinol are both marketed as retinoids for anti-aging and acne. A review of the conversion pathway, the clinical trial evidence, and whether the concentration and formulation claims on OTC products hold up.',
@@ -311,6 +327,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'ceramide-moisturizers-skin-barrier',
+    relatedSlugs : ['glycerin-humectant', 'creme-de-la-mer-miracle-broth', 'baby-eczema-condition-review'],
     url          : '/articles/skincare/2026/06/ceramide-moisturizers-skin-barrier',
     title        : 'Ceramide Moisturizers and Skin Barrier Claims: What the Evidence Actually Shows',
     deck         : 'Ceramide-containing moisturizers dominate the skincare category, with brands claiming to restore the skin barrier, reduce TEWL, and treat eczema-prone skin. A review of the barrier biology, the clinical evidence, and what the meta-analyses actually show.',
@@ -330,6 +347,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'tranexamic-acid-hyperpigmentation',
+    relatedSlugs : ['niacinamide-concentration', 'azelaic-acid-evidence', 'vitamin-c-serum-stability'],
     url          : '/articles/skincare/2026/06/tranexamic-acid-hyperpigmentation',
     title        : 'Tranexamic Acid for Hyperpigmentation: What the Evidence Actually Shows',
     deck         : 'Tranexamic acid is marketed as a next-generation brightening ingredient for melasma and post-inflammatory hyperpigmentation. A review of the oral and topical trial data, the proposed mechanisms, and how OTC concentrations compare to clinical doses.',
@@ -349,6 +367,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'omega-3-anti-inflammatory-evidence',
+    relatedSlugs : ['lemon-verbena-hibiscus', 'collagen-supplements-evidence', 'bovine-colostrum-supplements'],
     url          : '/articles/wellness/2026/06/omega-3-anti-inflammatory-evidence',
     title        : 'Omega-3 Supplements for Inflammation: What the Evidence Actually Shows',
     deck         : 'Fish oil is among the most widely sold wellness supplements, marketed for inflammation, cardiovascular health, and joint pain. A review of what the clinical evidence actually supports — and where recent large trials have revised expectations downward.',
@@ -368,6 +387,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'does-sugar-feed-cancer',
+    relatedSlugs : ['berberine-weight-loss', 'apple-cider-vinegar-weight-loss-blood-sugar', 'omega-3-anti-inflammatory-evidence'],
     url          : '/articles/pharma/2026/06/does-sugar-feed-cancer',
     title        : 'Does Sugar Feed Cancer? What the Clinical Evidence Actually Shows',
     deck         : 'The "sugar feeds cancer" claim has driven restrictive diets and an entire wellness industry aimed at oncology patients. The mechanistic story is real — but the dietary translation is not what the trial evidence supports.',
@@ -388,6 +408,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'minoxidil-vs-novogro',
+    relatedSlugs : ['finasteride-vs-novogro', 'pp405-vs-novogro', 'minoxidil-female-pattern-hair-loss'],
     url          : '/articles/haircare/2026/06/minoxidil-vs-novogro',
     title        : 'Minoxidil vs. NOVOGRO™: Legacy vs. the Future?',
     deck         : 'Minoxidil has been the topical hair loss standard for 40 years. NOVOGRO™ (NV-623 & NV-624) are new AI-discovered molecules targeting dermal papilla cells directly. A review of the preclinical evidence, the mechanism difference, and whether the science justifies the narrative.',
@@ -408,6 +429,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'finasteride-vs-novogro',
+    relatedSlugs : ['minoxidil-vs-novogro', 'pp405-vs-novogro', 'saw-palmetto-hair-loss'],
     url          : '/articles/haircare/2026/06/finasteride-vs-novogro',
     title        : 'Finasteride vs. NOVOGRO™ for Female Hair Growth: Is Blocking DHT Without Side Effects Finally Possible?',
     deck         : 'We compare finasteride\'s evidence and safety constraints in women against NV-1065, a non-steroidal DHT-blocking molecule positioned as a follicle-targeted alternative. Part 2 of a 3-part series on NOVOGRO™, a new category of intentionally designed molecules that target damaged hair follicles from the inside and out.',
@@ -427,6 +449,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'pp405-vs-novogro',
+    relatedSlugs : ['finasteride-vs-novogro', 'minoxidil-vs-novogro', 'saw-palmetto-hair-loss'],
     url          : '/articles/haircare/2026/07/pp405-vs-novogro',
     title        : 'PP405 vs. NOVOGRO™: Which Strategy Makes More Sense?',
     deck         : 'We compare PP405, Pelage Therapeutics\' MPC inhibitor targeting follicle stem cell quiescence, against NV-273, NOVOGRO\'s PHD2 inhibitor targeting the hair follicle environment. Part 3 of a 3-part series on NOVOGRO™, a new category of intentionally designed molecules that target damaged hair follicles from the inside and out.',
@@ -446,6 +469,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'bemotrizinol-fda-approval',
+    relatedSlugs : ['spf-claims', 'chemical-vs-mineral-sunscreen', 'dermatologists-beauty-brands'],
     url          : '/articles/pharma/2026/06/bemotrizinol-fda-approval',
     title        : 'Bemotrizinol Gets FDA Approval: What the Evidence Says About the First New Sunscreen Ingredient in 20 Years',
     deck         : 'The FDA granted GRASE status to bemotrizinol (BEMT) in June 2026, ending a two-decade drought of new US sunscreen options. A review of the efficacy data, how it compares to existing filters, and what the caveats are.',
@@ -465,6 +489,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'stress-hair-loss',
+    relatedSlugs : ['postpartum-hair-loss', 'telogen-effluvium-treatment', 'ashwagandha-evidence-review'],
     url          : '/articles/haircare/2026/06/stress-hair-loss',
     title        : 'Stress and Hair Loss: The HPA Axis, Cortisol, and What the Evidence Shows',
     deck         : 'Stress is widely blamed for hair loss. A review of the HPA axis and cortisol mechanism, the brain-skin axis research, and how stress-induced shedding differs from pattern hair loss.',
@@ -484,6 +509,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'postpartum-hair-loss',
+    relatedSlugs : ['stress-hair-loss', 'telogen-effluvium-treatment', 'pp405-vs-novogro'],
     url          : '/articles/haircare/2026/06/postpartum-hair-loss',
     title        : 'Postpartum Hair Loss: The Hormonal Mechanism and What Actually Helps',
     deck         : 'Postpartum hair loss affects most new mothers. A review of the estrogen withdrawal mechanism, expected timeline, and what the evidence shows for treatments and supplements.',
@@ -503,6 +529,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'ketoconazole-hair-loss',
+    relatedSlugs : ['finasteride-vs-novogro', 'saw-palmetto-hair-loss', 'pp405-vs-novogro'],
     url          : '/articles/haircare/2026/06/ketoconazole-hair-loss',
     title        : 'Ketoconazole Shampoo for Hair Loss: What the Evidence Actually Shows',
     deck         : 'Ketoconazole 2% shampoo is widely used as an adjunct for androgenetic alopecia. A review of the anti-androgen and antifungal mechanisms, the RCT evidence, and where it fits relative to minoxidil and finasteride.',
@@ -522,6 +549,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'saw-palmetto-hair-loss',
+    relatedSlugs : ['finasteride-vs-novogro', 'ketoconazole-hair-loss', 'dht-blockers-evidence'],
     url          : '/articles/haircare/2026/06/saw-palmetto-hair-loss',
     title        : 'Saw Palmetto for Hair Loss: How It Compares to Finasteride',
     deck         : 'Saw palmetto is marketed as a natural finasteride alternative for androgenetic alopecia. A review of the 5-alpha reductase mechanism, clinical trial evidence, and what the 2025–2026 research actually shows.',
@@ -541,6 +569,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'alopecia-areata-jak-inhibitors',
+    relatedSlugs : ['pp405-vs-novogro', 'finasteride-vs-novogro', 'minoxidil-vs-novogro'],
     url          : '/articles/haircare/2026/06/alopecia-areata-jak-inhibitors',
     title        : 'Alopecia Areata and JAK Inhibitors: What the Approvals Actually Mean',
     deck         : 'Baricitinib and ritlecitinib are FDA-approved for alopecia areata. A review of the Phase 3 evidence, what long-term data shows, and how JAK inhibitors compare to older treatments.',
@@ -561,6 +590,7 @@ window.MOS_ARTICLES = [
   // ── 3 new articles (May 19, 2026) ────────────────────────────────────────
   {
     slug         : 'thesis-nootropics-evidence',
+    relatedSlugs : ['nootropics-category-overview', 'creatine-cognitive-health', 'ashwagandha-evidence-review'],
     url          : '/articles/wellness/2026/05/thesis-nootropics-evidence',
     title        : 'Thesis Nootropics: A Product Breakdown of the Personalized Blend Model',
     deck         : 'Thesis built a $100M+ business on personalized nootropic blends. A breakdown of the four core formulas, the per-ingredient evidence base, the proprietary-blend dose problem, and what the trial literature actually supports.',
@@ -580,6 +610,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'creme-de-la-mer-miracle-broth',
+    relatedSlugs : ['ceramide-moisturizers-skin-barrier', 'glycerin-humectant', 'dermatologists-beauty-brands'],
     url          : '/articles/skincare/2026/05/creme-de-la-mer-miracle-broth',
     title        : 'Crème de la Mer: A Product Breakdown of the $400 Moisturizer and Its Miracle Broth',
     deck         : 'The original Crème de la Mer sells for over $400 per ounce on the strength of its \'Miracle Broth\' fermentation and a burn-recovery origin story. A breakdown of what\'s actually in the jar, what the evidence shows, and what the price premium reflects.',
@@ -599,6 +630,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'baby-eczema-condition-review',
+    relatedSlugs : ['peanut-allergy-prevention-treatment', 'ceramide-moisturizers-skin-barrier', 'glycerin-humectant'],
     url          : '/articles/wellness/2026/05/baby-eczema-condition-review',
     title        : 'Baby Eczema: A Condition Review of Prevalence, Prevention, and the Treatment Ladder',
     deck         : 'Atopic dermatitis affects roughly one in five infants. A review of the skin barrier biology, the disappointing prevention trials (BEEP, PreventADALL), the modern treatment ladder including dupilumab, and what the evidence shows for popular baby eczema products.',
@@ -619,6 +651,7 @@ window.MOS_ARTICLES = [
   // ── 2 new articles (May 13, 2026) ────────────────────────────────────────
   {
     slug         : 'beauty-peptides-evidence-review',
+    relatedSlugs : ['bakuchiol-vs-retinol', 'retinol-paradox', 'bpc-157-healing-peptide'],
     url          : '/articles/skincare/2026/05/beauty-peptides-evidence-review',
     title        : 'Beauty Peptides by Class: What the Clinical Evidence Actually Shows',
     deck         : 'Matrixyl, GHK-Cu, Argireline, and enzyme-inhibitor peptides are among the most-marketed skincare actives. A class-by-class review of the RCT evidence, penetration data, and the conflict-of-interest landscape that shapes the literature.',
@@ -638,6 +671,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'peptide-compounding-fda-review',
+    relatedSlugs : ['bpc-157-healing-peptide', 'compounded-glp1-semaglutide-tirzepatide', 'beauty-peptides-evidence-review'],
     url          : '/articles/pharma/2026/05/peptide-compounding-fda-review',
     title        : 'Seven Peptides, One Regulatory Gray Zone: Inside the FDA\'s 503A Compounding Review',
     deck         : 'BPC-157, Semax, Epitalon, and four other peptides were removed from the FDA\'s \'do not compound\' list in April 2026. A review of the regulatory history, the evidence gaps that drove the original restrictions, and what the July 2026 PCAC re-review means.',
@@ -658,6 +692,7 @@ window.MOS_ARTICLES = [
   // ── 6 new articles (April 29, 2026) ──────────────────────────────────────
   {
     slug         : 'hair-loss-treatments-sex-differences',
+    relatedSlugs : ['finasteride-vs-novogro', 'minoxidil-vs-novogro', 'saw-palmetto-hair-loss'],
     url          : '/articles/haircare/2026/04/hair-loss-treatments-sex-differences',
     title        : 'Hair Loss Treatments in Women vs. Men: What the Evidence Actually Shows',
     deck         : 'Minoxidil, finasteride, and spironolactone are all used for androgenetic alopecia \u2014 but the evidence base differs substantially by sex.',
@@ -677,6 +712,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'hair-growth-timelines',
+    relatedSlugs : ['minoxidil-vs-novogro', 'hair-loss-treatments-sex-differences', 'rosemary-oil-minoxidil'],
     url          : '/articles/haircare/2026/04/hair-growth-timelines',
     title        : 'Hair Growth Timelines: What the Anagen Cycle Means for Treatment Expectations',
     deck         : 'Most hair loss treatments require 3\u20136 months before measurable results. The biology of the hair growth cycle explains why \u2014 and why \u201cfast results\u201d marketing is biologically implausible.',
@@ -696,6 +732,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'biotin-hair-growth',
+    relatedSlugs : ['castor-oil-hair-growth', 'hair-growth-timelines', 'rosemary-oil-minoxidil'],
     url          : '/articles/haircare/2026/04/biotin-hair-growth',
     title        : 'Biotin for Hair Growth: Does Routine Supplementation Actually Help?',
     deck         : 'Biotin supplements are among the best-selling hair products on the market. The clinical evidence for supplementation in people without biotin deficiency is nearly absent.',
@@ -715,6 +752,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'hair-density-vs-thickness',
+    relatedSlugs : ['pp405-vs-novogro', 'finasteride-vs-novogro', 'minoxidil-vs-novogro'],
     url          : '/articles/haircare/2026/04/hair-density-vs-thickness',
     title        : 'Hair Density vs. Hair Thickness: Why Studies Can Mislead',
     deck         : '\u201cThicker hair\u201d claims appear in both clinical studies and product marketing \u2014 but density (follicles per cm\u00b2) and diameter (\u03bcm per strand) are distinct measurements that don\u2019t always move together.',
@@ -734,6 +772,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'salicylic-acid-concentration',
+    relatedSlugs : ['azelaic-acid-evidence', 'tretinoin-vs-otc-retinol', 'benzoyl-peroxide-adapalene'],
     url          : '/articles/skincare/2026/04/salicylic-acid-concentration',
     title        : 'Salicylic Acid 0.5% vs. 2%: Does Higher Concentration Improve Outcomes?',
     deck         : 'The FDA OTC acne monograph permits 0.5\u20132% salicylic acid. Whether higher concentrations within that range deliver meaningfully better results is a question the clinical literature has barely addressed.',
@@ -753,6 +792,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'caffeine-eye-products',
+    relatedSlugs : ['eye-cream-evidence', 'hyaluronic-acid', 'tranexamic-acid-hyperpigmentation'],
     url          : '/articles/skincare/2026/04/caffeine-eye-products',
     title        : 'Caffeine in Eye Products: Is There Any Clinical Evidence It Works?',
     deck         : 'Caffeine is the most commonly cited \u201cactive\u201d in eye serums and creams. The periorbital-specific clinical evidence is limited to small, short-duration studies with modest effect sizes.',
@@ -772,6 +812,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'retinol-paradox',
+    relatedSlugs : ['bakuchiol-vs-retinol', 'tretinoin-vs-otc-retinol', 'beauty-peptides-evidence-review'],
     url          : '/articles/skincare/2026/04/retinol-paradox',
     title        : 'The Retinol Paradox: Does Concentration Actually Predict Efficacy?',
     deck         : 'The serum aisle promises \u201cclinical-strength\u201d at every price point. The randomized trial literature is more equivocal.',
@@ -791,6 +832,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'benzoyl-peroxide-adapalene',
+    relatedSlugs : ['adapalene-otc-switch', 'tretinoin-vs-otc-retinol', 'salicylic-acid-concentration'],
     url          : '/articles/pharma/2026/02/benzoyl-peroxide-adapalene',
     title        : 'Benzoyl Peroxide vs. Adapalene: What the 2025 Head-to-Head Trials Actually Show',
     deck         : 'OTC acne marketing has outpaced the clinical evidence. We examine four recent RCTs and assess what\u2019s justified for first-line recommendation.',
@@ -810,6 +852,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'hyaluronic-acid',
+    relatedSlugs : ['snail-mucin-skincare', 'glycerin-humectant', 'ceramide-moisturizers-skin-barrier'],
     url          : '/articles/skincare/2026/02/hyaluronic-acid',
     title        : 'Hyaluronic Acid: Proven Humectant or Hydration Theater?',
     deck         : 'Molecular weight matters \u2014 yet almost no consumer product discloses it. A review of transepidermal penetration studies and what they mean for product selection.',
@@ -829,6 +872,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'niacinamide-concentration',
+    relatedSlugs : ['azelaic-acid-evidence', 'tranexamic-acid-hyperpigmentation', 'vitamin-c-serum-stability'],
     url          : '/articles/skincare/2026/01/niacinamide-concentration',
     title        : 'Niacinamide at 5% vs. 10%: Is There a Real Clinical Difference?',
     deck         : 'Niacinamide has become the industry\u2019s favorite multi-tasking ingredient. Examining sebum-regulation, pigmentation, and barrier-repair endpoints across concentration thresholds.',
@@ -848,6 +892,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'collagen-peptides',
+    relatedSlugs : ['collagen-supplements-skin', 'collagen-supplements-evidence', 'hyaluronic-acid'],
     url          : '/articles/wellness/2026/01/collagen-peptides',
     title        : 'Oral Collagen Peptides: The Bioavailability Question the Marketing Skips',
     deck         : 'A $5 billion supplement category rests on a plausible mechanism \u2014 but does the evidence reach the skin? Dissecting the trials behind the claims.',
@@ -867,6 +912,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'spf-claims',
+    relatedSlugs : ['bemotrizinol-fda-approval', 'chemical-vs-mineral-sunscreen', 'dermatologists-beauty-brands'],
     url          : '/articles/skincare/2025/12/spf-claims',
     title        : 'SPF 50 vs. SPF 100: What the FDA Monograph and Real-World Data Say',
     deck         : 'High-SPF marketing implies proportionally higher protection. The logarithmic reality, application thickness variables, and UVA protection gaps are rarely disclosed.',
@@ -886,6 +932,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'retinoid-ladder',
+    relatedSlugs : ['tretinoin-vs-otc-retinol', 'bakuchiol-vs-retinol', 'retinol-paradox'],
     url          : '/articles/skincare/2026/03/retinoid-ladder',
     title        : 'The Retinoid Ladder: Matching Strength to Indication Across OTC and Rx Formulations',
     deck         : 'Retinol, retinaldehyde, adapalene, tretinoin — the marketing hierarchy rarely maps to the clinical evidence hierarchy. A structured look at conversion rates, irritation profiles, and what the RCTs actually show.',
@@ -905,6 +952,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'adapalene-otc-switch',
+    relatedSlugs : ['benzoyl-peroxide-adapalene', 'tretinoin-vs-otc-retinol', 'salicylic-acid-concentration'],
     url          : '/articles/pharma/2026/02/adapalene-otc-switch',
     title        : 'Adapalene 0.1% OTC: What the Switch Means for Acne Management and Prescriber Guidance',
     deck         : 'The FDA OTC switch for adapalene 0.1% changed the access landscape for topical retinoids. A review of the regulatory basis, combination data with BPO, and implications for clinical practice.',
@@ -924,6 +972,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'collagen-supplements-evidence',
+    relatedSlugs : ['collagen-supplements-skin', 'collagen-peptides', 'hyaluronic-acid'],
     url          : '/articles/wellness/2026/01/collagen-supplements-evidence',
     title        : 'Collagen Supplements: Parsing the Bioavailability Claims from the Clinical Outcomes Data',
     deck         : 'Hydrolysed collagen peptides are among the fastest-growing supplement categories. A critical review of absorption evidence, skin-outcome RCTs, and what integrative practice guidelines actually recommend.',
@@ -947,6 +996,7 @@ window.MOS_ARTICLES = [
   // Skincare S1
   {
     slug         : 'vitamin-c-serum-stability',
+    relatedSlugs : ['niacinamide-concentration', 'azelaic-acid-evidence', 'hyaluronic-acid'],
     url          : '/articles/skincare/2026/04/vitamin-c-serum-stability',
     title        : 'Vitamin C Serums: Does Percentage Actually Predict Stability?',
     deck         : 'The serum aisle promises \u201cclinical-strength\u201d vitamin C at every price point. The randomized trial literature on L-ascorbic acid stability, oxidation, and efficacy is more equivocal.',
@@ -967,6 +1017,7 @@ window.MOS_ARTICLES = [
   // Skincare S2
   {
     slug         : 'azelaic-acid-evidence',
+    relatedSlugs : ['salicylic-acid-concentration', 'niacinamide-concentration', 'tretinoin-vs-otc-retinol'],
     url          : '/articles/skincare/2026/04/azelaic-acid-evidence',
     title        : 'Azelaic Acid: The Underrated Ingredient the Evidence Actually Supports',
     deck         : 'Azelaic acid has robust RCT evidence for rosacea, acne, and post-inflammatory hyperpigmentation \u2014 yet remains underrepresented in mainstream skincare marketing.',
@@ -987,6 +1038,7 @@ window.MOS_ARTICLES = [
   // Skincare S3
   {
     slug         : 'bakuchiol-vs-retinol',
+    relatedSlugs : ['tretinoin-vs-otc-retinol', 'retinol-paradox', 'retinoid-ladder'],
     url          : '/articles/skincare/2026/04/bakuchiol-vs-retinol',
     title        : 'Bakuchiol vs. Retinol: Is the \u201cNatural Alternative\u201d Claim Justified?',
     deck         : 'Bakuchiol is marketed as a plant-based retinol alternative with comparable efficacy and better tolerability. The clinical trial literature is more limited than the marketing implies.',
@@ -1007,6 +1059,7 @@ window.MOS_ARTICLES = [
   // Skincare S4
   {
     slug         : 'eye-cream-evidence',
+    relatedSlugs : ['caffeine-eye-products', 'dermatologists-beauty-brands', 'exosome-skincare'],
     url          : '/articles/skincare/2026/04/eye-cream-evidence',
     title        : 'Eye Creams: Clinically Meaningful or Expensive Moisturizer?',
     deck         : 'Eye creams command premium prices on claims of targeted dark circle and wrinkle reduction. The clinical evidence for periorbital-specific formulations versus regular moisturizers is thin.',
@@ -1027,6 +1080,7 @@ window.MOS_ARTICLES = [
   // Haircare H1
   {
     slug         : 'minoxidil-female-pattern-hair-loss',
+    relatedSlugs : ['minoxidil-vs-novogro', 'finasteride-female-hair-loss', 'topical-vs-oral-minoxidil'],
     url          : '/articles/haircare/2026/04/minoxidil-female-pattern-hair-loss',
     title        : 'Minoxidil for Female Pattern Hair Loss: What the Evidence Actually Shows',
     deck         : 'Minoxidil is the only FDA-approved topical treatment for female pattern hair loss. A review of the RCT evidence, dosing considerations, and what the trials show about response rates and limitations.',
@@ -1047,6 +1101,7 @@ window.MOS_ARTICLES = [
   // Haircare H2
   {
     slug         : 'dht-blockers-evidence',
+    relatedSlugs : ['saw-palmetto-hair-loss', 'finasteride-vs-novogro', 'finasteride-female-hair-loss'],
     url          : '/articles/haircare/2026/04/dht-blockers-evidence',
     title        : 'DHT Blockers: Finasteride, Saw Palmetto, and the Evidence Gap',
     deck         : 'DHT-blocking supplements and drugs are marketed for androgenetic alopecia. The evidence gap between finasteride and natural DHT blockers like saw palmetto is substantial.',
@@ -1067,6 +1122,7 @@ window.MOS_ARTICLES = [
   // Haircare H3
   {
     slug         : 'telogen-effluvium-treatment',
+    relatedSlugs : ['postpartum-hair-loss', 'stress-hair-loss', 'pp405-vs-novogro'],
     url          : '/articles/haircare/2026/04/telogen-effluvium-treatment',
     title        : 'Telogen Effluvium: What Triggers It and What the Trials Say About Recovery',
     deck         : 'Telogen effluvium is diffuse hair shedding triggered by physiological stress. A review of the evidence on triggers, natural recovery timeline, and what interventions the trials actually support.',
@@ -1087,6 +1143,7 @@ window.MOS_ARTICLES = [
   // Haircare H4
   {
     slug         : 'dandruff-scalp-microbiome',
+    relatedSlugs : ['ketoconazole-hair-loss', 'pp405-vs-novogro', 'castor-oil-hair-growth'],
     url          : '/articles/haircare/2026/04/dandruff-scalp-microbiome',
     title        : 'Dandruff and the Scalp Microbiome: Does Treating the Fungus Fix the Flaking?',
     deck         : 'Dandruff is linked to Malassezia overgrowth on the scalp. A review of the evidence for antifungal shampoos, scalp microbiome research, and what the RCTs show about treatment efficacy.',
@@ -1107,6 +1164,7 @@ window.MOS_ARTICLES = [
   // Wellness W1
   {
     slug         : 'collagen-supplements-skin',
+    relatedSlugs : ['collagen-supplements-evidence', 'collagen-peptides', 'hyaluronic-acid'],
     url          : '/articles/wellness/2026/04/collagen-supplements-skin',
     title        : 'Oral Collagen Supplements: Does Intake Actually Reach the Skin?',
     deck         : 'Collagen supplements are marketed for skin elasticity and wrinkle reduction. A review of the bioavailability evidence, skin-outcome RCTs, and what the absorption data actually show.',
@@ -1127,6 +1185,7 @@ window.MOS_ARTICLES = [
   // Wellness W2
   {
     slug         : 'vitamin-d-hair-loss',
+    relatedSlugs : ['iron-deficiency-hair-loss', 'biotin-hair-growth', 'red-light-therapy-hair-growth'],
     url          : '/articles/wellness/2026/04/vitamin-d-hair-loss',
     title        : 'Vitamin D and Hair Loss: Correlation, Causation, or Supplement Marketing?',
     deck         : 'Low vitamin D is associated with hair loss in observational studies. A review of the evidence for causation, supplementation trials, and what the data actually support for hair loss management.',
@@ -1147,6 +1206,7 @@ window.MOS_ARTICLES = [
   // Wellness W3
   {
     slug         : 'red-light-therapy-hair-growth',
+    relatedSlugs : ['castor-oil-hair-growth', 'hair-growth-timelines', 'biotin-hair-growth'],
     url          : '/articles/wellness/2026/04/red-light-therapy-hair-growth',
     title        : 'Red Light Therapy for Hair Growth: Separating Signal from Noise',
     deck         : 'Low-level laser therapy and red light devices are marketed for hair growth. A review of the RCT evidence, FDA clearance basis, and what the photobiomodulation data actually show.',
@@ -1167,6 +1227,7 @@ window.MOS_ARTICLES = [
   // Wellness W4
   {
     slug         : 'iron-deficiency-hair-loss',
+    relatedSlugs : ['vitamin-d-hair-loss', 'biotin-hair-growth', 'telogen-effluvium-treatment'],
     url          : '/articles/wellness/2026/04/iron-deficiency-hair-loss',
     title        : 'Iron Deficiency and Hair Loss: What Ferritin Thresholds Actually Mean',
     deck         : 'Iron deficiency is commonly identified in hair loss workups. A review of the ferritin threshold evidence, the causation question, and what the intervention trials show about iron supplementation for hair loss.',
@@ -1187,6 +1248,7 @@ window.MOS_ARTICLES = [
   // Pharma P1
   {
     slug         : 'ozempic-hair-loss-glp1',
+    relatedSlugs : ['compounded-glp1-semaglutide-tirzepatide', 'prp-hair-loss-evidence', 'finasteride-female-hair-loss'],
     url          : '/articles/pharma/2026/04/ozempic-hair-loss-glp1',
     title        : 'GLP-1 Drugs and Hair Loss: What the Ozempic/Zepbound Trial Data Shows',
     deck         : 'Hair loss has emerged as a reported side effect of GLP-1 receptor agonists. A review of the trial data, proposed mechanisms, and what the evidence shows about the nature and management of GLP-1-associated hair loss.',
@@ -1207,6 +1269,7 @@ window.MOS_ARTICLES = [
   // Pharma P2
   {
     slug         : 'topical-vs-oral-minoxidil',
+    relatedSlugs : ['minoxidil-vs-novogro', 'minoxidil-female-pattern-hair-loss', 'prp-hair-loss-evidence'],
     url          : '/articles/pharma/2026/04/topical-vs-oral-minoxidil',
     title        : 'Topical vs. Oral Minoxidil: Efficacy, Dosing, and the Evidence Base',
     deck         : 'Oral minoxidil at low doses has emerged as an alternative to topical minoxidil for hair loss. A review of the comparative efficacy data, dosing evidence, and clinical considerations.',
@@ -1227,6 +1290,7 @@ window.MOS_ARTICLES = [
   // Pharma P3
   {
     slug         : 'finasteride-female-hair-loss',
+    relatedSlugs : ['finasteride-vs-novogro', 'saw-palmetto-hair-loss', 'minoxidil-female-pattern-hair-loss'],
     url          : '/articles/pharma/2026/04/finasteride-female-hair-loss',
     title        : 'Finasteride for Female Hair Loss: What the Evidence Supports (and What It Doesn\u2019t)',
     deck         : 'Finasteride is FDA-approved for male androgenetic alopecia but used off-label in women. A review of the evidence for finasteride in female pattern hair loss, dosing considerations, and safety data.',
@@ -1247,6 +1311,7 @@ window.MOS_ARTICLES = [
   // Pharma P4
   {
     slug         : 'prp-hair-loss-evidence',
+    relatedSlugs : ['finasteride-female-hair-loss', 'topical-vs-oral-minoxidil', 'pp405-vs-novogro'],
     url          : '/articles/pharma/2026/04/prp-hair-loss-evidence',
     title        : 'PRP for Hair Loss: Reviewing the Randomized Trial Evidence',
     deck         : 'Platelet-rich plasma injections are marketed for hair restoration. A review of the randomized trial evidence, protocol variability, and what the data show about PRP efficacy for androgenetic alopecia.',
@@ -1266,6 +1331,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'rosemary-oil-minoxidil',
+    relatedSlugs : ['hair-growth-timelines', 'castor-oil-hair-growth', 'minoxidil-vs-novogro'],
     url          : '/articles/haircare/2026/04/rosemary-oil-minoxidil',
     title        : 'Rosemary Oil vs. Minoxidil: What the Evidence Actually Shows',
     deck         : 'A single small trial comparing rosemary oil to 2% minoxidil has fuelled a billion-dollar \u201cnatural\u201d hair-growth category. The methodology deserves closer scrutiny.',
@@ -1285,6 +1351,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'bond-builders-hair',
+    relatedSlugs : ['pp405-vs-novogro', 'castor-oil-hair-growth', 'finasteride-vs-novogro'],
     url          : '/articles/haircare/2026/04/bond-builders-hair',
     title        : 'Bond Builders (Olaplex, K18): Do They Actually Repair Hair?',
     deck         : 'The bond-repair category commands premium prices on a claim of covalent chemistry. The independent peer-reviewed literature is considerably thinner than the marketing spend.',
@@ -1304,6 +1371,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'berberine-weight-loss',
+    relatedSlugs : ['apple-cider-vinegar-weight-loss-blood-sugar', 'l-carnitine-evidence-review', 'compounded-glp1-semaglutide-tirzepatide'],
     url          : '/articles/wellness/2026/04/berberine-weight-loss',
     title        : 'Berberine for Weight Loss: A Clinical Review of \u201cNature\u2019s Ozempic\u201d',
     deck         : 'Berberine activates AMPK and lowers blood glucose \u2014 mechanisms it shares with metformin. Whether it warrants the \u201cnatural Ozempic\u201d label is a different question.',
@@ -1323,6 +1391,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'magnesium-threonate',
+    relatedSlugs : ['creatine-cognitive-health', 'thesis-nootropics-evidence', 'nootropics-category-overview'],
     url          : '/articles/wellness/2026/04/magnesium-threonate',
     title        : 'Magnesium L-Threonate: Does It Actually Cross the Blood-Brain Barrier?',
     deck         : 'The marketing claim rests primarily on rat studies and a single small human trial. Whether the threonate form uniquely elevates brain magnesium levels in humans remains unresolved.',
@@ -1342,6 +1411,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'pdrn-skin-repair',
+    relatedSlugs : ['exosome-skincare', 'snail-mucin-skincare', 'beauty-peptides-evidence-review'],
     url          : '/articles/skincare/2026/05/pdrn-skin-repair',
     title        : 'PDRN and Skin Repair: What the Regenerative Medicine Evidence Actually Shows',
     deck         : 'PDRN (polydeoxyribonucleotide) is a salmon DNA-derived ingredient used in wound healing and aesthetic medicine. A review of the A2A receptor mechanism, injectable clinical trials, and whether topical skincare can replicate those effects.',
@@ -1361,6 +1431,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'sublingual-allergy-drops',
+    relatedSlugs : ['peanut-allergy-prevention-treatment', 'cyclospora-outbreak-produce-safety', 'clinical-trials-beauty-vs-pharma'],
     url          : '/articles/pharma/2026/05/sublingual-allergy-drops',
     title        : 'Sublingual Allergy Drops vs. Allergy Shots: What the Evidence Says About SLIT',
     deck         : 'Sublingual immunotherapy drops are marketed as a convenient at-home alternative to allergy shots. A review of the RCT evidence, FDA approval status of tablets vs. compounded drops, and safety profile compared to SCIT.',
@@ -1380,6 +1451,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'nootropics-category-overview',
+    relatedSlugs : ['thesis-nootropics-evidence', 'creatine-cognitive-health', 'ashwagandha-evidence-review'],
     url          : '/articles/wellness/2026/05/nootropics-category-overview',
     title        : 'Nootropics: Which Common Ingredients Have Evidence Behind Them?',
     deck         : 'The nootropics category spans well-studied compounds to unproven blends. An evidence-tiered review of caffeine, L-theanine, citicoline, lion\u2019s mane, bacopa, ashwagandha, and ginkgo biloba, ranked by strength of clinical trial support.',
@@ -1399,6 +1471,7 @@ window.MOS_ARTICLES = [
   },
   {
     slug         : 'glycerin-humectant',
+    relatedSlugs : ['ceramide-moisturizers-skin-barrier', 'snail-mucin-skincare', 'creme-de-la-mer-miracle-broth'],
     url          : '/articles/skincare/2026/05/glycerin-humectant',
     title        : 'Glycerin in Skincare: Humectant Powerhouse or Overhyped Filler?',
     deck         : 'Glycerin is one of the most common ingredients in moisturizers and serums. A review of its humectant mechanism, stratum corneum hydration and barrier-function evidence, concentration effects, and comparison with hyaluronic acid, urea, and propylene glycol.',
@@ -1419,6 +1492,7 @@ window.MOS_ARTICLES = [
 
   {
     slug         : 'ashwagandha-evidence-review',
+    relatedSlugs : ['l-carnitine-evidence-review', 'creatine-cognitive-health', 'nootropics-category-overview'],
     url          : '/articles/wellness/2026/05/ashwagandha-evidence-review',
     title        : 'Ashwagandha for Athletic Performance and Testosterone: What the Evidence Actually Shows',
     deck         : 'Ashwagandha is marketed for testosterone, muscle strength, and athletic performance. A clinical review of the KSM-66 and Sensoril trial data, the testosterone claim, and what the stress and cortisol evidence actually supports.',
@@ -1439,6 +1513,7 @@ window.MOS_ARTICLES = [
 
   {
     slug         : 'creatine-cognitive-health',
+    relatedSlugs : ['magnesium-threonate', 'thesis-nootropics-evidence', 'nootropics-category-overview'],
     url          : '/articles/wellness/2026/05/creatine-cognitive-health',
     title        : 'Creatine for Brain Health: What the Cognitive Evidence Actually Shows',
     deck         : 'Creatine is marketed as a cognitive enhancer and brain fuel supplement. A review of the working memory, mental fatigue, and neuroprotection trial data — and why the benefit is population-specific.',
@@ -1459,6 +1534,7 @@ window.MOS_ARTICLES = [
 
   {
     slug         : 'l-carnitine-evidence-review',
+    relatedSlugs : ['apple-cider-vinegar-weight-loss-blood-sugar', 'ashwagandha-evidence-review', 'berberine-weight-loss'],
     url          : '/articles/wellness/2026/05/l-carnitine-evidence-review',
     title        : 'L-Carnitine for Fat Burning and Performance: What the Evidence Shows',
     deck         : 'L-carnitine is sold as a fat-burning and performance supplement. A review of the muscle uptake requirement, the weight loss meta-analysis data, and why the standard supplement protocol fails the mechanism.',
@@ -1479,6 +1555,7 @@ window.MOS_ARTICLES = [
 
   {
     slug         : 'lemon-verbena-hibiscus',
+    relatedSlugs : ['omega-3-anti-inflammatory-evidence', 'ashwagandha-evidence-review', 'berberine-weight-loss'],
     url          : '/articles/wellness/2026/05/lemon-verbena-hibiscus',
     title        : 'Lemon Verbena and Hibiscus for Joint Health: Evaluating the Combination Evidence',
     deck         : 'Two botanicals with distinct phytochemical profiles are increasingly paired in joint supplements. We review what each ingredient\'s evidence base actually looks like — and what the combination trials add.',
