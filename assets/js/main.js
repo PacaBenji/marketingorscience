@@ -543,13 +543,22 @@
 
     function markLoaded(img) {
         var wrap = img.closest('.img-wrap');
-        function done() { if (wrap) wrap.classList.add('is-loaded'); }
         if (img.complete && img.naturalWidth) {
-            done();
-        } else {
-            img.addEventListener('load',  done, { once: true });
-            img.addEventListener('error', done, { once: true });
+            if (wrap) wrap.classList.add('is-loaded');
+            return;
         }
+        // Only show the skeleton if the image is still loading after a short
+        // delay — fast/cached images never flash the shimmer.
+        var timer = setTimeout(function() {
+            if (wrap) wrap.classList.add('is-loading');
+        }, 180);
+        function done() {
+            clearTimeout(timer);
+            if (wrap) wrap.classList.remove('is-loading');
+            if (wrap) wrap.classList.add('is-loaded');
+        }
+        img.addEventListener('load',  done, { once: true });
+        img.addEventListener('error', done, { once: true });
     }
 
     // ─── Bootstrap ───────────────────────────────────────────────────────────

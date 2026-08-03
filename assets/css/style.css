@@ -3630,12 +3630,14 @@ figcaption {
     background-size: 800px 100%;
     animation: shimmer 1.4s infinite linear;
     z-index: 2;
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 0.35s ease;
 }
 
-.img-wrap.is-loaded::before {
-    opacity: 0;
-    pointer-events: none;
+/* Only reveal the shimmer once JS marks a slow-loading image (after a delay) */
+.img-wrap.is-loading::before {
+    opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
