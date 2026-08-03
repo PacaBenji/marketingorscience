@@ -21,7 +21,7 @@ window.MOS_ARTICLES = [
     searchText   : 'copper peptides ghk-cu ghk cu glycyl histidyl lysine tripeptide copper-1 hair growth regrowth scalp serum dormant follicle dermal papilla cells growth cycle anagen telogen in vitro preclinical mechanism lee 2016 annals of dermatology 5-aminolevulinic acid 5-ala alavax combination cannot isolate no randomized controlled trial monotherapy minoxidil finasteride gold standard fda approved comparator rosemary oil saw palmetto pickart skin photoaging cosmetic ingredient not approved hair loss drug ingredient analysis',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/man-woman-hair.jpg',
+    image        : '/assets/images/copper-peptides.jpg',
   },
   {
     slug         : 'growth-factor-egf-serums',
@@ -41,7 +41,7 @@ window.MOS_ARTICLES = [
     searchText   : 'growth factor egf serums epidermal growth factor tns skin recovery complex regeneration in a bottle wound healing collagen signaling proteins tgf-beta vegf recombinant human rhegf 6045 daltons 500 dalton penetration threshold stratum corneum barrier large molecule cannot penetrate intact skin microneedling adjunct post procedure randomized controlled trial split face two growth factors 20 subjects vehicle effect systematic review aesthetics regenerative medicine industry funded proprietary proliferation cancer safety concern dermatology times misbranding drug claim cosmeceutical peptides exosomes ingredient analysis',
     popular      : false,
     readingTime  : 12,
-    image        : '/assets/images/peptide-vials.jpg',
+    image        : '/assets/images/egf-regeneration-abstract.jpg',
   },
   {
     slug         : 'volufiline-filler-in-a-bottle',
@@ -61,7 +61,7 @@ window.MOS_ARTICLES = [
     searchText   : 'volufiline filler in a bottle sarsasapogenin anemarrhena asphodeloides sederma topical plumper skin volume increase 9 percent 28 days 11 percent 56 days adipogenesis preadipocyte differentiation lipid storage fat cells in vitro cell culture us patent 8361516 supplier run studies not peer reviewed manufacturer no independent rct dermal filler injectable hyaluronic acid needle penetration stratum corneum subcutaneous fat harpers bazaar vogue newbeauty viral trend cream is not an injectable ingredient analysis',
     popular      : false,
     readingTime  : 11,
-    image        : '/assets/images/pipete-serum-texture.jpg',
+    image        : '/assets/images/fat-cells.jpg',
   },
   {
     slug         : 'methylene-blue-nootropic',

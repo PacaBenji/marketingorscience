@@ -516,7 +516,7 @@
     function initImageLoaders() {
         // For card/banner wrappers: add img-wrap class directly (no figcaption inside)
         var directWrappers = document.querySelectorAll(
-            '.card-image-wrap, .featured-banner-image'
+            '.card-image-wrap, .featured-banner-image, .most-read-card-image'
         );
         directWrappers.forEach(function(wrap) {
             var img = wrap.querySelector('img');
