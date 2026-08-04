@@ -61,7 +61,7 @@ window.MOS_ARTICLES = [
     searchText   : 'volufiline filler in a bottle sarsasapogenin anemarrhena asphodeloides sederma topical plumper skin volume increase 9 percent 28 days 11 percent 56 days adipogenesis preadipocyte differentiation lipid storage fat cells in vitro cell culture us patent 8361516 supplier run studies not peer reviewed manufacturer no independent rct dermal filler injectable hyaluronic acid needle penetration stratum corneum subcutaneous fat harpers bazaar vogue newbeauty viral trend cream is not an injectable ingredient analysis',
     popular      : false,
     readingTime  : 11,
-    image        : '/assets/images/fat-cells.jpg',
+    image        : '/assets/images/fat-cells.jpeg',
   },
   {
     slug         : 'methylene-blue-nootropic',
