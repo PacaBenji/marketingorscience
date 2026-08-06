@@ -369,7 +369,17 @@
                 date        : '2026-07-27',
                 readingTime : 10,
                 verdict     : { label: 'Mixed Evidence', rating: 3, max: 5 },
-                peerReviewed: false
+                peerReviewed: false,
+                correction  : {
+                    label: 'Editorial Note',
+                    date : '2026-08-06',
+                    text : '<strong>This is an ongoing story.</strong> The 2026 Cyclospora ' +
+                        'outbreak is still under active investigation, and case counts, ' +
+                        'affected states, and guidance may change as new information ' +
+                        'becomes available. This article reflects what is publicly known ' +
+                        'as of the dates cited. For the latest information and guidance, ' +
+                        'visit the <u><a href="https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/index.html" target="_blank" rel="noopener">CDC Cyclospora outbreak page</a></u>.'
+                }
             });
             main.insertBefore(fold, articleBody);
 
