@@ -553,4 +553,28 @@
         <priority>0.8</priority>
     </url>
 
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/08/microneedling-hair-growth</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/08/low-dose-oral-minoxidil</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/08/centella-asiatica-cica</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/08/skin-cycling</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
