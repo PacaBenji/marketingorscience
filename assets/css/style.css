@@ -5067,7 +5067,7 @@ figcaption {
 }
 
 .scorecard-item__winner {
-    font-size: var(--text-h3);
+    font-size: var(--text-body);
     font-weight: 700;
     color: var(--color-accent-green-solid);
     text-transform: uppercase;
