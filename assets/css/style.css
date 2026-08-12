@@ -4362,7 +4362,7 @@ figcaption {
     text-align: center;
     background: var(--color-accent);
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     padding: 14px 18px;
     transition: background 0.15s;
@@ -4400,7 +4400,6 @@ figcaption {
 }
 
 .clinical-stat__number {
-    font-family: var(--font-ui);
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1;
@@ -4502,7 +4501,7 @@ figcaption {
     width: 100%;
     border-collapse: collapse;
     font-family: var(--font-ui);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: var(--space-lg) 0;
     border: 1px solid var(--color-divider);
     overflow: hidden;
@@ -4645,11 +4644,9 @@ figcaption {
 }
 
 .card-cta-link {
-    font-family: var(--font-ui);
-    font-size: var(--text-meta);
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--color-accent);
-    letter-spacing: 0.04em;
 }
 
 .card-cta-link:hover { color: var(--color-accent-hover); }
@@ -4685,7 +4682,7 @@ figcaption {
     border-collapse: separate;
     border-spacing: 0;
     font-family: var(--font-ui);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     min-width: 905px;
     border: 1px solid var(--color-divider);
     table-layout: fixed;
@@ -4884,7 +4881,7 @@ figcaption {
         min-width: unset;
     }
 
-    .product-img { width: 100%; max-width: 320px; margin: 0 auto; height: auto; flex-shrink: unset; }
+    .product-img { width: 100%; max-width: 450px; margin: 0 auto; height: auto; flex-shrink: unset; }
 
     .buy-btn { width: 100%; }
 
@@ -5052,7 +5049,6 @@ figcaption {
 .scorecard-item {
     background: var(--color-accent-light);
     padding: var(--space-lg);
-    border: var(--border);
 }
 
 .scorecard-item__header {
@@ -5071,12 +5067,10 @@ figcaption {
 }
 
 .scorecard-item__winner {
-    font-family: var(--font-ui);
-    font-size: var(--text-meta);
+    font-size: var(--text-h3);
     font-weight: 700;
     color: var(--color-accent-green-solid);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 .scorecard-bars {
@@ -5237,6 +5231,7 @@ figcaption {
 }
 
 .timeline-item__title {
+    font-family: var(--font-ui);
     font-size: var(--text-h3);
     font-weight: 600;
     color: var(--color-text);
