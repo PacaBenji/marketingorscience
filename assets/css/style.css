@@ -4009,7 +4009,6 @@ figcaption {
 .review-hero h1 {
     font-size: var(--text-hero);
     margin-bottom: var(--space-lg);
-    max-width: 720px;
 }
 
 .review-hero__intro {
