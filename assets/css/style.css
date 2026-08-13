@@ -4495,6 +4495,8 @@ figcaption {
 
 .card-body h3:first-child { margin-top: 0; }
 
+.card-body p { margin-bottom: var(--space-md); }
+
 /* Ingredient table */
 .ingredient-table {
     width: 100%;
