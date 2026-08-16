@@ -231,35 +231,6 @@ p {
     margin-left: 0;
 }
 
-/* Slash band — signature section break. A sparse rhythm of −20deg bars
-   (gradient axis at 110deg = perpendicular to the skew, so bars share the
-   motif's exact angle). Ends taper via mask so it dissolves, not hard-stops. */
-.slash-band {
-    width: min(320px, 60%);
-    height: 24px;
-    margin: var(--space-xl) auto;
-    background-image: repeating-linear-gradient(
-        110deg,
-        var(--color-accent) 0,
-        var(--color-accent) 6px,
-        transparent 6px,
-        transparent 30px
-    );
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
-            mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
-}
-
-/* Tan variant for placement on the dark mission panel */
-.slash-band--dark {
-    background-image: repeating-linear-gradient(
-        110deg,
-        var(--color-accent-hover) 0,
-        var(--color-accent-hover) 6px,
-        transparent 6px,
-        transparent 30px
-    );
-}
-
 
 /* ============================================================
    5. FOUC PREVENTION
@@ -1029,14 +1000,14 @@ body {
 .most-read-rank-badge {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5px;
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 1.1rem 0.5rem 1.35rem;
+    padding: 0.5rem 1.5rem 0.7rem 1.35rem;
     font-family: var(--font-serif);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.03em;
