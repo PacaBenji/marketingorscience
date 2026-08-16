@@ -529,10 +529,7 @@ body {
     object-fit: cover;
 }
 
-/* Gradient overlay — mirrors .fold-hero-overlay.
-   Top-left corner clipped on a 60x22px triangle → atan(22/60) ≈ 20deg, the
-   exact slash angle. Fixed-pixel cut keeps it identical to the card diagonal
-   regardless of element width (no fluid-aspect distortion). */
+/* Gradient overlay — mirrors .fold-hero-overlay */
 .featured-banner-overlay {
     position: absolute;
     bottom: 0;
@@ -541,7 +538,6 @@ body {
     padding: var(--space-2xl) var(--space-lg) var(--space-lg);
     background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%);
     z-index: 2;
-    clip-path: polygon(0 22px, 60px 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .featured-banner-overlay-inner {
@@ -733,26 +729,6 @@ body {
     transition: transform 0.35s ease;
 }
 
-/* Hover: wink of the motif — top-left corner cuts away on the same 60x22px
-   (~20deg) diagonal as the banner. Animates clip-path (transform is taken by
-   the image scale); suppressed under reduced-motion via the guard below. */
-.card-image-wrap {
-    clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 0 100%);
-    transition: clip-path 0.35s var(--ease-out);
-}
-
-.article-card:hover .card-image-wrap {
-    clip-path: polygon(0 22px, 60px 0, 100% 0, 100% 100%, 0 100%);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card-image-wrap,
-    .article-card:hover .card-image-wrap {
-        clip-path: none;
-        transition: none;
-    }
-}
-
 .article-card:hover .card-image-wrap img {
     transform: scale(1.03);
 }
@@ -785,9 +761,10 @@ body {
 .card-rank-slash {
     display: block;
     width: 8px;
-    height: 1.5rem;
+    height: 1.3rem;
     background: var(--color-accent);
-    transform: skewX(-20deg);
+    /* nudge onto the numeral's optical center — serif digits sit high */
+    transform: translateY(0.06em) skewX(-20deg);
 }
 
 .article-card:hover .card-rank-slash {
@@ -1045,9 +1022,8 @@ body {
     color: var(--color-accent);
 }
 
-/* Rank badge — open "NN /" mark matching the grid's numbered slash index.
-   Transparent over the photo: number carries a scrim + shadow for legibility,
-   the skewed navy slash (::after) is the shared brand mark. */
+/* Rank badge — solid navy chip with the "NN /" mark matching the grid's
+   numbered slash index. White numeral, tan skewed slash (::after). */
 .most-read-rank-badge {
     position: absolute;
     top: 0;
@@ -1064,18 +1040,17 @@ body {
     letter-spacing: -0.03em;
     font-variant-numeric: tabular-nums;
     color: #ffffff;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 72%);
+    background: var(--color-accent);
 }
 
 .most-read-rank-badge::after {
     content: '';
     display: block;
     width: 8px;
-    height: 1.5rem;
+    height: 1.3rem;
     background: var(--color-accent-hover);
-    transform: skewX(-20deg);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    /* match the grid rank's optical-center nudge */
+    transform: translateY(0.06em) skewX(-20deg);
 }
 
 .most-read-title {
