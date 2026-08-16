@@ -761,6 +761,7 @@ body {
 .card-rank-slash {
     display: block;
     width: 8px;
+    margin-bottom:-3px;
     height: 1.3rem;
     background: var(--color-accent);
     /* nudge onto the numeral's optical center — serif digits sit high */
@@ -1022,8 +1023,9 @@ body {
     color: var(--color-accent);
 }
 
-/* Rank badge — solid navy chip with the "NN /" mark matching the grid's
-   numbered slash index. White numeral, tan skewed slash (::after). */
+/* Rank badge — the navy fill itself is the slash: a parallelogram clipped to
+   the motif's −20deg angle (16px offset over ~44px height ≈ 20deg), anchored in
+   the image corner. White numeral sits upright inside. */
 .most-read-rank-badge {
     position: absolute;
     top: 0;
@@ -1031,8 +1033,8 @@ body {
     z-index: 2;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.85rem;
+    justify-content: center;
+    padding: 0.5rem 1.1rem 0.5rem 1.35rem;
     font-family: var(--font-serif);
     font-size: 1.75rem;
     font-weight: 900;
@@ -1041,16 +1043,7 @@ body {
     font-variant-numeric: tabular-nums;
     color: #ffffff;
     background: var(--color-accent);
-}
-
-.most-read-rank-badge::after {
-    content: '';
-    display: block;
-    width: 8px;
-    height: 1.3rem;
-    background: var(--color-accent-hover);
-    /* match the grid rank's optical-center nudge */
-    transform: translateY(0.06em) skewX(-20deg);
+    clip-path: polygon(16px 0, 100% 0, calc(100% - 16px) 100%, 0 100%);
 }
 
 .most-read-title {
