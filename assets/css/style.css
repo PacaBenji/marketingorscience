@@ -231,6 +231,35 @@ p {
     margin-left: 0;
 }
 
+/* Slash band — signature section break. A sparse rhythm of −20deg bars
+   (gradient axis at 110deg = perpendicular to the skew, so bars share the
+   motif's exact angle). Ends taper via mask so it dissolves, not hard-stops. */
+.slash-band {
+    width: min(320px, 60%);
+    height: 24px;
+    margin: var(--space-xl) auto;
+    background-image: repeating-linear-gradient(
+        110deg,
+        var(--color-accent) 0,
+        var(--color-accent) 6px,
+        transparent 6px,
+        transparent 30px
+    );
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
+}
+
+/* Tan variant for placement on the dark mission panel */
+.slash-band--dark {
+    background-image: repeating-linear-gradient(
+        110deg,
+        var(--color-accent-hover) 0,
+        var(--color-accent-hover) 6px,
+        transparent 6px,
+        transparent 30px
+    );
+}
+
 
 /* ============================================================
    5. FOUC PREVENTION
@@ -500,7 +529,10 @@ body {
     object-fit: cover;
 }
 
-/* Gradient overlay — mirrors .fold-hero-overlay */
+/* Gradient overlay — mirrors .fold-hero-overlay.
+   Top-left corner clipped on a 60x22px triangle → atan(22/60) ≈ 20deg, the
+   exact slash angle. Fixed-pixel cut keeps it identical to the card diagonal
+   regardless of element width (no fluid-aspect distortion). */
 .featured-banner-overlay {
     position: absolute;
     bottom: 0;
@@ -509,6 +541,7 @@ body {
     padding: var(--space-2xl) var(--space-lg) var(--space-lg);
     background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%);
     z-index: 2;
+    clip-path: polygon(0 22px, 60px 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .featured-banner-overlay-inner {
@@ -700,6 +733,26 @@ body {
     transition: transform 0.35s ease;
 }
 
+/* Hover: wink of the motif — top-left corner cuts away on the same 60x22px
+   (~20deg) diagonal as the banner. Animates clip-path (transform is taken by
+   the image scale); suppressed under reduced-motion via the guard below. */
+.card-image-wrap {
+    clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.35s var(--ease-out);
+}
+
+.article-card:hover .card-image-wrap {
+    clip-path: polygon(0 22px, 60px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-image-wrap,
+    .article-card:hover .card-image-wrap {
+        clip-path: none;
+        transition: none;
+    }
+}
+
 .article-card:hover .card-image-wrap img {
     transform: scale(1.03);
 }
@@ -710,6 +763,35 @@ body {
 
 .article-card:hover .card-headline {
     color: var(--color-accent);
+}
+
+/* Numbered slash index — masthead rank above each card.
+   Number recedes (muted); the skewed slash carries the navy accent.
+   Shares its −20deg angle with every other slash on the page. */
+.card-rank {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: var(--space-sm);
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-muted);
+}
+
+.card-rank-slash {
+    display: block;
+    width: 8px;
+    height: 1.5rem;
+    background: var(--color-accent);
+    transform: skewX(-20deg);
+}
+
+.article-card:hover .card-rank-slash {
+    background: var(--color-accent-hover);
 }
 
 /* Badge row: category + article type */
@@ -963,7 +1045,9 @@ body {
     color: var(--color-accent);
 }
 
-/* Rank badge — tabular numeral on navy chip, image corner */
+/* Rank badge — open "NN /" mark matching the grid's numbered slash index.
+   Transparent over the photo: number carries a scrim + shadow for legibility,
+   the skewed navy slash (::after) is the shared brand mark. */
 .most-read-rank-badge {
     position: absolute;
     top: 0;
@@ -971,18 +1055,27 @@ body {
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-width: 2.25rem;
-    height: 2.25rem;
-    padding: 0 0.5rem;
+    gap: 0.5rem;
+    padding: 0.5rem 0.85rem;
     font-family: var(--font-serif);
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.03em;
     font-variant-numeric: tabular-nums;
     color: #ffffff;
-    background: var(--color-accent);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 72%);
+}
+
+.most-read-rank-badge::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 1.5rem;
+    background: var(--color-accent-hover);
+    transform: skewX(-20deg);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .most-read-title {

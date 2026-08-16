@@ -60,13 +60,15 @@
         '</section>';
     }
 
-    function renderCard(article) {
+    function renderCard(article, idx) {
+        var rank = ('0' + (idx + 1)).slice(-2);
         return '<a href="' + article.url + '" class="article-card" aria-label="Read: ' + article.title + '">' +
             (article.image
                 ? '<div class="card-image-wrap">' +
                       '<img src="' + article.image + '" alt="" loading="lazy" width="600" height="340">' +
                   '</div>'
                 : '') +
+            '<span class="card-rank">' + rank + '<span class="card-rank-slash" aria-hidden="true"></span></span>' +
             '<div class="card-badge-row">' +
                 '<span class="category-badge category--' + (article.categorySlug || 'general') + '">' + (article.category || '') + '</span>' +
                 '<span class="article-type-badge">' + (article.type || '') + '</span>' +
