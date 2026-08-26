@@ -440,6 +440,12 @@
     </url>
 
     <url>
+        <loc>https://marketingorscience.com/reviews/glp1-hair-loss/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://marketingorscience.com/articles/skincare/2026/06/tranexamic-acid-hyperpigmentation</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -597,6 +603,12 @@
 
     <url>
         <loc>https://marketingorscience.com/articles/skincare/2026/08/gua-sha-facial-tools</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/08/glp1-hair-shedding-timeline</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

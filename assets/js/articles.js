@@ -4,6 +4,26 @@
 
 window.MOS_ARTICLES = [
   {
+    slug         : 'glp1-hair-shedding-timeline',
+    relatedSlugs : ['ozempic-hair-loss-glp1', 'compounded-glp1-semaglutide-tirzepatide', 'telogen-effluvium-treatment'],
+    url          : '/articles/pharma/2026/08/glp1-hair-shedding-timeline',
+    title        : 'GLP-1 Hair Shedding Timeline: What to Expect After Weight Loss',
+    deck         : 'Hair shedding after GLP-1 weight loss follows a predictable timeline. When it starts, when it peaks, how long recovery takes, and what the evidence shows.',
+    category     : 'Pharma & OTC',
+    categorySlug : 'pharma',
+    type         : 'Clinical Review',
+    tags         : ['glp1', 'ozempic', 'semaglutide', 'tirzepatide', 'wegovy', 'zepbound', 'hair-shedding', 'hair-loss', 'telogen-effluvium', 'weight-loss'],
+    author       : 'Dr. Brian Huber',
+    authorSlug   : 'brian-huber',
+    date         : '2026-08-22',
+    verdict      : 'Supported',
+    verdictClass : 'supported',
+    searchText   : 'glp1 hair shedding timeline glp-1 hair loss timeline how long hair shedding after glp-1 weight loss ozempic wegovy zepbound mounjaro semaglutide tirzepatide when does hair loss start peak recovery telogen effluvium rapid weight loss nutrient deficiency protein bariatric surgery months 2 4 6 12 anagen recovery reversible pharma clinical review',
+    popular      : false,
+    readingTime  : 9,
+    image        : '/assets/images/glp1-hair-timeline.jpg',
+  },
+  {
     slug         : 'minoxidil-non-responders',
     relatedSlugs : ['minoxidil-female-pattern-hair-loss', 'topical-vs-oral-minoxidil', 'low-dose-oral-minoxidil'],
     url          : '/articles/haircare/2026/08/minoxidil-non-responders',
