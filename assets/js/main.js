@@ -120,6 +120,16 @@
             document.head.appendChild(trackingScript);
         }
 
+        // Google "Preferred Sources" button — publisher.js (loaded once, site-wide)
+        // https://developers.google.com/search/docs/appearance/preferred-sources
+        if (!document.querySelector('script[data-mos-preferred-source]')) {
+            var prefSrc = document.createElement('script');
+            prefSrc.async = true;
+            prefSrc.src   = 'https://news.google.com/swg/js/v1/publisher.js';
+            prefSrc.dataset.mosPreferredSource = '1';
+            document.head.appendChild(prefSrc);
+        }
+
         // Google Fonts — Playfair Display, Lora, Inter
         if (!document.querySelector('link[data-mos-fonts]')) {
             var fonts = document.createElement('link');
@@ -295,6 +305,7 @@
                                     '</svg>' +
                                 '</a>' +
                             '</div>' +
+                            '<div class="footer-preferred-source" google-add-preferred-source-btn data-theme="dark"></div>' +
                             '<p class="footer-newsletter-desc">We&apos;ve recently moved to Substack!  Follow us for evidence reviews delivered when it matters.</p>' +
                             '<form class="footer-newsletter-form" action="#" method="post" novalidate>' +
                                 '<div class="footer-newsletter-row">' +

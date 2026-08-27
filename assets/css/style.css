@@ -2201,6 +2201,11 @@ body {
     display: block;
 }
 
+.footer-preferred-source {
+    margin-bottom: var(--space-md);
+    min-height: 40px;
+}
+
 /* ── Bottom bar ── */
 .footer-bottom {
     display: flex;
