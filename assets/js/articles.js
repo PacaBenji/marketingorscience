@@ -4,6 +4,26 @@
 
 window.MOS_ARTICLES = [
   {
+    slug         : 'caffeine-shampoo-hair-loss',
+    relatedSlugs : ['minoxidil-female-pattern-hair-loss', 'copper-peptides-hair-growth', 'saw-palmetto-hair-loss'],
+    url          : '/articles/haircare/2026/08/caffeine-shampoo-hair-loss',
+    title        : 'Caffeine Shampoo (Alpecin) for Hair Loss: What the Evidence Shows',
+    deck         : 'Caffeine shampoos like Alpecin promise to "wake up" follicles and fight hair loss. A review of the in-vitro data, the contact-time problem that undermines a rinse-off product, and why regulators banned the hair-loss claim.',
+    category     : 'Haircare',
+    categorySlug : 'haircare',
+    type         : 'Ingredient Analysis',
+    tags         : ['caffeine-shampoo', 'alpecin', 'caffeine', 'hair-loss', 'dht', 'follicle', 'contact-time', 'androgenetic-alopecia', 'minoxidil', 'haircare'],
+    author       : 'Editorial Team',
+    authorSlug   : 'editorial',
+    date         : '2026-08-28',
+    verdict      : 'Claim Unsupported',
+    verdictClass : 'unsupported',
+    searchText   : 'caffeine shampoo alpecin hair loss regrowth wake up follicle energize scalp penetration contact time rinse off two minutes leave on liquid serum fischer 2007 in vitro human hair follicle proliferation testosterone androgenetic alopecia dhurat 2017 phyto-caffeine female systematic review 2025 adenosine advertising standards authority asa 2018 banned reduce hair loss claim substantiate cosmetic not fda approved minoxidil comparator saw palmetto copper peptides ingredient analysis',
+    popular      : false,
+    readingTime  : 8,
+    image        : '/assets/images/caffeine-shampoo.jpg',
+  },
+  {
     slug         : 'glp1-hair-shedding-timeline',
     relatedSlugs : ['ozempic-hair-loss-glp1', 'compounded-glp1-semaglutide-tirzepatide', 'telogen-effluvium-treatment'],
     url          : '/articles/pharma/2026/08/glp1-hair-shedding-timeline',
