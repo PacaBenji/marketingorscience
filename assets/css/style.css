@@ -4057,6 +4057,7 @@ figcaption {
 /* Trust badges */
 .trust-badges {
     display: flex;
+    align-items: center;
     gap: var(--space-md);
     flex-wrap: wrap;
     margin-bottom: var(--space-lg);
