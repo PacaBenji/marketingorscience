@@ -4532,6 +4532,15 @@ figcaption {
 
 .card-body h3:first-child { margin-top: 0; }
 
+.card-body > h2 {
+    font-size: var(--text-h2);
+    margin-top: 0;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: var(--border);
+    line-height: 1.25;
+}
+
 .card-body p { margin-bottom: var(--space-md); }
 
 /* Ingredient table */
@@ -5473,3 +5482,26 @@ figcaption {
 }
 
 .figure-placeholder--square { aspect-ratio: 1 / 1; }
+
+.review-hero--below-bleed {
+    padding-top: var(--space-md);
+    border-bottom: var(--border);
+    margin-bottom: var(--space-xl);
+}
+
+.card-header__verdict {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    margin: 0 0 var(--space-sm);
+}
+
+.card-header__verdict-line {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent-hover);
+    line-height: 1.35;
+}
