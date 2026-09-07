@@ -4138,10 +4138,28 @@ figcaption {
     border-bottom: var(--border);
 }
 
+/* Shared grid track definition for header + rows so columns align */
+.quick-rank-head,
 .quick-rank-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) 150px 190px auto;
     align-items: center;
-    gap: var(--space-md);
+    column-gap: var(--space-md);
+    row-gap: 4px;
+}
+
+.quick-rank-head {
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--color-text);
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.quick-rank-item {
     padding: var(--space-md) 0;
     border-bottom: var(--border);
 }
@@ -4151,8 +4169,6 @@ figcaption {
     font-size: var(--text-meta);
     font-weight: 700;
     color: var(--color-muted);
-    width: 24px;
-    flex-shrink: 0;
     text-align: center;
 }
 
@@ -4160,7 +4176,15 @@ figcaption {
     font-family: var(--font-ui);
     font-size: var(--text-body);
     font-weight: 600;
-    flex: 1;
+}
+
+/* Winner/runner-up badge drops onto its own line under the name so it
+   never pushes the Type/Verdict/link columns out of alignment. */
+.quick-rank-item .winner-badge,
+.quick-rank-item .runner-up-badge {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 2px;
 }
 
 .quick-rank-item__format {
@@ -4172,7 +4196,7 @@ figcaption {
     color: var(--color-muted);
     border: 1px solid var(--color-divider);
     padding: 2px 8px;
-    flex-shrink: 0;
+    justify-self: start;
 }
 
 .quick-rank-item__rating {
@@ -4180,9 +4204,7 @@ figcaption {
     font-size: var(--text-meta);
     font-weight: 700;
     color: var(--color-text);
-    width: 48px;
-    text-align: right;
-    flex-shrink: 0;
+    text-align: left;
 }
 
 .quick-rank-item__link {
@@ -4190,7 +4212,7 @@ figcaption {
     font-size: var(--text-meta);
     font-weight: 600;
     color: var(--color-accent);
-    flex-shrink: 0;
+    justify-self: end;
 }
 
 /* Winner / Runner-up badges */
@@ -4707,15 +4729,6 @@ figcaption {
     margin-bottom: var(--space-xl);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    padding-left: var(--space-lg);
-    padding-right: var(--space-lg);
-    box-sizing: border-box;
 }
 
 .comparison-section h2 {
@@ -4821,6 +4834,27 @@ figcaption {
 
 .check { color: var(--pro-color); font-weight: 700; }
 .cross { color: var(--con-color); font-weight: 700; }
+
+/* 5-column variant (balanced widths, fits without horizontal scroll on desktop) */
+.comparison-table--5col {
+    min-width: 640px;
+    font-size: 0.95rem;
+}
+.comparison-table--5col th,
+.comparison-table--5col td {
+    padding: 0.85rem 1rem;
+    line-height: 1.5;
+}
+.comparison-table--5col th:nth-child(1),
+.comparison-table--5col td:nth-child(1) { width: 20%; }   /* Treatment */
+.comparison-table--5col th:nth-child(2),
+.comparison-table--5col td:nth-child(2) { width: 18%; }   /* Type */
+.comparison-table--5col th:nth-child(3),
+.comparison-table--5col td:nth-child(3) { width: 30%; }   /* Mechanism */
+.comparison-table--5col th:nth-child(4),
+.comparison-table--5col td:nth-child(4) { width: 18%; }   /* Evidence Rating */
+.comparison-table--5col th:nth-child(5),
+.comparison-table--5col td:nth-child(5) { width: 14%; }   /* Timeline */
 
 
 /* ============================================================
@@ -4935,7 +4969,11 @@ figcaption {
 
     .pros-cons-grid { grid-template-columns: 1fr; }
 
-    .quick-rank-item__format { display: none; }
+    /* Collapse to a single content column; Type/Verdict wrap under the name */
+    .quick-rank-head { display: none; }
+    .quick-rank-item { grid-template-columns: 24px minmax(0, 1fr) auto; }
+    .quick-rank-item__format,
+    .quick-rank-item__rating { grid-column: 2; justify-self: start; }
 
     .trust-badges { gap: var(--space-sm); }
 
@@ -4950,8 +4988,8 @@ figcaption {
 
 @media (max-width: 480px) {
 
-    .quick-rank-item { flex-wrap: wrap; }
-    .quick-rank-item__link { width: 100%; margin-top: var(--space-sm); }
+    .quick-rank-item { grid-template-columns: 24px minmax(0, 1fr); }
+    .quick-rank-item__link { grid-column: 2; justify-self: start; margin-top: var(--space-sm); }
 
     .related-reading-grid { grid-template-columns: 1fr; }
 
