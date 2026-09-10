@@ -2849,7 +2849,6 @@ figcaption {
   line-height: 1.55;
   color: var(--color-muted);
   margin-top: var(--space-xs);
-  border-bottom: 1px solid var(--color-divider);
   padding-top: var(--space-xs);
 }
 
@@ -4439,9 +4438,8 @@ figcaption {
    7. METHODOLOGY
    ============================================================ */
 .methodology {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
   padding: var(--space-lg);
-  border: var(--border);
   border-top: 3px solid var(--color-accent);
 }
 
@@ -4452,13 +4450,13 @@ figcaption {
 
 .methodology h3 {
   font-family: var(--font-ui);
-  font-size: var(--text-meta);
+  font-size: var(--text-body);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-muted);
   margin-bottom: var(--space-md);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-xl);
 }
 
 .methodology h3:first-of-type {
