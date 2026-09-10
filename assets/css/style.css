@@ -4092,6 +4092,22 @@ figcaption {
     margin-bottom: var(--space-lg);
 }
 
+.review-hero__vignette {
+    border-left: 3px solid var(--color-accent);
+    padding: var(--space-sm) 0 var(--space-sm) var(--space-md);
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-secondary, var(--color-text));
+    font-style: italic;
+}
+
+.review-hero__vignette p {
+    margin-bottom: var(--space-xs);
+}
+
+.review-hero__vignette p:last-child {
+    margin-bottom: 0;
+}
+
 /* Trust badges */
 .trust-badges {
     display: flex;
@@ -5492,6 +5508,63 @@ figcaption {
 
 .urgency-note strong {
     font-weight: 600;
+}
+
+/* ============================================================
+   PRODUCT BANNER (inline, full-width, thin CTA strip)
+   ============================================================ */
+.product-banner {
+    border: 1px solid var(--color-accent);
+    border-left: 4px solid var(--color-accent);
+    background: var(--color-accent-light, #EEF3FB);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-xl) 0;
+    display: flex;
+    align-items: center;
+}
+
+.product-banner__inner {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-banner__label {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.product-banner__text {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    color: var(--color-text);
+    margin: 0;
+    flex: 1;
+}
+
+.product-banner__link {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: 1px;
+    flex-shrink: 0;
+}
+
+.product-banner__link:hover {
+    color: var(--color-accent-hover, var(--color-accent));
+    border-color: var(--color-accent-hover, var(--color-accent));
 }
 
 /* ============================================================
