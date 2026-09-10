@@ -4,6 +4,26 @@
 
 window.MOS_ARTICLES = [
   {
+    slug         : 'dust-allergens-der-p1-der-p2',
+    relatedSlugs : ['ceramide-moisturizers-skin-barrier', 'baby-eczema-condition-review', 'dandruff-scalp-microbiome'],
+    url          : '/articles/haircare/2026/07/dust-allergens-der-p1-der-p2',
+    title        : 'Your Skin vs. Dust Allergens: The Disruptive Effects of Der p 1 and Der p 2',
+    deck         : 'Der p 1 cleaves barrier proteins. Der p 2 amplifies immune signaling. A review of both mechanisms and what EnviroBlock™ would need to show to claim dual protection against house dust mite allergens.',
+    category     : 'Haircare',
+    categorySlug : 'haircare',
+    type         : 'Ingredient Analysis',
+    tags         : ['der-p-1', 'der-p-2', 'dust-mites', 'skin-barrier', 'enviroblock', 'resveratrol', 'atopic-dermatitis', 'allergens', 'haircare'],
+    author       : 'Editorial Team',
+    authorSlug   : 'editorial',
+    date         : '2026-07-18',
+    verdict      : 'Promising — Awaiting Clinical Data',
+    verdictClass : 'partial',
+    searchText   : 'der p 1 der p 2 house dust mite allergens skin barrier tight junction claudin protease tlr4 th2 atopic dermatitis eczema enviroblock resveratrol barrier protection environmental allergen ingredient analysis',
+    popular      : false,
+    readingTime  : 9,
+    image        : '/assets/images/dust_vs_skin_hero.png',
+  },
+  {
     slug         : 'hair-growth-supplements-nutrafol-viviscal',
     relatedSlugs : ['biotin-hair-growth', 'iron-deficiency-hair-loss', 'saw-palmetto-hair-loss'],
     url          : '/articles/haircare/2026/08/hair-growth-supplements-nutrafol-viviscal',
