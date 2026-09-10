@@ -5912,9 +5912,10 @@ figcaption {
   background: #fff;
   border: 1px solid #1a1a1a;
   padding: 0;
-  margin: var(--space-xl) auto;
+  margin: var(--space-xl) 0;
   overflow: hidden;
-  max-width: 720px;
+  max-width: none;
+  width: 100%;
 }
 
 .product-callout__media {
@@ -5975,6 +5976,14 @@ figcaption {
   border: 0;
   padding: 0;
   color: var(--color-text);
+}
+
+.product-callout__copy .product-callout__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-meta);
+  line-height: 1.55;
+  color: var(--color-muted);
+  margin: 0;
 }
 
 .product-callout__body p {
