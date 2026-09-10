@@ -1960,6 +1960,44 @@ body {
     padding: 0 var(--space-lg) var(--space-xl);
 }
 
+/* Series editorial note */
+.series-note {
+    background: var(--color-accent-light);
+    border-left: 3px solid var(--color-accent);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-lg) 0;
+    font-size: var(--text-sm);
+}
+
+.series-note-label {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+}
+
+.series-note p {
+    margin: 0 0 var(--space-xs);
+    color: var(--color-muted);
+}
+
+.series-note ul {
+    margin: 0;
+    padding-left: 1.2em;
+    color: var(--color-muted);
+}
+
+.series-note ul li {
+    margin-bottom: 2px;
+}
+
+.series-note a {
+    color: var(--color-accent);
+}
+
 /* Claim → Evidence → Verdict structure blocks */
 .claim-block {
     background: #F8F8F8;
