@@ -566,7 +566,13 @@
     </url>
 
     <url>
-        <loc>https://marketingorscience.com/articles/haircare/2026/08/caffeine-shampoo-hair-loss</loc>
+        <loc>https://marketingorscience.com/articles/haircare/2026/08/hair-growth-supplements-nutrafol-viviscal</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/09/caffeine-shampoo-hair-loss</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
