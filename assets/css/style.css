@@ -4439,24 +4439,22 @@ figcaption {
    ============================================================ */
 .methodology {
   margin-bottom: var(--space-lg);
-  padding: var(--space-lg);
+  padding: var(--space-lg) 1rem;
   border-top: 3px solid var(--color-accent);
 }
 
 .methodology h2 {
   font-size: var(--text-h2);
-  margin-bottom: var(--space-lg);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  padding-top: var(--space-md);
 }
 
 .methodology h3 {
-  font-family: var(--font-ui);
-  font-size: var(--text-body);
+  font-size: 1.375rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-muted);
-  margin-bottom: var(--space-md);
-  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-lg);
 }
 
 .methodology h3:first-of-type {
