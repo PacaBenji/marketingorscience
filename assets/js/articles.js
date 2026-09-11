@@ -4,6 +4,26 @@
 
 window.MOS_ARTICLES = [
   {
+    slug         : 'meno-hair-serums',
+    relatedSlugs : ['finasteride-vs-novogro', 'low-dose-oral-minoxidil', 'minoxidil-female-pattern-hair-loss'],
+    url          : '/articles/haircare/2026/09/meno-hair-serums',
+    title        : 'The Science Behind Meno-Hair and Four Hair Serums that Can Help',
+    deck         : 'Menopausal hair thinning is not just an age thing. A review of the hormonal mechanisms behind meno-hair, and how RE:YOU, Vegamour, Hers minoxidil, and OneSkin OS-01 actually stack up on clinical evidence.',
+    category     : 'Haircare',
+    categorySlug : 'haircare',
+    type         : 'Treatment Analysis',
+    tags         : ['menopause', 'hair-loss', 'reyou', 'vegamour', 'minoxidil', 'oneskin', 'novogro', 'hair-serum', 'fphl', 'haircare'],
+    author       : 'Editorial Team',
+    authorSlug   : 'editorial',
+    date         : '2026-09-10',
+    verdict      : 'Promising — Awaiting Clinical Data',
+    verdictClass : 'partial',
+    searchText   : 'meno-hair menopause perimenopause hair thinning serum reyou vegamour hers minoxidil oneskin os-01 novogro dual-path revival estrogen dht scalp circulation hair loss female pattern treatment analysis',
+    popular      : false,
+    readingTime  : 12,
+    image        : '/assets/images/menopause-lp-hero.png',
+  },
+  {
     slug         : 'dust-allergens-der-p1-der-p2',
     relatedSlugs : ['ceramide-moisturizers-skin-barrier', 'baby-eczema-condition-review', 'dandruff-scalp-microbiome'],
     url          : '/articles/haircare/2026/07/dust-allergens-der-p1-der-p2',
