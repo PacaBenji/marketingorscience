@@ -4436,7 +4436,6 @@ figcaption {
    7. METHODOLOGY
    ============================================================ */
 .methodology {
-  margin-bottom: var(--space-lg);
   padding: var(--space-lg) 0rem;
   border-top: 3px solid var(--color-accent);
 }
