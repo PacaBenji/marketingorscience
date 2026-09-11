@@ -8,7 +8,7 @@ window.MOS_ARTICLES = [
     relatedSlugs : ['finasteride-vs-novogro', 'low-dose-oral-minoxidil', 'minoxidil-female-pattern-hair-loss'],
     url          : '/articles/haircare/2026/09/meno-hair-serums',
     title        : 'The Science Behind Meno-Hair and Four Hair Serums that Can Help',
-    deck         : 'Menopausal hair thinning is not just an age thing. A review of the hormonal mechanisms behind meno-hair, and how RE:YOU, Vegamour, Hers minoxidil, and OneSkin OS-01 actually stack up on clinical evidence.',
+    deck         : 'A lot changes during menopause, does your hair have to be a part of it too? We looked at the so-called “best” hair serums for menopausal hair loss — here’s what the science actually says.',
     category     : 'Haircare',
     categorySlug : 'haircare',
     type         : 'Treatment Analysis',
