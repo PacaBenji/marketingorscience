@@ -4226,7 +4226,7 @@ figcaption {
 }
 
 .review-hero h1 {
-  font-size: var(--text-hero);
+  font-size: 2rem;
   margin-bottom: var(--space-lg);
 }
 
@@ -4439,13 +4439,12 @@ figcaption {
    ============================================================ */
 .methodology {
   margin-bottom: var(--space-lg);
-  padding: var(--space-lg) 1rem;
+  padding: var(--space-lg) 0rem;
   border-top: 3px solid var(--color-accent);
 }
 
 .methodology h2 {
   font-size: var(--text-h2);
-  margin-top: var(--space-xl);
   margin-bottom: var(--space-md);
   padding-top: var(--space-md);
 }
@@ -5824,25 +5823,6 @@ figcaption {
 /* ============================================================
    REVIEW FIGURE (Inline photos + placeholders)
    ============================================================ */
-.review-figure {
-  margin: var(--space-lg) 0;
-}
-
-.review-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: var(--border);
-}
-
-.review-figure figcaption {
-  font-family: var(--font-ui);
-  font-size: var(--text-meta);
-  color: var(--color-muted);
-  line-height: 1.5;
-  padding-top: var(--space-sm);
-}
-
 .figure-placeholder {
   display: flex;
   flex-direction: column;
