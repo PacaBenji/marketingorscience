@@ -4,6 +4,26 @@
 
 window.MOS_ARTICLES = [
   {
+    slug         : 'before-start-minoxidil',
+    relatedSlugs : ['minoxidil-non-responders', 'minoxidil-vs-novogro', 'minoxidil-female-pattern-hair-loss'],
+    url          : '/articles/haircare/2026/09/before-start-minoxidil',
+    title        : 'Before You Start Minoxidil: 5 Things to Know',
+    deck         : 'How to tell if minoxidil is likely to work, what the early shedding actually means, which side effects warrant stopping, and how a newer minoxidil-free approach compares.',
+    category     : 'Haircare',
+    categorySlug : 'haircare',
+    type         : 'Clinical Review',
+    tags         : ['minoxidil', 'sult1a1', 'hair-loss', 'reyou', 'novogro', 'side-effects', 'non-responder', 'haircare'],
+    author       : 'Editorial Team',
+    authorSlug   : 'editorial',
+    date         : '2026-09-17',
+    verdict      : 'Promising — Awaiting Clinical Data',
+    verdictClass : 'partial',
+    searchText   : 'before you start minoxidil five things to know sult1a1 sulfotransferase enzyme non-responder shedding side effects facial hair scalp irritation when to stop dual-path reyou novogro nv-623 nv-624 nv-273 dermal papilla minoxidil-free clinical review',
+    popular      : false,
+    readingTime  : 8,
+    image        : '/assets/images/before-start-minoxidil-img2.1.png',
+  },
+  {
     slug         : 'meno-hair-serums',
     relatedSlugs : ['finasteride-vs-novogro', 'low-dose-oral-minoxidil', 'minoxidil-female-pattern-hair-loss'],
     url          : '/articles/haircare/2026/09/meno-hair-serums',
