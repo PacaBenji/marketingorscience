@@ -21,7 +21,7 @@ window.MOS_ARTICLES = [
     searchText   : 'aod-9604 hgh fragment 176-191 fat loss peptide ozempic alternative weight loss compounding lipolytic metabolic pharmaceuticals phase 2b failed clinical trial placebo no difference animal data human evidence gap',
     popular      : false,
     readingTime  : 10,
-    image        : '/assets/images/aod-9604-fat-loss-peptides.jpg',
+    image        : '/assets/images/peptide-vials.jpg',
   },
   {
     slug         : 'what-are-peptides-explainer',
@@ -41,7 +41,7 @@ window.MOS_ARTICLES = [
     searchText   : 'what are peptides amino acids peptide bonds molecular weight dalton rule skin penetration oral bioavailability injectable delivery route stratum corneum digestion first pass metabolism synthetic bioidentical naturally derived cosmetics drug claim mocra label',
     popular      : false,
     readingTime  : 8,
-    image        : '/assets/images/what-are-peptides.jpg',
+    image        : '/assets/images/women-peptides-skin.jpg',
   },
   {
     slug         : 'before-start-minoxidil',
