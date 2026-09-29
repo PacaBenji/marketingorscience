@@ -2612,6 +2612,21 @@ body {
 
   .fold-headline {
     font-size: clamp(1.6rem, 6vw, 2.5rem);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .fold-hero-overlay,
+  .fold-hero-overlay-inner {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .fold-hero-overlay .fold-headline {
+    min-width: 0;
+    width: 100%;
+    word-break: normal;
   }
 
   .fold-byline {
@@ -6030,4 +6045,3 @@ figcaption {
   color: var(--color-accent-hover);
   line-height: 1.35;
 }
-
