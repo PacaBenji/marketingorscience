@@ -41,7 +41,7 @@ window.MOS_ARTICLES = [
     searchText   : 'gut peptides gut healing supplements leaky gut intestinal permeability tight junction larazotide celiac disease bpc-157 glutamine collagen hydrolysate zonulin barrier repair clinical evidence',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/gut-peptides-supplements.png',
+    image        : '/assets/images/gut-peptides-supplements.jpg',
   },
   {
     slug         : 'anti-aging-peptides-longevity',
@@ -61,7 +61,7 @@ window.MOS_ARTICLES = [
     searchText   : 'anti aging peptides longevity marketing matrixyl palmitoyl pentapeptide ghk-cu copper peptide egf growth factor serum skin penetration collagen wrinkles cellular rejuvenation healthspan injectable peptide evidence',
     popular      : false,
     readingTime  : 9,
-    image        : '/assets/images/anti-aging-peptides-longevity.png',
+    image        : '/assets/images/anti-aging-peptides-longevity.jpg',
   },
   {
     slug         : 'aod-9604-fat-loss-peptides',
