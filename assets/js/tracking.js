@@ -38,7 +38,35 @@
         }
     }
 
-    // 1. Outbound click tracking — one event per brand
+    function getCookie(name) {
+        var value = '; ' + document.cookie;
+        var parts = value.split('; ' + name + '=');
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return '';
+    }
+
+    // Forward Converge identity onto partner domains. Inserts before any hash
+    // so links like /pages/science#clinical-trial stay intact.
+    function appendCvgParams(url) {
+        var uid = getCookie('__cvg_uid');
+        var sid = getCookie('__cvg_sid');
+        var params = [];
+        if (uid && url.indexOf('__cvg_uid=') === -1) params.push('__cvg_uid=' + encodeURIComponent(uid));
+        if (sid && url.indexOf('__cvg_sid=') === -1) params.push('__cvg_sid=' + encodeURIComponent(sid));
+        if (!params.length) return url;
+
+        var hash = '';
+        var hashIdx = url.indexOf('#');
+        if (hashIdx !== -1) {
+            hash = url.slice(hashIdx);
+            url = url.slice(0, hashIdx);
+        }
+        return url + (url.indexOf('?') !== -1 ? '&' : '?') + params.join('&') + hash;
+    }
+
+    // 1. Outbound click tracking — one event per brand.
+    // Holds navigation 200ms and appends __cvg_uid / __cvg_sid. Matched by
+    // hostname because outbound links here are not marked with a shared class.
     document.addEventListener('click', function(e) {
         var link = e.target.closest('a[href]');
         if (!link) return;
@@ -47,9 +75,27 @@
         for (var i = 0; i < OUTBOUND_EVENTS.length; i++) {
             var d = OUTBOUND_EVENTS[i].domain;
             if (host === d || host.endsWith('.' + d)) {
+                var finalUrl = appendCvgParams(link.href);
                 safeTrack({ method: 'track', eventName: OUTBOUND_EVENTS[i].eventName, properties: {
                     outbound_url: link.href
                 }});
+
+                // Let modified clicks (new tab, etc.) proceed, with params already on the href.
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) {
+                    link.href = finalUrl;
+                    break;
+                }
+
+                e.preventDefault();
+                var pendingWin = link.target === '_blank' ? window.open('', '_blank') : null;
+                if (pendingWin) pendingWin.opener = null;
+                setTimeout(function() {
+                    if (pendingWin) {
+                        pendingWin.location.href = finalUrl;
+                    } else {
+                        window.location.href = finalUrl;
+                    }
+                }, 200);
                 break;
             }
         }
