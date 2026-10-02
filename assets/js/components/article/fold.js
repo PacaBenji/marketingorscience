@@ -32,6 +32,7 @@
     Supported: "supported",
     "Partially Supported": "partial",
     "Promising — Awaiting Clinical Data": "partial",
+    "Promising — Interim Clinical Data": "partial",
     "Mixed Evidence": "mixed",
     "Claim Unsupported": "unsupported",
     "Mostly Marketing": "unsupported",
