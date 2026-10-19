@@ -416,6 +416,12 @@
     </url>
 
     <url>
+        <loc>https://marketingorscience.com/experts/brian-huber/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
         <loc>https://marketingorscience.com/methods/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -453,6 +459,12 @@
 
     <url>
         <loc>https://marketingorscience.com/reviews/perimenopausal-hair-loss/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marketingorscience.com/reviews/post-hair-transplant/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -518,7 +530,7 @@
     </url>
 
     <url>
-        <loc>https://marketingorscience.com/articles/haircare/2026/07/dust-allergens-der-p1-der-p2</loc>
+        <loc>https://marketingorscience.com/articles/skincare/2026/01/your-skin-vs-dust-allergens</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
