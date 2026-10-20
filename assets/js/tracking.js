@@ -45,6 +45,18 @@
         return '';
     }
 
+    // Forward WL attribution (MOS_Attribution, loaded before this file via
+    // main.js) onto main-domain links, then Converge identity below. The
+    // attribution capture-phase click handler has usually already rewritten
+    // the href; buildOutboundURL is idempotent, so re-applying is safe.
+    function appendAttributionParams(url) {
+        if (typeof window !== 'undefined' && window.MOS_Attribution &&
+            typeof window.MOS_Attribution.buildOutboundURL === 'function') {
+            return window.MOS_Attribution.buildOutboundURL(url);
+        }
+        return url;
+    }
+
     // Forward Converge identity onto partner domains. Inserts before any hash
     // so links like /pages/science#clinical-trial stay intact.
     function appendCvgParams(url) {
@@ -75,7 +87,7 @@
         for (var i = 0; i < OUTBOUND_EVENTS.length; i++) {
             var d = OUTBOUND_EVENTS[i].domain;
             if (host === d || host.endsWith('.' + d)) {
-                var finalUrl = appendCvgParams(link.href);
+                var finalUrl = appendCvgParams(appendAttributionParams(link.href));
                 safeTrack({ method: 'track', eventName: OUTBOUND_EVENTS[i].eventName, properties: {
                     outbound_url: link.href
                 }});

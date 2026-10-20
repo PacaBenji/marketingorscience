@@ -112,10 +112,23 @@
             document.head.appendChild(relatedInline);
         }
 
+        // Attribution (WL traffic params) — must load before tracking.js so
+        // outbound clicks already carry the persisted params when the
+        // Converge click handler appends its __cvg_uid / __cvg_sid.
+        // async=false keeps dynamically-inserted scripts in insertion order.
+        if (!document.querySelector('script[data-mos-attribution]')) {
+            var attributionScript = document.createElement('script');
+            attributionScript.src = assetPath + '/js/attribution.js';
+            attributionScript.async = false;
+            attributionScript.dataset.mosAttribution = '1';
+            document.head.appendChild(attributionScript);
+        }
+
         // Converge custom event tracking
         if (!document.querySelector('script[data-mos-tracking]')) {
             var trackingScript = document.createElement('script');
             trackingScript.src = assetPath + '/js/tracking.js';
+            trackingScript.async = false;
             trackingScript.dataset.mosTracking = '1';
             document.head.appendChild(trackingScript);
         }
