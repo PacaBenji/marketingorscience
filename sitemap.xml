@@ -747,5 +747,20 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/10/fda-mail-import-rule-peptides-supplements</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/10/fda-non-animal-testing-beauty</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/10/wellness-shots-claims-evidence</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
