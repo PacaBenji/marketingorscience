@@ -762,5 +762,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/10/veradermics-vdphl01-vs-low-dose-oral-minoxidil</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>

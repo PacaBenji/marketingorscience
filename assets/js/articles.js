@@ -4,6 +4,26 @@
 
 window.MOS_ARTICLES = [
   {
+    slug         : 'veradermics-vdphl01-vs-low-dose-oral-minoxidil',
+    relatedSlugs : ['low-dose-oral-minoxidil', 'topical-vs-oral-minoxidil', 'minoxidil-non-responders'],
+    url          : '/articles/pharma/2026/10/veradermics-vdphl01-vs-low-dose-oral-minoxidil',
+    title        : 'VDPHL01, Broken Down: Is Extended-Release Minoxidil Better Than the Generic Pill?',
+    deck         : 'Veradermics\' extended-release oral minoxidil (VDPHL01) hit every endpoint in Phase 3. But is it better than the cheap, off-label low-dose oral minoxidil already prescribed today? A deep dive into the trial data, the pharmacokinetic pitch, the safety numbers, and what\'s still missing.',
+    category     : 'Pharma & OTC',
+    categorySlug : 'pharma',
+    type         : 'Treatment Analysis',
+    tags         : ['veradermics', 'vdphl01', 'minoxidil', 'oral-minoxidil', 'extended-release', 'ldom', 'androgenetic-alopecia', 'hair-loss', 'clinical-trials', 'novogro', 'clascoterone', 'pp405', 'pharma'],
+    author       : 'Editorial Team',
+    authorSlug   : 'editorial',
+    date         : '2026-10-26',
+    verdict      : 'Partially Supported',
+    verdictClass : 'partial',
+    searchText   : 'veradermics mane vdphl01 extended release oral minoxidil er gel matrix tablet phase 3 study 304 study 302 male pattern hair loss androgenetic alopecia 8.5 mg once daily twice daily target area hair count non-vellus aairs placebo low dose oral minoxidil ldom generic off-label immediate release penha 2024 jama dermatology topical 5% hypertrichosis peripheral edema heart rate blood pressure cardiotoxic peaks pharmacokinetics cmax head to head 12 month safety study 306 women fda approval price minoxidil-free alternative novogro re:you reyou nv-623 nv-624 finasteride clascoterone breezula cosmo pp405 pelage awaken',
+    popular      : false,
+    readingTime  : 16,
+    image        : '/assets/images/vdphl01-extended-release-minoxidil.jpg',
+  },
+  {
     slug         : 'wellness-shots-claims-evidence',
     relatedSlugs : ['apple-cider-vinegar-weight-loss-blood-sugar', 'omega-3-anti-inflammatory-evidence', 'electrolyte-powders-hydration'],
     url          : '/articles/wellness/2026/10/wellness-shots-claims-evidence',
