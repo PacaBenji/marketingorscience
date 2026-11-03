@@ -767,5 +767,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://marketingorscience.com/articles/haircare/2026/11/minoxidil-2-vs-5-percent</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
