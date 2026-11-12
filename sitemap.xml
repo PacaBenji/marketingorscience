@@ -772,5 +772,15 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://marketingorscience.com/articles/pharma/2026/11/glp1-pills-oral-semaglutide-orforglipron</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/11/nad-boosters-nmn-nr-iv-drips</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
