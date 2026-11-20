@@ -782,5 +782,15 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://marketingorscience.com/articles/skincare/2026/11/beef-tallow-skincare</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://marketingorscience.com/articles/wellness/2026/11/fibermaxxing-fiber-evidence</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
